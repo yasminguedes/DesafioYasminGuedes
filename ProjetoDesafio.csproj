@@ -68,9 +68,17 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Administrador.cs" />
+    <Compile Include="Model\Cargo.cs" />
     <Compile Include="Model\Categoria.cs" />
+    <Compile Include="Model\Cliente.cs" />
     <Compile Include="Model\Endereco.cs" />
+    <Compile Include="Model\Fornecedor.cs" />
+    <Compile Include="Model\Funcionario.cs" />
     <Compile Include="Model\Marca.cs" />
+    <Compile Include="Model\Pessoa.cs" />
+    <Compile Include="Model\Produto.cs" />
+    <Compile Include="Model\Promocao.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">

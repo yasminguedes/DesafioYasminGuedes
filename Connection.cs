@@ -24,7 +24,5 @@ namespace ProjetoDesafio
             string conn = ConfigurationManager.ConnectionStrings["FireBirdConnectionString"].ToString();
             return new FbConnection(conn);
         }
-
-        
     }
 }

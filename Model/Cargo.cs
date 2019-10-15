@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ProjetoDesafio.Model
 {
-    public class Categoria
+    public class Cargo
     {
-        public int idCategoria { get; set; }
-        public string nomeCategoria { get; set; }
+        public int idCargo { get; set; }
+        public string nomeCargo { get; set; }
     }
 }
