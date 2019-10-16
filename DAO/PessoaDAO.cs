@@ -18,7 +18,7 @@ namespace ProjetoDesafio.DAO
                 try
                 {
                     conexaoFirebird.Open();
-                    string mSQL = "Select * from Pessoa";
+                    string mSQL = @"Select * from Pessoa";
                     FbCommand cmd = new FbCommand(mSQL, conexaoFirebird);
                     FbDataAdapter da = new FbDataAdapter(cmd);
                     DataTable dt = new DataTable();
@@ -36,19 +36,30 @@ namespace ProjetoDesafio.DAO
             }
         }
 
-        public static void fb_InserirDados(Pessoa pessoa)
+        public static int fb_InserirDados(Pessoa pessoa)
         {
             using (FbConnection conexaoFireBird = Connection.getInstancia().getConexao())
             {
                 try
                 {
                     conexaoFireBird.Open();
-                    string mSQL = "INSERT into Pessoa Values(" + pessoa.idPessoa + ", " + pessoa.nomePessoa + "," +
-                                  pessoa.sexo + "," + pessoa.rgIe + "," + pessoa.cpfCnpj + "," + pessoa.emailPessoa + "," +
-                                  pessoa.telefonePessoa + "," + pessoa.Endereco.idEndereco + ")";
+                    string mSQL = @"INSERT into Pessoa (nome_pessoa, sexo, rg_ie, cpf_cnpj, email_pessoa, telefone_pessoa, id_endereco)
+                                    Values(@NomePessoa, @Sexo, @RgIe, @CpfCnpj, @EmailPessoa, @TelefonePessoa, @Endereco) RETURNING id_pessoa";
 
                     FbCommand cmd = new FbCommand(mSQL, conexaoFireBird);
+
+                    cmd.Parameters.Add("@NomePessoa", FbDbType.VarChar).Value = pessoa.nomePessoa;
+                    cmd.Parameters.Add("@Sexo", FbDbType.VarChar).Value = pessoa.sexo;
+                    cmd.Parameters.Add("@RgIe", FbDbType.VarChar).Value = pessoa.rgIe;
+                    cmd.Parameters.Add("@CpfCnpj", FbDbType.VarChar).Value = pessoa.cpfCnpj;
+                    cmd.Parameters.Add("@EmailPessoa", FbDbType.VarChar).Value = pessoa.emailPessoa;
+                    cmd.Parameters.Add("@TelefonePessoa", FbDbType.VarChar).Value = pessoa.telefonePessoa;
+                    cmd.Parameters.Add("@Endereco", FbDbType.Integer).Value = pessoa.Endereco;
+
                     cmd.ExecuteNonQuery();
+
+                    var idPessoa = int.Parse(cmd.ExecuteScalar().ToString());
+                    return idPessoa;
                 }
                 catch (FbException fbex)
                 {
@@ -61,31 +72,31 @@ namespace ProjetoDesafio.DAO
             }
         }
 
-        public static Endereco fb_ProcuraDados(int id)
+        public static Pessoa fb_ProcuraDados(int idP)
         {
             using (FbConnection conexaoFireBird = Connection.getInstancia().getConexao())
             {
                 try
                 {
                     conexaoFireBird.Open();
-                    string mSQL = "Select * from Pessoa Where id_pessoa = " + id;
+                    string mSQL = @"Select * from Pessoa p INNER JOIN endereco AS e on p.id_endereco = e.id_endereco Where id_pessoa = " + idP;
                     FbCommand cmd = new FbCommand(mSQL, conexaoFireBird);
                     FbDataReader dr = cmd.ExecuteReader();
-                    Endereco endereco = new Endereco();
+                    Pessoa pessoa = new Pessoa();
                     while (dr.Read())
                     {
-                        endereco.idEndereco = Convert.ToInt32(dr[0]);
-                        endereco.cep = dr[1].ToString();
-                        endereco.rua = dr[2].ToString();
-                        endereco.numero = dr[3].ToString();
-                        endereco.complemento = dr[4].ToString();
-                        endereco.bairro = dr[5].ToString();
-                        endereco.cidade = dr[6].ToString();
-                        endereco.estado = dr[7].ToString();
-                        endereco.pais = dr[8].ToString();
+                        pessoa.idPessoa = Convert.ToInt32(dr["id_pessoa"]);
+                        pessoa.nomePessoa = dr["nome_pessoa"].ToString();
+                        pessoa.sexo = dr["sexo"].ToString();
+                        pessoa.rgIe = dr["rg_ie"].ToString();
+                        pessoa.cpfCnpj = dr["cpf_cnpj"].ToString();
+                        pessoa.emailPessoa = dr["email_pessoa"].ToString();
+                        pessoa.telefonePessoa = dr["telefone_pessoa"].ToString();
+                        pessoa.Endereco.idEndereco = Convert.ToInt32(dr["id_endereco"]);
+                      
                     }
 
-                    return endereco;
+                    return pessoa;
                 }
                 catch (FbException fbex)
                 {
@@ -98,19 +109,26 @@ namespace ProjetoDesafio.DAO
             }
         }
 
-        public static void fb_AlterarDados(Endereco endereco)
+        public static void fb_AlterarDados(Pessoa pessoa)
         {
             using (FbConnection conexaoFireBird = Connection.getInstancia().getConexao())
             {
                 try
                 {
                     conexaoFireBird.Open();
-                    string mSQL = "Update Endereco set cep=" + endereco.cep + ", endereco=" + endereco.rua
-                                  + ", endereco=" + endereco.numero + ", endereco=" + endereco.complemento +
-                                  ", endereco=" + endereco.bairro + "endereco=" + endereco.cidade + ", endereco="
-                                  + endereco.estado + ", endereco=" + endereco.pais + "Where id_endereco=" +
-                                  endereco.idEndereco;
+                    string mSQL = @"Update Pessoa set nome_pessoa= @NomePessoa, sexo= @Sexo, rg_ie= @RgIe, cpf_cnpj= @CpfCnpj,
+                                    email_pessoa= @EmailPessoa, telefone_pessoa= @TelefonePessoa,
+                                    id_endereco= @Endereco WHERE id_Pessoa= @IdPessoa";
                     FbCommand cmd = new FbCommand(mSQL, conexaoFireBird);
+
+                    cmd.Parameters.Add("@NomePessoa", FbDbType.VarChar).Value = pessoa.nomePessoa;
+                    cmd.Parameters.Add("@Sexo", FbDbType.VarChar).Value = pessoa.sexo;
+                    cmd.Parameters.Add("@RgIe", FbDbType.VarChar).Value = pessoa.rgIe;
+                    cmd.Parameters.Add("@CpfCnpj", FbDbType.VarChar).Value = pessoa.cpfCnpj;
+                    cmd.Parameters.Add("@EmailPessoa", FbDbType.VarChar).Value = pessoa.emailPessoa;
+                    cmd.Parameters.Add("@TelefonePessoa", FbDbType.VarChar).Value = pessoa.telefonePessoa;
+                    cmd.Parameters.Add("@Endereco", FbDbType.Integer).Value = pessoa.Endereco;
+
                     cmd.ExecuteNonQuery();
                 }
                 catch (FbException fbex)
