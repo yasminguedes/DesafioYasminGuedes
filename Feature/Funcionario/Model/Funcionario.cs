@@ -7,6 +7,6 @@ namespace ProjetoDesafio.Feature.Funcionario.Model
         public int IdFuncionario { get; set; }
         public string UsuarioFuncionario { get; set; }
         public string SenhaFuncionario { get; set; }
-        public Cargo Cargo { get; set; }
+        public int Cargo { get; set; }
     }
 }
