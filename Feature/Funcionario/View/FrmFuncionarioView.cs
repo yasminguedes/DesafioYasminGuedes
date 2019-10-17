@@ -10,29 +10,14 @@ using System.Windows.Forms;
 
 namespace ProjetoDesafio.Feature.Funcionario.View
 {
-    public partial class FuncionarioView : Form
+    public partial class FrmFuncionarioView : Form
     {
-        public FuncionarioView()
+        public FrmFuncionarioView()
         {
             InitializeComponent();
         }
         
         private void BtnCadastrar(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
         {
 
         }
@@ -44,6 +29,27 @@ namespace ProjetoDesafio.Feature.Funcionario.View
 
         private void txtNome_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void BtnListar(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEnviar_Click(object sender, EventArgs e)
+        {
+
 
         }
     }

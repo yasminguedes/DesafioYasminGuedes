@@ -1,6 +1,6 @@
 ﻿namespace ProjetoDesafio.Feature.Funcionario.View
 {
-    partial class FuncionarioView
+    partial class FrmFuncionarioView
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FuncionarioView));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmFuncionarioView));
             this.btnCadastrar = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnListar = new System.Windows.Forms.Button();
+            this.btnAlterar = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
             this.lblNome = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblEndereco = new System.Windows.Forms.Label();
@@ -86,47 +86,50 @@
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.BtnCadastrar);
             // 
-            // button2
+            // btnListar
             // 
-            this.button2.AccessibleDescription = "Listar";
-            this.button2.AccessibleName = "Listar";
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(114, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(96, 93);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Listar";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnListar.AccessibleDescription = "Listar";
+            this.btnListar.AccessibleName = "Listar";
+            this.btnListar.Image = ((System.Drawing.Image)(resources.GetObject("btnListar.Image")));
+            this.btnListar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnListar.Location = new System.Drawing.Point(114, 12);
+            this.btnListar.Name = "btnListar";
+            this.btnListar.Size = new System.Drawing.Size(96, 93);
+            this.btnListar.TabIndex = 1;
+            this.btnListar.Text = "Listar";
+            this.btnListar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.BtnListar);
             // 
-            // button3
+            // btnAlterar
             // 
-            this.button3.AccessibleDescription = "Alterar";
-            this.button3.AccessibleName = "Alterar";
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.Location = new System.Drawing.Point(216, 12);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(96, 93);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Alterar";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnAlterar.AccessibleDescription = "Alterar";
+            this.btnAlterar.AccessibleName = "Alterar";
+            this.btnAlterar.Image = ((System.Drawing.Image)(resources.GetObject("btnAlterar.Image")));
+            this.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAlterar.Location = new System.Drawing.Point(216, 12);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(96, 93);
+            this.btnAlterar.TabIndex = 2;
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
-            // button4
+            // btnExcluir
             // 
-            this.button4.AccessibleDescription = "Excluir";
-            this.button4.AccessibleName = "Excluir";
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button4.Location = new System.Drawing.Point(318, 12);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(96, 93);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Excluir";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnExcluir.AccessibleDescription = "Excluir";
+            this.btnExcluir.AccessibleName = "Excluir";
+            this.btnExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluir.Image")));
+            this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnExcluir.Location = new System.Drawing.Point(318, 12);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(96, 93);
+            this.btnExcluir.TabIndex = 3;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // lblNome
             // 
@@ -224,7 +227,6 @@
             this.lblComplemento.Size = new System.Drawing.Size(134, 25);
             this.lblComplemento.TabIndex = 12;
             this.lblComplemento.Text = "Complemento";
-            this.lblComplemento.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtComplemento
             // 
@@ -347,7 +349,6 @@
             this.dtNascimento.Name = "dtNascimento";
             this.dtNascimento.Size = new System.Drawing.Size(145, 30);
             this.dtNascimento.TabIndex = 21;
-            this.dtNascimento.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // lblSexo
             // 
@@ -386,7 +387,6 @@
             this.lblEmail.Size = new System.Drawing.Size(60, 25);
             this.lblEmail.TabIndex = 24;
             this.lblEmail.Text = "Email";
-            this.lblEmail.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtEmail
             // 
@@ -496,7 +496,7 @@
             this.lblUsuario.AccessibleName = "Usuario";
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(14, 538);
+            this.lblUsuario.Location = new System.Drawing.Point(7, 535);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(79, 25);
             this.lblUsuario.TabIndex = 34;
@@ -544,13 +544,14 @@
             this.btnEnviar.TabIndex = 38;
             this.btnEnviar.Text = "Enviar";
             this.btnEnviar.UseVisualStyleBackColor = true;
+            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
             // 
             // btnCancelar
             // 
             this.btnCancelar.AccessibleDescription = "Cancelar";
             this.btnCancelar.AccessibleName = "Cancelar";
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(428, 629);
+            this.btnCancelar.Location = new System.Drawing.Point(435, 626);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(141, 54);
             this.btnCancelar.TabIndex = 39;
@@ -558,7 +559,7 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.button5_Click);
             // 
-            // FuncionarioView
+            // FrmFuncionarioView
             // 
             this.AccessibleDescription = "Pais";
             this.AccessibleName = "Pais";
@@ -601,12 +602,12 @@
             this.Controls.Add(this.lblEndereco);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lblNome);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnExcluir);
+            this.Controls.Add(this.btnAlterar);
+            this.Controls.Add(this.btnListar);
             this.Controls.Add(this.btnCadastrar);
-            this.Name = "FuncionarioView";
-            this.Text = "FuncionarioView";
+            this.Name = "FrmFuncionarioView";
+            this.Text = "Texto da janela";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -615,9 +616,9 @@
         #endregion
 
         private System.Windows.Forms.Button btnCadastrar;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnListar;
+        private System.Windows.Forms.Button btnAlterar;
+        private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblEndereco;

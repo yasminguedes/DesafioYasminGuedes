@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Text;
 using FirebirdSql.Data.FirebirdClient;
 
 namespace ProjetoDesafio.Feature.Pessoa.Dao
@@ -8,21 +9,21 @@ namespace ProjetoDesafio.Feature.Pessoa.Dao
     {
         public static DataTable GetDados()
         {
-            using (FbConnection conexaoFirebird = Connection.GetInstancia().GetConexao())
+            var conexaoFirebird = Connection.GetInstancia().GetConexao();
             {
                 try
                 {
                     conexaoFirebird.Open();
-                    string mSql = @"Select * from Pessoa";
-                    FbCommand cmd = new FbCommand(mSql, conexaoFirebird);
-                    FbDataAdapter da = new FbDataAdapter(cmd);
-                    DataTable dt = new DataTable();
+                    const string mSql = @"Select * from Pessoa";
+                    var cmd = new FbCommand(mSql, conexaoFirebird);
+                    var da = new FbDataAdapter(cmd);
+                    var dt = new DataTable();
                     da.Fill(dt);
                     return dt;
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-                    throw ex;
+                    throw;
                 }
                 finally
                 {
@@ -31,18 +32,22 @@ namespace ProjetoDesafio.Feature.Pessoa.Dao
             }
         }
 
-        public static int Cadastrar(Pessoa.Model.Pessoa pessoa)
+        public static int Cadastrar(Pessoa.Model.PessoModel pessoa)
         {
-            using (FbConnection conexaoFireBird = Connection.GetInstancia().GetConexao())
+            var conexaoFireBird = Connection.GetInstancia().GetConexao();
+            conexaoFireBird.Open();
+
+            var commandText = new StringBuilder();
+
+            commandText.Append(@"INSERT into Pessoa(nome_pessoa, sexo, rg_ie, cpf_cnpj, email_pessoa, telefone_pessoa, id_endereco");
+            commandText.Append("Values(@NomePessoa, @Sexo, @RgIe, @CpfCnpj, @EmailPessoa, @TelefonePessoa, @Endereco) RETURNING id_pessoa");
+
+            var transaction = conexaoFireBird.BeginTransaction();
+            var cmd = new FbCommand(commandText.ToString(), conexaoFireBird, transaction);
+
             {
                 try
                 {
-                    conexaoFireBird.Open();
-                    string mSql = @"INSERT into Pessoa (nome_pessoa, sexo, rg_ie, cpf_cnpj, email_pessoa, telefone_pessoa, id_endereco)
-                                    Values(@NomePessoa, @Sexo, @RgIe, @CpfCnpj, @EmailPessoa, @TelefonePessoa, @Endereco) RETURNING id_pessoa";
-
-                    FbCommand cmd = new FbCommand(mSql, conexaoFireBird);
-
                     cmd.Parameters.Add("@NomePessoa", FbDbType.VarChar).Value = pessoa.NomePessoa;
                     cmd.Parameters.Add("@Sexo", FbDbType.VarChar).Value = pessoa.Sexo;
                     cmd.Parameters.Add("@RgIe", FbDbType.VarChar).Value = pessoa.RgIe;
@@ -51,33 +56,40 @@ namespace ProjetoDesafio.Feature.Pessoa.Dao
                     cmd.Parameters.Add("@TelefonePessoa", FbDbType.VarChar).Value = pessoa.TelefonePessoa;
                     cmd.Parameters.Add("@Endereco", FbDbType.Integer).Value = pessoa.Endereco;
 
-                    cmd.ExecuteNonQuery();
+                    
 
                     var idPessoa = int.Parse(cmd.ExecuteScalar().ToString());
+                    
+                    cmd.ExecuteNonQuery();
+
+                    transaction.Commit();
+
                     return idPessoa;
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-                    throw ex;
+                    transaction.Rollback();
+                    throw;
                 }
                 finally
                 {
+                    cmd.Dispose();
                     conexaoFireBird.Close();
                 }
             }
         }
 
-        public static Pessoa.Model.Pessoa Listar(int idP)
+        public static Model.PessoModel Listar(int idP)
         {
-            using (FbConnection conexaoFireBird = Connection.GetInstancia().GetConexao())
+            var conexaoFireBird = Connection.GetInstancia().GetConexao();
             {
                 try
                 {
                     conexaoFireBird.Open();
-                    string mSql = @"Select * from Pessoa p INNER JOIN endereco AS e on p.id_endereco = e.id_endereco Where id_pessoa = " + idP;
-                    FbCommand cmd = new FbCommand(mSql, conexaoFireBird);
-                    FbDataReader dr = cmd.ExecuteReader();
-                    Pessoa.Model.Pessoa pessoa = new Pessoa.Model.Pessoa();
+                    var mSql = @"Select * from Pessoa p INNER JOIN endereco AS e on p.id_endereco = e.id_endereco Where id_pessoa = " + idP;
+                    var cmd = new FbCommand(mSql, conexaoFireBird);
+                    var dr = cmd.ExecuteReader();
+                    var pessoa = new Pessoa.Model.PessoModel();
                     while (dr.Read())
                     {
                         pessoa.IdPessoa = Convert.ToInt32(dr["id_pessoa"]);
@@ -93,9 +105,9 @@ namespace ProjetoDesafio.Feature.Pessoa.Dao
 
                     return pessoa;
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-                    throw ex;
+                    throw;
                 }
                 finally
                 {
@@ -104,17 +116,17 @@ namespace ProjetoDesafio.Feature.Pessoa.Dao
             }
         }
 
-        public static void Alterar(Pessoa.Model.Pessoa pessoa)
+        public static void Alterar(Pessoa.Model.PessoModel pessoa)
         {
-            using (FbConnection conexaoFireBird = Connection.GetInstancia().GetConexao())
+            var conexaoFireBird = Connection.GetInstancia().GetConexao();
             {
                 try
                 {
                     conexaoFireBird.Open();
-                    string mSql = @"Update Pessoa set nome_pessoa= @NomePessoa, sexo= @Sexo, rg_ie= @RgIe, cpf_cnpj= @CpfCnpj,
+                    const string mSql = @"Update Pessoa set nome_pessoa= @NomePessoa, sexo= @Sexo, rg_ie= @RgIe, cpf_cnpj= @CpfCnpj,
                                     email_pessoa= @EmailPessoa, telefone_pessoa= @TelefonePessoa,
                                     id_endereco= @Endereco WHERE id_pessoa= @IdPessoa";
-                    FbCommand cmd = new FbCommand(mSql, conexaoFireBird);
+                    var cmd = new FbCommand(mSql, conexaoFireBird);
 
                     cmd.Parameters.Add("@NomePessoa", FbDbType.VarChar).Value = pessoa.NomePessoa;
                     cmd.Parameters.Add("@Sexo", FbDbType.VarChar).Value = pessoa.Sexo;
@@ -126,9 +138,9 @@ namespace ProjetoDesafio.Feature.Pessoa.Dao
 
                     cmd.ExecuteNonQuery();
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-                    throw ex;
+                    throw;
                 }
                 finally
                 {

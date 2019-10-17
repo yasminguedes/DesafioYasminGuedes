@@ -8,21 +8,21 @@ namespace ProjetoDesafio.Feature.Endereco.Dao
     {
         public static DataTable RecuperarEnderecos()
         {
-            using (var conexaoFirebird = Connection.GetInstancia().GetConexao())
+            var conexaoFirebird = Connection.GetInstancia().GetConexao();
             {
                 try
                 {
                     conexaoFirebird.Open();
                     var mSql = @"Select * from Endereco";
-                    FbCommand cmd = new FbCommand(mSql, conexaoFirebird);
-                    FbDataAdapter da = new FbDataAdapter(cmd);
-                    DataTable dt = new DataTable();
+                    var cmd = new FbCommand(mSql, conexaoFirebird);
+                    var da = new FbDataAdapter(cmd);
+                    var dt = new DataTable();
                     da.Fill(dt);
                     return dt;
                 }
-                catch (FbException fbex)
+                catch (FbException)
                 {
-                    throw fbex;
+                    throw;
                 }
                 finally
                 {
@@ -31,17 +31,17 @@ namespace ProjetoDesafio.Feature.Endereco.Dao
             }
         }
 
-        public static int Fb_InserirDados(Model.Endereco endereco)
+        public static int Cadastrar(Model.Endereco endereco)
         {
-            using (FbConnection conexaoFireBird = Connection.GetInstancia().GetConexao())
+            var conexaoFireBird = Connection.GetInstancia().GetConexao();
             {
                 try
                 {
                     conexaoFireBird.Open();
-                    string mSql = @"INSERT into Endereco (cep, rua, numero, complemento, bairro, cidade, estado, pais )
+                    const string mSql = @"INSERT into Endereco (cep, rua, numero, complemento, bairro, cidade, estado, pais )
                                     Values(@Cep, @Rua, @Numero, @Complemento, @Bairro, @Cidade, @Estado, @Pais )";
 
-                    FbCommand cmd = new FbCommand(mSql, conexaoFireBird);
+                    var cmd = new FbCommand(mSql, conexaoFireBird);
 
                     cmd.Parameters.Add("@Cep", FbDbType.VarChar).Value = endereco.Cep;
                     cmd.Parameters.Add("@Rua", FbDbType.VarChar).Value = endereco.Rua;
@@ -57,9 +57,9 @@ namespace ProjetoDesafio.Feature.Endereco.Dao
                     var idEndereco = int.Parse(cmd.ExecuteScalar().ToString());
                     return idEndereco;
                 }
-                catch (FbException fbex)
+                catch (FbException)
                 {
-                    throw fbex;
+                    throw;
                 }
                 finally
                 {
@@ -68,17 +68,17 @@ namespace ProjetoDesafio.Feature.Endereco.Dao
             }
         }
 
-        public static Model.Endereco Fb_ProcuraDados(int id)
+        public static Model.Endereco Listar(int id)
         {
-            using (FbConnection conexaoFireBird = Connection.GetInstancia().GetConexao())
+            using (var conexaoFireBird = Connection.GetInstancia().GetConexao())
             {
                 try
                 {
                     conexaoFireBird.Open();
-                    string mSql = "Select * from Endereco Where id_endereco = " + id;
-                    FbCommand cmd = new FbCommand(mSql, conexaoFireBird);
-                    FbDataReader dr = cmd.ExecuteReader();
-                    Model.Endereco endereco = new Model.Endereco();
+                    var mSql = "Select * from Endereco Where id_endereco = " + id;
+                    var cmd = new FbCommand(mSql, conexaoFireBird);
+                    var dr = cmd.ExecuteReader();
+                    var endereco = new Model.Endereco();
                     while (dr.Read())
                     {
                         endereco.IdEndereco = Convert.ToInt32(dr["id_endereco"]);
@@ -94,9 +94,9 @@ namespace ProjetoDesafio.Feature.Endereco.Dao
 
                     return endereco;
                 }
-                catch (FbException fbex)
+                catch (FbException)
                 {
-                    throw fbex;
+                    throw;
                 }
                 finally
                 {
@@ -105,16 +105,16 @@ namespace ProjetoDesafio.Feature.Endereco.Dao
             }
         }
 
-        public static void Fb_AlterarDados(Model.Endereco endereco)
+        public static void Alterar(Model.Endereco endereco)
         {
-            using (FbConnection conexaoFireBird = Connection.GetInstancia().GetConexao())
+            var conexaoFireBird = Connection.GetInstancia().GetConexao();
             {
                 try
                 {
                     conexaoFireBird.Open();
-                    string mSql = @"Update Endereco set cep= @Cep, rua= @Rua, numero= @Numero, complemento= @Complemento,
+                    const string mSql = @"Update Endereco set cep= @Cep, rua= @Rua, numero= @Numero, complemento= @Complemento,
                                     bairro= @bairro, cidade= @Cidade, estado= @Estado, pais= @Pais WHERE id_endereco= @IdEndereco";
-                    FbCommand cmd = new FbCommand(mSql, conexaoFireBird);
+                    var cmd = new FbCommand(mSql, conexaoFireBird);
 
                     cmd.Parameters.Add("@Cep", FbDbType.VarChar).Value = endereco.Cep;
                     cmd.Parameters.Add("@Rua", FbDbType.VarChar).Value = endereco.Rua;
@@ -127,9 +127,9 @@ namespace ProjetoDesafio.Feature.Endereco.Dao
 
                     cmd.ExecuteNonQuery();
                 }
-                catch (FbException fbex)
+                catch (FbException)
                 {
-                    throw fbex;
+                    throw;
                 }
                 finally
                 {

@@ -64,11 +64,11 @@
     <Compile Include="Connection.cs" />
     <Compile Include="Feature\Endereco\Dao\EnderecoDao.cs" />
     <Compile Include="Feature\Funcionario\Dao\FuncionarioDao.cs" />
-    <Compile Include="Feature\Funcionario\View\FuncionarioView.cs">
+    <Compile Include="Feature\Funcionario\View\FrmFuncionarioView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Feature\Funcionario\View\FuncionarioView.Designer.cs">
-      <DependentUpon>FuncionarioView.cs</DependentUpon>
+    <Compile Include="Feature\Funcionario\View\FrmFuncionarioView.Designer.cs">
+      <DependentUpon>FrmFuncionarioView.cs</DependentUpon>
     </Compile>
     <Compile Include="Feature\Pessoa\Dao\PessoaDao.cs" />
     <Compile Include="Model\Administrador.cs" />
@@ -82,14 +82,14 @@
     <Compile Include="Model\Marca.cs" />
     <Compile Include="Model\MovimentacaoProduto.cs" />
     <Compile Include="Model\Pedido.cs" />
-    <Compile Include="Feature\Pessoa\Model\Pessoa.cs" />
+    <Compile Include="Feature\Pessoa\Model\PessoModel.cs" />
     <Compile Include="Feature\Produto\Model\Produto.cs" />
     <Compile Include="Model\Promocao.cs" />
     <Compile Include="Model\PromocaoProduto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Feature\Funcionario\View\FuncionarioView.resx">
-      <DependentUpon>FuncionarioView.cs</DependentUpon>
+    <EmbeddedResource Include="Feature\Funcionario\View\FrmFuncionarioView.resx">
+      <DependentUpon>FrmFuncionarioView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

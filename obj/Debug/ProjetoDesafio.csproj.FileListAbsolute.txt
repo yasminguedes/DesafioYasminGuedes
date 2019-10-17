@@ -13,3 +13,4 @@ C:\Users\gabri\Desktop\Desafio\DesafioYasminGuedes\obj\Debug\ProjetoDesafio.cspr
 C:\Users\gabri\Desktop\Desafio\DesafioYasminGuedes\obj\Debug\ProjetoDesafio.csproj.CopyComplete
 C:\Users\gabri\Desktop\Desafio\DesafioYasminGuedes\obj\Debug\ProjetoDesafio.exe
 C:\Users\gabri\Desktop\Desafio\DesafioYasminGuedes\obj\Debug\ProjetoDesafio.pdb
+C:\Users\gabri\Desktop\Desafio\DesafioYasminGuedes\obj\Debug\ProjetoDesafio.Feature.Funcionario.View.FuncionarioView.resources

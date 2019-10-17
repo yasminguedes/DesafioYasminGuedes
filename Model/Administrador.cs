@@ -7,7 +7,7 @@ using ProjetoDesafio.Feature.Pessoa.Model;
 
 namespace ProjetoDesafio.Model
 {
-    public class Administrador: Pessoa
+    public class Administrador: PessoModel
     {
         public int IdAdministrador { get; set; }
         public string UsuarioAdministrador { get; set; }

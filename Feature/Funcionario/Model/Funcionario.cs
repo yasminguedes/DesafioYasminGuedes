@@ -2,7 +2,7 @@
 
 namespace ProjetoDesafio.Feature.Funcionario.Model
 {
-    public class Funcionario: Pessoa.Model.Pessoa
+    public class Funcionario: Pessoa.Model.PessoModel
     {
         public int IdFuncionario { get; set; }
         public string UsuarioFuncionario { get; set; }
