@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ProjetoDesafio.Feature.Pessoa.Model;
 
 namespace ProjetoDesafio.Model
 {
     public class Cliente: Pessoa
     {
-        public int idCliente { get; set; }
-        public string profissaoCliente { get; set; }
-        public DateTime dataCadastro { get; set; }
+        public int IdCliente { get; set; }
+        public string ProfissaoCliente { get; set; }
+        public DateTime DataCadastro { get; set; }
     }
 }

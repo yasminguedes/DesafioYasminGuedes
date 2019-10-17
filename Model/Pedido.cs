@@ -8,11 +8,11 @@ namespace ProjetoDesafio.Model
 {
     public class Pedido
     {
-        public int idPedido { get; set; }
-        public DateTime dataVenda { get; set; }
-        public int qtdeVenda { get; set; }
-        public string formaPagamento { get; set; }
-        public double totalVenda { get; set; }
+        public int IdPedido { get; set; }
+        public DateTime DataVenda { get; set; }
+        public int QtdeVenda { get; set; }
+        public string FormaPagamento { get; set; }
+        public double TotalVenda { get; set; }
         public Cliente Cliente { get; set; }
     }
 }

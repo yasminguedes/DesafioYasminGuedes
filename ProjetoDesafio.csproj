@@ -62,8 +62,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connection.cs" />
-    <Compile Include="DAO\EnderecoDAO.cs" />
-    <Compile Include="DAO\PessoaDAO.cs" />
+    <Compile Include="Feature\Endereco\Dao\EnderecoDao.cs" />
+    <Compile Include="Feature\Funcionario\Dao\FuncionarioDao.cs" />
+    <Compile Include="Feature\Pessoa\Dao\PessoaDao.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,15 +75,15 @@
     <Compile Include="Model\Cargo.cs" />
     <Compile Include="Model\Categoria.cs" />
     <Compile Include="Model\Cliente.cs" />
-    <Compile Include="Model\Endereco.cs" />
+    <Compile Include="Feature\Endereco\Model\Endereco.cs" />
     <Compile Include="Model\Fornecedor.cs" />
-    <Compile Include="Model\Funcionario.cs" />
+    <Compile Include="Feature\Funcionario\Model\Funcionario.cs" />
     <Compile Include="Model\ItemPedido.cs" />
     <Compile Include="Model\Marca.cs" />
     <Compile Include="Model\MovimentacaoProduto.cs" />
     <Compile Include="Model\Pedido.cs" />
-    <Compile Include="Model\Pessoa.cs" />
-    <Compile Include="Model\Produto.cs" />
+    <Compile Include="Feature\Pessoa\Model\Pessoa.cs" />
+    <Compile Include="Feature\Produto\Model\Produto.cs" />
     <Compile Include="Model\Promocao.cs" />
     <Compile Include="Model\PromocaoProduto.cs" />
     <Compile Include="Program.cs" />
@@ -111,8 +112,15 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controller\" />
-    <Folder Include="View\" />
+    <Folder Include="Feature\Endereco\Controller\" />
+    <Folder Include="Feature\Endereco\View\" />
+    <Folder Include="Feature\Funcionario\Controller\" />
+    <Folder Include="Feature\Funcionario\View\" />
+    <Folder Include="Feature\Pessoa\Controller\" />
+    <Folder Include="Feature\Pessoa\View\" />
+    <Folder Include="Feature\Produto\Controller\" />
+    <Folder Include="Feature\Produto\Dao\" />
+    <Folder Include="Feature\Produto\View\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

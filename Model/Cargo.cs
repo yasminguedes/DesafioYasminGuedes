@@ -8,7 +8,7 @@ namespace ProjetoDesafio.Model
 {
     public class Cargo
     {
-        public int idCargo { get; set; }
-        public string nomeCargo { get; set; }
+        public int IdCargo { get; set; }
+        public string NomeCargo { get; set; }
     }
 }

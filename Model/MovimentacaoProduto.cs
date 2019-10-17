@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ProjetoDesafio.Feature.Produto.Model;
 
 namespace ProjetoDesafio.Model
 {
     public class MovimentacaoProduto
     {
-        public int idMovimentacaoEstoque { get; set; }
-        public DateTime dataMovimentacao { get; set; }
-        public string tipoMovimentacao { get; set; }
-        public int qtdeEntrada { get; set; }
-        public int qtdeSaida { get; set; }
-        public int qtdeEstoque { get; set; }
+        public int IdMovimentacaoEstoque { get; set; }
+        public DateTime DataMovimentacao { get; set; }
+        public string TipoMovimentacao { get; set; }
+        public int QtdeEntrada { get; set; }
+        public int QtdeSaida { get; set; }
+        public int QtdeEstoque { get; set; }
         public Produto Produto { get; set; }
     }
 }

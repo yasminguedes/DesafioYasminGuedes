@@ -11,15 +11,15 @@ namespace ProjetoDesafio
 {
     public class Connection
     {
-        private static readonly Connection instanciaFireBird = new Connection();
+        private static readonly Connection InstanciaFireBird = new Connection();
         private Connection(){}
 
-        public static Connection getInstancia()
+        public static Connection GetInstancia()
         {
-            return instanciaFireBird;
+            return InstanciaFireBird;
         }
 
-        public FbConnection getConexao()
+        public FbConnection GetConexao()
         {
             string conn = ConfigurationManager.ConnectionStrings["FireBirdConnectionString"].ToString();
             return new FbConnection(conn);

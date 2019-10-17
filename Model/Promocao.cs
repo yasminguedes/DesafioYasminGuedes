@@ -8,12 +8,12 @@ namespace ProjetoDesafio.Model
 {
     public class Promocao
     {
-        public int idPromocao { get; set; }
-        public string nomePromocao { get; set; }
-        public string statusPromocao { get; set; }
-        public double desconto { get; set; }
-        public DateTime inicioPromocao { get; set; }
-        public DateTime terminoPromocao { get; set; }
-        public DayOfWeek diaSemana { get; set; }
+        public int IdPromocao { get; set; }
+        public string NomePromocao { get; set; }
+        public string StatusPromocao { get; set; }
+        public double Desconto { get; set; }
+        public DateTime InicioPromocao { get; set; }
+        public DateTime TerminoPromocao { get; set; }
+        public DayOfWeek DiaSemana { get; set; }
     }
 }
