@@ -2,7 +2,7 @@
 
 namespace ProjetoDesafio.Feature.Pessoa.Model
 {
-    public class PessoModel 
+    public class PessoaModel 
     {
         public int IdPessoa { get; set; }
         public string NomePessoa { get; set; }
@@ -12,5 +12,6 @@ namespace ProjetoDesafio.Feature.Pessoa.Model
         public string EmailPessoa { get; set; }
         public string TelefonePessoa { get; set; }
         public object Endereco { get; set; }
+        public int IdEndereco { get; set; }
     }
 }

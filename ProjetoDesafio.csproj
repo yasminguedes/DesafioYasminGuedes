@@ -62,7 +62,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connection.cs" />
+    <Compile Include="Feature\Endereco\Controller\EnderecoController.cs" />
     <Compile Include="Feature\Endereco\Dao\EnderecoDao.cs" />
+    <Compile Include="Feature\Funcionario\Controller\FuncionarioController.cs" />
     <Compile Include="Feature\Funcionario\Dao\FuncionarioDao.cs" />
     <Compile Include="Feature\Funcionario\View\FrmFuncionarioView.cs">
       <SubType>Form</SubType>
@@ -70,19 +72,20 @@
     <Compile Include="Feature\Funcionario\View\FrmFuncionarioView.Designer.cs">
       <DependentUpon>FrmFuncionarioView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Feature\Pessoa\Controller\PessoaController.cs" />
     <Compile Include="Feature\Pessoa\Dao\PessoaDao.cs" />
     <Compile Include="Model\Administrador.cs" />
     <Compile Include="Model\Cargo.cs" />
     <Compile Include="Model\Categoria.cs" />
     <Compile Include="Model\Cliente.cs" />
-    <Compile Include="Feature\Endereco\Model\Endereco.cs" />
+    <Compile Include="Feature\Endereco\Model\EnderecoModel.cs" />
     <Compile Include="Model\Fornecedor.cs" />
-    <Compile Include="Feature\Funcionario\Model\Funcionario.cs" />
+    <Compile Include="Feature\Funcionario\Model\FuncionarioModel.cs" />
     <Compile Include="Model\ItemPedido.cs" />
     <Compile Include="Model\Marca.cs" />
     <Compile Include="Model\MovimentacaoProduto.cs" />
     <Compile Include="Model\Pedido.cs" />
-    <Compile Include="Feature\Pessoa\Model\PessoModel.cs" />
+    <Compile Include="Feature\Pessoa\Model\PessoaModel.cs" />
     <Compile Include="Feature\Produto\Model\Produto.cs" />
     <Compile Include="Model\Promocao.cs" />
     <Compile Include="Model\PromocaoProduto.cs" />
@@ -115,11 +118,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Feature\Endereco\Controller\" />
     <Folder Include="Feature\Endereco\View\" />
-    <Folder Include="Feature\Funcionario\Controller\" />
     <Folder Include="Feature\icones\" />
-    <Folder Include="Feature\Pessoa\Controller\" />
     <Folder Include="Feature\Pessoa\View\" />
     <Folder Include="Feature\Produto\Controller\" />
     <Folder Include="Feature\Produto\Dao\" />

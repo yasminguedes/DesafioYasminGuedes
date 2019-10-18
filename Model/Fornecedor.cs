@@ -7,7 +7,7 @@ using ProjetoDesafio.Feature.Pessoa.Model;
 
 namespace ProjetoDesafio.Model
 {
-   public class Fornecedor: PessoModel
+   public class Fornecedor: PessoaModel
     {
         public int IdFornecedor { get; set; }
         public string RazaoSocial { get; set; }

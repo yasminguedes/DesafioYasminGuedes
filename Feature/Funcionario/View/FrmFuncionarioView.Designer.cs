@@ -48,7 +48,7 @@
             this.lblEstado = new System.Windows.Forms.Label();
             this.cmbEstado = new System.Windows.Forms.ComboBox();
             this.lblPais = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPais = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dtNascimento = new System.Windows.Forms.DateTimePicker();
             this.lblSexo = new System.Windows.Forms.Label();
@@ -81,10 +81,9 @@
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(96, 93);
             this.btnCadastrar.TabIndex = 0;
-            this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCadastrar.UseVisualStyleBackColor = true;
-            this.btnCadastrar.Click += new System.EventHandler(this.BtnCadastrar);
+            this.btnCadastrar.Click += new System.EventHandler(this.BtnCadastrar_Click);
             // 
             // btnListar
             // 
@@ -96,10 +95,9 @@
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(96, 93);
             this.btnListar.TabIndex = 1;
-            this.btnListar.Text = "Listar";
             this.btnListar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnListar.UseVisualStyleBackColor = true;
-            this.btnListar.Click += new System.EventHandler(this.BtnListar);
+            this.btnListar.Click += new System.EventHandler(this.BtnListar_Click);
             // 
             // btnAlterar
             // 
@@ -111,7 +109,6 @@
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(96, 93);
             this.btnAlterar.TabIndex = 2;
-            this.btnAlterar.Text = "Alterar";
             this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAlterar.UseVisualStyleBackColor = true;
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
@@ -119,14 +116,14 @@
             // btnExcluir
             // 
             this.btnExcluir.AccessibleDescription = "Excluir";
-            this.btnExcluir.AccessibleName = "Excluir";
+            this.btnExcluir.AccessibleName = "";
             this.btnExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluir.Image")));
             this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnExcluir.Location = new System.Drawing.Point(318, 12);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(96, 93);
             this.btnExcluir.TabIndex = 3;
-            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.Text = "";
             this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
@@ -150,7 +147,6 @@
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(310, 30);
             this.txtNome.TabIndex = 5;
-            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
             // lblEndereco
             // 
@@ -321,13 +317,13 @@
             this.lblPais.TabIndex = 18;
             this.lblPais.Text = "País";
             // 
-            // textBox1
+            // txtPais
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(695, 303);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(193, 30);
-            this.textBox1.TabIndex = 19;
+            this.txtPais.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPais.Location = new System.Drawing.Point(695, 303);
+            this.txtPais.Name = "txtPais";
+            this.txtPais.Size = new System.Drawing.Size(193, 30);
+            this.txtPais.TabIndex = 19;
             // 
             // label1
             // 
@@ -345,7 +341,7 @@
             // 
             this.dtNascimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtNascimento.Location = new System.Drawing.Point(201, 367);
+            this.dtNascimento.Location = new System.Drawing.Point(220, 364);
             this.dtNascimento.Name = "dtNascimento";
             this.dtNascimento.Size = new System.Drawing.Size(145, 30);
             this.dtNascimento.TabIndex = 21;
@@ -557,7 +553,7 @@
             this.btnCancelar.TabIndex = 39;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.button5_Click);
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // FrmFuncionarioView
             // 
@@ -586,7 +582,7 @@
             this.Controls.Add(this.lblSexo);
             this.Controls.Add(this.dtNascimento);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPais);
             this.Controls.Add(this.lblPais);
             this.Controls.Add(this.cmbEstado);
             this.Controls.Add(this.lblEstado);
@@ -634,7 +630,7 @@
         private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.ComboBox cmbEstado;
         private System.Windows.Forms.Label lblPais;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPais;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dtNascimento;
         private System.Windows.Forms.Label lblSexo;
