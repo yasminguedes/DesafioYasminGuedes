@@ -1,4 +1,7 @@
-﻿using ProjetoDesafio.Model;
+﻿using System;
+using System.Windows.Forms;
+using ProjetoDesafio.Feature.Endereco.Model;
+using ProjetoDesafio.Model;
 
 namespace ProjetoDesafio.Feature.Pessoa.Model
 {
@@ -11,7 +14,13 @@ namespace ProjetoDesafio.Feature.Pessoa.Model
         public string CpfCnpj { get; set; }
         public string EmailPessoa { get; set; }
         public string TelefonePessoa { get; set; }
-        public object Endereco { get; set; }
-        public int IdEndereco { get; set; }
+        public DateTime DataNascimento { get; set; }
+        public EnderecoModel Endereco { get; set; }
+
+        public PessoaModel()
+        {
+            Endereco = new EnderecoModel();
+        }
+        
     }
 }

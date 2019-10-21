@@ -33,15 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.Firebird, Version=7.1.1.0, Culture=neutral, PublicKeyToken=42d22d092898e5f8, processorArchitecture=MSIL">
-      <HintPath>packages\EntityFramework.Firebird.7.1.1\lib\net452\EntityFramework.Firebird.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="FirebirdSql.Data.FirebirdClient, Version=7.1.1.0, Culture=neutral, PublicKeyToken=3750abcc3150b00c, processorArchitecture=MSIL">
       <HintPath>packages\FirebirdSql.Data.FirebirdClient.7.1.1\lib\net452\FirebirdSql.Data.FirebirdClient.dll</HintPath>
     </Reference>
@@ -62,20 +53,33 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connection.cs" />
+    <Compile Include="Feature\Cargo\Dao\CargoDao.cs" />
     <Compile Include="Feature\Endereco\Controller\EnderecoController.cs" />
     <Compile Include="Feature\Endereco\Dao\EnderecoDao.cs" />
-    <Compile Include="Feature\Funcionario\Controller\FuncionarioController.cs" />
-    <Compile Include="Feature\Funcionario\Dao\FuncionarioDao.cs" />
-    <Compile Include="Feature\Funcionario\View\FrmFuncionarioView.cs">
+    <Compile Include="Feature\FrmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Feature\Funcionario\View\FrmFuncionarioView.Designer.cs">
-      <DependentUpon>FrmFuncionarioView.cs</DependentUpon>
+    <Compile Include="Feature\FrmMenu.Designer.cs">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Feature\Funcionario\Controller\FuncionarioController.cs" />
+    <Compile Include="Feature\Funcionario\Dao\FuncionarioDao.cs" />
+    <Compile Include="Feature\Funcionario\View\FrmFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Feature\Funcionario\View\FrmFuncionario.Designer.cs">
+      <DependentUpon>FrmFuncionario.cs</DependentUpon>
     </Compile>
     <Compile Include="Feature\Pessoa\Controller\PessoaController.cs" />
     <Compile Include="Feature\Pessoa\Dao\PessoaDao.cs" />
+    <Compile Include="Feature\TelaLogin\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Feature\TelaLogin\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\Administrador.cs" />
-    <Compile Include="Model\Cargo.cs" />
+    <Compile Include="Feature\Cargo\Model\CargoModel.cs" />
     <Compile Include="Model\Categoria.cs" />
     <Compile Include="Model\Cliente.cs" />
     <Compile Include="Feature\Endereco\Model\EnderecoModel.cs" />
@@ -91,8 +95,14 @@
     <Compile Include="Model\PromocaoProduto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Feature\Funcionario\View\FrmFuncionarioView.resx">
-      <DependentUpon>FrmFuncionarioView.cs</DependentUpon>
+    <EmbeddedResource Include="Feature\FrmMenu.resx">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Feature\Funcionario\View\FrmFuncionario.resx">
+      <DependentUpon>FrmFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Feature\TelaLogin\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
