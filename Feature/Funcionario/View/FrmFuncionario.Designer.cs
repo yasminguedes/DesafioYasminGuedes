@@ -1,6 +1,6 @@
 ﻿namespace ProjetoDesafio.Feature.Funcionario.View
 {
-    partial class FrmFuncionarioView
+    partial class FrmFuncionario
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmFuncionarioView));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmFuncionario));
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnListar = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
@@ -67,20 +67,34 @@
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.lblSenha = new System.Windows.Forms.Label();
             this.mskSenha = new System.Windows.Forms.MaskedTextBox();
-            this.btnEnviar = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.Informacoes = new System.Windows.Forms.GroupBox();
+            this.Endereco = new System.Windows.Forms.GroupBox();
+            this.txtBairro = new System.Windows.Forms.TextBox();
+            this.lblBairro = new System.Windows.Forms.Label();
+            this.Contato = new System.Windows.Forms.GroupBox();
+            this.Acesso = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.maskSenha = new System.Windows.Forms.MaskedTextBox();
+            this.Informacoes.SuspendLayout();
+            this.Endereco.SuspendLayout();
+            this.Contato.SuspendLayout();
+            this.Acesso.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCadastrar
             // 
             this.btnCadastrar.AccessibleDescription = "Cadastrar";
             this.btnCadastrar.AccessibleName = "Cadastrar";
+            this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrar.Image")));
             this.btnCadastrar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnCadastrar.Location = new System.Drawing.Point(12, 12);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(96, 93);
+            this.btnCadastrar.Size = new System.Drawing.Size(96, 118);
             this.btnCadastrar.TabIndex = 0;
+            this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.BtnCadastrar_Click);
@@ -89,50 +103,53 @@
             // 
             this.btnListar.AccessibleDescription = "Listar";
             this.btnListar.AccessibleName = "Listar";
+            this.btnListar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListar.Image = ((System.Drawing.Image)(resources.GetObject("btnListar.Image")));
             this.btnListar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnListar.Location = new System.Drawing.Point(114, 12);
             this.btnListar.Name = "btnListar";
-            this.btnListar.Size = new System.Drawing.Size(96, 93);
+            this.btnListar.Size = new System.Drawing.Size(96, 118);
             this.btnListar.TabIndex = 1;
+            this.btnListar.Text = "Listar";
             this.btnListar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnListar.UseVisualStyleBackColor = true;
-            this.btnListar.Click += new System.EventHandler(this.BtnListar_Click);
             // 
             // btnAlterar
             // 
             this.btnAlterar.AccessibleDescription = "Alterar";
             this.btnAlterar.AccessibleName = "Alterar";
+            this.btnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlterar.Image = ((System.Drawing.Image)(resources.GetObject("btnAlterar.Image")));
             this.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnAlterar.Location = new System.Drawing.Point(216, 12);
             this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(96, 93);
+            this.btnAlterar.Size = new System.Drawing.Size(96, 118);
             this.btnAlterar.TabIndex = 2;
+            this.btnAlterar.Text = "Alterar";
             this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAlterar.UseVisualStyleBackColor = true;
-            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnExcluir
             // 
             this.btnExcluir.AccessibleDescription = "Excluir";
             this.btnExcluir.AccessibleName = "";
+            this.btnExcluir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluir.Image")));
             this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnExcluir.Location = new System.Drawing.Point(318, 12);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(96, 93);
+            this.btnExcluir.Size = new System.Drawing.Size(96, 118);
             this.btnExcluir.TabIndex = 3;
-            this.btnExcluir.Text = "";
+            this.btnExcluir.Text = "Excluir";
             this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnExcluir.UseVisualStyleBackColor = true;
-            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // lblNome
             // 
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.Location = new System.Drawing.Point(7, 188);
+            this.lblNome.Location = new System.Drawing.Point(5, 62);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(64, 25);
             this.lblNome.TabIndex = 4;
@@ -143,9 +160,9 @@
             this.txtNome.AccessibleDescription = "Nome";
             this.txtNome.AccessibleName = "Nome";
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(104, 185);
+            this.txtNome.Location = new System.Drawing.Point(102, 59);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(310, 30);
+            this.txtNome.Size = new System.Drawing.Size(545, 30);
             this.txtNome.TabIndex = 5;
             // 
             // lblEndereco
@@ -154,7 +171,7 @@
             this.lblEndereco.AccessibleName = "Endereco";
             this.lblEndereco.AutoSize = true;
             this.lblEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEndereco.Location = new System.Drawing.Point(7, 250);
+            this.lblEndereco.Location = new System.Drawing.Point(10, 123);
             this.lblEndereco.Name = "lblEndereco";
             this.lblEndereco.Size = new System.Drawing.Size(96, 25);
             this.lblEndereco.TabIndex = 6;
@@ -165,9 +182,9 @@
             this.txtRua.AccessibleDescription = "Rua";
             this.txtRua.AccessibleName = "Rua";
             this.txtRua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRua.Location = new System.Drawing.Point(104, 245);
+            this.txtRua.Location = new System.Drawing.Point(114, 120);
             this.txtRua.Name = "txtRua";
-            this.txtRua.Size = new System.Drawing.Size(310, 30);
+            this.txtRua.Size = new System.Drawing.Size(532, 30);
             this.txtRua.TabIndex = 7;
             // 
             // lblNumero
@@ -176,18 +193,18 @@
             this.lblNumero.AccessibleName = "Numero";
             this.lblNumero.AutoSize = true;
             this.lblNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumero.Location = new System.Drawing.Point(430, 250);
+            this.lblNumero.Location = new System.Drawing.Point(10, 179);
             this.lblNumero.Name = "lblNumero";
-            this.lblNumero.Size = new System.Drawing.Size(33, 25);
+            this.lblNumero.Size = new System.Drawing.Size(81, 25);
             this.lblNumero.TabIndex = 8;
-            this.lblNumero.Text = "Nº";
+            this.lblNumero.Text = "Número";
             // 
             // txtNumero
             // 
             this.txtNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumero.Location = new System.Drawing.Point(469, 247);
+            this.txtNumero.Location = new System.Drawing.Point(114, 178);
             this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(100, 30);
+            this.txtNumero.Size = new System.Drawing.Size(142, 30);
             this.txtNumero.TabIndex = 9;
             // 
             // lblCep
@@ -196,7 +213,7 @@
             this.lblCep.AccessibleName = "CEP";
             this.lblCep.AutoSize = true;
             this.lblCep.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCep.Location = new System.Drawing.Point(616, 188);
+            this.lblCep.Location = new System.Drawing.Point(10, 62);
             this.lblCep.Name = "lblCep";
             this.lblCep.Size = new System.Drawing.Size(53, 25);
             this.lblCep.TabIndex = 10;
@@ -207,9 +224,9 @@
             this.txtCep.AccessibleDescription = "Cep";
             this.txtCep.AccessibleName = "CEP";
             this.txtCep.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCep.Location = new System.Drawing.Point(695, 185);
+            this.txtCep.Location = new System.Drawing.Point(114, 59);
             this.txtCep.Name = "txtCep";
-            this.txtCep.Size = new System.Drawing.Size(195, 30);
+            this.txtCep.Size = new System.Drawing.Size(197, 30);
             this.txtCep.TabIndex = 11;
             // 
             // lblComplemento
@@ -218,7 +235,7 @@
             this.lblComplemento.AccessibleName = "Complemento";
             this.lblComplemento.AutoSize = true;
             this.lblComplemento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblComplemento.Location = new System.Drawing.Point(575, 250);
+            this.lblComplemento.Location = new System.Drawing.Point(296, 179);
             this.lblComplemento.Name = "lblComplemento";
             this.lblComplemento.Size = new System.Drawing.Size(134, 25);
             this.lblComplemento.TabIndex = 12;
@@ -229,9 +246,9 @@
             this.txtComplemento.AccessibleDescription = "Complemento";
             this.txtComplemento.AccessibleName = "Complemento";
             this.txtComplemento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtComplemento.Location = new System.Drawing.Point(715, 247);
+            this.txtComplemento.Location = new System.Drawing.Point(451, 176);
             this.txtComplemento.Name = "txtComplemento";
-            this.txtComplemento.Size = new System.Drawing.Size(175, 30);
+            this.txtComplemento.Size = new System.Drawing.Size(195, 30);
             this.txtComplemento.TabIndex = 13;
             // 
             // lblCidade
@@ -240,7 +257,7 @@
             this.lblCidade.AccessibleName = "Cidade";
             this.lblCidade.AutoSize = true;
             this.lblCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCidade.Location = new System.Drawing.Point(7, 303);
+            this.lblCidade.Location = new System.Drawing.Point(10, 292);
             this.lblCidade.Name = "lblCidade";
             this.lblCidade.Size = new System.Drawing.Size(75, 25);
             this.lblCidade.TabIndex = 14;
@@ -251,9 +268,9 @@
             this.txtCidade.AccessibleDescription = "Cidade";
             this.txtCidade.AccessibleName = "Cidade";
             this.txtCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCidade.Location = new System.Drawing.Point(104, 303);
+            this.txtCidade.Location = new System.Drawing.Point(114, 292);
             this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(179, 30);
+            this.txtCidade.Size = new System.Drawing.Size(532, 30);
             this.txtCidade.TabIndex = 15;
             // 
             // lblEstado
@@ -262,7 +279,7 @@
             this.lblEstado.AccessibleName = "Estado";
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado.Location = new System.Drawing.Point(289, 306);
+            this.lblEstado.Location = new System.Drawing.Point(330, 62);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(73, 25);
             this.lblEstado.TabIndex = 16;
@@ -302,7 +319,7 @@
             "São Paulo (SP)",
             "Sergipe (SE)",
             "Tocantins (TO)"});
-            this.cmbEstado.Location = new System.Drawing.Point(368, 303);
+            this.cmbEstado.Location = new System.Drawing.Point(409, 58);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(237, 33);
             this.cmbEstado.TabIndex = 17;
@@ -311,7 +328,7 @@
             // 
             this.lblPais.AutoSize = true;
             this.lblPais.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPais.Location = new System.Drawing.Point(628, 309);
+            this.lblPais.Location = new System.Drawing.Point(10, 352);
             this.lblPais.Name = "lblPais";
             this.lblPais.Size = new System.Drawing.Size(50, 25);
             this.lblPais.TabIndex = 18;
@@ -320,9 +337,9 @@
             // txtPais
             // 
             this.txtPais.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPais.Location = new System.Drawing.Point(695, 303);
+            this.txtPais.Location = new System.Drawing.Point(114, 349);
             this.txtPais.Name = "txtPais";
-            this.txtPais.Size = new System.Drawing.Size(193, 30);
+            this.txtPais.Size = new System.Drawing.Size(532, 30);
             this.txtPais.TabIndex = 19;
             // 
             // label1
@@ -331,19 +348,19 @@
             this.label1.AccessibleName = "Data de Nascimento";
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 367);
+            this.label1.Location = new System.Drawing.Point(345, 123);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(188, 25);
+            this.label1.Size = new System.Drawing.Size(115, 25);
             this.label1.TabIndex = 20;
-            this.label1.Text = "Data de Nascimento";
+            this.label1.Text = "Nascimento";
             // 
             // dtNascimento
             // 
             this.dtNascimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtNascimento.Location = new System.Drawing.Point(220, 364);
+            this.dtNascimento.Location = new System.Drawing.Point(504, 118);
             this.dtNascimento.Name = "dtNascimento";
-            this.dtNascimento.Size = new System.Drawing.Size(145, 30);
+            this.dtNascimento.Size = new System.Drawing.Size(144, 30);
             this.dtNascimento.TabIndex = 21;
             // 
             // lblSexo
@@ -352,7 +369,7 @@
             this.lblSexo.AccessibleName = "Sexo";
             this.lblSexo.AutoSize = true;
             this.lblSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSexo.Location = new System.Drawing.Point(420, 188);
+            this.lblSexo.Location = new System.Drawing.Point(7, 123);
             this.lblSexo.Name = "lblSexo";
             this.lblSexo.Size = new System.Drawing.Size(58, 25);
             this.lblSexo.TabIndex = 22;
@@ -367,9 +384,9 @@
             this.cmbSexo.Items.AddRange(new object[] {
             "Masculino",
             "Feminino"});
-            this.cmbSexo.Location = new System.Drawing.Point(484, 185);
+            this.cmbSexo.Location = new System.Drawing.Point(104, 120);
             this.cmbSexo.Name = "cmbSexo";
-            this.cmbSexo.Size = new System.Drawing.Size(121, 33);
+            this.cmbSexo.Size = new System.Drawing.Size(195, 33);
             this.cmbSexo.TabIndex = 23;
             // 
             // lblEmail
@@ -378,7 +395,7 @@
             this.lblEmail.AccessibleName = "Email";
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(371, 367);
+            this.lblEmail.Location = new System.Drawing.Point(9, 64);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(60, 25);
             this.lblEmail.TabIndex = 24;
@@ -389,9 +406,9 @@
             this.txtEmail.AccessibleDescription = "Email";
             this.txtEmail.AccessibleName = "Email";
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(444, 364);
+            this.txtEmail.Location = new System.Drawing.Point(103, 61);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(446, 30);
+            this.txtEmail.Size = new System.Drawing.Size(553, 30);
             this.txtEmail.TabIndex = 25;
             // 
             // lblCargo
@@ -400,7 +417,7 @@
             this.lblCargo.AccessibleName = "Cargo";
             this.lblCargo.AutoSize = true;
             this.lblCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCargo.Location = new System.Drawing.Point(7, 420);
+            this.lblCargo.Location = new System.Drawing.Point(8, 59);
             this.lblCargo.Name = "lblCargo";
             this.lblCargo.Size = new System.Drawing.Size(66, 25);
             this.lblCargo.TabIndex = 26;
@@ -412,16 +429,16 @@
             this.cmbCargo.AccessibleName = "Cargo";
             this.cmbCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCargo.FormattingEnabled = true;
-            this.cmbCargo.Location = new System.Drawing.Point(97, 417);
+            this.cmbCargo.Location = new System.Drawing.Point(104, 56);
             this.cmbCargo.Name = "cmbCargo";
-            this.cmbCargo.Size = new System.Drawing.Size(402, 33);
+            this.cmbCargo.Size = new System.Drawing.Size(551, 33);
             this.cmbCargo.TabIndex = 27;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(516, 423);
+            this.label2.Location = new System.Drawing.Point(9, 118);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 25);
             this.label2.TabIndex = 28;
@@ -432,10 +449,10 @@
             this.mskTelefone.AccessibleDescription = "Telefone";
             this.mskTelefone.AccessibleName = "Telefone";
             this.mskTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskTelefone.Location = new System.Drawing.Point(614, 420);
+            this.mskTelefone.Location = new System.Drawing.Point(106, 115);
             this.mskTelefone.Mask = "(999)  00000-0000";
             this.mskTelefone.Name = "mskTelefone";
-            this.mskTelefone.Size = new System.Drawing.Size(209, 30);
+            this.mskTelefone.Size = new System.Drawing.Size(242, 30);
             this.mskTelefone.TabIndex = 29;
             // 
             // lblRg
@@ -444,7 +461,7 @@
             this.lblRg.AccessibleName = "RG";
             this.lblRg.AutoSize = true;
             this.lblRg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRg.Location = new System.Drawing.Point(9, 473);
+            this.lblRg.Location = new System.Drawing.Point(12, 179);
             this.lblRg.Name = "lblRg";
             this.lblRg.Size = new System.Drawing.Size(40, 25);
             this.lblRg.TabIndex = 30;
@@ -455,10 +472,10 @@
             this.mskRg.AccessibleDescription = "RG";
             this.mskRg.AccessibleName = "RG";
             this.mskRg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskRg.Location = new System.Drawing.Point(97, 473);
-            this.mskRg.Mask = "                 99 999 999-9";
+            this.mskRg.Location = new System.Drawing.Point(104, 176);
+            this.mskRg.Mask = "99 999 999-9";
             this.mskRg.Name = "mskRg";
-            this.mskRg.Size = new System.Drawing.Size(270, 30);
+            this.mskRg.Size = new System.Drawing.Size(195, 30);
             this.mskRg.TabIndex = 31;
             this.mskRg.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -468,7 +485,7 @@
             this.lblCpf.AccessibleName = "CPF";
             this.lblCpf.AutoSize = true;
             this.lblCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCpf.Location = new System.Drawing.Point(530, 473);
+            this.lblCpf.Location = new System.Drawing.Point(373, 179);
             this.lblCpf.Name = "lblCpf";
             this.lblCpf.Size = new System.Drawing.Size(52, 25);
             this.lblCpf.TabIndex = 32;
@@ -479,10 +496,10 @@
             this.mskCpf.AccessibleDescription = "CPF";
             this.mskCpf.AccessibleName = "CPF";
             this.mskCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskCpf.Location = new System.Drawing.Point(614, 473);
+            this.mskCpf.Location = new System.Drawing.Point(503, 176);
             this.mskCpf.Mask = "000 000 000-00";
             this.mskCpf.Name = "mskCpf";
-            this.mskCpf.Size = new System.Drawing.Size(274, 30);
+            this.mskCpf.Size = new System.Drawing.Size(145, 30);
             this.mskCpf.TabIndex = 33;
             this.mskCpf.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -492,7 +509,7 @@
             this.lblUsuario.AccessibleName = "Usuario";
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(7, 535);
+            this.lblUsuario.Location = new System.Drawing.Point(701, 59);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(79, 25);
             this.lblUsuario.TabIndex = 34;
@@ -501,9 +518,9 @@
             // txtUsuario
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(97, 535);
+            this.txtUsuario.Location = new System.Drawing.Point(805, 56);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(366, 30);
+            this.txtUsuario.Size = new System.Drawing.Size(532, 30);
             this.txtUsuario.TabIndex = 35;
             // 
             // lblSenha
@@ -512,7 +529,7 @@
             this.lblSenha.AccessibleName = "Senha";
             this.lblSenha.AutoSize = true;
             this.lblSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSenha.Location = new System.Drawing.Point(499, 538);
+            this.lblSenha.Location = new System.Drawing.Point(8, 112);
             this.lblSenha.Name = "lblSenha";
             this.lblSenha.Size = new System.Drawing.Size(70, 25);
             this.lblSenha.TabIndex = 36;
@@ -523,89 +540,192 @@
             this.mskSenha.AccessibleDescription = "Senha";
             this.mskSenha.AccessibleName = "Senha";
             this.mskSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskSenha.Location = new System.Drawing.Point(580, 535);
+            this.mskSenha.Location = new System.Drawing.Point(104, 112);
             this.mskSenha.Name = "mskSenha";
-            this.mskSenha.Size = new System.Drawing.Size(310, 30);
+            this.mskSenha.PasswordChar = '*';
+            this.mskSenha.Size = new System.Drawing.Size(551, 30);
             this.mskSenha.TabIndex = 37;
             this.mskSenha.UseSystemPasswordChar = true;
             // 
-            // btnEnviar
+            // btnSalvar
             // 
-            this.btnEnviar.AccessibleDescription = "Enviar";
-            this.btnEnviar.AccessibleName = "Enviar";
-            this.btnEnviar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnviar.Location = new System.Drawing.Point(273, 626);
-            this.btnEnviar.Name = "btnEnviar";
-            this.btnEnviar.Size = new System.Drawing.Size(141, 54);
-            this.btnEnviar.TabIndex = 38;
-            this.btnEnviar.Text = "Enviar";
-            this.btnEnviar.UseVisualStyleBackColor = true;
-            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
+            this.btnSalvar.AccessibleDescription = "Enviar";
+            this.btnSalvar.AccessibleName = "Enviar";
+            this.btnSalvar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSalvar.Location = new System.Drawing.Point(447, 774);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(221, 54);
+            this.btnSalvar.TabIndex = 38;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnCancelar
             // 
             this.btnCancelar.AccessibleDescription = "Cancelar";
             this.btnCancelar.AccessibleName = "Cancelar";
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(435, 626);
+            this.btnCancelar.BackColor = System.Drawing.SystemColors.Menu;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnCancelar.Location = new System.Drawing.Point(818, 774);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(141, 54);
+            this.btnCancelar.Size = new System.Drawing.Size(221, 54);
             this.btnCancelar.TabIndex = 39;
             this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.btnCancelar.UseVisualStyleBackColor = false;
             // 
-            // FrmFuncionarioView
+            // Informacoes
+            // 
+            this.Informacoes.Controls.Add(this.txtNome);
+            this.Informacoes.Controls.Add(this.lblNome);
+            this.Informacoes.Controls.Add(this.cmbSexo);
+            this.Informacoes.Controls.Add(this.lblSexo);
+            this.Informacoes.Controls.Add(this.label1);
+            this.Informacoes.Controls.Add(this.dtNascimento);
+            this.Informacoes.Controls.Add(this.mskRg);
+            this.Informacoes.Controls.Add(this.mskCpf);
+            this.Informacoes.Controls.Add(this.lblRg);
+            this.Informacoes.Controls.Add(this.lblCpf);
+            this.Informacoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Informacoes.Location = new System.Drawing.Point(13, 166);
+            this.Informacoes.Name = "Informacoes";
+            this.Informacoes.Size = new System.Drawing.Size(685, 225);
+            this.Informacoes.TabIndex = 40;
+            this.Informacoes.TabStop = false;
+            this.Informacoes.Text = "Informações Pessoais";
+            // 
+            // Endereco
+            // 
+            this.Endereco.Controls.Add(this.txtBairro);
+            this.Endereco.Controls.Add(this.lblBairro);
+            this.Endereco.Controls.Add(this.txtCep);
+            this.Endereco.Controls.Add(this.lblCep);
+            this.Endereco.Controls.Add(this.cmbEstado);
+            this.Endereco.Controls.Add(this.lblEstado);
+            this.Endereco.Controls.Add(this.txtRua);
+            this.Endereco.Controls.Add(this.lblEndereco);
+            this.Endereco.Controls.Add(this.txtNumero);
+            this.Endereco.Controls.Add(this.lblNumero);
+            this.Endereco.Controls.Add(this.lblComplemento);
+            this.Endereco.Controls.Add(this.txtComplemento);
+            this.Endereco.Controls.Add(this.txtCidade);
+            this.Endereco.Controls.Add(this.lblCidade);
+            this.Endereco.Controls.Add(this.txtPais);
+            this.Endereco.Controls.Add(this.lblPais);
+            this.Endereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Endereco.Location = new System.Drawing.Point(704, 166);
+            this.Endereco.Name = "Endereco";
+            this.Endereco.Size = new System.Drawing.Size(685, 410);
+            this.Endereco.TabIndex = 41;
+            this.Endereco.TabStop = false;
+            this.Endereco.Text = "Endereço";
+            // 
+            // txtBairro
+            // 
+            this.txtBairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBairro.Location = new System.Drawing.Point(114, 235);
+            this.txtBairro.Name = "txtBairro";
+            this.txtBairro.Size = new System.Drawing.Size(532, 30);
+            this.txtBairro.TabIndex = 19;
+            // 
+            // lblBairro
+            // 
+            this.lblBairro.AccessibleDescription = "Numero";
+            this.lblBairro.AccessibleName = "Numero";
+            this.lblBairro.AutoSize = true;
+            this.lblBairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBairro.Location = new System.Drawing.Point(10, 236);
+            this.lblBairro.Name = "lblBairro";
+            this.lblBairro.Size = new System.Drawing.Size(63, 25);
+            this.lblBairro.TabIndex = 18;
+            this.lblBairro.Text = "Bairro";
+            // 
+            // Contato
+            // 
+            this.Contato.Controls.Add(this.txtEmail);
+            this.Contato.Controls.Add(this.lblEmail);
+            this.Contato.Controls.Add(this.label2);
+            this.Contato.Controls.Add(this.mskTelefone);
+            this.Contato.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Contato.Location = new System.Drawing.Point(12, 397);
+            this.Contato.Name = "Contato";
+            this.Contato.Size = new System.Drawing.Size(685, 179);
+            this.Contato.TabIndex = 41;
+            this.Contato.TabStop = false;
+            this.Contato.Text = "Informações de Contato";
+            // 
+            // Acesso
+            // 
+            this.Acesso.Controls.Add(this.label3);
+            this.Acesso.Controls.Add(this.maskSenha);
+            this.Acesso.Controls.Add(this.lblCargo);
+            this.Acesso.Controls.Add(this.cmbCargo);
+            this.Acesso.Controls.Add(this.lblUsuario);
+            this.Acesso.Controls.Add(this.txtUsuario);
+            this.Acesso.Controls.Add(this.lblSenha);
+            this.Acesso.Controls.Add(this.mskSenha);
+            this.Acesso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Acesso.Location = new System.Drawing.Point(13, 582);
+            this.Acesso.Name = "Acesso";
+            this.Acesso.Size = new System.Drawing.Size(1376, 167);
+            this.Acesso.TabIndex = 42;
+            this.Acesso.TabStop = false;
+            this.Acesso.Text = "Informações de Acesso";
+            // 
+            // label3
+            // 
+            this.label3.AccessibleDescription = "Senha";
+            this.label3.AccessibleName = "Senha";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(701, 115);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(70, 25);
+            this.label3.TabIndex = 38;
+            this.label3.Text = "Senha";
+            // 
+            // maskSenha
+            // 
+            this.maskSenha.AccessibleDescription = "Senha";
+            this.maskSenha.AccessibleName = "Senha";
+            this.maskSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskSenha.Location = new System.Drawing.Point(805, 115);
+            this.maskSenha.Name = "maskSenha";
+            this.maskSenha.PasswordChar = '*';
+            this.maskSenha.Size = new System.Drawing.Size(532, 30);
+            this.maskSenha.TabIndex = 39;
+            this.maskSenha.UseSystemPasswordChar = true;
+            // 
+            // FrmFuncionario
             // 
             this.AccessibleDescription = "Pais";
             this.AccessibleName = "Pais";
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(919, 788);
+            this.ClientSize = new System.Drawing.Size(1412, 904);
+            this.Controls.Add(this.Acesso);
+            this.Controls.Add(this.Contato);
+            this.Controls.Add(this.Endereco);
+            this.Controls.Add(this.Informacoes);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnEnviar);
-            this.Controls.Add(this.mskSenha);
-            this.Controls.Add(this.lblSenha);
-            this.Controls.Add(this.txtUsuario);
-            this.Controls.Add(this.lblUsuario);
-            this.Controls.Add(this.mskCpf);
-            this.Controls.Add(this.lblCpf);
-            this.Controls.Add(this.mskRg);
-            this.Controls.Add(this.lblRg);
-            this.Controls.Add(this.mskTelefone);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.cmbCargo);
-            this.Controls.Add(this.lblCargo);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.lblEmail);
-            this.Controls.Add(this.cmbSexo);
-            this.Controls.Add(this.lblSexo);
-            this.Controls.Add(this.dtNascimento);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtPais);
-            this.Controls.Add(this.lblPais);
-            this.Controls.Add(this.cmbEstado);
-            this.Controls.Add(this.lblEstado);
-            this.Controls.Add(this.txtCidade);
-            this.Controls.Add(this.lblCidade);
-            this.Controls.Add(this.txtComplemento);
-            this.Controls.Add(this.lblComplemento);
-            this.Controls.Add(this.txtCep);
-            this.Controls.Add(this.lblCep);
-            this.Controls.Add(this.txtNumero);
-            this.Controls.Add(this.lblNumero);
-            this.Controls.Add(this.txtRua);
-            this.Controls.Add(this.lblEndereco);
-            this.Controls.Add(this.txtNome);
-            this.Controls.Add(this.lblNome);
+            this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.btnCadastrar);
-            this.Name = "FrmFuncionarioView";
+            this.Name = "FrmFuncionario";
             this.Text = "Texto da janela";
+            this.Informacoes.ResumeLayout(false);
+            this.Informacoes.PerformLayout();
+            this.Endereco.ResumeLayout(false);
+            this.Endereco.PerformLayout();
+            this.Contato.ResumeLayout(false);
+            this.Contato.PerformLayout();
+            this.Acesso.ResumeLayout(false);
+            this.Acesso.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -649,7 +769,15 @@
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label lblSenha;
         private System.Windows.Forms.MaskedTextBox mskSenha;
-        private System.Windows.Forms.Button btnEnviar;
+        private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.GroupBox Informacoes;
+        private System.Windows.Forms.GroupBox Endereco;
+        private System.Windows.Forms.TextBox txtBairro;
+        private System.Windows.Forms.Label lblBairro;
+        private System.Windows.Forms.GroupBox Contato;
+        private System.Windows.Forms.GroupBox Acesso;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.MaskedTextBox maskSenha;
     }
 }

@@ -62,20 +62,33 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connection.cs" />
+    <Compile Include="Feature\Cargo\Dao\CargoDao.cs" />
     <Compile Include="Feature\Endereco\Controller\EnderecoController.cs" />
     <Compile Include="Feature\Endereco\Dao\EnderecoDao.cs" />
     <Compile Include="Feature\Funcionario\Controller\FuncionarioController.cs" />
     <Compile Include="Feature\Funcionario\Dao\FuncionarioDao.cs" />
-    <Compile Include="Feature\Funcionario\View\FrmFuncionarioView.cs">
+    <Compile Include="Feature\Funcionario\View\FrmFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Feature\Funcionario\View\FrmFuncionarioView.Designer.cs">
-      <DependentUpon>FrmFuncionarioView.cs</DependentUpon>
+    <Compile Include="Feature\Funcionario\View\FrmFuncionario.Designer.cs">
+      <DependentUpon>FrmFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Feature\Menu\FrmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Feature\Menu\FrmMenu.Designer.cs">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Feature\Pessoa\Controller\PessoaController.cs" />
     <Compile Include="Feature\Pessoa\Dao\PessoaDao.cs" />
+    <Compile Include="Feature\Tela Login\Logar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Feature\Tela Login\Logar.Designer.cs">
+      <DependentUpon>Logar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\Administrador.cs" />
-    <Compile Include="Model\Cargo.cs" />
+    <Compile Include="Feature\Cargo\Model\CargoModel.cs" />
     <Compile Include="Model\Categoria.cs" />
     <Compile Include="Model\Cliente.cs" />
     <Compile Include="Feature\Endereco\Model\EnderecoModel.cs" />
@@ -91,8 +104,14 @@
     <Compile Include="Model\PromocaoProduto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Feature\Funcionario\View\FrmFuncionarioView.resx">
-      <DependentUpon>FrmFuncionarioView.cs</DependentUpon>
+    <EmbeddedResource Include="Feature\Funcionario\View\FrmFuncionario.resx">
+      <DependentUpon>FrmFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Feature\Menu\FrmMenu.resx">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Feature\Tela Login\Logar.resx">
+      <DependentUpon>Logar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

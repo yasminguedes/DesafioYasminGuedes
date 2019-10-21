@@ -1,6 +1,6 @@
 ﻿namespace ProjetoDesafio.Feature.Endereco.Model
 {
-    public class Endereco
+    public class EnderecoModel
     {
         public int IdEndereco{ get; set; }
         public string Cep { get; set; }

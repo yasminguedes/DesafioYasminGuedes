@@ -27,43 +27,21 @@ namespace ProjetoDesafio.Feature.Funcionario.Dao
                 }
             }
         }
-        public static int Cadastrar(Model.FuncionarioModel funcionario)
+        public bool Cadastrar(Model.FuncionarioModel funcionario, FbCommand cmd)
         {
-            var conexaoFireBird = Connection.GetInstancia().GetConexao();
-            conexaoFireBird.Open();
-
             var commandText = new StringBuilder();
 
-            var transaction = conexaoFireBird.BeginTransaction();
-            var cmd = new FbCommand(commandText.ToString(), conexaoFireBird, transaction);
+            commandText.Append(@"INSERT into Funcionario (usuario_funcionario, senha_funcionario, id_pessoa) ");
+            commandText.Append("Values(@UsuarioFuncionario, @SenhaFuncionario, @IdPessoa)");
 
-            commandText.Append(@"INSERT into Funcionario (usuario_funcionario, senha_funcionario, id_pessoa, id_cargo");
-            commandText.Append("Values(@UsuarioFuncionario, @SenhaFuncionario, @IdPessoa, @Cargo) RETURNING id_funcionario");
-
-            try
-            {
+            
                     cmd.Parameters.Add("@UsuarioFuncionario", FbDbType.VarChar).Value = funcionario.UsuarioFuncionario;
                     cmd.Parameters.Add("@SenhaFuncionario", FbDbType.VarChar).Value = funcionario.SenhaFuncionario;
                     cmd.Parameters.Add("@IdPessoa", FbDbType.VarChar).Value = funcionario.IdPessoa;
                     cmd.Parameters.Add("@Cargo", FbDbType.VarChar).Value = funcionario.Cargo;
-                    
-                
-                    var idFuncionario = int.Parse(cmd.ExecuteScalar().ToString());
-                    cmd.ExecuteNonQuery();
-                    transaction.Commit();
-                    return idFuncionario;
-            }
-            catch (Exception)
-            {
 
-                transaction.Rollback(); 
-                throw;
-            }
-            finally
-            {
-                cmd.Dispose();
-                conexaoFireBird.Close();
-            }
+            cmd.ExecuteNonQuery();
+            return true;
         }
 
         public static Model.FuncionarioModel Listar(int idFn)
