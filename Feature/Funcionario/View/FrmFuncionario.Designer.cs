@@ -575,6 +575,7 @@
             this.btnCancelar.TabIndex = 39;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // Informacoes
             // 
@@ -704,7 +705,7 @@
             this.AccessibleName = "Pais";
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1412, 904);
+            this.ClientSize = new System.Drawing.Size(1401, 870);
             this.Controls.Add(this.Acesso);
             this.Controls.Add(this.Contato);
             this.Controls.Add(this.Endereco);

@@ -79,6 +79,11 @@ namespace ProjetoDesafio.Feature.Funcionario.View
             new FuncionarioController().Cadastrar(funcionario);
 
         }
+
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
 

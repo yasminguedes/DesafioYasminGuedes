@@ -88,7 +88,7 @@
             this.Acesso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Acesso.Location = new System.Drawing.Point(20, 587);
             this.Acesso.Name = "Acesso";
-            this.Acesso.Size = new System.Drawing.Size(1376, 167);
+            this.Acesso.Size = new System.Drawing.Size(1376, 128);
             this.Acesso.TabIndex = 13;
             this.Acesso.TabStop = false;
             this.Acesso.Text = "Informações de Acesso";
@@ -616,14 +616,16 @@
             this.btnCancelar.AccessibleDescription = "Cancelar";
             this.btnCancelar.AccessibleName = "Cancelar";
             this.btnCancelar.BackColor = System.Drawing.SystemColors.Menu;
+            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnCancelar.Location = new System.Drawing.Point(825, 806);
+            this.btnCancelar.Location = new System.Drawing.Point(825, 765);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(221, 54);
             this.btnCancelar.TabIndex = 41;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // btnSalvar
             // 
@@ -632,7 +634,7 @@
             this.btnSalvar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSalvar.Location = new System.Drawing.Point(454, 806);
+            this.btnSalvar.Location = new System.Drawing.Point(454, 765);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(221, 54);
             this.btnSalvar.TabIndex = 40;
@@ -644,7 +646,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1460, 897);
+            this.CancelButton = this.btnCancelar;
+            this.ClientSize = new System.Drawing.Size(1401, 870);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.Acesso);
@@ -656,6 +659,7 @@
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.btnCadastrar);
             this.Name = "FrmCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Cliente";
             this.Acesso.ResumeLayout(false);
             this.Acesso.PerformLayout();

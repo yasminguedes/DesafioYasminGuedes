@@ -16,34 +16,22 @@ namespace ProjetoDesafio.Feature.Menu
 
         private void BtnFuncionario_Click(object sender, EventArgs e)
         {
-            Hide();
-            var principal = new FrmFuncionario();
-            principal.Closed += (s, args) => Close();
-            principal.Show();
+            new FrmFuncionario().Show();
         }
 
         private void BtnFornecedor_Click(object sender, EventArgs e)
         {
-            Hide();
-            var principal = new FrmFornecedor();
-            principal.Closed += (s, args) => Close();
-            principal.Show();
+            new FrmFornecedor().Show();
         }
 
         private void BtnAdministrador_Click(object sender, EventArgs e)
         {
-            Hide();
-            var principal = new FrmAdministrador();
-            principal.Closed += (s, args) => Close();
-            principal.Show();
+            new FrmAdministrador().Show();
         }
 
         private void BtnCliente(object sender, EventArgs e)
         {
-            Hide();
-            var principal = new FrmCliente();
-            principal.Closed += (s, args) => Close();
-            principal.Show();
+            new FrmCliente().Show();
         }
     }
 }

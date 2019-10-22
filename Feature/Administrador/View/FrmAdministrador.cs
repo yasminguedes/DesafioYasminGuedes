@@ -75,5 +75,10 @@ namespace ProjetoDesafio.Feature.Administrador.View
             if (administrador.SenhasIguais)
                 MessageBox.Show(@"Senhas não conferem");
         }
+
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

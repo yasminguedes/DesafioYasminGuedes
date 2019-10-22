@@ -49,5 +49,10 @@ namespace ProjetoDesafio.Feature.Cliente.View
         {
             var cliente = new ClienteModel();
         }
+
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
