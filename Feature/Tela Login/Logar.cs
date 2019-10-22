@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProjetoDesafio.Feature.Menu;
 
@@ -17,6 +10,7 @@ namespace ProjetoDesafio.Feature.Tela_Login
         {
             InitializeComponent();
         }
+
         private void BtnEntrar_Click(object sender, EventArgs e)
         {
             var usuario = txtUsuario.Text;
@@ -33,10 +27,9 @@ namespace ProjetoDesafio.Feature.Tela_Login
                 MessageBox.Show(@"Usuário e/ou senha inválido(s)!");
             }
         }
-        private void Login_Load(object sender, EventArgs e)
-        {
-            txtUsuario.Focus();
-        }
+
+        private void Login_Load(object sender, EventArgs e) => txtUsuario.Focus();
+        
     }
 }
   

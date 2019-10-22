@@ -1,7 +1,7 @@
-﻿using System;
+﻿using FirebirdSql.Data.FirebirdClient;
+using System;
 using System.Data;
 using System.Text;
-using FirebirdSql.Data.FirebirdClient;
 
 namespace ProjetoDesafio.Feature.Funcionario.Dao
 {
@@ -38,7 +38,7 @@ namespace ProjetoDesafio.Feature.Funcionario.Dao
                     cmd.Parameters.Add("@UsuarioFuncionario", FbDbType.VarChar).Value = funcionario.UsuarioFuncionario;
                     cmd.Parameters.Add("@SenhaFuncionario", FbDbType.VarChar).Value = funcionario.SenhaFuncionario;
                     cmd.Parameters.Add("@IdPessoa", FbDbType.VarChar).Value = funcionario.IdPessoa;
-                    cmd.Parameters.Add("@Cargo", FbDbType.VarChar).Value = funcionario.Cargo;
+                    cmd.Parameters.Add("@Cargo", FbDbType.VarChar).Value = funcionario.Cargo.IdCargo;
 
             cmd.ExecuteNonQuery();
             return true;
@@ -61,7 +61,7 @@ namespace ProjetoDesafio.Feature.Funcionario.Dao
                         funcionario.UsuarioFuncionario = dr["usuario_funcionario"].ToString();
                         funcionario.SenhaFuncionario = dr["senha_funcionario"].ToString();
                         funcionario.IdPessoa = Convert.ToInt32(dr["id_pessoa"]);
-                        funcionario.Cargo = Convert.ToInt32(dr["id_cargo"]);
+                        funcionario.Cargo.IdCargo = Convert.ToInt32(dr["id_cargo"]);
 
                     }
 
@@ -85,10 +85,8 @@ namespace ProjetoDesafio.Feature.Funcionario.Dao
             var cmd = new FbCommand(commandText.ToString(), conexaoFireBird, transaction);
             try
             {
-                    
                    const string mSql = @"Update Funcionario set usuario_funcionario= @UsuarioFuncionario, senha_funcionario= @SenhaFuncionario,
                                     id_pessoa= @IdPessoa, id_cargo= @Cargo WHERE id_funcionario= @IdFuncionario";
-                    
 
                     cmd.Parameters.Add("@UsuarioFuncionario", FbDbType.VarChar).Value = funcionario.UsuarioFuncionario;
                     cmd.Parameters.Add("@SenhaFuncionario", FbDbType.VarChar).Value = funcionario.SenhaFuncionario;

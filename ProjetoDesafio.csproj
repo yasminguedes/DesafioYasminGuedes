@@ -62,9 +62,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connection.cs" />
+    <Compile Include="Feature\Administrador\View\FrmAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Feature\Administrador\View\FrmAdministrador.Designer.cs">
+      <DependentUpon>FrmAdministrador.cs</DependentUpon>
+    </Compile>
     <Compile Include="Feature\Cargo\Dao\CargoDao.cs" />
+    <Compile Include="Feature\Cliente\View\FrmCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Feature\Cliente\View\FrmCliente.Designer.cs">
+      <DependentUpon>FrmCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Feature\Endereco\Controller\EnderecoController.cs" />
     <Compile Include="Feature\Endereco\Dao\EnderecoDao.cs" />
+    <Compile Include="Feature\Fornecedor\Controller\FornecedorController.cs" />
     <Compile Include="Feature\Funcionario\Controller\FuncionarioController.cs" />
     <Compile Include="Feature\Funcionario\Dao\FuncionarioDao.cs" />
     <Compile Include="Feature\Funcionario\View\FrmFuncionario.cs">
@@ -81,18 +94,24 @@
     </Compile>
     <Compile Include="Feature\Pessoa\Controller\PessoaController.cs" />
     <Compile Include="Feature\Pessoa\Dao\PessoaDao.cs" />
+    <Compile Include="Feature\Fornecedor\View\FrmFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Feature\Fornecedor\View\FrmFornecedor.Designer.cs">
+      <DependentUpon>FrmFornecedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Feature\Tela Login\Logar.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Feature\Tela Login\Logar.Designer.cs">
       <DependentUpon>Logar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Administrador.cs" />
+    <Compile Include="Feature\Administrador\Model\AdministradorModel.cs" />
     <Compile Include="Feature\Cargo\Model\CargoModel.cs" />
     <Compile Include="Model\Categoria.cs" />
-    <Compile Include="Model\Cliente.cs" />
+    <Compile Include="Feature\Cliente\Model\ClienteModel.cs" />
     <Compile Include="Feature\Endereco\Model\EnderecoModel.cs" />
-    <Compile Include="Model\Fornecedor.cs" />
+    <Compile Include="Feature\Fornecedor\Model\FornecedorModel.cs" />
     <Compile Include="Feature\Funcionario\Model\FuncionarioModel.cs" />
     <Compile Include="Model\ItemPedido.cs" />
     <Compile Include="Model\Marca.cs" />
@@ -104,11 +123,20 @@
     <Compile Include="Model\PromocaoProduto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Feature\Administrador\View\FrmAdministrador.resx">
+      <DependentUpon>FrmAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Feature\Cliente\View\FrmCliente.resx">
+      <DependentUpon>FrmCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Feature\Funcionario\View\FrmFuncionario.resx">
       <DependentUpon>FrmFuncionario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Feature\Menu\FrmMenu.resx">
       <DependentUpon>FrmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Feature\Fornecedor\View\FrmFornecedor.resx">
+      <DependentUpon>FrmFornecedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Feature\Tela Login\Logar.resx">
       <DependentUpon>Logar.cs</DependentUpon>
@@ -137,6 +165,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Feature\Administrador\Controller\" />
     <Folder Include="Feature\Endereco\View\" />
     <Folder Include="Feature\icones\" />
     <Folder Include="Feature\Pessoa\View\" />

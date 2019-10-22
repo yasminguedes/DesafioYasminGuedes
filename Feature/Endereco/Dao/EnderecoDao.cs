@@ -1,5 +1,4 @@
-﻿using System;
-using System.Data;
+﻿using System.Data;
 using FirebirdSql.Data.FirebirdClient;
 
 namespace ProjetoDesafio.Feature.Endereco.Dao
@@ -35,8 +34,7 @@ namespace ProjetoDesafio.Feature.Endereco.Dao
                const string mSql = @"INSERT into Endereco (cep, rua, numero, complemento, bairro, cidade, estado, pais )
                                     Values(@Cep, @Rua, @Numero, @Complemento, @Bairro, @Cidade, @Estado, @Pais )";
 
-
-                cmd.CommandText = mSql;
+                    cmd.CommandText = mSql;
 
                     cmd.Parameters.Add("@Cep", FbDbType.VarChar).Value = endereco.Cep;
                     cmd.Parameters.Add("@Rua", FbDbType.VarChar).Value = endereco.Rua;

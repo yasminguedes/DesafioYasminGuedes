@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using ProjetoDesafio.Feature.Funcionario.View;
 using ProjetoDesafio.Feature.Menu;
+using ProjetoDesafio.Feature.Tela_Login;
 
 namespace ProjetoDesafio
 {
@@ -18,7 +15,7 @@ namespace ProjetoDesafio
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmMenu());
+            Application.Run(new FrmLogar());
         }
     }
 }

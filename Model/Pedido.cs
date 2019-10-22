@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ProjetoDesafio.Feature.Cliente.Model;
 
 namespace ProjetoDesafio.Model
 {
@@ -13,6 +14,6 @@ namespace ProjetoDesafio.Model
         public int QtdeVenda { get; set; }
         public string FormaPagamento { get; set; }
         public double TotalVenda { get; set; }
-        public Cliente Cliente { get; set; }
+        public ClienteModel Cliente { get; set; }
     }
 }

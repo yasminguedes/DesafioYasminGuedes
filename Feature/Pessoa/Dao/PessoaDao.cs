@@ -1,8 +1,6 @@
-﻿using System;
-using System.Data;
+﻿using System.Data;
 using System.Text;
 using FirebirdSql.Data.FirebirdClient;
-using ProjetoDesafio.Feature.Endereco.Model;
 
 namespace ProjetoDesafio.Feature.Pessoa.Dao
 {

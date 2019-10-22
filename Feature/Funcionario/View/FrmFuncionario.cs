@@ -34,6 +34,7 @@ namespace ProjetoDesafio.Feature.Funcionario.View
             mskCpf.Enabled = habilitarCampos;
             txtUsuario.Enabled = habilitarCampos;
             mskSenha.Enabled = habilitarCampos;
+            mskSenhaConfirmar.Enabled = habilitarCampos;
         }
 
         private void BtnCadastrar_Click(object sender, EventArgs e)
@@ -70,9 +71,12 @@ namespace ProjetoDesafio.Feature.Funcionario.View
                 CpfCnpj = mskCpf.Text,
                 UsuarioFuncionario = txtUsuario.Text,
                 SenhaFuncionario = mskSenha.Text,
+                ConfirmarSenha = mskSenhaConfirmar.Text
             };
+            if (funcionario.SenhasIguais)
+                MessageBox.Show(@"Senhas não conferem");
 
-            new FuncionarioController().ChamarCadastrar(funcionario);
+            new FuncionarioController().Cadastrar(funcionario);
 
         }
     }

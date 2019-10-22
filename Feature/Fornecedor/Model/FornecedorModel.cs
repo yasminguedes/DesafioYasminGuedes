@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ProjetoDesafio.Feature.Pessoa.Model;
+﻿using ProjetoDesafio.Feature.Pessoa.Model;
 
-namespace ProjetoDesafio.Model
+namespace ProjetoDesafio.Feature.Fornecedor.Model
 {
-   public class Fornecedor: PessoaModel
+   public class FornecedorModel: PessoaModel
     {
         public int IdFornecedor { get; set; }
         public string RazaoSocial { get; set; }
