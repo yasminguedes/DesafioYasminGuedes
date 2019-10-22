@@ -17,3 +17,5 @@ C:\Users\gabri\Desktop\Desafio\DesafioYasminGuedes\obj\Debug\ProjetoDesafio.Feat
 C:\Users\gabri\Desktop\Desafio\DesafioYasminGuedes\obj\Debug\ProjetoDesafio.Feature.Menu.FrmMenu.resources
 C:\Users\gabri\Desktop\Desafio\DesafioYasminGuedes\obj\Debug\ProjetoDesafio.Feature.Tela_Login.FrmLogar.resources
 C:\Users\gabri\Desktop\Desafio\DesafioYasminGuedes\obj\Debug\ProjetoDesafio.Feature.Fornecedor.View.FrmFornecedor.resources
+C:\Users\gabri\Desktop\Desafio\DesafioYasminGuedes\obj\Debug\ProjetoDesafio.Feature.Administrador.View.FrmAdministrador.resources
+C:\Users\gabri\Desktop\Desafio\DesafioYasminGuedes\obj\Debug\ProjetoDesafio.Feature.Cliente.View.FrmCliente.resources

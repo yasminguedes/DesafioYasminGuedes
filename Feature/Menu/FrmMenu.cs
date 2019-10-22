@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using ProjetoDesafio.Feature.Administrador.View;
+using ProjetoDesafio.Feature.Cliente.View;
 using ProjetoDesafio.Feature.Fornecedor.View;
 using ProjetoDesafio.Feature.Funcionario.View;
 
@@ -33,6 +34,14 @@ namespace ProjetoDesafio.Feature.Menu
         {
             Hide();
             var principal = new FrmAdministrador();
+            principal.Closed += (s, args) => Close();
+            principal.Show();
+        }
+
+        private void BtnCliente(object sender, EventArgs e)
+        {
+            Hide();
+            var principal = new FrmCliente();
             principal.Closed += (s, args) => Close();
             principal.Show();
         }

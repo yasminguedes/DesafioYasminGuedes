@@ -30,14 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCliente));
             this.Acesso = new System.Windows.Forms.GroupBox();
-            this.txtProfissao = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.mskSenhaConfirmar = new System.Windows.Forms.MaskedTextBox();
+            this.dtCadastro = new System.Windows.Forms.DateTimePicker();
+            this.txtProfissao = new System.Windows.Forms.TextBox();
             this.lblCargo = new System.Windows.Forms.Label();
-            this.lblUsuario = new System.Windows.Forms.Label();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.lblSenha = new System.Windows.Forms.Label();
-            this.mskSenha = new System.Windows.Forms.MaskedTextBox();
             this.Contato = new System.Windows.Forms.GroupBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
@@ -85,14 +81,10 @@
             // 
             // Acesso
             // 
-            this.Acesso.Controls.Add(this.txtProfissao);
             this.Acesso.Controls.Add(this.label3);
-            this.Acesso.Controls.Add(this.mskSenhaConfirmar);
+            this.Acesso.Controls.Add(this.dtCadastro);
+            this.Acesso.Controls.Add(this.txtProfissao);
             this.Acesso.Controls.Add(this.lblCargo);
-            this.Acesso.Controls.Add(this.lblUsuario);
-            this.Acesso.Controls.Add(this.txtUsuario);
-            this.Acesso.Controls.Add(this.lblSenha);
-            this.Acesso.Controls.Add(this.mskSenha);
             this.Acesso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Acesso.Location = new System.Drawing.Point(20, 587);
             this.Acesso.Name = "Acesso";
@@ -101,6 +93,27 @@
             this.Acesso.TabStop = false;
             this.Acesso.Text = "Informações de Acesso";
             // 
+            // label3
+            // 
+            this.label3.AccessibleDescription = "Data de Nascimento";
+            this.label3.AccessibleName = "Data de Nascimento";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(701, 59);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(92, 25);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Cadastro";
+            // 
+            // dtCadastro
+            // 
+            this.dtCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtCadastro.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtCadastro.Location = new System.Drawing.Point(805, 54);
+            this.dtCadastro.Name = "dtCadastro";
+            this.dtCadastro.Size = new System.Drawing.Size(144, 30);
+            this.dtCadastro.TabIndex = 9;
+            // 
             // txtProfissao
             // 
             this.txtProfissao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -108,30 +121,6 @@
             this.txtProfissao.Name = "txtProfissao";
             this.txtProfissao.Size = new System.Drawing.Size(551, 30);
             this.txtProfissao.TabIndex = 8;
-            // 
-            // label3
-            // 
-            this.label3.AccessibleDescription = "Senha";
-            this.label3.AccessibleName = "Senha";
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(701, 115);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 25);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Senha";
-            // 
-            // mskSenhaConfirmar
-            // 
-            this.mskSenhaConfirmar.AccessibleDescription = "Senha";
-            this.mskSenhaConfirmar.AccessibleName = "Senha";
-            this.mskSenhaConfirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskSenhaConfirmar.Location = new System.Drawing.Point(805, 115);
-            this.mskSenhaConfirmar.Name = "mskSenhaConfirmar";
-            this.mskSenhaConfirmar.PasswordChar = '*';
-            this.mskSenhaConfirmar.Size = new System.Drawing.Size(532, 30);
-            this.mskSenhaConfirmar.TabIndex = 3;
-            this.mskSenhaConfirmar.UseSystemPasswordChar = true;
             // 
             // lblCargo
             // 
@@ -144,50 +133,6 @@
             this.lblCargo.Size = new System.Drawing.Size(93, 25);
             this.lblCargo.TabIndex = 4;
             this.lblCargo.Text = "Profissão";
-            // 
-            // lblUsuario
-            // 
-            this.lblUsuario.AccessibleDescription = "Usuario";
-            this.lblUsuario.AccessibleName = "Usuario";
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(701, 59);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(79, 25);
-            this.lblUsuario.TabIndex = 6;
-            this.lblUsuario.Text = "Usuário";
-            // 
-            // txtUsuario
-            // 
-            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(805, 56);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(532, 30);
-            this.txtUsuario.TabIndex = 1;
-            // 
-            // lblSenha
-            // 
-            this.lblSenha.AccessibleDescription = "Senha";
-            this.lblSenha.AccessibleName = "Senha";
-            this.lblSenha.AutoSize = true;
-            this.lblSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSenha.Location = new System.Drawing.Point(8, 112);
-            this.lblSenha.Name = "lblSenha";
-            this.lblSenha.Size = new System.Drawing.Size(70, 25);
-            this.lblSenha.TabIndex = 5;
-            this.lblSenha.Text = "Senha";
-            // 
-            // mskSenha
-            // 
-            this.mskSenha.AccessibleDescription = "Senha";
-            this.mskSenha.AccessibleName = "Senha";
-            this.mskSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskSenha.Location = new System.Drawing.Point(104, 112);
-            this.mskSenha.Name = "mskSenha";
-            this.mskSenha.PasswordChar = '*';
-            this.mskSenha.Size = new System.Drawing.Size(551, 30);
-            this.mskSenha.TabIndex = 2;
-            this.mskSenha.UseSystemPasswordChar = true;
             // 
             // Contato
             // 
@@ -693,7 +638,7 @@
             this.btnSalvar.TabIndex = 40;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            this.btnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
             // FrmCliente
             // 
@@ -711,7 +656,7 @@
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.btnCadastrar);
             this.Name = "FrmCliente";
-            this.Text = "FrmCliente";
+            this.Text = "Cadastro de Cliente";
             this.Acesso.ResumeLayout(false);
             this.Acesso.PerformLayout();
             this.Contato.ResumeLayout(false);
@@ -727,13 +672,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox Acesso;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.MaskedTextBox mskSenhaConfirmar;
         private System.Windows.Forms.Label lblCargo;
-        private System.Windows.Forms.Label lblUsuario;
-        private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.Label lblSenha;
-        private System.Windows.Forms.MaskedTextBox mskSenha;
         private System.Windows.Forms.GroupBox Contato;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblEmail;
@@ -774,5 +713,7 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.TextBox txtProfissao;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker dtCadastro;
     }
 }
