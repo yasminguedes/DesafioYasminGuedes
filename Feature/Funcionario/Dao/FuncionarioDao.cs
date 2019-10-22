@@ -34,11 +34,11 @@ namespace ProjetoDesafio.Feature.Funcionario.Dao
             commandText.Append(@"INSERT into Funcionario (usuario_funcionario, senha_funcionario, id_pessoa) ");
             commandText.Append("Values(@UsuarioFuncionario, @SenhaFuncionario, @IdPessoa)");
 
-            
-                    cmd.Parameters.Add("@UsuarioFuncionario", FbDbType.VarChar).Value = funcionario.UsuarioFuncionario;
-                    cmd.Parameters.Add("@SenhaFuncionario", FbDbType.VarChar).Value = funcionario.SenhaFuncionario;
-                    cmd.Parameters.Add("@IdPessoa", FbDbType.VarChar).Value = funcionario.IdPessoa;
-                    cmd.Parameters.Add("@Cargo", FbDbType.VarChar).Value = funcionario.Cargo.IdCargo;
+            cmd.CommandText = commandText.ToString();
+
+            cmd.Parameters.Add("@UsuarioFuncionario", FbDbType.VarChar).Value = funcionario.UsuarioFuncionario;
+            cmd.Parameters.Add("@SenhaFuncionario", FbDbType.VarChar).Value = funcionario.SenhaFuncionario;
+            cmd.Parameters.Add("@IdPessoa", FbDbType.VarChar).Value = funcionario.IdPessoa;
 
             cmd.ExecuteNonQuery();
             return true;
@@ -85,16 +85,16 @@ namespace ProjetoDesafio.Feature.Funcionario.Dao
             var cmd = new FbCommand(commandText.ToString(), conexaoFireBird, transaction);
             try
             {
-                   const string mSql = @"Update Funcionario set usuario_funcionario= @UsuarioFuncionario, senha_funcionario= @SenhaFuncionario,
+                const string mSql = @"Update Funcionario set usuario_funcionario= @UsuarioFuncionario, senha_funcionario= @SenhaFuncionario,
                                     id_pessoa= @IdPessoa, id_cargo= @Cargo WHERE id_funcionario= @IdFuncionario";
 
-                    cmd.Parameters.Add("@UsuarioFuncionario", FbDbType.VarChar).Value = funcionario.UsuarioFuncionario;
-                    cmd.Parameters.Add("@SenhaFuncionario", FbDbType.VarChar).Value = funcionario.SenhaFuncionario;
-                    cmd.Parameters.Add("@IdPessoa", FbDbType.VarChar).Value =funcionario.IdPessoa;
-                    cmd.Parameters.Add("@Cargo", FbDbType.VarChar).Value = funcionario.Cargo;
-                    
-                    cmd.ExecuteNonQuery();
-                    transaction.Commit();
+                cmd.Parameters.Add("@UsuarioFuncionario", FbDbType.VarChar).Value = funcionario.UsuarioFuncionario;
+                cmd.Parameters.Add("@SenhaFuncionario", FbDbType.VarChar).Value = funcionario.SenhaFuncionario;
+                cmd.Parameters.Add("@IdPessoa", FbDbType.VarChar).Value = funcionario.IdPessoa;
+                cmd.Parameters.Add("@Cargo", FbDbType.VarChar).Value = funcionario.Cargo;
+
+                cmd.ExecuteNonQuery();
+                transaction.Commit();
             }
             catch (Exception)
             {
@@ -107,7 +107,6 @@ namespace ProjetoDesafio.Feature.Funcionario.Dao
                 conexaoFireBird.Close();
             }
         }
-        }
-
     }
+}
 

@@ -108,13 +108,13 @@
     </Compile>
     <Compile Include="Feature\Administrador\Model\AdministradorModel.cs" />
     <Compile Include="Feature\Cargo\Model\CargoModel.cs" />
-    <Compile Include="Model\Categoria.cs" />
+    <Compile Include="Feature\Categoria\Model\CategoriaModel.cs" />
     <Compile Include="Feature\Cliente\Model\ClienteModel.cs" />
     <Compile Include="Feature\Endereco\Model\EnderecoModel.cs" />
     <Compile Include="Feature\Fornecedor\Model\FornecedorModel.cs" />
     <Compile Include="Feature\Funcionario\Model\FuncionarioModel.cs" />
     <Compile Include="Model\ItemPedido.cs" />
-    <Compile Include="Model\Marca.cs" />
+    <Compile Include="Feature\Marca\Model\MarcaModel.cs" />
     <Compile Include="Model\MovimentacaoProduto.cs" />
     <Compile Include="Model\Pedido.cs" />
     <Compile Include="Feature\Pessoa\Model\PessoaModel.cs" />
@@ -166,8 +166,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Feature\Administrador\Controller\" />
+    <Folder Include="Feature\Categoria\View\" />
     <Folder Include="Feature\Endereco\View\" />
     <Folder Include="Feature\icones\" />
+    <Folder Include="Feature\Marca\View\" />
     <Folder Include="Feature\Pessoa\View\" />
     <Folder Include="Feature\Produto\Controller\" />
     <Folder Include="Feature\Produto\Dao\" />

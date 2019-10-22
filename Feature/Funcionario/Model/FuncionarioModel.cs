@@ -3,7 +3,7 @@ using ProjetoDesafio.Feature.Pessoa.Model;
 
 namespace ProjetoDesafio.Feature.Funcionario.Model
 {
-    public class FuncionarioModel: PessoaModel
+    public class FuncionarioModel : PessoaModel
     {
         public int IdFuncionario { get; set; }
         public string UsuarioFuncionario { get; set; }
@@ -19,7 +19,5 @@ namespace ProjetoDesafio.Feature.Funcionario.Model
         {
             Cargo = new CargoModel();
         }
-
-
     }
 }

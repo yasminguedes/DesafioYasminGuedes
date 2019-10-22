@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Windows.Forms;
 using ProjetoDesafio.Feature.Endereco.Model;
-using ProjetoDesafio.Model;
 
 namespace ProjetoDesafio.Feature.Pessoa.Model
 {
-    public class PessoaModel 
+    public class PessoaModel
     {
         public int IdPessoa { get; set; }
         public string NomePessoa { get; set; }

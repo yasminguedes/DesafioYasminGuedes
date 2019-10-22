@@ -12,7 +12,32 @@ namespace ProjetoDesafio.Feature.Funcionario.View
             InitializeComponent();
 
             HabilitarOuDesabilitarCampos(false);
+            LimparCampos();
         }
+
+        private void LimparCampos()
+        {
+            txtNome.Text = "";
+            txtRua.Text = "";
+            txtNumero.Text = "";
+            txtCep.Text = "";
+            txtComplemento.Text = "";
+            txtBairro.Text = "";
+            cmbCidade.Text = "";
+            cmbEstado.Text = "";
+            txtPais.Text = "";
+            dtNascimento.Text = "";
+            cmbSexo.Text = "";
+            txtEmail.Text = "";
+            cmbCargo.Text = "";
+            mskTelefone.Text = "";
+            mskRg.Text = "";
+            mskCpf.Text = "";
+            txtUsuario.Text = "";
+            mskSenha.Text = "";
+            mskSenhaConfirmar.Text = "";
+        }
+
 
         private void HabilitarOuDesabilitarCampos(bool habilitarCampos)
         {
@@ -22,7 +47,7 @@ namespace ProjetoDesafio.Feature.Funcionario.View
             txtCep.Enabled = habilitarCampos;
             txtComplemento.Enabled = habilitarCampos;
             txtBairro.Enabled = habilitarCampos;
-            txtCidade.Enabled = habilitarCampos;
+            cmbCidade.Enabled = habilitarCampos;
             cmbEstado.Enabled = habilitarCampos;
             txtPais.Enabled = habilitarCampos;
             dtNascimento.Enabled = habilitarCampos;
@@ -43,8 +68,8 @@ namespace ProjetoDesafio.Feature.Funcionario.View
             txtNome.Focus();
 
         }
-        private void btnSalvar_Click(object sender, EventArgs e)
-        {
+        private void BtnSalvar_Click(object sender, EventArgs e)
+        { 
             var funcionario = new FuncionarioModel
             {
                 NomePessoa = txtNome.Text,
@@ -56,7 +81,7 @@ namespace ProjetoDesafio.Feature.Funcionario.View
                     Numero = txtNumero.Text,
                     Complemento = txtComplemento.Text,
                     Bairro = txtBairro.Text,
-                    Cidade = txtCidade.Text,
+                    Cidade = cmbCidade.Text,
                     Estado = cmbEstado.Text,
                     Pais = txtPais.Text
                 },
@@ -71,18 +96,54 @@ namespace ProjetoDesafio.Feature.Funcionario.View
                 CpfCnpj = mskCpf.Text,
                 UsuarioFuncionario = txtUsuario.Text,
                 SenhaFuncionario = mskSenha.Text,
-                ConfirmarSenha = mskSenhaConfirmar.Text
+
             };
             if (funcionario.SenhasIguais)
                 MessageBox.Show(@"Senhas não conferem");
 
             new FuncionarioController().Cadastrar(funcionario);
+            LimparCampos();
 
         }
-
+        
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void CmbEstado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SelecionarEstado();
+        }
+
+        private void SelecionarEstado()
+        {
+            cmbEstado.Text = @"Acre (AC)";
+            cmbEstado.Text = @"Alagoas (AL)";
+            cmbEstado.Text = @"Amapá (AP)";
+            cmbEstado.Text = @"Amazonas (AM)";
+            cmbEstado.Text = @"Bahia (BA)";
+            cmbEstado.Text = @"Ceará (CE)";
+            cmbEstado.Text = @"Distrito Federal (DF)";
+            cmbEstado.Text = @"Espírito Santo (ES)";
+            cmbEstado.Text = @"Goiás (GO)";
+            cmbEstado.Text = @"Maranhão (MA)";
+            cmbEstado.Text = @"Mato Grosso (MT)";
+            cmbEstado.Text = @"Mato Grosso do Sul (MS)";
+            cmbEstado.Text = @"Minas Gerais (MG)";
+            cmbEstado.Text = @"Pará (PA)";
+            cmbEstado.Text = @"Paraíba (PB)";
+            cmbEstado.Text = @"Paraná (PR)";
+            cmbEstado.Text = @"Pernambuco (PE)";
+            cmbEstado.Text = @"Piauí (PI)";
+            cmbEstado.Text = @"Rio de Janeiro (RJ)";
+            cmbEstado.Text = @"Rio Grande do Sul (RS)";
+            cmbEstado.Text = @"Rondônia (RO)";
+            cmbEstado.Text = @"Roraima (RR)";
+            cmbEstado.Text = @"Santa Catarina (SC)";
+            cmbEstado.Text = @"São Paulo (SP)";
+            cmbEstado.Text = @"Sergipe (SE)";
+            cmbEstado.Text = @"Tocantins (TO)";
         }
     }
 }

@@ -10,7 +10,7 @@ using FirebirdSql.Data.FirebirdClient;
 
 namespace ProjetoDesafio.Feature.Funcionario.Controller
 {
-   public class FuncionarioController
+    public class FuncionarioController
     {
         public bool Cadastrar(FuncionarioModel funcionario)
         {

@@ -507,7 +507,6 @@
             this.mskRg.AccessibleName = "RG";
             this.mskRg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskRg.Location = new System.Drawing.Point(104, 176);
-            this.mskRg.Mask = "99 999 999-9";
             this.mskRg.Name = "mskRg";
             this.mskRg.Size = new System.Drawing.Size(195, 30);
             this.mskRg.TabIndex = 3;

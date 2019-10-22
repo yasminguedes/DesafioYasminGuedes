@@ -32,7 +32,7 @@ namespace ProjetoDesafio.Feature.Endereco.Dao
             {
                conexaoFireBird.Open();
                const string mSql = @"INSERT into Endereco (cep, rua, numero, complemento, bairro, cidade, estado, pais )
-                                    Values(@Cep, @Rua, @Numero, @Complemento, @Bairro, @Cidade, @Estado, @Pais )";
+                                    Values(@Cep, @Rua, @Numero, @Complemento, @Bairro, @Cidade, @Estado, @Pais ) returning id_endereco";
 
                     cmd.CommandText = mSql;
 

@@ -1,5 +1,6 @@
 ﻿using System;
-using ProjetoDesafio.Model;
+using ProjetoDesafio.Feature.Categoria.Model;
+using ProjetoDesafio.Feature.Marca.Model;
 
 namespace ProjetoDesafio.Feature.Produto.Model
 {
@@ -12,7 +13,7 @@ namespace ProjetoDesafio.Feature.Produto.Model
         public int QtdeEstoque { get; set; }
         public string Ativo { get; set; }
         public DateTime DataCadastro { get; set; }
-        public Marca Marca { get; set; }
-        public Categoria Categoria { get; set; }
+        public MarcaModel Marca { get; set; }
+        public CategoriaModel Categoria { get; set; }
     }
 }

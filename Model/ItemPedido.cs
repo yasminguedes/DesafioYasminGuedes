@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ProjetoDesafio.Feature.Categoria.Model;
+using ProjetoDesafio.Feature.Marca.Model;
 using ProjetoDesafio.Feature.Produto.Model;
 
 namespace ProjetoDesafio.Model
@@ -13,7 +10,7 @@ namespace ProjetoDesafio.Model
         public double ValorItem { get; set; }
         public Pedido Pedido { get; set; }
         public Produto Produto { get; set; }
-        public Marca Marca { get; set; }
-        public Categoria Categoria { get; set; }
+        public MarcaModel Marca { get; set; }
+        public CategoriaModel Categoria { get; set; }
     }
 }
