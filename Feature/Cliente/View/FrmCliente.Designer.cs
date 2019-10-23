@@ -40,6 +40,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.mskTelefone = new System.Windows.Forms.MaskedTextBox();
             this.Endereco = new System.Windows.Forms.GroupBox();
+            this.cmbCidade = new System.Windows.Forms.ComboBox();
             this.txtBairro = new System.Windows.Forms.TextBox();
             this.lblBairro = new System.Windows.Forms.Label();
             this.txtCep = new System.Windows.Forms.TextBox();
@@ -72,7 +73,6 @@
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.cmbCidade = new System.Windows.Forms.ComboBox();
             this.Acesso.SuspendLayout();
             this.Contato.SuspendLayout();
             this.Endereco.SuspendLayout();
@@ -217,6 +217,14 @@
             this.Endereco.TabStop = false;
             this.Endereco.Text = "Endereço";
             // 
+            // cmbCidade
+            // 
+            this.cmbCidade.FormattingEnabled = true;
+            this.cmbCidade.Location = new System.Drawing.Point(114, 292);
+            this.cmbCidade.Name = "cmbCidade";
+            this.cmbCidade.Size = new System.Drawing.Size(532, 33);
+            this.cmbCidade.TabIndex = 16;
+            // 
             // txtBairro
             // 
             this.txtBairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -265,34 +273,6 @@
             this.cmbEstado.AccessibleName = "Estado";
             this.cmbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbEstado.FormattingEnabled = true;
-            this.cmbEstado.Items.AddRange(new object[] {
-            "Acre (AC)",
-            "Alagoas (AL)",
-            "Amapá (AP)",
-            "Amazonas (AM)",
-            "Bahia (BA)",
-            "Ceará (CE)",
-            "Distrito Federal (DF)",
-            "Espírito Santo (ES)",
-            "Goiás (GO)",
-            "Maranhão (MA)",
-            "Mato Grosso (MT)",
-            "Mato Grosso do Sul (MS)",
-            "Minas Gerais (MG)",
-            "Pará (PA)",
-            "Paraíba (PB)",
-            "Paraná (PR)",
-            "Pernambuco (PE)",
-            "Piauí (PI)",
-            "Rio de Janeiro (RJ)",
-            "Rio Grande do Norte (RN)",
-            "Rio Grande do Sul (RS)",
-            "Rondônia (RO)",
-            "Roraima (RR)",
-            "Santa Catarina (SC)",
-            "São Paulo (SP)",
-            "Sergipe (SE)",
-            "Tocantins (TO)"});
             this.cmbEstado.Location = new System.Drawing.Point(409, 58);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(237, 33);
@@ -631,14 +611,6 @@
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
-            // 
-            // cmbCidade
-            // 
-            this.cmbCidade.FormattingEnabled = true;
-            this.cmbCidade.Location = new System.Drawing.Point(114, 292);
-            this.cmbCidade.Name = "cmbCidade";
-            this.cmbCidade.Size = new System.Drawing.Size(532, 33);
-            this.cmbCidade.TabIndex = 16;
             // 
             // FrmCliente
             // 

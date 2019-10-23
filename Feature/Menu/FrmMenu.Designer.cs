@@ -34,7 +34,7 @@
             this.btnAdministrador = new System.Windows.Forms.Button();
             this.btnCliente = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnMarca = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -109,17 +109,18 @@
             this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnMarca
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(71, 225);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(229, 126);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Marca";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMarca.Image = ((System.Drawing.Image)(resources.GetObject("btnMarca.Image")));
+            this.btnMarca.Location = new System.Drawing.Point(71, 225);
+            this.btnMarca.Name = "btnMarca";
+            this.btnMarca.Size = new System.Drawing.Size(229, 126);
+            this.btnMarca.TabIndex = 5;
+            this.btnMarca.Text = "Marca";
+            this.btnMarca.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnMarca.UseVisualStyleBackColor = true;
+            this.btnMarca.Click += new System.EventHandler(this.BtnMarca_Click);
             // 
             // button6
             // 
@@ -152,7 +153,7 @@
             this.ClientSize = new System.Drawing.Size(1172, 411);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnMarca);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.btnCliente);
             this.Controls.Add(this.btnAdministrador);
@@ -174,7 +175,7 @@
         private System.Windows.Forms.Button btnAdministrador;
         private System.Windows.Forms.Button btnCliente;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnMarca;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
     }

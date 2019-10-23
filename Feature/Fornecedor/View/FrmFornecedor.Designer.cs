@@ -42,6 +42,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.mskTelefone = new System.Windows.Forms.MaskedTextBox();
             this.Endereco = new System.Windows.Forms.GroupBox();
+            this.cmbCidade = new System.Windows.Forms.ComboBox();
             this.txtBairro = new System.Windows.Forms.TextBox();
             this.lblBairro = new System.Windows.Forms.Label();
             this.txtCep = new System.Windows.Forms.TextBox();
@@ -54,7 +55,6 @@
             this.lblNumero = new System.Windows.Forms.Label();
             this.lblComplemento = new System.Windows.Forms.Label();
             this.txtComplemento = new System.Windows.Forms.TextBox();
-            this.txtCidade = new System.Windows.Forms.TextBox();
             this.lblCidade = new System.Windows.Forms.Label();
             this.txtPais = new System.Windows.Forms.TextBox();
             this.lblPais = new System.Windows.Forms.Label();
@@ -114,7 +114,7 @@
             this.mskTelefoneRepresentante.Mask = "(999)  00000-0000";
             this.mskTelefoneRepresentante.Name = "mskTelefoneRepresentante";
             this.mskTelefoneRepresentante.Size = new System.Drawing.Size(177, 30);
-            this.mskTelefoneRepresentante.TabIndex = 9;
+            this.mskTelefoneRepresentante.TabIndex = 2;
             this.mskTelefoneRepresentante.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtRepresentante
@@ -123,7 +123,7 @@
             this.txtRepresentante.Location = new System.Drawing.Point(156, 56);
             this.txtRepresentante.Name = "txtRepresentante";
             this.txtRepresentante.Size = new System.Drawing.Size(354, 30);
-            this.txtRepresentante.TabIndex = 8;
+            this.txtRepresentante.TabIndex = 0;
             // 
             // lblCargo
             // 
@@ -217,6 +217,7 @@
             // 
             // Endereco
             // 
+            this.Endereco.Controls.Add(this.cmbCidade);
             this.Endereco.Controls.Add(this.txtBairro);
             this.Endereco.Controls.Add(this.lblBairro);
             this.Endereco.Controls.Add(this.txtCep);
@@ -229,7 +230,6 @@
             this.Endereco.Controls.Add(this.lblNumero);
             this.Endereco.Controls.Add(this.lblComplemento);
             this.Endereco.Controls.Add(this.txtComplemento);
-            this.Endereco.Controls.Add(this.txtCidade);
             this.Endereco.Controls.Add(this.lblCidade);
             this.Endereco.Controls.Add(this.txtPais);
             this.Endereco.Controls.Add(this.lblPais);
@@ -240,6 +240,17 @@
             this.Endereco.TabIndex = 41;
             this.Endereco.TabStop = false;
             this.Endereco.Text = "Endereço";
+            // 
+            // cmbCidade
+            // 
+            this.cmbCidade.AccessibleDescription = "Estado";
+            this.cmbCidade.AccessibleName = "Estado";
+            this.cmbCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCidade.FormattingEnabled = true;
+            this.cmbCidade.Location = new System.Drawing.Point(114, 289);
+            this.cmbCidade.Name = "cmbCidade";
+            this.cmbCidade.Size = new System.Drawing.Size(532, 33);
+            this.cmbCidade.TabIndex = 6;
             // 
             // txtBairro
             // 
@@ -289,38 +300,11 @@
             this.cmbEstado.AccessibleName = "Estado";
             this.cmbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbEstado.FormattingEnabled = true;
-            this.cmbEstado.Items.AddRange(new object[] {
-            "Acre (AC)",
-            "Alagoas (AL)",
-            "Amapá (AP)",
-            "Amazonas (AM)",
-            "Bahia (BA)",
-            "Ceará (CE)",
-            "Distrito Federal (DF)",
-            "Espírito Santo (ES)",
-            "Goiás (GO)",
-            "Maranhão (MA)",
-            "Mato Grosso (MT)",
-            "Mato Grosso do Sul (MS)",
-            "Minas Gerais (MG)",
-            "Pará (PA)",
-            "Paraíba (PB)",
-            "Paraná (PR)",
-            "Pernambuco (PE)",
-            "Piauí (PI)",
-            "Rio de Janeiro (RJ)",
-            "Rio Grande do Norte (RN)",
-            "Rio Grande do Sul (RS)",
-            "Rondônia (RO)",
-            "Roraima (RR)",
-            "Santa Catarina (SC)",
-            "São Paulo (SP)",
-            "Sergipe (SE)",
-            "Tocantins (TO)"});
             this.cmbEstado.Location = new System.Drawing.Point(409, 58);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(237, 33);
             this.cmbEstado.TabIndex = 1;
+            this.cmbEstado.SelectedIndexChanged += new System.EventHandler(this.cmbEstado_SelectedIndexChanged);
             // 
             // lblEstado
             // 
@@ -398,16 +382,6 @@
             this.txtComplemento.Size = new System.Drawing.Size(195, 30);
             this.txtComplemento.TabIndex = 4;
             // 
-            // txtCidade
-            // 
-            this.txtCidade.AccessibleDescription = "Cidade";
-            this.txtCidade.AccessibleName = "Cidade";
-            this.txtCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCidade.Location = new System.Drawing.Point(114, 292);
-            this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(532, 30);
-            this.txtCidade.TabIndex = 6;
-            // 
             // lblCidade
             // 
             this.lblCidade.AccessibleDescription = "Cidade";
@@ -464,7 +438,7 @@
             this.txtRazaoSocial.Location = new System.Drawing.Point(156, 120);
             this.txtRazaoSocial.Name = "txtRazaoSocial";
             this.txtRazaoSocial.Size = new System.Drawing.Size(492, 30);
-            this.txtRazaoSocial.TabIndex = 10;
+            this.txtRazaoSocial.TabIndex = 1;
             // 
             // txtNome
             // 
@@ -506,7 +480,7 @@
             this.mskIe.Location = new System.Drawing.Point(156, 176);
             this.mskIe.Name = "mskIe";
             this.mskIe.Size = new System.Drawing.Size(195, 30);
-            this.mskIe.TabIndex = 3;
+            this.mskIe.TabIndex = 2;
             this.mskIe.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // mskCnpj
@@ -517,7 +491,7 @@
             this.mskCnpj.Location = new System.Drawing.Point(434, 176);
             this.mskCnpj.Name = "mskCnpj";
             this.mskCnpj.Size = new System.Drawing.Size(214, 30);
-            this.mskCnpj.TabIndex = 4;
+            this.mskCnpj.TabIndex = 3;
             this.mskCnpj.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // lblRg
@@ -554,7 +528,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(818, 761);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(221, 54);
-            this.btnCancelar.TabIndex = 45;
+            this.btnCancelar.TabIndex = 2;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
@@ -569,7 +543,7 @@
             this.btnSalvar.Location = new System.Drawing.Point(447, 761);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(221, 54);
-            this.btnSalvar.TabIndex = 44;
+            this.btnSalvar.TabIndex = 1;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
@@ -585,7 +559,7 @@
             this.btnExcluir.Location = new System.Drawing.Point(573, 21);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(137, 122);
-            this.btnExcluir.TabIndex = 49;
+            this.btnExcluir.TabIndex = 5;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnExcluir.UseVisualStyleBackColor = true;
@@ -600,7 +574,7 @@
             this.btnAlterar.Location = new System.Drawing.Point(386, 21);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(137, 122);
-            this.btnAlterar.TabIndex = 48;
+            this.btnAlterar.TabIndex = 4;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAlterar.UseVisualStyleBackColor = true;
@@ -615,7 +589,7 @@
             this.btnListar.Location = new System.Drawing.Point(205, 21);
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(137, 122);
-            this.btnListar.TabIndex = 47;
+            this.btnListar.TabIndex = 3;
             this.btnListar.Text = "Listar";
             this.btnListar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnListar.UseVisualStyleBackColor = true;
@@ -630,7 +604,7 @@
             this.btnCadastrar.Location = new System.Drawing.Point(25, 21);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(137, 122);
-            this.btnCadastrar.TabIndex = 46;
+            this.btnCadastrar.TabIndex = 0;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCadastrar.UseVisualStyleBackColor = true;
@@ -691,7 +665,6 @@
         private System.Windows.Forms.Label lblNumero;
         private System.Windows.Forms.Label lblComplemento;
         private System.Windows.Forms.TextBox txtComplemento;
-        private System.Windows.Forms.TextBox txtCidade;
         private System.Windows.Forms.Label lblCidade;
         private System.Windows.Forms.TextBox txtPais;
         private System.Windows.Forms.Label lblPais;
@@ -713,5 +686,6 @@
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnListar;
         private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.ComboBox cmbCidade;
     }
 }

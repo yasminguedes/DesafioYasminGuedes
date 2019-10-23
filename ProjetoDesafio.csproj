@@ -86,6 +86,12 @@
     <Compile Include="Feature\Funcionario\View\FrmFuncionario.Designer.cs">
       <DependentUpon>FrmFuncionario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Feature\Marca\View\FrmMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Feature\Marca\View\FrmMarca.Designer.cs">
+      <DependentUpon>FrmMarca.cs</DependentUpon>
+    </Compile>
     <Compile Include="Feature\Menu\FrmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +138,9 @@
     <EmbeddedResource Include="Feature\Funcionario\View\FrmFuncionario.resx">
       <DependentUpon>FrmFuncionario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Feature\Marca\View\FrmMarca.resx">
+      <DependentUpon>FrmMarca.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Feature\Menu\FrmMenu.resx">
       <DependentUpon>FrmMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -169,7 +178,6 @@
     <Folder Include="Feature\Administrador\Controller\" />
     <Folder Include="Feature\Categoria\View\" />
     <Folder Include="Feature\Endereco\View\" />
-    <Folder Include="Feature\Marca\View\" />
     <Folder Include="Feature\Pessoa\View\" />
     <Folder Include="Feature\Produto\Controller\" />
     <Folder Include="Feature\Produto\Dao\" />

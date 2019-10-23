@@ -4,6 +4,7 @@ using ProjetoDesafio.Feature.Administrador.View;
 using ProjetoDesafio.Feature.Cliente.View;
 using ProjetoDesafio.Feature.Fornecedor.View;
 using ProjetoDesafio.Feature.Funcionario.View;
+using ProjetoDesafio.Feature.Marca.View;
 
 namespace ProjetoDesafio.Feature.Menu
 {
@@ -32,6 +33,11 @@ namespace ProjetoDesafio.Feature.Menu
         private void BtnCliente(object sender, EventArgs e)
         {
             new FrmCliente().Show();
+        }
+
+        private void BtnMarca_Click(object sender, EventArgs e)
+        {
+            new FrmMarca().Show();
         }
     }
 }
