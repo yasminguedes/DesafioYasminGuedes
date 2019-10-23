@@ -20,3 +20,6 @@ C:\Users\gabri\Desktop\Desafio\DesafioYasminGuedes\obj\Debug\ProjetoDesafio.Feat
 C:\Users\gabri\Desktop\Desafio\DesafioYasminGuedes\obj\Debug\ProjetoDesafio.Feature.Administrador.View.FrmAdministrador.resources
 C:\Users\gabri\Desktop\Desafio\DesafioYasminGuedes\obj\Debug\ProjetoDesafio.Feature.Cliente.View.FrmCliente.resources
 C:\Users\gabri\Desktop\Desafio\DesafioYasminGuedes\obj\Debug\ProjetoDesafio.Feature.Marca.View.FrmMarca.resources
+C:\Users\gabri\Desktop\Desafio\DesafioYasminGuedes\obj\Debug\ProjetoDesafio.Feature.Categoria.View.FrmCategoria.resources
+C:\Users\gabri\Desktop\Desafio\DesafioYasminGuedes\obj\Debug\ProjetoDesafio.Feature.Produto.View.FrmProduto.resources
+C:\Users\gabri\Desktop\Desafio\DesafioYasminGuedes\obj\Debug\ProjetoDesafio.Feature.Promocao.View.FrmPromocao.resources

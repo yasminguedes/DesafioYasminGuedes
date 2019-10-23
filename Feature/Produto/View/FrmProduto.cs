@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjetoDesafio.Feature.Produto.View
@@ -15,6 +8,49 @@ namespace ProjetoDesafio.Feature.Produto.View
         public FrmProduto()
         {
             InitializeComponent();
+            HabilitarOuDesabilitarCampos(false);
+            LimparCampos();
+        }
+
+        private void LimparCampos()
+        {
+            txtCompra.Text = "";
+            txtNomeProduto.Text = "";
+            txtQuantidade.Text = "";
+            txtVenda.Text = "";
+            cmbAtivo.Text = "";
+            cmbCategoria.Text = "";
+            cmbMarca.Text = "";
+            cmbTipo.Text = "";
+            dtCadastro.Text = "";
+        }
+        private void HabilitarOuDesabilitarCampos(bool habilitarCampos)
+        {
+            txtNomeProduto.Enabled = habilitarCampos;
+            txtCompra.Enabled = habilitarCampos;
+            txtVenda.Enabled = habilitarCampos;
+            txtQuantidade.Enabled = habilitarCampos;
+            cmbMarca.Enabled = habilitarCampos;
+            cmbCategoria.Enabled = habilitarCampos;
+            cmbTipo.Enabled = habilitarCampos;
+            cmbAtivo.Enabled = habilitarCampos;
+            dtCadastro.Enabled = habilitarCampos;
+        }
+
+        private void BtnCadastrar_Click(object sender, EventArgs e)
+        {
+            HabilitarOuDesabilitarCampos(true);
+        }
+
+        private void BtnSalvar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Produto cadastrado com sucesso!");
+            LimparCampos();
+        }
+
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
