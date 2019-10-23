@@ -29,30 +29,93 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenu));
-            this.btnFuncionario = new System.Windows.Forms.Button();
-            this.btnFornecedor = new System.Windows.Forms.Button();
-            this.btnAdministrador = new System.Windows.Forms.Button();
-            this.btnPromocao = new System.Windows.Forms.Button();
-            this.btnMarca = new System.Windows.Forms.Button();
-            this.btnCategoria = new System.Windows.Forms.Button();
-            this.btnProduto = new System.Windows.Forms.Button();
             this.BtnCliente = new System.Windows.Forms.Button();
+            this.btnProduto = new System.Windows.Forms.Button();
+            this.btnCategoria = new System.Windows.Forms.Button();
+            this.btnMarca = new System.Windows.Forms.Button();
+            this.btnPromocao = new System.Windows.Forms.Button();
+            this.btnAdministrador = new System.Windows.Forms.Button();
+            this.btnFornecedor = new System.Windows.Forms.Button();
+            this.btnFuncionario = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnFuncionario
+            // BtnCliente
             // 
-            this.btnFuncionario.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFuncionario.BackgroundImage")));
-            this.btnFuncionario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFuncionario.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnFuncionario.Location = new System.Drawing.Point(71, 67);
-            this.btnFuncionario.Name = "btnFuncionario";
-            this.btnFuncionario.Size = new System.Drawing.Size(229, 126);
-            this.btnFuncionario.TabIndex = 0;
-            this.btnFuncionario.Text = "Funcionário";
-            this.btnFuncionario.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnFuncionario.UseVisualStyleBackColor = true;
-            this.btnFuncionario.Click += new System.EventHandler(this.BtnFuncionario_Click);
+            this.BtnCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCliente.Image = ((System.Drawing.Image)(resources.GetObject("BtnCliente.Image")));
+            this.BtnCliente.Location = new System.Drawing.Point(836, 67);
+            this.BtnCliente.Name = "BtnCliente";
+            this.BtnCliente.Size = new System.Drawing.Size(229, 126);
+            this.BtnCliente.TabIndex = 8;
+            this.BtnCliente.Text = "Cliente";
+            this.BtnCliente.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnCliente.UseVisualStyleBackColor = true;
+            this.BtnCliente.Click += new System.EventHandler(this.BtnCliente_Click);
+            // 
+            // btnProduto
+            // 
+            this.btnProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProduto.Image = ((System.Drawing.Image)(resources.GetObject("btnProduto.Image")));
+            this.btnProduto.Location = new System.Drawing.Point(583, 225);
+            this.btnProduto.Name = "btnProduto";
+            this.btnProduto.Size = new System.Drawing.Size(229, 126);
+            this.btnProduto.TabIndex = 7;
+            this.btnProduto.Text = "Produto";
+            this.btnProduto.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnProduto.UseVisualStyleBackColor = true;
+            this.btnProduto.Click += new System.EventHandler(this.BtnProduto_Click);
+            // 
+            // btnCategoria
+            // 
+            this.btnCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCategoria.Image = ((System.Drawing.Image)(resources.GetObject("btnCategoria.Image")));
+            this.btnCategoria.Location = new System.Drawing.Point(327, 225);
+            this.btnCategoria.Name = "btnCategoria";
+            this.btnCategoria.Size = new System.Drawing.Size(229, 126);
+            this.btnCategoria.TabIndex = 6;
+            this.btnCategoria.Text = "Categoria";
+            this.btnCategoria.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCategoria.UseVisualStyleBackColor = true;
+            this.btnCategoria.Click += new System.EventHandler(this.BtnCategoria_Click);
+            // 
+            // btnMarca
+            // 
+            this.btnMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMarca.Image = ((System.Drawing.Image)(resources.GetObject("btnMarca.Image")));
+            this.btnMarca.Location = new System.Drawing.Point(71, 225);
+            this.btnMarca.Name = "btnMarca";
+            this.btnMarca.Size = new System.Drawing.Size(229, 126);
+            this.btnMarca.TabIndex = 5;
+            this.btnMarca.Text = "Marca";
+            this.btnMarca.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnMarca.UseVisualStyleBackColor = true;
+            this.btnMarca.Click += new System.EventHandler(this.BtnMarca_Click);
+            // 
+            // btnPromocao
+            // 
+            this.btnPromocao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPromocao.Image = ((System.Drawing.Image)(resources.GetObject("btnPromocao.Image")));
+            this.btnPromocao.Location = new System.Drawing.Point(836, 225);
+            this.btnPromocao.Name = "btnPromocao";
+            this.btnPromocao.Size = new System.Drawing.Size(229, 126);
+            this.btnPromocao.TabIndex = 4;
+            this.btnPromocao.Text = "Promoção";
+            this.btnPromocao.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnPromocao.UseVisualStyleBackColor = true;
+            this.btnPromocao.Click += new System.EventHandler(this.BtnPromocao_Click);
+            // 
+            // btnAdministrador
+            // 
+            this.btnAdministrador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdministrador.Image = ((System.Drawing.Image)(resources.GetObject("btnAdministrador.Image")));
+            this.btnAdministrador.Location = new System.Drawing.Point(583, 67);
+            this.btnAdministrador.Name = "btnAdministrador";
+            this.btnAdministrador.Size = new System.Drawing.Size(229, 126);
+            this.btnAdministrador.TabIndex = 2;
+            this.btnAdministrador.Text = "Administrador";
+            this.btnAdministrador.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAdministrador.UseVisualStyleBackColor = true;
+            this.btnAdministrador.Click += new System.EventHandler(this.BtnAdministrador_Click);
             // 
             // btnFornecedor
             // 
@@ -69,81 +132,20 @@
             this.btnFornecedor.UseVisualStyleBackColor = true;
             this.btnFornecedor.Click += new System.EventHandler(this.BtnFornecedor_Click);
             // 
-            // btnAdministrador
+            // btnFuncionario
             // 
-            this.btnAdministrador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdministrador.Image = ((System.Drawing.Image)(resources.GetObject("btnAdministrador.Image")));
-            this.btnAdministrador.Location = new System.Drawing.Point(583, 67);
-            this.btnAdministrador.Name = "btnAdministrador";
-            this.btnAdministrador.Size = new System.Drawing.Size(229, 126);
-            this.btnAdministrador.TabIndex = 2;
-            this.btnAdministrador.Text = "Administrador";
-            this.btnAdministrador.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnAdministrador.UseVisualStyleBackColor = true;
-            this.btnAdministrador.Click += new System.EventHandler(this.BtnAdministrador_Click);
-            // 
-            // btnPromocao
-            // 
-            this.btnPromocao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPromocao.Image = ((System.Drawing.Image)(resources.GetObject("btnPromocao.Image")));
-            this.btnPromocao.Location = new System.Drawing.Point(836, 225);
-            this.btnPromocao.Name = "btnPromocao";
-            this.btnPromocao.Size = new System.Drawing.Size(229, 126);
-            this.btnPromocao.TabIndex = 4;
-            this.btnPromocao.Text = "Promoção";
-            this.btnPromocao.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnPromocao.UseVisualStyleBackColor = true;
-            // 
-            // btnMarca
-            // 
-            this.btnMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMarca.Image = ((System.Drawing.Image)(resources.GetObject("btnMarca.Image")));
-            this.btnMarca.Location = new System.Drawing.Point(71, 225);
-            this.btnMarca.Name = "btnMarca";
-            this.btnMarca.Size = new System.Drawing.Size(229, 126);
-            this.btnMarca.TabIndex = 5;
-            this.btnMarca.Text = "Marca";
-            this.btnMarca.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnMarca.UseVisualStyleBackColor = true;
-            this.btnMarca.Click += new System.EventHandler(this.BtnMarca_Click);
-            // 
-            // btnCategoria
-            // 
-            this.btnCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCategoria.Image = ((System.Drawing.Image)(resources.GetObject("btnCategoria.Image")));
-            this.btnCategoria.Location = new System.Drawing.Point(327, 225);
-            this.btnCategoria.Name = "btnCategoria";
-            this.btnCategoria.Size = new System.Drawing.Size(229, 126);
-            this.btnCategoria.TabIndex = 6;
-            this.btnCategoria.Text = "Categoria";
-            this.btnCategoria.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnCategoria.UseVisualStyleBackColor = true;
-            this.btnCategoria.Click += new System.EventHandler(this.btnCategoria_Click);
-            // 
-            // btnProduto
-            // 
-            this.btnProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProduto.Image = ((System.Drawing.Image)(resources.GetObject("btnProduto.Image")));
-            this.btnProduto.Location = new System.Drawing.Point(583, 225);
-            this.btnProduto.Name = "btnProduto";
-            this.btnProduto.Size = new System.Drawing.Size(229, 126);
-            this.btnProduto.TabIndex = 7;
-            this.btnProduto.Text = "Produto";
-            this.btnProduto.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnProduto.UseVisualStyleBackColor = true;
-            // 
-            // BtnCliente
-            // 
-            this.BtnCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCliente.Image = ((System.Drawing.Image)(resources.GetObject("BtnCliente.Image")));
-            this.BtnCliente.Location = new System.Drawing.Point(836, 67);
-            this.BtnCliente.Name = "BtnCliente";
-            this.BtnCliente.Size = new System.Drawing.Size(229, 126);
-            this.BtnCliente.TabIndex = 8;
-            this.BtnCliente.Text = "Cliente";
-            this.BtnCliente.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BtnCliente.UseVisualStyleBackColor = true;
-            this.BtnCliente.Click += new System.EventHandler(this.BtnCliente_Click);
+            this.btnFuncionario.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFuncionario.BackgroundImage")));
+            this.btnFuncionario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFuncionario.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnFuncionario.Location = new System.Drawing.Point(71, 67);
+            this.btnFuncionario.Name = "btnFuncionario";
+            this.btnFuncionario.Size = new System.Drawing.Size(229, 126);
+            this.btnFuncionario.TabIndex = 0;
+            this.btnFuncionario.Text = "Funcionário";
+            this.btnFuncionario.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnFuncionario.UseVisualStyleBackColor = true;
+            this.btnFuncionario.Click += new System.EventHandler(this.BtnFuncionario_Click);
             // 
             // FrmMenu
             // 

@@ -628,6 +628,7 @@
             this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.btnCadastrar);
+            this.MaximizeBox = false;
             this.Name = "FrmCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Cliente";

@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ProjetoDesafio.Model
+namespace ProjetoDesafio.Feature.Promocao.Model
 {
-    public class Promocao
+    public class PromocaoModel
     {
         public int IdPromocao { get; set; }
         public string NomePromocao { get; set; }

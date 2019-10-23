@@ -10,7 +10,8 @@ namespace ProjetoDesafio.Feature.Produto.Model
         public string NomeProduto { get; set; }
         public double PrecoCompra { get; set; }
         public double PrecoVenda { get; set; }
-        public int QtdeEstoque { get; set; }
+        public int Qtde { get; set; }
+        public  string Tipo { get; set; }
         public string Ativo { get; set; }
         public DateTime DataCadastro { get; set; }
         public MarcaModel Marca { get; set; }
