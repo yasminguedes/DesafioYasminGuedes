@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenu));
+            this.btnEstoque = new System.Windows.Forms.Button();
+            this.btnPedido = new System.Windows.Forms.Button();
             this.BtnCliente = new System.Windows.Forms.Button();
             this.btnProduto = new System.Windows.Forms.Button();
             this.btnCategoria = new System.Windows.Forms.Button();
@@ -37,8 +39,32 @@
             this.btnAdministrador = new System.Windows.Forms.Button();
             this.btnFornecedor = new System.Windows.Forms.Button();
             this.btnFuncionario = new System.Windows.Forms.Button();
-            this.btnPedido = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // btnEstoque
+            // 
+            this.btnEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEstoque.Image = ((System.Drawing.Image)(resources.GetObject("btnEstoque.Image")));
+            this.btnEstoque.Location = new System.Drawing.Point(1095, 225);
+            this.btnEstoque.Name = "btnEstoque";
+            this.btnEstoque.Size = new System.Drawing.Size(229, 126);
+            this.btnEstoque.TabIndex = 10;
+            this.btnEstoque.Text = "Estoque";
+            this.btnEstoque.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEstoque.UseVisualStyleBackColor = true;
+            // 
+            // btnPedido
+            // 
+            this.btnPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPedido.Image = ((System.Drawing.Image)(resources.GetObject("btnPedido.Image")));
+            this.btnPedido.Location = new System.Drawing.Point(836, 225);
+            this.btnPedido.Name = "btnPedido";
+            this.btnPedido.Size = new System.Drawing.Size(229, 126);
+            this.btnPedido.TabIndex = 9;
+            this.btnPedido.Text = "Pedido";
+            this.btnPedido.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnPedido.UseVisualStyleBackColor = true;
+            this.btnPedido.Click += new System.EventHandler(this.BtnPedido_Click);
             // 
             // BtnCliente
             // 
@@ -148,24 +174,12 @@
             this.btnFuncionario.UseVisualStyleBackColor = true;
             this.btnFuncionario.Click += new System.EventHandler(this.BtnFuncionario_Click);
             // 
-            // btnPedido
-            // 
-            this.btnPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPedido.Image = ((System.Drawing.Image)(resources.GetObject("btnPedido.Image")));
-            this.btnPedido.Location = new System.Drawing.Point(836, 225);
-            this.btnPedido.Name = "btnPedido";
-            this.btnPedido.Size = new System.Drawing.Size(229, 126);
-            this.btnPedido.TabIndex = 9;
-            this.btnPedido.Text = "Pedido";
-            this.btnPedido.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnPedido.UseVisualStyleBackColor = true;
-            this.btnPedido.Click += new System.EventHandler(this.BtnPedido_Click);
-            // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1374, 411);
+            this.Controls.Add(this.btnEstoque);
             this.Controls.Add(this.btnPedido);
             this.Controls.Add(this.BtnCliente);
             this.Controls.Add(this.btnProduto);
@@ -195,5 +209,6 @@
         private System.Windows.Forms.Button btnProduto;
         private System.Windows.Forms.Button BtnCliente;
         private System.Windows.Forms.Button btnPedido;
+        private System.Windows.Forms.Button btnEstoque;
     }
 }

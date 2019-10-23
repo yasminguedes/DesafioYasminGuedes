@@ -6,6 +6,7 @@ using ProjetoDesafio.Feature.Cliente.View;
 using ProjetoDesafio.Feature.Fornecedor.View;
 using ProjetoDesafio.Feature.Funcionario.View;
 using ProjetoDesafio.Feature.Marca.View;
+using ProjetoDesafio.Feature.Pedido.View;
 using ProjetoDesafio.Feature.Produto.View;
 using ProjetoDesafio.Feature.Promocao.View;
 
@@ -60,7 +61,7 @@ namespace ProjetoDesafio.Feature.Menu
 
         private void BtnPedido_Click(object sender, EventArgs e)
         {
-
+            new gpProdutos().Show();
         }
     }
 }

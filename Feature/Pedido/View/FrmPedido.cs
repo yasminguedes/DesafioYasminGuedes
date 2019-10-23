@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProjetoDesafio.Feature.Pedido.View
 {
-    public partial class FrmPedido : Form
+    public partial class gpProdutos : Form
     {
-        public FrmPedido()
+        public gpProdutos()
         {
             InitializeComponent();
         }
