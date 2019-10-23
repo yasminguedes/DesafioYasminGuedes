@@ -4,7 +4,7 @@ using ProjetoDesafio.Feature.Marca.Model;
 
 namespace ProjetoDesafio.Feature.Produto.Model
 {
-    public class Produto
+    public class ProdutoModel
     {
         public int IdProduto { get; set; }
         public string NomeProduto { get; set; }

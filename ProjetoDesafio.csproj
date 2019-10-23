@@ -103,6 +103,12 @@
     <Compile Include="Feature\Menu\FrmMenu.Designer.cs">
       <DependentUpon>FrmMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Feature\Pedido\View\FrmPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Feature\Pedido\View\FrmPedido.Designer.cs">
+      <DependentUpon>FrmPedido.cs</DependentUpon>
+    </Compile>
     <Compile Include="Feature\Pessoa\Dao\PessoaDao.cs" />
     <Compile Include="Feature\Fornecedor\View\FrmFornecedor.cs">
       <SubType>Form</SubType>
@@ -135,14 +141,12 @@
     <Compile Include="Feature\Endereco\Model\EnderecoModel.cs" />
     <Compile Include="Feature\Fornecedor\Model\FornecedorModel.cs" />
     <Compile Include="Feature\Funcionario\Model\FuncionarioModel.cs" />
-    <Compile Include="Model\ItemPedido.cs" />
     <Compile Include="Feature\Marca\Model\MarcaModel.cs" />
     <Compile Include="Model\MovimentacaoProduto.cs" />
-    <Compile Include="Model\Pedido.cs" />
+    <Compile Include="Feature\Pedido\Model\PedidoModel.cs" />
     <Compile Include="Feature\Pessoa\Model\PessoaModel.cs" />
-    <Compile Include="Feature\Produto\Model\Produto.cs" />
+    <Compile Include="Feature\Produto\Model\ProdutoModel.cs" />
     <Compile Include="Feature\Promocao\Model\PromocaoModel.cs" />
-    <Compile Include="Model\PromocaoProduto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Feature\Administrador\View\FrmAdministrador.resx">
@@ -165,6 +169,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Feature\Fornecedor\View\FrmFornecedor.resx">
       <DependentUpon>FrmFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Feature\Pedido\View\FrmPedido.resx">
+      <DependentUpon>FrmPedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Feature\Produto\View\FrmProduto.resx">
       <DependentUpon>FrmProduto.cs</DependentUpon>

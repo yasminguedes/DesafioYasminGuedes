@@ -56,9 +56,13 @@
             this.gpValores = new System.Windows.Forms.GroupBox();
             this.txtVenda = new System.Windows.Forms.TextBox();
             this.txtCompra = new System.Windows.Forms.TextBox();
+            this.gpProcedencia = new System.Windows.Forms.GroupBox();
+            this.cmbFornecedor = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.gpInformacoes.SuspendLayout();
             this.gpCompra.SuspendLayout();
             this.gpValores.SuspendLayout();
+            this.gpProcedencia.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCancelar
@@ -68,7 +72,7 @@
             this.btnCancelar.BackColor = System.Drawing.SystemColors.Menu;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnCancelar.Location = new System.Drawing.Point(865, 572);
+            this.btnCancelar.Location = new System.Drawing.Point(1191, 594);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(221, 54);
             this.btnCancelar.TabIndex = 2;
@@ -83,7 +87,7 @@
             this.btnSalvar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSalvar.Location = new System.Drawing.Point(476, 572);
+            this.btnSalvar.Location = new System.Drawing.Point(802, 594);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(221, 54);
             this.btnSalvar.TabIndex = 1;
@@ -262,24 +266,24 @@
             // cmbCategoria
             // 
             this.cmbCategoria.FormattingEnabled = true;
-            this.cmbCategoria.Location = new System.Drawing.Point(119, 165);
+            this.cmbCategoria.Location = new System.Drawing.Point(132, 165);
             this.cmbCategoria.Name = "cmbCategoria";
-            this.cmbCategoria.Size = new System.Drawing.Size(548, 33);
+            this.cmbCategoria.Size = new System.Drawing.Size(535, 33);
             this.cmbCategoria.TabIndex = 2;
             // 
             // cmbMarca
             // 
             this.cmbMarca.FormattingEnabled = true;
-            this.cmbMarca.Location = new System.Drawing.Point(119, 105);
+            this.cmbMarca.Location = new System.Drawing.Point(132, 105);
             this.cmbMarca.Name = "cmbMarca";
-            this.cmbMarca.Size = new System.Drawing.Size(548, 33);
+            this.cmbMarca.Size = new System.Drawing.Size(535, 33);
             this.cmbMarca.TabIndex = 1;
             // 
             // txtNomeProduto
             // 
-            this.txtNomeProduto.Location = new System.Drawing.Point(119, 45);
+            this.txtNomeProduto.Location = new System.Drawing.Point(132, 45);
             this.txtNomeProduto.Name = "txtNomeProduto";
-            this.txtNomeProduto.Size = new System.Drawing.Size(548, 30);
+            this.txtNomeProduto.Size = new System.Drawing.Size(535, 30);
             this.txtNomeProduto.TabIndex = 0;
             // 
             // gpCompra
@@ -354,16 +358,47 @@
             // 
             // txtCompra
             // 
-            this.txtCompra.Location = new System.Drawing.Point(119, 50);
+            this.txtCompra.Location = new System.Drawing.Point(132, 50);
             this.txtCompra.Name = "txtCompra";
-            this.txtCompra.Size = new System.Drawing.Size(548, 30);
+            this.txtCompra.Size = new System.Drawing.Size(535, 30);
             this.txtCompra.TabIndex = 0;
+            // 
+            // gpProcedencia
+            // 
+            this.gpProcedencia.Controls.Add(this.cmbFornecedor);
+            this.gpProcedencia.Controls.Add(this.label1);
+            this.gpProcedencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpProcedencia.Location = new System.Drawing.Point(30, 550);
+            this.gpProcedencia.Name = "gpProcedencia";
+            this.gpProcedencia.Size = new System.Drawing.Size(685, 134);
+            this.gpProcedencia.TabIndex = 26;
+            this.gpProcedencia.TabStop = false;
+            this.gpProcedencia.Text = "Procedência";
+            // 
+            // cmbFornecedor
+            // 
+            this.cmbFornecedor.FormattingEnabled = true;
+            this.cmbFornecedor.Location = new System.Drawing.Point(132, 56);
+            this.cmbFornecedor.Name = "cmbFornecedor";
+            this.cmbFornecedor.Size = new System.Drawing.Size(535, 33);
+            this.cmbFornecedor.TabIndex = 21;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(6, 59);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(112, 25);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "Fornecedor";
             // 
             // FrmProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1441, 653);
+            this.ClientSize = new System.Drawing.Size(1441, 735);
+            this.Controls.Add(this.gpProcedencia);
             this.Controls.Add(this.gpValores);
             this.Controls.Add(this.gpCompra);
             this.Controls.Add(this.gpInformacoes);
@@ -383,6 +418,8 @@
             this.gpCompra.PerformLayout();
             this.gpValores.ResumeLayout(false);
             this.gpValores.PerformLayout();
+            this.gpProcedencia.ResumeLayout(false);
+            this.gpProcedencia.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -416,5 +453,8 @@
         private System.Windows.Forms.GroupBox gpValores;
         private System.Windows.Forms.TextBox txtCompra;
         private System.Windows.Forms.TextBox txtVenda;
+        private System.Windows.Forms.GroupBox gpProcedencia;
+        private System.Windows.Forms.ComboBox cmbFornecedor;
+        private System.Windows.Forms.Label label1;
     }
 }

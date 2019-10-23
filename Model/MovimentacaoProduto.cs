@@ -15,6 +15,6 @@ namespace ProjetoDesafio.Model
         public int QtdeEntrada { get; set; }
         public int QtdeSaida { get; set; }
         public int QtdeEstoque { get; set; }
-        public Produto Produto { get; set; }
+        public ProdutoModel Produto { get; set; }
     }
 }

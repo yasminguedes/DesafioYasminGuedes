@@ -57,5 +57,10 @@ namespace ProjetoDesafio.Feature.Menu
         {
             new  FrmPromocao().Show();
         }
+
+        private void BtnPedido_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
