@@ -36,7 +36,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.btnEntrar = new System.Windows.Forms.Button();
+            this.pctCheck = new System.Windows.Forms.PictureBox();
+            this.pctCheck2 = new System.Windows.Forms.PictureBox();
+            this.pctErrado = new System.Windows.Forms.PictureBox();
+            this.pctErrado2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctCheck)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctCheck2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctErrado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctErrado2)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -76,6 +84,7 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(257, 34);
             this.txtUsuario.TabIndex = 3;
+            this.txtUsuario.Leave += new System.EventHandler(this.TxtUsuario_Leave);
             // 
             // label3
             // 
@@ -95,6 +104,7 @@
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(257, 34);
             this.txtSenha.TabIndex = 5;
+            this.txtSenha.Leave += new System.EventHandler(this.TxtSenha_Leave);
             // 
             // btnEntrar
             // 
@@ -109,11 +119,61 @@
             this.btnEntrar.UseVisualStyleBackColor = false;
             this.btnEntrar.Click += new System.EventHandler(this.BtnEntrar_Click);
             // 
+            // pctCheck
+            // 
+            this.pctCheck.Image = ((System.Drawing.Image)(resources.GetObject("pctCheck.Image")));
+            this.pctCheck.Location = new System.Drawing.Point(490, 386);
+            this.pctCheck.Name = "pctCheck";
+            this.pctCheck.Size = new System.Drawing.Size(25, 29);
+            this.pctCheck.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pctCheck.TabIndex = 7;
+            this.pctCheck.TabStop = false;
+            this.pctCheck.Visible = false;
+            // 
+            // pctCheck2
+            // 
+            this.pctCheck2.Image = ((System.Drawing.Image)(resources.GetObject("pctCheck2.Image")));
+            this.pctCheck2.Location = new System.Drawing.Point(490, 506);
+            this.pctCheck2.Name = "pctCheck2";
+            this.pctCheck2.Size = new System.Drawing.Size(25, 29);
+            this.pctCheck2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pctCheck2.TabIndex = 8;
+            this.pctCheck2.TabStop = false;
+            this.pctCheck2.Visible = false;
+            // 
+            // pctErrado
+            // 
+            this.pctErrado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pctErrado.ErrorImage = global::ProjetoDesafio.Properties.Resources.cancel_16;
+            this.pctErrado.Image = global::ProjetoDesafio.Properties.Resources.cancel_16;
+            this.pctErrado.ImageLocation = "center";
+            this.pctErrado.Location = new System.Drawing.Point(494, 390);
+            this.pctErrado.Name = "pctErrado";
+            this.pctErrado.Size = new System.Drawing.Size(18, 19);
+            this.pctErrado.TabIndex = 9;
+            this.pctErrado.TabStop = false;
+            this.pctErrado.Visible = false;
+            // 
+            // pctErrado2
+            // 
+            this.pctErrado2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pctErrado2.BackgroundImage")));
+            this.pctErrado2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pctErrado2.Location = new System.Drawing.Point(490, 507);
+            this.pctErrado2.Name = "pctErrado2";
+            this.pctErrado2.Size = new System.Drawing.Size(29, 28);
+            this.pctErrado2.TabIndex = 10;
+            this.pctErrado2.TabStop = false;
+            this.pctErrado2.Visible = false;
+            // 
             // FrmLogar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(692, 776);
+            this.Controls.Add(this.pctErrado2);
+            this.Controls.Add(this.pctErrado);
+            this.Controls.Add(this.pctCheck2);
+            this.Controls.Add(this.pctCheck);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.label3);
@@ -126,6 +186,10 @@
             this.Text = "Tela de Login";
             this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctCheck)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctCheck2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctErrado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctErrado2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -140,5 +204,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Button btnEntrar;
+        private System.Windows.Forms.PictureBox pctCheck;
+        private System.Windows.Forms.PictureBox pctCheck2;
+        private System.Windows.Forms.PictureBox pctErrado;
+        private System.Windows.Forms.PictureBox pctErrado2;
     }
 }

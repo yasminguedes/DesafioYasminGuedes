@@ -174,4 +174,33 @@
         srqkUqlUKpVKpVZL69b9H2PEUpa5BTv+AAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="pctCheck.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAQpJREFUOE+1
+        kj1SAjEYQBdKx9EbWMtYaMktBApvYUPhzyU4AUIhHAGksfAIHkIo4AqK75Hdnbhkh0bezJv5Nsm3X74k
+        2bFo4ROOcx/zsYOc4xR/8AtnucaOTfAMk5j8iS6+xQYWGHfQOdckf2JlF1zsvtI455rX3VeE/blFq9Rx
+        hVbuomsvseQZ/XO87Zgb3OAAm7hED7bEk/awUlzjGj/w1AF4w5cQBkY4D2HWxvsQlpXf8cSBnAUOQxiI
+        WzDZHt1uKjnZQvUQ+7jFarL08Bv/HKL4SOJrvMNqsnNW37tG8YqKh+RVudUCYyubXPuQxAl3Yjsr9GDV
+        2DEr1ybH2N8DejtqvNfzP5Blv+NvPluNKnnNAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="pctCheck2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAQpJREFUOE+1
+        kj1SAjEYQBdKx9EbWMtYaMktBApvYUPhzyU4AUIhHAGksfAIHkIo4AqK75Hdnbhkh0bezJv5Nsm3X74k
+        2bFo4ROOcx/zsYOc4xR/8AtnucaOTfAMk5j8iS6+xQYWGHfQOdckf2JlF1zsvtI455rX3VeE/blFq9Rx
+        hVbuomsvseQZ/XO87Zgb3OAAm7hED7bEk/awUlzjGj/w1AF4w5cQBkY4D2HWxvsQlpXf8cSBnAUOQxiI
+        WzDZHt1uKjnZQvUQ+7jFarL08Bv/HKL4SOJrvMNqsnNW37tG8YqKh+RVudUCYyubXPuQxAl3Yjsr9GDV
+        2DEr1ybH2N8DejtqvNfzP5Blv+NvPluNKnnNAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="pctErrado2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAN1JREFUOE+1
+        kk0OAUEQRofElhtYcxo/R7HwcxgscATcwN4hcArivcz0pJmZIPiSl/lSXTXV1d3Jv9SFKSwzJlnspVqw
+        gRucYJuhN7aGJpTK4iOY3IMaBOn74Jo5pT+xswltaBh4kjHXzFkZiOV8btEuJh5gBEF6Y64NwNwO5JqB
+        fw7btsAkv7FXdTiDB5trAbvU5gqFcXHQHuapTfX1D74e4ZNDHMIVHg5R+UjeuUa7F65R+TjCQ/Kq3GqQ
+        3s4WVz4k5YI7cZwLeLCiN2bnyuJYzjcGb0f0hZl/oCS5A++nRBUf8GbQAAAAAElFTkSuQmCC
+</value>
+  </data>
 </root>

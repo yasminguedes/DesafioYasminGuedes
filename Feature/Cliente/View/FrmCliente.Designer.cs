@@ -52,7 +52,6 @@
             this.lblNumero = new System.Windows.Forms.Label();
             this.lblComplemento = new System.Windows.Forms.Label();
             this.txtComplemento = new System.Windows.Forms.TextBox();
-            this.txtCidade = new System.Windows.Forms.TextBox();
             this.lblCidade = new System.Windows.Forms.Label();
             this.txtPais = new System.Windows.Forms.TextBox();
             this.lblPais = new System.Windows.Forms.Label();
@@ -73,6 +72,7 @@
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
+            this.cmbCidade = new System.Windows.Forms.ComboBox();
             this.Acesso.SuspendLayout();
             this.Contato.SuspendLayout();
             this.Endereco.SuspendLayout();
@@ -193,6 +193,7 @@
             // 
             // Endereco
             // 
+            this.Endereco.Controls.Add(this.cmbCidade);
             this.Endereco.Controls.Add(this.txtBairro);
             this.Endereco.Controls.Add(this.lblBairro);
             this.Endereco.Controls.Add(this.txtCep);
@@ -205,7 +206,6 @@
             this.Endereco.Controls.Add(this.lblNumero);
             this.Endereco.Controls.Add(this.lblComplemento);
             this.Endereco.Controls.Add(this.txtComplemento);
-            this.Endereco.Controls.Add(this.txtCidade);
             this.Endereco.Controls.Add(this.lblCidade);
             this.Endereco.Controls.Add(this.txtPais);
             this.Endereco.Controls.Add(this.lblPais);
@@ -297,6 +297,7 @@
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(237, 33);
             this.cmbEstado.TabIndex = 1;
+            this.cmbEstado.SelectedIndexChanged += new System.EventHandler(this.CmbEstado_SelectedIndexChanged);
             // 
             // lblEstado
             // 
@@ -373,16 +374,6 @@
             this.txtComplemento.Name = "txtComplemento";
             this.txtComplemento.Size = new System.Drawing.Size(195, 30);
             this.txtComplemento.TabIndex = 4;
-            // 
-            // txtCidade
-            // 
-            this.txtCidade.AccessibleDescription = "Cidade";
-            this.txtCidade.AccessibleName = "Cidade";
-            this.txtCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCidade.Location = new System.Drawing.Point(114, 292);
-            this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(532, 30);
-            this.txtCidade.TabIndex = 6;
             // 
             // lblCidade
             // 
@@ -641,6 +632,14 @@
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
+            // cmbCidade
+            // 
+            this.cmbCidade.FormattingEnabled = true;
+            this.cmbCidade.Location = new System.Drawing.Point(114, 292);
+            this.cmbCidade.Name = "cmbCidade";
+            this.cmbCidade.Size = new System.Drawing.Size(532, 33);
+            this.cmbCidade.TabIndex = 16;
+            // 
             // FrmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -694,7 +693,6 @@
         private System.Windows.Forms.Label lblNumero;
         private System.Windows.Forms.Label lblComplemento;
         private System.Windows.Forms.TextBox txtComplemento;
-        private System.Windows.Forms.TextBox txtCidade;
         private System.Windows.Forms.Label lblCidade;
         private System.Windows.Forms.TextBox txtPais;
         private System.Windows.Forms.Label lblPais;
@@ -718,5 +716,6 @@
         private System.Windows.Forms.TextBox txtProfissao;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dtCadastro;
+        private System.Windows.Forms.ComboBox cmbCidade;
     }
 }

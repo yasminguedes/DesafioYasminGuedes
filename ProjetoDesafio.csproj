@@ -149,6 +149,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -168,12 +169,14 @@
     <Folder Include="Feature\Administrador\Controller\" />
     <Folder Include="Feature\Categoria\View\" />
     <Folder Include="Feature\Endereco\View\" />
-    <Folder Include="Feature\icones\" />
     <Folder Include="Feature\Marca\View\" />
     <Folder Include="Feature\Pessoa\View\" />
     <Folder Include="Feature\Produto\Controller\" />
     <Folder Include="Feature\Produto\Dao\" />
     <Folder Include="Feature\Produto\View\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Feature\icones\cancel-16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

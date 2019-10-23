@@ -2,6 +2,7 @@
 using ProjetoDesafio.Feature.Funcionario.Controller;
 using ProjetoDesafio.Feature.Funcionario.Model;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace ProjetoDesafio.Feature.Funcionario.View
 {
@@ -12,6 +13,7 @@ namespace ProjetoDesafio.Feature.Funcionario.View
             InitializeComponent();
 
             HabilitarOuDesabilitarCampos(false);
+            SelecionarEstado();
             LimparCampos();
         }
 
@@ -60,6 +62,36 @@ namespace ProjetoDesafio.Feature.Funcionario.View
             txtUsuario.Enabled = habilitarCampos;
             mskSenha.Enabled = habilitarCampos;
             mskSenhaConfirmar.Enabled = habilitarCampos;
+        }
+
+        public void SelecionarEstado()
+        {
+            cmbEstado.Items.Add("Acre (AC)");
+            cmbEstado.Items.Add("Alagoas (AL)");
+            cmbEstado.Items.Add("Amapá (AP)");
+            cmbEstado.Items.Add("Amazonas (AM)");
+            cmbEstado.Items.Add("Bahia (BA)");
+            cmbEstado.Items.Add("Ceará (CE)");
+            cmbEstado.Items.Add("Distrito Federal (DF)");
+            cmbEstado.Items.Add("Espírito Santo (ES)");
+            cmbEstado.Items.Add("Goiás (GO)");
+            cmbEstado.Items.Add("Maranhão (MA)");
+            cmbEstado.Items.Add("Mato Grosso (MT)");
+            cmbEstado.Items.Add("Mato Grosso do Sul (MS)");
+            cmbEstado.Items.Add("Minas Gerais (MG)");
+            cmbEstado.Items.Add("Pará (PA)");
+            cmbEstado.Items.Add("Paraíba (PB)");
+            cmbEstado.Items.Add("Paraná (PR)");
+            cmbEstado.Items.Add("Pernambuco (PE)");
+            cmbEstado.Items.Add("Piauí (PI)");
+            cmbEstado.Items.Add("Rio de Janeiro (RJ)");
+            cmbEstado.Items.Add("Rio Grande do Sul (RS)");
+            cmbEstado.Items.Add("Rondônia (RO)");
+            cmbEstado.Items.Add("Roraima (RR)");
+            cmbEstado.Items.Add("Santa Catarina (SC)");
+            cmbEstado.Items.Add("São Paulo (SP)");
+            cmbEstado.Items.Add("Sergipe (SE)");
+            cmbEstado.Items.Add("Tocantins (TO)");
         }
 
         private void BtnCadastrar_Click(object sender, EventArgs e)
@@ -113,37 +145,20 @@ namespace ProjetoDesafio.Feature.Funcionario.View
 
         private void CmbEstado_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SelecionarEstado();
-        }
-
-        private void SelecionarEstado()
-        {
-            cmbEstado.Text = @"Acre (AC)";
-            cmbEstado.Text = @"Alagoas (AL)";
-            cmbEstado.Text = @"Amapá (AP)";
-            cmbEstado.Text = @"Amazonas (AM)";
-            cmbEstado.Text = @"Bahia (BA)";
-            cmbEstado.Text = @"Ceará (CE)";
-            cmbEstado.Text = @"Distrito Federal (DF)";
-            cmbEstado.Text = @"Espírito Santo (ES)";
-            cmbEstado.Text = @"Goiás (GO)";
-            cmbEstado.Text = @"Maranhão (MA)";
-            cmbEstado.Text = @"Mato Grosso (MT)";
-            cmbEstado.Text = @"Mato Grosso do Sul (MS)";
-            cmbEstado.Text = @"Minas Gerais (MG)";
-            cmbEstado.Text = @"Pará (PA)";
-            cmbEstado.Text = @"Paraíba (PB)";
-            cmbEstado.Text = @"Paraná (PR)";
-            cmbEstado.Text = @"Pernambuco (PE)";
-            cmbEstado.Text = @"Piauí (PI)";
-            cmbEstado.Text = @"Rio de Janeiro (RJ)";
-            cmbEstado.Text = @"Rio Grande do Sul (RS)";
-            cmbEstado.Text = @"Rondônia (RO)";
-            cmbEstado.Text = @"Roraima (RR)";
-            cmbEstado.Text = @"Santa Catarina (SC)";
-            cmbEstado.Text = @"São Paulo (SP)";
-            cmbEstado.Text = @"Sergipe (SE)";
-            cmbEstado.Text = @"Tocantins (TO)";
+            cmbCidade.Text = string.Empty;
+            cmbCidade.Items.Clear();
+            if (cmbEstado.SelectedItem.Equals("São Paulo (SP)"))
+            {
+                cmbCidade.Items.Add("Jales");
+                cmbCidade.Items.Add("Urânia");
+                cmbCidade.Items.Add("Fernandopolis");
+            }
+            else if (cmbEstado.SelectedItem.Equals("Bahia (BA)"))
+            {
+                cmbCidade.Items.Add("Salvador");
+                cmbCidade.Items.Add("Itacaré");
+                cmbCidade.Items.Add("Porto Seguro");
+            }
         }
     }
 }

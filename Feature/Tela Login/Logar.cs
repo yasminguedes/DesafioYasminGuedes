@@ -15,6 +15,12 @@ namespace ProjetoDesafio.Feature.Tela_Login
         {
             var usuario = txtUsuario.Text;
             var senha = txtSenha.Text;
+            if ("usuario".Equals(usuario) && !"1234".Equals(senha))
+            {
+                pctCheck.Visible = true;
+                pctErrado2.Visible = true;
+                MessageBox.Show("Senha Inválida");
+            }
             if ("usuario".Equals(usuario) && "1234".Equals(senha))
             {
                 Hide();
@@ -29,7 +35,34 @@ namespace ProjetoDesafio.Feature.Tela_Login
         }
 
         private void Login_Load(object sender, EventArgs e) => txtUsuario.Focus();
-        
+
+        private void TxtUsuario_Leave(object sender, EventArgs e)
+        {
+            if ("usuario".Equals((txtUsuario.Text)))
+            {
+                pctCheck.Visible = true;
+                pctErrado.Visible = false;
+            }
+            else
+            {
+                pctErrado.Visible = true;
+                pctCheck.Visible = false;
+            }
+        }
+
+        private void TxtSenha_Leave(object sender, EventArgs e)
+        {
+            if ("1234".Equals(txtSenha.Text))
+            {
+                pctCheck2.Visible = true;
+                pctErrado2.Visible = false;
+            }
+            else
+            {
+                pctErrado2.Visible = true;
+                pctCheck2.Visible = false;
+            }
+        }
     }
 }
   
