@@ -1,6 +1,6 @@
-﻿namespace ProjetoDesafio.Feature.Marca.View
+﻿namespace ProjetoDesafio.Feature.Categoria.View
 {
-    partial class FrmMarca
+    partial class FrmCategoria
     {
         /// <summary>
         /// Required designer variable.
@@ -28,34 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMarca));
-            this.lblMarca = new System.Windows.Forms.Label();
-            this.txtMarca = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCategoria));
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
+            this.txtCategoria = new System.Windows.Forms.TextBox();
+            this.lblCategoria = new System.Windows.Forms.Label();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnListar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // lblMarca
-            // 
-            this.lblMarca.AutoSize = true;
-            this.lblMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMarca.Location = new System.Drawing.Point(7, 237);
-            this.lblMarca.Name = "lblMarca";
-            this.lblMarca.Size = new System.Drawing.Size(67, 25);
-            this.lblMarca.TabIndex = 13;
-            this.lblMarca.Text = "Marca";
-            // 
-            // txtMarca
-            // 
-            this.txtMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMarca.Location = new System.Drawing.Point(108, 237);
-            this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(486, 30);
-            this.txtMarca.TabIndex = 14;
             // 
             // btnCancelar
             // 
@@ -67,10 +49,9 @@
             this.btnCancelar.Location = new System.Drawing.Point(373, 309);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(221, 54);
-            this.btnCancelar.TabIndex = 41;
+            this.btnCancelar.TabIndex = 49;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnSalvar
             // 
@@ -82,10 +63,28 @@
             this.btnSalvar.Location = new System.Drawing.Point(108, 309);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(221, 54);
-            this.btnSalvar.TabIndex = 40;
+            this.btnSalvar.TabIndex = 48;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            this.btnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
+            // 
+            // txtCategoria
+            // 
+            this.txtCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCategoria.Location = new System.Drawing.Point(108, 237);
+            this.txtCategoria.Name = "txtCategoria";
+            this.txtCategoria.Size = new System.Drawing.Size(486, 30);
+            this.txtCategoria.TabIndex = 47;
+            // 
+            // lblCategoria
+            // 
+            this.lblCategoria.AutoSize = true;
+            this.lblCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategoria.Location = new System.Drawing.Point(7, 237);
+            this.lblCategoria.Name = "lblCategoria";
+            this.lblCategoria.Size = new System.Drawing.Size(97, 25);
+            this.lblCategoria.TabIndex = 46;
+            this.lblCategoria.Text = "Categoria";
             // 
             // btnExcluir
             // 
@@ -98,7 +97,7 @@
             this.btnExcluir.Location = new System.Drawing.Point(560, 12);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(137, 122);
-            this.btnExcluir.TabIndex = 12;
+            this.btnExcluir.TabIndex = 45;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnExcluir.UseVisualStyleBackColor = true;
@@ -113,7 +112,7 @@
             this.btnAlterar.Location = new System.Drawing.Point(373, 12);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(137, 122);
-            this.btnAlterar.TabIndex = 11;
+            this.btnAlterar.TabIndex = 44;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAlterar.UseVisualStyleBackColor = true;
@@ -128,7 +127,7 @@
             this.btnListar.Location = new System.Drawing.Point(192, 12);
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(137, 122);
-            this.btnListar.TabIndex = 10;
+            this.btnListar.TabIndex = 43;
             this.btnListar.Text = "Listar";
             this.btnListar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnListar.UseVisualStyleBackColor = true;
@@ -143,28 +142,27 @@
             this.btnCadastrar.Location = new System.Drawing.Point(12, 12);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(137, 122);
-            this.btnCadastrar.TabIndex = 9;
+            this.btnCadastrar.TabIndex = 42;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.BtnCadastrar_Click);
             // 
-            // FrmMarca
+            // FrmCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 396);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.txtMarca);
-            this.Controls.Add(this.lblMarca);
+            this.Controls.Add(this.txtCategoria);
+            this.Controls.Add(this.lblCategoria);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.btnCadastrar);
-            this.Name = "FrmMarca";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cadastro de Marca";
+            this.Name = "FrmCategoria";
+            this.Text = "Cadastro de Categoria";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -172,13 +170,13 @@
 
         #endregion
 
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.TextBox txtCategoria;
+        private System.Windows.Forms.Label lblCategoria;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnListar;
         private System.Windows.Forms.Button btnCadastrar;
-        private System.Windows.Forms.Label lblMarca;
-        private System.Windows.Forms.TextBox txtMarca;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnSalvar;
     }
 }

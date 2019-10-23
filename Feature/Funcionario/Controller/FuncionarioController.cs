@@ -14,7 +14,7 @@ namespace ProjetoDesafio.Feature.Funcionario.Controller
     {
         public bool Cadastrar(FuncionarioModel funcionario)
         {
-            var conexaoFireBird = Connection.GetInstancia().GetConexao();
+            var conexaoFireBird = Connection.PegarInstancia().PegarConexao();
             var cmd = new FbCommand();
 
             try

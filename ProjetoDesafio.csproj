@@ -69,13 +69,18 @@
       <DependentUpon>FrmAdministrador.cs</DependentUpon>
     </Compile>
     <Compile Include="Feature\Cargo\Dao\CargoDao.cs" />
+    <Compile Include="Feature\Categoria\View\FrmCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Feature\Categoria\View\FrmCategoria.Designer.cs">
+      <DependentUpon>FrmCategoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="Feature\Cliente\View\FrmCliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Feature\Cliente\View\FrmCliente.Designer.cs">
       <DependentUpon>FrmCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Feature\Endereco\Controller\EnderecoController.cs" />
     <Compile Include="Feature\Endereco\Dao\EnderecoDao.cs" />
     <Compile Include="Feature\Fornecedor\Controller\FornecedorController.cs" />
     <Compile Include="Feature\Funcionario\Controller\FuncionarioController.cs" />
@@ -98,7 +103,6 @@
     <Compile Include="Feature\Menu\FrmMenu.Designer.cs">
       <DependentUpon>FrmMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Feature\Pessoa\Controller\PessoaController.cs" />
     <Compile Include="Feature\Pessoa\Dao\PessoaDao.cs" />
     <Compile Include="Feature\Fornecedor\View\FrmFornecedor.cs">
       <SubType>Form</SubType>
@@ -131,6 +135,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Feature\Administrador\View\FrmAdministrador.resx">
       <DependentUpon>FrmAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Feature\Categoria\View\FrmCategoria.resx">
+      <DependentUpon>FrmCategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Feature\Cliente\View\FrmCliente.resx">
       <DependentUpon>FrmCliente.cs</DependentUpon>
@@ -176,8 +183,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Feature\Administrador\Controller\" />
-    <Folder Include="Feature\Categoria\View\" />
+    <Folder Include="Feature\Endereco\Controller\" />
     <Folder Include="Feature\Endereco\View\" />
+    <Folder Include="Feature\Pessoa\Controller\" />
     <Folder Include="Feature\Pessoa\View\" />
     <Folder Include="Feature\Produto\Controller\" />
     <Folder Include="Feature\Produto\Dao\" />

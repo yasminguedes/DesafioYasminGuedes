@@ -9,7 +9,7 @@ namespace ProjetoDesafio.Feature.Funcionario.Dao
     {
         public static DataTable GetDados()
         {
-            var conexaoFirebird = Connection.GetInstancia().GetConexao();
+            var conexaoFirebird = Connection.PegarInstancia().PegarConexao();
             {
                 try
                 {
@@ -46,7 +46,7 @@ namespace ProjetoDesafio.Feature.Funcionario.Dao
 
         public static Model.FuncionarioModel Listar(int idFn)
         {
-            var conexaoFireBird = Connection.GetInstancia().GetConexao();
+            var conexaoFireBird = Connection.PegarInstancia().PegarConexao();
             {
                 try
                 {
@@ -76,7 +76,7 @@ namespace ProjetoDesafio.Feature.Funcionario.Dao
 
         public static void Alterar(Model.FuncionarioModel funcionario)
         {
-            var conexaoFireBird = Connection.GetInstancia().GetConexao();
+            var conexaoFireBird = Connection.PegarInstancia().PegarConexao();
             conexaoFireBird.Open();
 
             var commandText = new StringBuilder();

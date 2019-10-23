@@ -12,7 +12,7 @@ namespace ProjetoDesafio.Feature.Cargo.Dao
     {
         public static DataTable GetDados()
         {
-            var conexaoFirebird = Connection.GetInstancia().GetConexao();
+            var conexaoFirebird = Connection.PegarInstancia().PegarConexao();
             {
                 try
                 {

@@ -8,7 +8,7 @@ namespace ProjetoDesafio.Feature.Pessoa.Dao
     {
         public static DataTable GetDados()
         {
-            var conexaoFirebird = Connection.GetInstancia().GetConexao();
+            var conexaoFirebird = Connection.PegarInstancia().PegarConexao();
             {
                 try
                 {

@@ -32,11 +32,11 @@
             this.btnFuncionario = new System.Windows.Forms.Button();
             this.btnFornecedor = new System.Windows.Forms.Button();
             this.btnAdministrador = new System.Windows.Forms.Button();
-            this.btnCliente = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnPromocao = new System.Windows.Forms.Button();
             this.btnMarca = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnCategoria = new System.Windows.Forms.Button();
+            this.btnProduto = new System.Windows.Forms.Button();
+            this.BtnCliente = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnFuncionario
@@ -82,32 +82,17 @@
             this.btnAdministrador.UseVisualStyleBackColor = true;
             this.btnAdministrador.Click += new System.EventHandler(this.BtnAdministrador_Click);
             // 
-            // btnCliente
+            // btnPromocao
             // 
-            this.btnCliente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCliente.BackgroundImage")));
-            this.btnCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCliente.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCliente.Location = new System.Drawing.Point(836, 67);
-            this.btnCliente.Name = "btnCliente";
-            this.btnCliente.Size = new System.Drawing.Size(229, 126);
-            this.btnCliente.TabIndex = 3;
-            this.btnCliente.Text = "Cliente";
-            this.btnCliente.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnCliente.UseVisualStyleBackColor = true;
-            this.btnCliente.Click += new System.EventHandler(this.BtnCliente);
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(836, 225);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(229, 126);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Promoção";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnPromocao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPromocao.Image = ((System.Drawing.Image)(resources.GetObject("btnPromocao.Image")));
+            this.btnPromocao.Location = new System.Drawing.Point(836, 225);
+            this.btnPromocao.Name = "btnPromocao";
+            this.btnPromocao.Size = new System.Drawing.Size(229, 126);
+            this.btnPromocao.TabIndex = 4;
+            this.btnPromocao.Text = "Promoção";
+            this.btnPromocao.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnPromocao.UseVisualStyleBackColor = true;
             // 
             // btnMarca
             // 
@@ -122,40 +107,54 @@
             this.btnMarca.UseVisualStyleBackColor = true;
             this.btnMarca.Click += new System.EventHandler(this.BtnMarca_Click);
             // 
-            // button6
+            // btnCategoria
             // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.Location = new System.Drawing.Point(327, 225);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(229, 126);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "Categoria";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCategoria.Image = ((System.Drawing.Image)(resources.GetObject("btnCategoria.Image")));
+            this.btnCategoria.Location = new System.Drawing.Point(327, 225);
+            this.btnCategoria.Name = "btnCategoria";
+            this.btnCategoria.Size = new System.Drawing.Size(229, 126);
+            this.btnCategoria.TabIndex = 6;
+            this.btnCategoria.Text = "Categoria";
+            this.btnCategoria.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCategoria.UseVisualStyleBackColor = true;
+            this.btnCategoria.Click += new System.EventHandler(this.btnCategoria_Click);
             // 
-            // button7
+            // btnProduto
             // 
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.Location = new System.Drawing.Point(583, 225);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(229, 126);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "Produto";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProduto.Image = ((System.Drawing.Image)(resources.GetObject("btnProduto.Image")));
+            this.btnProduto.Location = new System.Drawing.Point(583, 225);
+            this.btnProduto.Name = "btnProduto";
+            this.btnProduto.Size = new System.Drawing.Size(229, 126);
+            this.btnProduto.TabIndex = 7;
+            this.btnProduto.Text = "Produto";
+            this.btnProduto.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnProduto.UseVisualStyleBackColor = true;
+            // 
+            // BtnCliente
+            // 
+            this.BtnCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCliente.Image = ((System.Drawing.Image)(resources.GetObject("BtnCliente.Image")));
+            this.BtnCliente.Location = new System.Drawing.Point(836, 67);
+            this.BtnCliente.Name = "BtnCliente";
+            this.BtnCliente.Size = new System.Drawing.Size(229, 126);
+            this.BtnCliente.TabIndex = 8;
+            this.BtnCliente.Text = "Cliente";
+            this.BtnCliente.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnCliente.UseVisualStyleBackColor = true;
+            this.BtnCliente.Click += new System.EventHandler(this.BtnCliente_Click);
             // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1172, 411);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.BtnCliente);
+            this.Controls.Add(this.btnProduto);
+            this.Controls.Add(this.btnCategoria);
             this.Controls.Add(this.btnMarca);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.btnCliente);
+            this.Controls.Add(this.btnPromocao);
             this.Controls.Add(this.btnAdministrador);
             this.Controls.Add(this.btnFornecedor);
             this.Controls.Add(this.btnFuncionario);
@@ -173,10 +172,10 @@
         private System.Windows.Forms.Button btnFuncionario;
         private System.Windows.Forms.Button btnFornecedor;
         private System.Windows.Forms.Button btnAdministrador;
-        private System.Windows.Forms.Button btnCliente;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnPromocao;
         private System.Windows.Forms.Button btnMarca;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnCategoria;
+        private System.Windows.Forms.Button btnProduto;
+        private System.Windows.Forms.Button BtnCliente;
     }
 }

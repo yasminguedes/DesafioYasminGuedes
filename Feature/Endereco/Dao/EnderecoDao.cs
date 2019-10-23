@@ -7,7 +7,7 @@ namespace ProjetoDesafio.Feature.Endereco.Dao
     {
         public static DataTable RecuperarEnderecos()
         {
-            var conexaoFirebird = Connection.GetInstancia().GetConexao();
+            var conexaoFirebird = Connection.PegarInstancia().PegarConexao();
             {
                 try
                 {
@@ -28,7 +28,7 @@ namespace ProjetoDesafio.Feature.Endereco.Dao
 
         public static FbCommand Cadastrar(Model.EnderecoModel endereco, FbCommand cmd)
         {
-            var conexaoFireBird = Connection.GetInstancia().GetConexao();
+            var conexaoFireBird = Connection.PegarInstancia().PegarConexao();
             {
                conexaoFireBird.Open();
                const string mSql = @"INSERT into Endereco (cep, rua, numero, complemento, bairro, cidade, estado, pais )
