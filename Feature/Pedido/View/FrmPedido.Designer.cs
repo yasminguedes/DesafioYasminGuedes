@@ -1,6 +1,6 @@
 ﻿namespace ProjetoDesafio.Feature.Pedido.View
 {
-    partial class gpProdutos
+    partial class FrmPedido
     {
         /// <summary>
         /// Required designer variable.
@@ -28,19 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(gpProdutos));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPedido));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lstProdutos = new System.Windows.Forms.ListBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.lstProdutos = new System.Windows.Forms.ListBox();
+            this.nrQtde = new System.Windows.Forms.NumericUpDown();
             this.gpPedido = new System.Windows.Forms.GroupBox();
+            this.txtValor = new System.Windows.Forms.TextBox();
+            this.Qtde = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtProduto = new System.Windows.Forms.TextBox();
             this.lblProduto = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.gpProdutosPedido = new System.Windows.Forms.GroupBox();
+            this.dtgItens = new System.Windows.Forms.DataGridView();
+            this.Produto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gpTotal = new System.Windows.Forms.GroupBox();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.lblTotal = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nrQtde)).BeginInit();
             this.gpPedido.SuspendLayout();
+            this.gpProdutosPedido.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgItens)).BeginInit();
+            this.gpTotal.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -48,9 +62,19 @@
             this.groupBox1.Controls.Add(this.lstProdutos);
             this.groupBox1.Location = new System.Drawing.Point(22, 167);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(323, 465);
+            this.groupBox1.Size = new System.Drawing.Size(512, 465);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // lstProdutos
+            // 
+            this.lstProdutos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstProdutos.FormattingEnabled = true;
+            this.lstProdutos.ItemHeight = 25;
+            this.lstProdutos.Location = new System.Drawing.Point(23, 17);
+            this.lstProdutos.Name = "lstProdutos";
+            this.lstProdutos.Size = new System.Drawing.Size(464, 429);
+            this.lstProdutos.TabIndex = 0;
             // 
             // btnCancelar
             // 
@@ -59,7 +83,7 @@
             this.btnCancelar.BackColor = System.Drawing.SystemColors.Menu;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnCancelar.Location = new System.Drawing.Point(277, 693);
+            this.btnCancelar.Location = new System.Drawing.Point(277, 650);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(221, 54);
             this.btnCancelar.TabIndex = 5;
@@ -73,7 +97,7 @@
             this.btnSalvar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSalvar.Location = new System.Drawing.Point(22, 693);
+            this.btnSalvar.Location = new System.Drawing.Point(22, 650);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(221, 54);
             this.btnSalvar.TabIndex = 4;
@@ -94,32 +118,68 @@
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.BtnCadastrar_Click);
             // 
-            // numericUpDown1
+            // nrQtde
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(1091, 468);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 22);
-            this.numericUpDown1.TabIndex = 6;
-            // 
-            // lstProdutos
-            // 
-            this.lstProdutos.FormattingEnabled = true;
-            this.lstProdutos.ItemHeight = 16;
-            this.lstProdutos.Location = new System.Drawing.Point(12, 17);
-            this.lstProdutos.Name = "lstProdutos";
-            this.lstProdutos.Size = new System.Drawing.Size(293, 436);
-            this.lstProdutos.TabIndex = 0;
+            this.nrQtde.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nrQtde.Location = new System.Drawing.Point(520, 77);
+            this.nrQtde.Name = "nrQtde";
+            this.nrQtde.Size = new System.Drawing.Size(120, 30);
+            this.nrQtde.TabIndex = 6;
+            this.nrQtde.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // gpPedido
             // 
-            this.gpPedido.Controls.Add(this.textBox1);
+            this.gpPedido.Controls.Add(this.txtValor);
+            this.gpPedido.Controls.Add(this.nrQtde);
+            this.gpPedido.Controls.Add(this.Qtde);
+            this.gpPedido.Controls.Add(this.label1);
+            this.gpPedido.Controls.Add(this.txtProduto);
             this.gpPedido.Controls.Add(this.lblProduto);
-            this.gpPedido.Location = new System.Drawing.Point(351, 167);
+            this.gpPedido.Location = new System.Drawing.Point(564, 167);
             this.gpPedido.Name = "gpPedido";
-            this.gpPedido.Size = new System.Drawing.Size(1046, 155);
+            this.gpPedido.Size = new System.Drawing.Size(675, 155);
             this.gpPedido.TabIndex = 7;
             this.gpPedido.TabStop = false;
+            // 
+            // txtValor
+            // 
+            this.txtValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtValor.Location = new System.Drawing.Point(140, 76);
+            this.txtValor.Name = "txtValor";
+            this.txtValor.Size = new System.Drawing.Size(217, 30);
+            this.txtValor.TabIndex = 4;
+            this.txtValor.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // Qtde
+            // 
+            this.Qtde.AutoSize = true;
+            this.Qtde.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Qtde.Location = new System.Drawing.Point(388, 79);
+            this.Qtde.Name = "Qtde";
+            this.Qtde.Size = new System.Drawing.Size(114, 25);
+            this.Qtde.TabIndex = 3;
+            this.Qtde.Text = "Quantidade";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(17, 79);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 25);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Valor Item";
+            // 
+            // txtProduto
+            // 
+            this.txtProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProduto.Location = new System.Drawing.Point(140, 18);
+            this.txtProduto.Name = "txtProduto";
+            this.txtProduto.Size = new System.Drawing.Size(500, 30);
+            this.txtProduto.TabIndex = 1;
+            this.txtProduto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // lblProduto
             // 
@@ -131,33 +191,101 @@
             this.lblProduto.TabIndex = 0;
             this.lblProduto.Text = "Produto";
             // 
-            // textBox1
+            // gpProdutosPedido
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(95, 18);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(290, 30);
-            this.textBox1.TabIndex = 1;
+            this.gpProdutosPedido.Controls.Add(this.dtgItens);
+            this.gpProdutosPedido.Location = new System.Drawing.Point(564, 329);
+            this.gpProdutosPedido.Name = "gpProdutosPedido";
+            this.gpProdutosPedido.Size = new System.Drawing.Size(675, 303);
+            this.gpProdutosPedido.TabIndex = 8;
+            this.gpProdutosPedido.TabStop = false;
             // 
-            // gpProdutos
+            // dtgItens
+            // 
+            this.dtgItens.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgItens.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Produto,
+            this.Valor,
+            this.Quantidade});
+            this.dtgItens.Location = new System.Drawing.Point(6, 21);
+            this.dtgItens.Name = "dtgItens";
+            this.dtgItens.RowHeadersWidth = 51;
+            this.dtgItens.RowTemplate.Height = 24;
+            this.dtgItens.Size = new System.Drawing.Size(653, 272);
+            this.dtgItens.TabIndex = 0;
+            // 
+            // Produto
+            // 
+            this.Produto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Produto.HeaderText = "Produto";
+            this.Produto.MinimumWidth = 6;
+            this.Produto.Name = "Produto";
+            // 
+            // Valor
+            // 
+            this.Valor.HeaderText = "Valor Item";
+            this.Valor.MinimumWidth = 6;
+            this.Valor.Name = "Valor";
+            this.Valor.Width = 125;
+            // 
+            // Quantidade
+            // 
+            this.Quantidade.HeaderText = "Quantidade";
+            this.Quantidade.MinimumWidth = 6;
+            this.Quantidade.Name = "Quantidade";
+            this.Quantidade.Width = 125;
+            // 
+            // gpTotal
+            // 
+            this.gpTotal.Controls.Add(this.txtTotal);
+            this.gpTotal.Controls.Add(this.lblTotal);
+            this.gpTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpTotal.Location = new System.Drawing.Point(852, 628);
+            this.gpTotal.Name = "gpTotal";
+            this.gpTotal.Size = new System.Drawing.Size(387, 76);
+            this.gpTotal.TabIndex = 9;
+            this.gpTotal.TabStop = false;
+            // 
+            // txtTotal
+            // 
+            this.txtTotal.Location = new System.Drawing.Point(121, 33);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(250, 30);
+            this.txtTotal.TabIndex = 1;
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Location = new System.Drawing.Point(19, 36);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(56, 25);
+            this.lblTotal.TabIndex = 0;
+            this.lblTotal.Text = "Total";
+            // 
+            // FrmPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1398, 759);
+            this.ClientSize = new System.Drawing.Size(1285, 744);
+            this.Controls.Add(this.gpTotal);
+            this.Controls.Add(this.gpProdutosPedido);
             this.Controls.Add(this.gpPedido);
-            this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.groupBox1);
             this.MaximizeBox = false;
-            this.Name = "gpProdutos";
+            this.Name = "FrmPedido";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pedido";
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nrQtde)).EndInit();
             this.gpPedido.ResumeLayout(false);
             this.gpPedido.PerformLayout();
+            this.gpProdutosPedido.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgItens)).EndInit();
+            this.gpTotal.ResumeLayout(false);
+            this.gpTotal.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -169,9 +297,20 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnCadastrar;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown nrQtde;
         private System.Windows.Forms.GroupBox gpPedido;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtProduto;
         private System.Windows.Forms.Label lblProduto;
+        private System.Windows.Forms.Label Qtde;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtValor;
+        private System.Windows.Forms.GroupBox gpProdutosPedido;
+        private System.Windows.Forms.DataGridView dtgItens;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Produto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Valor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantidade;
+        private System.Windows.Forms.GroupBox gpTotal;
+        private System.Windows.Forms.TextBox txtTotal;
+        private System.Windows.Forms.Label lblTotal;
     }
 }

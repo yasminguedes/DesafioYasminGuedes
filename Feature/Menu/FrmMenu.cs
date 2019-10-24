@@ -61,7 +61,7 @@ namespace ProjetoDesafio.Feature.Menu
 
         private void BtnPedido_Click(object sender, EventArgs e)
         {
-            new gpProdutos().Show();
+            new FrmPedido().Show();
         }
     }
 }
