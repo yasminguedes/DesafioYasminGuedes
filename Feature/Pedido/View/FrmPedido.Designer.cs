@@ -51,6 +51,7 @@
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.lblTotal = new System.Windows.Forms.Label();
             this.btnCadastrar = new System.Windows.Forms.Button();
+            this.btnListar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nrQtde)).BeginInit();
             this.gpPedido.SuspendLayout();
@@ -289,11 +290,27 @@
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.BtnCadastrar_Click);
             // 
+            // btnListar
+            // 
+            this.btnListar.AccessibleDescription = "Listar";
+            this.btnListar.AccessibleName = "Listar";
+            this.btnListar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListar.Image = ((System.Drawing.Image)(resources.GetObject("btnListar.Image")));
+            this.btnListar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnListar.Location = new System.Drawing.Point(194, 17);
+            this.btnListar.Name = "btnListar";
+            this.btnListar.Size = new System.Drawing.Size(137, 122);
+            this.btnListar.TabIndex = 11;
+            this.btnListar.Text = "Listar";
+            this.btnListar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnListar.UseVisualStyleBackColor = true;
+            // 
             // FrmPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1285, 744);
+            this.Controls.Add(this.btnListar);
             this.Controls.Add(this.gpTotal);
             this.Controls.Add(this.gpProdutosPedido);
             this.Controls.Add(this.gpPedido);
@@ -342,5 +359,6 @@
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Button btnListar;
     }
 }
