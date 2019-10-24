@@ -10,20 +10,11 @@ using System.Windows.Forms;
 
 namespace ProjetoDesafio.Feature.Promocao.View
 {
-    public partial class FrmPromocao : Form
+    public partial class FrmCadastrarPromocao : Form
     {
-        public FrmPromocao()
+        public FrmCadastrarPromocao()
         {
             InitializeComponent();
-        }
-        private void BtnNovo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BtnCancelar_Click(object sender, EventArgs e)
-        {
-            Close();
         }
     }
 }

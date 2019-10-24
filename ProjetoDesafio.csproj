@@ -122,6 +122,12 @@
     <Compile Include="Feature\Produto\View\FrmProduto.Designer.cs">
       <DependentUpon>FrmProduto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Feature\Promocao\View\FrmCadastrarPromocao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Feature\Promocao\View\FrmCadastrarPromocao.Designer.cs">
+      <DependentUpon>FrmCadastrarPromocao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Feature\Promocao\View\FrmPromocao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Feature\Produto\View\FrmProduto.resx">
       <DependentUpon>FrmProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Feature\Promocao\View\FrmCadastrarPromocao.resx">
+      <DependentUpon>FrmCadastrarPromocao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Feature\Promocao\View\FrmPromocao.resx">
       <DependentUpon>FrmPromocao.cs</DependentUpon>
