@@ -118,6 +118,39 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnExcluir.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAWBJREFUSEvl
+        lEdOxDAUQHMD2FCGNWUBYk4AZ6Fdh7IDhlNQDsCesgLOQDkAIBbwnpNBGSvFE1jBk55kO47jfP/v7F8w
+        jTt4jOeFtrfRZ52ZwxP8wE98xOtC2475bIDOHYt1fMFX3MUVjHFsD9/Qub6ThBPf8R7nHWhhAZ3rO2sO
+        NOGvups7nHAgkUn0I88460AdxtOwpOw8ZhEN11HoVTCDHpox78oBusZU6EWYimbGcuh1YxVdYyv0Isxt
+        0++nPGFlmC7wKm9+s4GXLTqnjHVyljdHsUJ9WKbLB27xNG+O8lshMlUrQ+Td4gFVVW0qfXSN+K8CXlym
+        mOXflcY0FQvNYrH8x2UJvS4OQ6+GHhpDy97yT8W5D2iKNl4VUr7sLP823LmLJ112Q5zonxiufbRCYzxQ
+        Y+7C7jx58SH+qunmoZkZfvCm0LZjPnNOa1iaMCO8Wzw8K1Rtb2JttvwVsuwLtgxhc+QhSksAAAAASUVO
+        RK5CYII=
+</value>
+  </data>
+  <data name="btnAdd.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAWRJREFUSEvd
+        lEtKQ0EQRR+KTvwsRF2FLsAQxT34R3eh7kIS3U8iqKiLEJ040nvaXJBO/wg4yYUDr6r6VSX1uqqbey2L
+        A3EnnsTnBJ7xEePMTNoTb+K7wqvoi2YtiBvhBCNxLjbFygSe8Y2Fz10L3q3Kyb/EkSi9tCiOBWd550oU
+        RVucfBtHo3aEi/RwpMTHcs8PcSREDFI6EcRexBKOWNwIDtDzXFtKBWjXgyC+jyPWvSB4Fqy0SgXQhSA+
+        CFakZ0FwI1hp1QpsCeLMyZQ+BMHVYP3KCWtYawKbXFNyAQ5Zf5OUsNYF9nuwIv17i4aCIBOaU63ApSB+
+        G6xIvqaMP1cupVKB6jVl0FhcHGBFpFQqcCqIZQcNsRU5xNgz/q1qWhUWW9FFGP9cuxAxfrmTV5cdYk24
+        CNBXJpQbwowAz/jccydvWtcWf5V+OkEOzuyKmcTH4kawWx4Fwwg84yOW/aDzoK77AZfnk9LiAEk7AAAA
+        AElFTkSuQmCC
+</value>
+  </data>
+  <metadata name="Produto.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Valor.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Quantidade.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btnCadastrar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
@@ -132,13 +165,4 @@
         +TG3Xz6r1RfPo2H6xaR42wAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="Produto.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Valor.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Quantidade.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
 </root>

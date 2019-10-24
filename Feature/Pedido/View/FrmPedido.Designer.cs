@@ -33,9 +33,10 @@
             this.lstProdutos = new System.Windows.Forms.ListBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.btnCadastrar = new System.Windows.Forms.Button();
             this.nrQtde = new System.Windows.Forms.NumericUpDown();
             this.gpPedido = new System.Windows.Forms.GroupBox();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.txtValor = new System.Windows.Forms.TextBox();
             this.Qtde = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,6 +50,7 @@
             this.gpTotal = new System.Windows.Forms.GroupBox();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.lblTotal = new System.Windows.Forms.Label();
+            this.btnCadastrar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nrQtde)).BeginInit();
             this.gpPedido.SuspendLayout();
@@ -75,6 +77,7 @@
             this.lstProdutos.Name = "lstProdutos";
             this.lstProdutos.Size = new System.Drawing.Size(464, 429);
             this.lstProdutos.TabIndex = 0;
+            this.lstProdutos.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.LstProdutos_MouseDoubleClick);
             // 
             // btnCancelar
             // 
@@ -89,6 +92,7 @@
             this.btnCancelar.TabIndex = 5;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // btnSalvar
             // 
@@ -103,27 +107,12 @@
             this.btnSalvar.TabIndex = 4;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
-            // 
-            // btnCadastrar
-            // 
-            this.btnCadastrar.AccessibleDescription = "Cadastrar";
-            this.btnCadastrar.AccessibleName = "Cadastrar";
-            this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrar.Image")));
-            this.btnCadastrar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCadastrar.Location = new System.Drawing.Point(22, 17);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(137, 122);
-            this.btnCadastrar.TabIndex = 3;
-            this.btnCadastrar.Text = "Cadastrar";
-            this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnCadastrar.UseVisualStyleBackColor = true;
-            this.btnCadastrar.Click += new System.EventHandler(this.BtnCadastrar_Click);
+            this.btnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
             // nrQtde
             // 
             this.nrQtde.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nrQtde.Location = new System.Drawing.Point(520, 77);
+            this.nrQtde.Location = new System.Drawing.Point(457, 77);
             this.nrQtde.Name = "nrQtde";
             this.nrQtde.Size = new System.Drawing.Size(120, 30);
             this.nrQtde.TabIndex = 6;
@@ -131,6 +120,8 @@
             // 
             // gpPedido
             // 
+            this.gpPedido.Controls.Add(this.btnExcluir);
+            this.gpPedido.Controls.Add(this.btnAdd);
             this.gpPedido.Controls.Add(this.txtValor);
             this.gpPedido.Controls.Add(this.nrQtde);
             this.gpPedido.Controls.Add(this.Qtde);
@@ -143,12 +134,32 @@
             this.gpPedido.TabIndex = 7;
             this.gpPedido.TabStop = false;
             // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluir.Image")));
+            this.btnExcluir.Location = new System.Drawing.Point(624, 76);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(34, 30);
+            this.btnExcluir.TabIndex = 8;
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.BtnExcluir_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
+            this.btnAdd.Location = new System.Drawing.Point(583, 76);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(35, 30);
+            this.btnAdd.TabIndex = 7;
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
+            // 
             // txtValor
             // 
             this.txtValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtValor.Location = new System.Drawing.Point(140, 76);
             this.txtValor.Name = "txtValor";
-            this.txtValor.Size = new System.Drawing.Size(217, 30);
+            this.txtValor.Size = new System.Drawing.Size(172, 30);
             this.txtValor.TabIndex = 4;
             this.txtValor.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -156,7 +167,7 @@
             // 
             this.Qtde.AutoSize = true;
             this.Qtde.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Qtde.Location = new System.Drawing.Point(388, 79);
+            this.Qtde.Location = new System.Drawing.Point(337, 79);
             this.Qtde.Name = "Qtde";
             this.Qtde.Size = new System.Drawing.Size(114, 25);
             this.Qtde.TabIndex = 3;
@@ -177,7 +188,7 @@
             this.txtProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProduto.Location = new System.Drawing.Point(140, 18);
             this.txtProduto.Name = "txtProduto";
-            this.txtProduto.Size = new System.Drawing.Size(500, 30);
+            this.txtProduto.Size = new System.Drawing.Size(518, 30);
             this.txtProduto.TabIndex = 1;
             this.txtProduto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -262,6 +273,22 @@
             this.lblTotal.TabIndex = 0;
             this.lblTotal.Text = "Total";
             // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.AccessibleDescription = "Cadastrar";
+            this.btnCadastrar.AccessibleName = "Cadastrar";
+            this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrar.Image")));
+            this.btnCadastrar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnCadastrar.Location = new System.Drawing.Point(22, 17);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(137, 122);
+            this.btnCadastrar.TabIndex = 3;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.BtnCadastrar_Click);
+            // 
             // FrmPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -278,6 +305,7 @@
             this.Name = "FrmPedido";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pedido";
+            this.Load += new System.EventHandler(this.FrmPedido_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.nrQtde)).EndInit();
             this.gpPedido.ResumeLayout(false);
@@ -312,5 +340,7 @@
         private System.Windows.Forms.GroupBox gpTotal;
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnExcluir;
     }
 }

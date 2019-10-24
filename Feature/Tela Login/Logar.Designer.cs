@@ -29,33 +29,23 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogar));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.btnEntrar = new System.Windows.Forms.Button();
-            this.pctCheck = new System.Windows.Forms.PictureBox();
-            this.pctCheck2 = new System.Windows.Forms.PictureBox();
-            this.pctErrado = new System.Windows.Forms.PictureBox();
             this.pctErrado2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctCheck)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctCheck2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctErrado)).BeginInit();
+            this.pctErrado = new System.Windows.Forms.PictureBox();
+            this.pctCheck2 = new System.Windows.Forms.PictureBox();
+            this.pctCheck = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pctErrado2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctErrado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctCheck2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctCheck)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Location = new System.Drawing.Point(256, 89);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(185, 149);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -119,16 +109,29 @@
             this.btnEntrar.UseVisualStyleBackColor = false;
             this.btnEntrar.Click += new System.EventHandler(this.BtnEntrar_Click);
             // 
-            // pctCheck
+            // pctErrado2
             // 
-            this.pctCheck.Image = ((System.Drawing.Image)(resources.GetObject("pctCheck.Image")));
-            this.pctCheck.Location = new System.Drawing.Point(490, 386);
-            this.pctCheck.Name = "pctCheck";
-            this.pctCheck.Size = new System.Drawing.Size(25, 29);
-            this.pctCheck.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pctCheck.TabIndex = 7;
-            this.pctCheck.TabStop = false;
-            this.pctCheck.Visible = false;
+            this.pctErrado2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pctErrado2.BackgroundImage")));
+            this.pctErrado2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pctErrado2.Location = new System.Drawing.Point(490, 507);
+            this.pctErrado2.Name = "pctErrado2";
+            this.pctErrado2.Size = new System.Drawing.Size(29, 28);
+            this.pctErrado2.TabIndex = 10;
+            this.pctErrado2.TabStop = false;
+            this.pctErrado2.Visible = false;
+            // 
+            // pctErrado
+            // 
+            this.pctErrado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pctErrado.ErrorImage = global::ProjetoDesafio.Properties.Resources.cancel_161;
+            this.pctErrado.Image = global::ProjetoDesafio.Properties.Resources.cancel_161;
+            this.pctErrado.ImageLocation = "center";
+            this.pctErrado.Location = new System.Drawing.Point(494, 392);
+            this.pctErrado.Name = "pctErrado";
+            this.pctErrado.Size = new System.Drawing.Size(18, 19);
+            this.pctErrado.TabIndex = 9;
+            this.pctErrado.TabStop = false;
+            this.pctErrado.Visible = false;
             // 
             // pctCheck2
             // 
@@ -141,29 +144,26 @@
             this.pctCheck2.TabStop = false;
             this.pctCheck2.Visible = false;
             // 
-            // pctErrado
+            // pctCheck
             // 
-            this.pctErrado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pctErrado.ErrorImage = global::ProjetoDesafio.Properties.Resources.cancel_16;
-            this.pctErrado.Image = global::ProjetoDesafio.Properties.Resources.cancel_16;
-            this.pctErrado.ImageLocation = "center";
-            this.pctErrado.Location = new System.Drawing.Point(494, 390);
-            this.pctErrado.Name = "pctErrado";
-            this.pctErrado.Size = new System.Drawing.Size(18, 19);
-            this.pctErrado.TabIndex = 9;
-            this.pctErrado.TabStop = false;
-            this.pctErrado.Visible = false;
+            this.pctCheck.Image = ((System.Drawing.Image)(resources.GetObject("pctCheck.Image")));
+            this.pctCheck.Location = new System.Drawing.Point(490, 386);
+            this.pctCheck.Name = "pctCheck";
+            this.pctCheck.Size = new System.Drawing.Size(25, 29);
+            this.pctCheck.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pctCheck.TabIndex = 7;
+            this.pctCheck.TabStop = false;
+            this.pctCheck.Visible = false;
             // 
-            // pctErrado2
+            // pictureBox1
             // 
-            this.pctErrado2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pctErrado2.BackgroundImage")));
-            this.pctErrado2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pctErrado2.Location = new System.Drawing.Point(490, 507);
-            this.pctErrado2.Name = "pctErrado2";
-            this.pctErrado2.Size = new System.Drawing.Size(29, 28);
-            this.pctErrado2.TabIndex = 10;
-            this.pctErrado2.TabStop = false;
-            this.pctErrado2.Visible = false;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Location = new System.Drawing.Point(256, 89);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(185, 149);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // FrmLogar
             // 
@@ -185,11 +185,11 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tela de Login";
             this.Load += new System.EventHandler(this.Login_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctCheck)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctCheck2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctErrado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctErrado2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctErrado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctCheck2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctCheck)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
