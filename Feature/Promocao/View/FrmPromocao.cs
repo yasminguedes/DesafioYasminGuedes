@@ -18,7 +18,7 @@ namespace ProjetoDesafio.Feature.Promocao.View
         }
         private void BtnNovo_Click(object sender, EventArgs e)
         {
-
+            new FrmCadastroPromocao().Show();
         }
 
         private void BtnCancelar_Click(object sender, EventArgs e)

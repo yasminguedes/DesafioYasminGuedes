@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPromocao));
-            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("Nome da Promoção", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("Tipo", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("Status", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("Nome da Promoção", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup5 = new System.Windows.Forms.ListViewGroup("Tipo", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup6 = new System.Windows.Forms.ListViewGroup("Status", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewGroup listViewGroup10 = new System.Windows.Forms.ListViewGroup("Nome da Promoção", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup11 = new System.Windows.Forms.ListViewGroup("Tipo", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup12 = new System.Windows.Forms.ListViewGroup("Status", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewGroup listViewGroup13 = new System.Windows.Forms.ListViewGroup("Nome da Promoção", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup14 = new System.Windows.Forms.ListViewGroup("Tipo", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup15 = new System.Windows.Forms.ListViewGroup("Status", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
             ""}, -1, System.Drawing.SystemColors.InfoText, System.Drawing.Color.Empty, null);
-            System.Windows.Forms.ListViewGroup listViewGroup7 = new System.Windows.Forms.ListViewGroup("Nome da Promoção", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup8 = new System.Windows.Forms.ListViewGroup("Tipo", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup9 = new System.Windows.Forms.ListViewGroup("Status", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewGroup listViewGroup16 = new System.Windows.Forms.ListViewGroup("Nome da Promoção", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup17 = new System.Windows.Forms.ListViewGroup("Tipo", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup18 = new System.Windows.Forms.ListViewGroup("Status", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("");
             this.btnCancelar = new System.Windows.Forms.Button();
             this.gpPromocoes = new System.Windows.Forms.GroupBox();
             this.btnNovo = new System.Windows.Forms.Button();
@@ -67,9 +67,9 @@
             // 
             this.btnCancelar.AccessibleDescription = "Cancelar";
             this.btnCancelar.AccessibleName = "Cancelar";
-            this.btnCancelar.BackColor = System.Drawing.SystemColors.Menu;
+            this.btnCancelar.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btnCancelar.Location = new System.Drawing.Point(36, 601);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(221, 54);
@@ -123,20 +123,20 @@
             this.columnHeader4,
             this.columnHeader5,
             this.columnHeader6});
-            listViewGroup1.Header = "Nome da Promoção";
-            listViewGroup1.Name = "lstNome";
-            listViewGroup2.Header = "Tipo";
-            listViewGroup2.Name = "lstTipo";
-            listViewGroup3.Header = "Status";
-            listViewGroup3.Name = "lstStatus";
+            listViewGroup10.Header = "Nome da Promoção";
+            listViewGroup10.Name = "lstNome";
+            listViewGroup11.Header = "Tipo";
+            listViewGroup11.Name = "lstTipo";
+            listViewGroup12.Header = "Status";
+            listViewGroup12.Name = "lstStatus";
             this.lstStatus.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup1,
-            listViewGroup2,
-            listViewGroup3});
+            listViewGroup10,
+            listViewGroup11,
+            listViewGroup12});
             this.lstStatus.HideSelection = false;
-            listViewItem1.Group = listViewGroup3;
+            listViewItem4.Group = listViewGroup12;
             this.lstStatus.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
+            listViewItem4});
             this.lstStatus.Location = new System.Drawing.Point(589, 0);
             this.lstStatus.Name = "lstStatus";
             this.lstStatus.Size = new System.Drawing.Size(124, 380);
@@ -163,21 +163,21 @@
             this.clTipo,
             this.clStatus});
             this.lstNome.GridLines = true;
-            listViewGroup4.Header = "Nome da Promoção";
-            listViewGroup4.Name = "lstNome";
-            listViewGroup5.Header = "Tipo";
-            listViewGroup5.Name = "lstTipo";
-            listViewGroup6.Header = "Status";
-            listViewGroup6.Name = "lstStatus";
+            listViewGroup13.Header = "Nome da Promoção";
+            listViewGroup13.Name = "lstNome";
+            listViewGroup14.Header = "Tipo";
+            listViewGroup14.Name = "lstTipo";
+            listViewGroup15.Header = "Status";
+            listViewGroup15.Name = "lstStatus";
             this.lstNome.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup4,
-            listViewGroup5,
-            listViewGroup6});
+            listViewGroup13,
+            listViewGroup14,
+            listViewGroup15});
             this.lstNome.HideSelection = false;
-            listViewItem2.Group = listViewGroup4;
-            listViewItem2.UseItemStyleForSubItems = false;
+            listViewItem5.Group = listViewGroup13;
+            listViewItem5.UseItemStyleForSubItems = false;
             this.lstNome.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
+            listViewItem5});
             this.lstNome.Location = new System.Drawing.Point(0, 0);
             this.lstNome.Name = "lstNome";
             this.lstNome.Size = new System.Drawing.Size(435, 380);
@@ -203,20 +203,20 @@
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3});
-            listViewGroup7.Header = "Nome da Promoção";
-            listViewGroup7.Name = "lstNome";
-            listViewGroup8.Header = "Tipo";
-            listViewGroup8.Name = "lstTipo";
-            listViewGroup9.Header = "Status";
-            listViewGroup9.Name = "lstStatus";
+            listViewGroup16.Header = "Nome da Promoção";
+            listViewGroup16.Name = "lstNome";
+            listViewGroup17.Header = "Tipo";
+            listViewGroup17.Name = "lstTipo";
+            listViewGroup18.Header = "Status";
+            listViewGroup18.Name = "lstStatus";
             this.lstTipo.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup7,
-            listViewGroup8,
-            listViewGroup9});
+            listViewGroup16,
+            listViewGroup17,
+            listViewGroup18});
             this.lstTipo.HideSelection = false;
-            listViewItem3.Group = listViewGroup8;
+            listViewItem6.Group = listViewGroup17;
             this.lstTipo.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem3});
+            listViewItem6});
             this.lstTipo.Location = new System.Drawing.Point(434, 0);
             this.lstTipo.Name = "lstTipo";
             this.lstTipo.Size = new System.Drawing.Size(155, 380);

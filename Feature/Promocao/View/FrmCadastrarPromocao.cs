@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace ProjetoDesafio.Feature.Promocao.View
 {
-    public partial class FrmCadastrarPromocao : Form
+    public partial class FrmCadastroPromocao : Form
     {
-        public FrmCadastrarPromocao()
+        public FrmCadastroPromocao()
         {
             InitializeComponent();
+        }
+
+        private void BtnVoltar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
