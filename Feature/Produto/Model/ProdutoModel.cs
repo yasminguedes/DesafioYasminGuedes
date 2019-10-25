@@ -6,6 +6,7 @@ namespace ProjetoDesafio.Feature.Produto.Model
 {
     public class ProdutoModel
     {
+        public double PrecoDeVendaComDesconto { get; set; }
         public int IdProduto { get; set; }
         public string NomeProduto { get; set; }
         public double PrecoCompra { get; set; }
@@ -14,7 +15,8 @@ namespace ProjetoDesafio.Feature.Produto.Model
         public  string Tipo { get; set; }
         public string Ativo { get; set; }
         public DateTime DataCadastro { get; set; }
+        public string CategoriaProduto { get; set; }
         public MarcaModel Marca { get; set; }
-        public CategoriaModel Categoria { get; set; }
+        //public CategoriaModel Categoria { get; set; }
     }
 }

@@ -146,10 +146,10 @@
     <Compile Include="Feature\Promocao\View\FrmSelecionarProdutos.Designer.cs">
       <DependentUpon>FrmSelecionarProdutos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Feature\Tela Login\Logar.cs">
+    <Compile Include="Feature\TelaLogin\Logar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Feature\Tela Login\Logar.Designer.cs">
+    <Compile Include="Feature\TelaLogin\Logar.Designer.cs">
       <DependentUpon>Logar.cs</DependentUpon>
     </Compile>
     <Compile Include="Feature\Administrador\Model\AdministradorModel.cs" />
@@ -206,7 +206,7 @@
     <EmbeddedResource Include="Feature\Promocao\View\FrmSelecionarProdutos.resx">
       <DependentUpon>FrmSelecionarProdutos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Feature\Tela Login\Logar.resx">
+    <EmbeddedResource Include="Feature\TelaLogin\Logar.resx">
       <DependentUpon>Logar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

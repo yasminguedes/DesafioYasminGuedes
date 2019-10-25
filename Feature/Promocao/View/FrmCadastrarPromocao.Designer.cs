@@ -37,10 +37,7 @@
             this.gpProdutos = new System.Windows.Forms.GroupBox();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Produto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Desconto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtgCadastroItem = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
@@ -52,9 +49,12 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnExcluirSemana = new System.Windows.Forms.Button();
             this.btnNovoSemana = new System.Windows.Forms.Button();
+            this.Produto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Desconto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gpPromocao.SuspendLayout();
             this.gpProdutos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgCadastroItem)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtSemana)).BeginInit();
@@ -81,6 +81,7 @@
             this.cmbTipo.Name = "cmbTipo";
             this.cmbTipo.Size = new System.Drawing.Size(465, 33);
             this.cmbTipo.TabIndex = 4;
+            this.cmbTipo.SelectedIndexChanged += new System.EventHandler(this.cmbTipo_SelectedIndexChanged);
             // 
             // lblTipo
             // 
@@ -134,6 +135,7 @@
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnNovo
             // 
@@ -149,44 +151,23 @@
             this.btnNovo.UseVisualStyleBackColor = true;
             this.btnNovo.Click += new System.EventHandler(this.BtnNovo_Click);
             // 
-            // dataGridView1
+            // dtgCadastroItem
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dtgCadastroItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgCadastroItem.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Produto,
             this.Valor,
             this.Desconto});
-            this.dataGridView1.Location = new System.Drawing.Point(0, 10);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(703, 401);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // Produto
-            // 
-            this.Produto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Produto.HeaderText = "Produto";
-            this.Produto.MinimumWidth = 6;
-            this.Produto.Name = "Produto";
-            // 
-            // Valor
-            // 
-            this.Valor.HeaderText = "Valor Unitário";
-            this.Valor.MinimumWidth = 6;
-            this.Valor.Name = "Valor";
-            this.Valor.Width = 125;
-            // 
-            // Desconto
-            // 
-            this.Desconto.HeaderText = "Desconto";
-            this.Desconto.MinimumWidth = 6;
-            this.Desconto.Name = "Desconto";
-            this.Desconto.Width = 125;
+            this.dtgCadastroItem.Location = new System.Drawing.Point(0, 10);
+            this.dtgCadastroItem.Name = "dtgCadastroItem";
+            this.dtgCadastroItem.RowHeadersWidth = 51;
+            this.dtgCadastroItem.RowTemplate.Height = 24;
+            this.dtgCadastroItem.Size = new System.Drawing.Size(703, 401);
+            this.dtgCadastroItem.TabIndex = 0;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.dtgCadastroItem);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(723, 240);
             this.groupBox1.Name = "groupBox1";
@@ -294,6 +275,7 @@
             this.btnExcluirSemana.Text = "Excluir";
             this.btnExcluirSemana.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnExcluirSemana.UseVisualStyleBackColor = true;
+            this.btnExcluirSemana.Click += new System.EventHandler(this.btnExcluirSemana_Click);
             // 
             // btnNovoSemana
             // 
@@ -308,6 +290,27 @@
             this.btnNovoSemana.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnNovoSemana.UseVisualStyleBackColor = true;
             this.btnNovoSemana.Click += new System.EventHandler(this.BtnNovoSemana_Click);
+            // 
+            // Produto
+            // 
+            this.Produto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Produto.HeaderText = "Produto";
+            this.Produto.MinimumWidth = 6;
+            this.Produto.Name = "Produto";
+            // 
+            // Valor
+            // 
+            this.Valor.HeaderText = "Valor ";
+            this.Valor.MinimumWidth = 6;
+            this.Valor.Name = "Valor";
+            this.Valor.Width = 125;
+            // 
+            // Desconto
+            // 
+            this.Desconto.HeaderText = "Preço Desconto";
+            this.Desconto.MinimumWidth = 6;
+            this.Desconto.Name = "Desconto";
+            this.Desconto.Width = 125;
             // 
             // FrmCadastroPromocao
             // 
@@ -328,7 +331,7 @@
             this.gpPromocao.ResumeLayout(false);
             this.gpPromocao.PerformLayout();
             this.gpProdutos.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgCadastroItem)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtSemana)).EndInit();
@@ -347,10 +350,7 @@
         private System.Windows.Forms.GroupBox gpProdutos;
         private System.Windows.Forms.Button btnNovo;
         private System.Windows.Forms.Button btnExcluir;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Produto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Valor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Desconto;
+        private System.Windows.Forms.DataGridView dtgCadastroItem;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnVoltar;
@@ -362,5 +362,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Semana;
         private System.Windows.Forms.DataGridViewTextBoxColumn Inicio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Termino;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Produto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Valor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Desconto;
     }
 }

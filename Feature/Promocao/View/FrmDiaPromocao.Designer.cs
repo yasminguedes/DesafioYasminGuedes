@@ -91,6 +91,7 @@
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnAdicionar
             // 
@@ -270,6 +271,7 @@
             this.btnSalvar.TabIndex = 6;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
             // btnCancelar
             // 

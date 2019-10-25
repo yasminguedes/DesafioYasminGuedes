@@ -32,5 +32,15 @@ namespace ProjetoDesafio.Feature.Promocao.View
             dtgDiasAdicionados.Rows.Add(cmbDiaSemana.Text, dtDiaInicio.Text, dtDiaTermino.Text, dtHoraInicio.Text,
                 dtHoraTermino.Text);
         }
+
+        private void BtnSalvar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            dtgDiasAdicionados.Rows.Remove(dtgDiasAdicionados.CurrentRow ?? throw new InvalidOperationException());
+        }
     }
 }
