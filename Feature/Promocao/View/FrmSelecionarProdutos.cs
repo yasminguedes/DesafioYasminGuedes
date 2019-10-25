@@ -3,20 +3,26 @@ using System.Windows.Forms;
 
 namespace ProjetoDesafio.Feature.Promocao.View
 {
-    public partial class FrmPromocao : Form
+    public partial class FrmSelecionarProdutos : Form
     {
-        public FrmPromocao()
+        public FrmSelecionarProdutos()
         {
             InitializeComponent();
         }
-        private void BtnNovo_Click(object sender, EventArgs e)
+
+        private void BtnAplicar_Click(object sender, EventArgs e)
         {
-            new FrmCadastroPromocao().Show();
+
         }
 
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void BtnSalvar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

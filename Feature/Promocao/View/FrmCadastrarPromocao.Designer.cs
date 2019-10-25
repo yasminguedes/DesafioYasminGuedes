@@ -147,6 +147,7 @@
             this.btnNovo.Text = "Novo";
             this.btnNovo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.BtnNovo_Click);
             // 
             // dataGridView1
             // 
@@ -319,7 +320,9 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gpProdutos);
             this.Controls.Add(this.gpPromocao);
+            this.MaximizeBox = false;
             this.Name = "FrmCadastroPromocao";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Promoção";
             this.gpPromocao.ResumeLayout(false);
             this.gpPromocao.PerformLayout();
