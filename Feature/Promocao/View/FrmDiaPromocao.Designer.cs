@@ -30,30 +30,30 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDiaPromocao));
             this.gpDia = new System.Windows.Forms.GroupBox();
-            this.lblDiadaSemana = new System.Windows.Forms.Label();
-            this.cmbDiaSemana = new System.Windows.Forms.ComboBox();
-            this.lblDiaInicio = new System.Windows.Forms.Label();
-            this.lblDiaFim = new System.Windows.Forms.Label();
-            this.lblHoraInicio = new System.Windows.Forms.Label();
-            this.lblHoraTérmino = new System.Windows.Forms.Label();
-            this.dtDiaInicio = new System.Windows.Forms.DateTimePicker();
-            this.dtDiaTermino = new System.Windows.Forms.DateTimePicker();
-            this.gpAdicionados = new System.Windows.Forms.GroupBox();
-            this.dtHoraInicio = new System.Windows.Forms.DateTimePicker();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnAdicionar = new System.Windows.Forms.Button();
             this.dtHoraTermino = new System.Windows.Forms.DateTimePicker();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtHoraInicio = new System.Windows.Forms.DateTimePicker();
+            this.gpAdicionados = new System.Windows.Forms.GroupBox();
+            this.dtgDiasAdicionados = new System.Windows.Forms.DataGridView();
             this.DiaSemana = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DataInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DataTermino = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoraInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoraFim = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnExcluir = new System.Windows.Forms.Button();
-            this.btnAdicionar = new System.Windows.Forms.Button();
+            this.dtDiaTermino = new System.Windows.Forms.DateTimePicker();
+            this.dtDiaInicio = new System.Windows.Forms.DateTimePicker();
+            this.lblHoraTérmino = new System.Windows.Forms.Label();
+            this.lblHoraInicio = new System.Windows.Forms.Label();
+            this.lblDiaFim = new System.Windows.Forms.Label();
+            this.lblDiaInicio = new System.Windows.Forms.Label();
+            this.cmbDiaSemana = new System.Windows.Forms.ComboBox();
+            this.lblDiadaSemana = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.gpDia.SuspendLayout();
             this.gpAdicionados.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgDiasAdicionados)).BeginInit();
             this.SuspendLayout();
             // 
             // gpDia
@@ -79,93 +79,32 @@
             this.gpDia.TabStop = false;
             this.gpDia.Text = "Adicionar Dia";
             // 
-            // lblDiadaSemana
+            // btnExcluir
             // 
-            this.lblDiadaSemana.AutoSize = true;
-            this.lblDiadaSemana.Location = new System.Drawing.Point(55, 48);
-            this.lblDiadaSemana.Name = "lblDiadaSemana";
-            this.lblDiadaSemana.Size = new System.Drawing.Size(147, 25);
-            this.lblDiadaSemana.TabIndex = 0;
-            this.lblDiadaSemana.Text = "Dia da Semana";
+            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluir.Image")));
+            this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnExcluir.Location = new System.Drawing.Point(760, 29);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(115, 73);
+            this.btnExcluir.TabIndex = 7;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnExcluir.UseVisualStyleBackColor = true;
             // 
-            // cmbDiaSemana
+            // btnAdicionar
             // 
-            this.cmbDiaSemana.FormattingEnabled = true;
-            this.cmbDiaSemana.Location = new System.Drawing.Point(243, 45);
-            this.cmbDiaSemana.Name = "cmbDiaSemana";
-            this.cmbDiaSemana.Size = new System.Drawing.Size(253, 33);
-            this.cmbDiaSemana.TabIndex = 1;
-            // 
-            // lblDiaInicio
-            // 
-            this.lblDiaInicio.AutoSize = true;
-            this.lblDiaInicio.Location = new System.Drawing.Point(55, 128);
-            this.lblDiaInicio.Name = "lblDiaInicio";
-            this.lblDiaInicio.Size = new System.Drawing.Size(118, 25);
-            this.lblDiaInicio.TabIndex = 2;
-            this.lblDiaInicio.Text = "Dia de Início";
-            // 
-            // lblDiaFim
-            // 
-            this.lblDiaFim.AutoSize = true;
-            this.lblDiaFim.Location = new System.Drawing.Point(55, 216);
-            this.lblDiaFim.Name = "lblDiaFim";
-            this.lblDiaFim.Size = new System.Drawing.Size(145, 25);
-            this.lblDiaFim.TabIndex = 3;
-            this.lblDiaFim.Text = "Dia de Término";
-            // 
-            // lblHoraInicio
-            // 
-            this.lblHoraInicio.AutoSize = true;
-            this.lblHoraInicio.Location = new System.Drawing.Point(565, 128);
-            this.lblHoraInicio.Name = "lblHoraInicio";
-            this.lblHoraInicio.Size = new System.Drawing.Size(131, 25);
-            this.lblHoraInicio.TabIndex = 4;
-            this.lblHoraInicio.Text = "Hora de Início";
-            // 
-            // lblHoraTérmino
-            // 
-            this.lblHoraTérmino.AutoSize = true;
-            this.lblHoraTérmino.Location = new System.Drawing.Point(565, 216);
-            this.lblHoraTérmino.Name = "lblHoraTérmino";
-            this.lblHoraTérmino.Size = new System.Drawing.Size(158, 25);
-            this.lblHoraTérmino.TabIndex = 5;
-            this.lblHoraTérmino.Text = "Hora de Término";
-            // 
-            // dtDiaInicio
-            // 
-            this.dtDiaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtDiaInicio.Location = new System.Drawing.Point(237, 123);
-            this.dtDiaInicio.Name = "dtDiaInicio";
-            this.dtDiaInicio.Size = new System.Drawing.Size(150, 30);
-            this.dtDiaInicio.TabIndex = 6;
-            // 
-            // dtDiaTermino
-            // 
-            this.dtDiaTermino.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtDiaTermino.Location = new System.Drawing.Point(237, 211);
-            this.dtDiaTermino.Name = "dtDiaTermino";
-            this.dtDiaTermino.Size = new System.Drawing.Size(150, 30);
-            this.dtDiaTermino.TabIndex = 7;
-            // 
-            // gpAdicionados
-            // 
-            this.gpAdicionados.Controls.Add(this.dataGridView1);
-            this.gpAdicionados.Location = new System.Drawing.Point(6, 288);
-            this.gpAdicionados.Name = "gpAdicionados";
-            this.gpAdicionados.Size = new System.Drawing.Size(1004, 366);
-            this.gpAdicionados.TabIndex = 10;
-            this.gpAdicionados.TabStop = false;
-            this.gpAdicionados.Text = "Dias Adicionados";
-            // 
-            // dtHoraInicio
-            // 
-            this.dtHoraInicio.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtHoraInicio.Location = new System.Drawing.Point(760, 123);
-            this.dtHoraInicio.Name = "dtHoraInicio";
-            this.dtHoraInicio.ShowUpDown = true;
-            this.dtHoraInicio.Size = new System.Drawing.Size(115, 30);
-            this.dtHoraInicio.TabIndex = 11;
+            this.btnAdicionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdicionar.Image = ((System.Drawing.Image)(resources.GetObject("btnAdicionar.Image")));
+            this.btnAdicionar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAdicionar.Location = new System.Drawing.Point(554, 29);
+            this.btnAdicionar.Name = "btnAdicionar";
+            this.btnAdicionar.Size = new System.Drawing.Size(115, 73);
+            this.btnAdicionar.TabIndex = 6;
+            this.btnAdicionar.Text = "Adicionar";
+            this.btnAdicionar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAdicionar.UseVisualStyleBackColor = true;
+            this.btnAdicionar.Click += new System.EventHandler(this.BtnAdicionar_Click);
             // 
             // dtHoraTermino
             // 
@@ -175,22 +114,43 @@
             this.dtHoraTermino.ShowUpDown = true;
             this.dtHoraTermino.Size = new System.Drawing.Size(115, 30);
             this.dtHoraTermino.TabIndex = 12;
+            this.dtHoraTermino.Value = new System.DateTime(2019, 10, 25, 20, 54, 0, 0);
             // 
-            // dataGridView1
+            // dtHoraInicio
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dtHoraInicio.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtHoraInicio.Location = new System.Drawing.Point(760, 123);
+            this.dtHoraInicio.Name = "dtHoraInicio";
+            this.dtHoraInicio.ShowUpDown = true;
+            this.dtHoraInicio.Size = new System.Drawing.Size(115, 30);
+            this.dtHoraInicio.TabIndex = 11;
+            this.dtHoraInicio.Value = new System.DateTime(2019, 10, 25, 11, 4, 15, 0);
+            // 
+            // gpAdicionados
+            // 
+            this.gpAdicionados.Controls.Add(this.dtgDiasAdicionados);
+            this.gpAdicionados.Location = new System.Drawing.Point(6, 288);
+            this.gpAdicionados.Name = "gpAdicionados";
+            this.gpAdicionados.Size = new System.Drawing.Size(1004, 366);
+            this.gpAdicionados.TabIndex = 10;
+            this.gpAdicionados.TabStop = false;
+            this.gpAdicionados.Text = "Dias Adicionados";
+            // 
+            // dtgDiasAdicionados
+            // 
+            this.dtgDiasAdicionados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgDiasAdicionados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.DiaSemana,
             this.DataInicio,
             this.DataTermino,
             this.HoraInicio,
             this.HoraFim});
-            this.dataGridView1.Location = new System.Drawing.Point(7, 30);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(997, 330);
-            this.dataGridView1.TabIndex = 0;
+            this.dtgDiasAdicionados.Location = new System.Drawing.Point(7, 30);
+            this.dtgDiasAdicionados.Name = "dtgDiasAdicionados";
+            this.dtgDiasAdicionados.RowHeadersWidth = 51;
+            this.dtgDiasAdicionados.RowTemplate.Height = 24;
+            this.dtgDiasAdicionados.Size = new System.Drawing.Size(997, 330);
+            this.dtgDiasAdicionados.TabIndex = 0;
             // 
             // DiaSemana
             // 
@@ -227,31 +187,74 @@
             this.HoraFim.Name = "HoraFim";
             this.HoraFim.Width = 125;
             // 
-            // btnExcluir
+            // dtDiaTermino
             // 
-            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluir.Image")));
-            this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnExcluir.Location = new System.Drawing.Point(760, 29);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(115, 73);
-            this.btnExcluir.TabIndex = 7;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.dtDiaTermino.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtDiaTermino.Location = new System.Drawing.Point(237, 211);
+            this.dtDiaTermino.Name = "dtDiaTermino";
+            this.dtDiaTermino.Size = new System.Drawing.Size(150, 30);
+            this.dtDiaTermino.TabIndex = 7;
             // 
-            // btnAdicionar
+            // dtDiaInicio
             // 
-            this.btnAdicionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdicionar.Image = ((System.Drawing.Image)(resources.GetObject("btnAdicionar.Image")));
-            this.btnAdicionar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAdicionar.Location = new System.Drawing.Point(554, 29);
-            this.btnAdicionar.Name = "btnAdicionar";
-            this.btnAdicionar.Size = new System.Drawing.Size(115, 73);
-            this.btnAdicionar.TabIndex = 6;
-            this.btnAdicionar.Text = "Adicionar";
-            this.btnAdicionar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnAdicionar.UseVisualStyleBackColor = true;
+            this.dtDiaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtDiaInicio.Location = new System.Drawing.Point(237, 123);
+            this.dtDiaInicio.Name = "dtDiaInicio";
+            this.dtDiaInicio.Size = new System.Drawing.Size(150, 30);
+            this.dtDiaInicio.TabIndex = 6;
+            // 
+            // lblHoraTérmino
+            // 
+            this.lblHoraTérmino.AutoSize = true;
+            this.lblHoraTérmino.Location = new System.Drawing.Point(565, 216);
+            this.lblHoraTérmino.Name = "lblHoraTérmino";
+            this.lblHoraTérmino.Size = new System.Drawing.Size(158, 25);
+            this.lblHoraTérmino.TabIndex = 5;
+            this.lblHoraTérmino.Text = "Hora de Término";
+            // 
+            // lblHoraInicio
+            // 
+            this.lblHoraInicio.AutoSize = true;
+            this.lblHoraInicio.Location = new System.Drawing.Point(565, 128);
+            this.lblHoraInicio.Name = "lblHoraInicio";
+            this.lblHoraInicio.Size = new System.Drawing.Size(131, 25);
+            this.lblHoraInicio.TabIndex = 4;
+            this.lblHoraInicio.Text = "Hora de Início";
+            // 
+            // lblDiaFim
+            // 
+            this.lblDiaFim.AutoSize = true;
+            this.lblDiaFim.Location = new System.Drawing.Point(55, 216);
+            this.lblDiaFim.Name = "lblDiaFim";
+            this.lblDiaFim.Size = new System.Drawing.Size(145, 25);
+            this.lblDiaFim.TabIndex = 3;
+            this.lblDiaFim.Text = "Dia de Término";
+            // 
+            // lblDiaInicio
+            // 
+            this.lblDiaInicio.AutoSize = true;
+            this.lblDiaInicio.Location = new System.Drawing.Point(55, 128);
+            this.lblDiaInicio.Name = "lblDiaInicio";
+            this.lblDiaInicio.Size = new System.Drawing.Size(118, 25);
+            this.lblDiaInicio.TabIndex = 2;
+            this.lblDiaInicio.Text = "Dia de Início";
+            // 
+            // cmbDiaSemana
+            // 
+            this.cmbDiaSemana.FormattingEnabled = true;
+            this.cmbDiaSemana.Location = new System.Drawing.Point(237, 45);
+            this.cmbDiaSemana.Name = "cmbDiaSemana";
+            this.cmbDiaSemana.Size = new System.Drawing.Size(253, 33);
+            this.cmbDiaSemana.TabIndex = 1;
+            // 
+            // lblDiadaSemana
+            // 
+            this.lblDiadaSemana.AutoSize = true;
+            this.lblDiadaSemana.Location = new System.Drawing.Point(55, 48);
+            this.lblDiadaSemana.Name = "lblDiadaSemana";
+            this.lblDiadaSemana.Size = new System.Drawing.Size(147, 25);
+            this.lblDiadaSemana.TabIndex = 0;
+            this.lblDiadaSemana.Text = "Dia da Semana";
             // 
             // btnSalvar
             // 
@@ -298,7 +301,7 @@
             this.gpDia.ResumeLayout(false);
             this.gpDia.PerformLayout();
             this.gpAdicionados.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgDiasAdicionados)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -317,7 +320,7 @@
         private System.Windows.Forms.Label lblDiadaSemana;
         private System.Windows.Forms.DateTimePicker dtHoraInicio;
         private System.Windows.Forms.DateTimePicker dtHoraTermino;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgDiasAdicionados;
         private System.Windows.Forms.DataGridViewTextBoxColumn DiaSemana;
         private System.Windows.Forms.DataGridViewTextBoxColumn DataInicio;
         private System.Windows.Forms.DataGridViewTextBoxColumn DataTermino;
