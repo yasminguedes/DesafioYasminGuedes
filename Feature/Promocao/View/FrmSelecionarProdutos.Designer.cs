@@ -37,16 +37,18 @@
             treeNode3});
             System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Orloff");
             System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Smirnoff Ice");
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("José Cuervo", new System.Windows.Forms.TreeNode[] {
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("José Cuervo");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Destilados", new System.Windows.Forms.TreeNode[] {
             treeNode5,
-            treeNode6});
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Heineken");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Budweiser");
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Eisenbahn");
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Cerveja", new System.Windows.Forms.TreeNode[] {
-            treeNode8,
+            treeNode6,
+            treeNode7});
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Heineken");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Budweiser");
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Eisenbahn");
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Cerveja", new System.Windows.Forms.TreeNode[] {
             treeNode9,
-            treeNode10});
+            treeNode10,
+            treeNode11});
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSelecionarProdutos));
             this.gpSelecionar = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -145,22 +147,24 @@
             treeNode5.Text = "Orloff";
             treeNode6.Name = "Smirnoff Ice";
             treeNode6.Text = "Smirnoff Ice";
-            treeNode7.Checked = true;
-            treeNode7.Name = "José Cuervo";
+            treeNode7.Name = "JoseCuervo";
             treeNode7.Text = "José Cuervo";
-            treeNode8.Name = "Heineken";
-            treeNode8.Text = "Heineken";
-            treeNode9.Name = "Budweiser";
-            treeNode9.Text = "Budweiser";
-            treeNode10.Name = "Eisenbahn";
-            treeNode10.Text = "Eisenbahn";
-            treeNode11.Checked = true;
-            treeNode11.Name = "Cerveja";
-            treeNode11.Text = "Cerveja";
+            treeNode8.Checked = true;
+            treeNode8.Name = "Destilados";
+            treeNode8.Text = "Destilados";
+            treeNode9.Name = "Heineken";
+            treeNode9.Text = "Heineken";
+            treeNode10.Name = "Budweiser";
+            treeNode10.Text = "Budweiser";
+            treeNode11.Name = "Eisenbahn";
+            treeNode11.Text = "Eisenbahn";
+            treeNode12.Checked = true;
+            treeNode12.Name = "Cerveja";
+            treeNode12.Text = "Cerveja";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode4,
-            treeNode7,
-            treeNode11});
+            treeNode8,
+            treeNode12});
             this.treeView1.Size = new System.Drawing.Size(419, 431);
             this.treeView1.TabIndex = 4;
             // 

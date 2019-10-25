@@ -29,38 +29,18 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPromocao));
-            System.Windows.Forms.ListViewGroup listViewGroup10 = new System.Windows.Forms.ListViewGroup("Nome da Promoção", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup11 = new System.Windows.Forms.ListViewGroup("Tipo", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup12 = new System.Windows.Forms.ListViewGroup("Status", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewGroup listViewGroup13 = new System.Windows.Forms.ListViewGroup("Nome da Promoção", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup14 = new System.Windows.Forms.ListViewGroup("Tipo", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup15 = new System.Windows.Forms.ListViewGroup("Status", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
-            ""}, -1, System.Drawing.SystemColors.InfoText, System.Drawing.Color.Empty, null);
-            System.Windows.Forms.ListViewGroup listViewGroup16 = new System.Windows.Forms.ListViewGroup("Nome da Promoção", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup17 = new System.Windows.Forms.ListViewGroup("Tipo", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup18 = new System.Windows.Forms.ListViewGroup("Status", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("");
             this.btnCancelar = new System.Windows.Forms.Button();
             this.gpPromocoes = new System.Windows.Forms.GroupBox();
             this.btnNovo = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lstStatus = new System.Windows.Forms.ListView();
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.lstNome = new System.Windows.Forms.ListView();
-            this.clNome = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clTipo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clStatus = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.lstTipo = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.gpPromocoesCadastradas = new System.Windows.Forms.GroupBox();
             this.btnEditar = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.NomePromocao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gpPromocoes.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gpPromocoesCadastradas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCancelar
@@ -81,7 +61,7 @@
             // gpPromocoes
             // 
             this.gpPromocoes.Controls.Add(this.btnNovo);
-            this.gpPromocoes.Controls.Add(this.groupBox1);
+            this.gpPromocoes.Controls.Add(this.gpPromocoesCadastradas);
             this.gpPromocoes.Controls.Add(this.btnEditar);
             this.gpPromocoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpPromocoes.Location = new System.Drawing.Point(36, 39);
@@ -105,136 +85,14 @@
             this.btnNovo.UseVisualStyleBackColor = true;
             this.btnNovo.Click += new System.EventHandler(this.BtnNovo_Click);
             // 
-            // groupBox1
+            // gpPromocoesCadastradas
             // 
-            this.groupBox1.Controls.Add(this.lstStatus);
-            this.groupBox1.Controls.Add(this.lstNome);
-            this.groupBox1.Controls.Add(this.lstTipo);
-            this.groupBox1.Location = new System.Drawing.Point(22, 134);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(714, 380);
-            this.groupBox1.TabIndex = 17;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
-            // 
-            // lstStatus
-            // 
-            this.lstStatus.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6});
-            listViewGroup10.Header = "Nome da Promoção";
-            listViewGroup10.Name = "lstNome";
-            listViewGroup11.Header = "Tipo";
-            listViewGroup11.Name = "lstTipo";
-            listViewGroup12.Header = "Status";
-            listViewGroup12.Name = "lstStatus";
-            this.lstStatus.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup10,
-            listViewGroup11,
-            listViewGroup12});
-            this.lstStatus.HideSelection = false;
-            listViewItem4.Group = listViewGroup12;
-            this.lstStatus.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem4});
-            this.lstStatus.Location = new System.Drawing.Point(589, 0);
-            this.lstStatus.Name = "lstStatus";
-            this.lstStatus.Size = new System.Drawing.Size(124, 380);
-            this.lstStatus.TabIndex = 4;
-            this.lstStatus.UseCompatibleStateImageBehavior = false;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Nome da Promoção";
-            this.columnHeader4.Width = 100;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Tipo";
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Status";
-            // 
-            // lstNome
-            // 
-            this.lstNome.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.clNome,
-            this.clTipo,
-            this.clStatus});
-            this.lstNome.GridLines = true;
-            listViewGroup13.Header = "Nome da Promoção";
-            listViewGroup13.Name = "lstNome";
-            listViewGroup14.Header = "Tipo";
-            listViewGroup14.Name = "lstTipo";
-            listViewGroup15.Header = "Status";
-            listViewGroup15.Name = "lstStatus";
-            this.lstNome.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup13,
-            listViewGroup14,
-            listViewGroup15});
-            this.lstNome.HideSelection = false;
-            listViewItem5.Group = listViewGroup13;
-            listViewItem5.UseItemStyleForSubItems = false;
-            this.lstNome.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem5});
-            this.lstNome.Location = new System.Drawing.Point(0, 0);
-            this.lstNome.Name = "lstNome";
-            this.lstNome.Size = new System.Drawing.Size(435, 380);
-            this.lstNome.TabIndex = 2;
-            this.lstNome.UseCompatibleStateImageBehavior = false;
-            // 
-            // clNome
-            // 
-            this.clNome.Text = "Nome da Promoção";
-            this.clNome.Width = 100;
-            // 
-            // clTipo
-            // 
-            this.clTipo.Text = "Tipo";
-            // 
-            // clStatus
-            // 
-            this.clStatus.Text = "Status";
-            // 
-            // lstTipo
-            // 
-            this.lstTipo.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3});
-            listViewGroup16.Header = "Nome da Promoção";
-            listViewGroup16.Name = "lstNome";
-            listViewGroup17.Header = "Tipo";
-            listViewGroup17.Name = "lstTipo";
-            listViewGroup18.Header = "Status";
-            listViewGroup18.Name = "lstStatus";
-            this.lstTipo.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup16,
-            listViewGroup17,
-            listViewGroup18});
-            this.lstTipo.HideSelection = false;
-            listViewItem6.Group = listViewGroup17;
-            this.lstTipo.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem6});
-            this.lstTipo.Location = new System.Drawing.Point(434, 0);
-            this.lstTipo.Name = "lstTipo";
-            this.lstTipo.Size = new System.Drawing.Size(155, 380);
-            this.lstTipo.TabIndex = 3;
-            this.lstTipo.UseCompatibleStateImageBehavior = false;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Nome da Promoção";
-            this.columnHeader1.Width = 100;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Tipo";
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Status";
+            this.gpPromocoesCadastradas.Controls.Add(this.dataGridView1);
+            this.gpPromocoesCadastradas.Location = new System.Drawing.Point(22, 134);
+            this.gpPromocoesCadastradas.Name = "gpPromocoesCadastradas";
+            this.gpPromocoesCadastradas.Size = new System.Drawing.Size(714, 380);
+            this.gpPromocoesCadastradas.TabIndex = 17;
+            this.gpPromocoesCadastradas.TabStop = false;
             // 
             // btnEditar
             // 
@@ -249,6 +107,41 @@
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEditar.UseVisualStyleBackColor = true;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.NomePromocao,
+            this.Tipo,
+            this.Status});
+            this.dataGridView1.Location = new System.Drawing.Point(0, 20);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(714, 360);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // NomePromocao
+            // 
+            this.NomePromocao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NomePromocao.HeaderText = "Nome da Promoção";
+            this.NomePromocao.MinimumWidth = 6;
+            this.NomePromocao.Name = "NomePromocao";
+            // 
+            // Tipo
+            // 
+            this.Tipo.HeaderText = "Tipo";
+            this.Tipo.MinimumWidth = 6;
+            this.Tipo.Name = "Tipo";
+            this.Tipo.Width = 125;
+            // 
+            // Status
+            // 
+            this.Status.HeaderText = "Status";
+            this.Status.MinimumWidth = 6;
+            this.Status.Name = "Status";
+            this.Status.Width = 125;
+            // 
             // FrmPromocao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -261,7 +154,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Promoção";
             this.gpPromocoes.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
+            this.gpPromocoesCadastradas.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -269,20 +163,12 @@
         #endregion
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.GroupBox gpPromocoes;
-        private System.Windows.Forms.ListView lstStatus;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.ColumnHeader columnHeader6;
-        private System.Windows.Forms.ListView lstTipo;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ListView lstNome;
-        private System.Windows.Forms.ColumnHeader clNome;
-        private System.Windows.Forms.ColumnHeader clTipo;
-        private System.Windows.Forms.ColumnHeader clStatus;
         private System.Windows.Forms.Button btnNovo;
         private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gpPromocoesCadastradas;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NomePromocao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tipo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
     }
 }

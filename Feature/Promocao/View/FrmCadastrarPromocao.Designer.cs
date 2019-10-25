@@ -307,6 +307,7 @@
             this.btnNovoSemana.Text = "Novo";
             this.btnNovoSemana.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnNovoSemana.UseVisualStyleBackColor = true;
+            this.btnNovoSemana.Click += new System.EventHandler(this.BtnNovoSemana_Click);
             // 
             // FrmCadastroPromocao
             // 

@@ -19,5 +19,10 @@ namespace ProjetoDesafio.Feature.Promocao.View
         {
             new FrmSelecionarProdutos().Show();
         }
+
+        private void BtnNovoSemana_Click(object sender, EventArgs e)
+        {
+            new FrmDiaPromocao().Show();
+        }
     }
 }
