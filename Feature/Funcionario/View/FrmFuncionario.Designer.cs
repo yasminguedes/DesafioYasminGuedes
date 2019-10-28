@@ -392,16 +392,11 @@
             this.cmbCargo.AccessibleName = "Cargo";
             this.cmbCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCargo.FormattingEnabled = true;
-            this.cmbCargo.Items.AddRange(new object[] {
-            "Gerente",
-            "Administrador",
-            "Atendente",
-            "Caixa",
-            "Vendedor"});
             this.cmbCargo.Location = new System.Drawing.Point(104, 56);
             this.cmbCargo.Name = "cmbCargo";
             this.cmbCargo.Size = new System.Drawing.Size(551, 33);
             this.cmbCargo.TabIndex = 0;
+            this.cmbCargo.SelectedIndexChanged += new System.EventHandler(this.CmbCargo_SelectedIndexChanged);
             // 
             // label2
             // 

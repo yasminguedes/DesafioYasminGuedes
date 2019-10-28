@@ -31,14 +31,15 @@ namespace ProjetoDesafio.Feature.Funcionario.Dao
         {
             var commandText = new StringBuilder();
 
-            commandText.Append(@"INSERT into Funcionario (usuario_funcionario, senha_funcionario, id_pessoa) ");
-            commandText.Append("Values(@UsuarioFuncionario, @SenhaFuncionario, @IdPessoa)");
+            commandText.Append(@"INSERT into Funcionario (usuario_funcionario, senha_funcionario, id_pessoa,id_cargo) ");
+            commandText.Append("Values(@UsuarioFuncionario, @SenhaFuncionario, @IdPessoa,@IdCargo)");
 
             cmd.CommandText = commandText.ToString();
 
             cmd.Parameters.Add("@UsuarioFuncionario", FbDbType.VarChar).Value = funcionario.UsuarioFuncionario;
             cmd.Parameters.Add("@SenhaFuncionario", FbDbType.VarChar).Value = funcionario.SenhaFuncionario;
             cmd.Parameters.Add("@IdPessoa", FbDbType.VarChar).Value = funcionario.IdPessoa;
+            cmd.Parameters.Add("@IdCargo", FbDbType.VarChar).Value = funcionario.Cargo.IdCargo;
 
             cmd.ExecuteNonQuery();
             return true;

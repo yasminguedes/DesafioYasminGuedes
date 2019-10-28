@@ -36,7 +36,7 @@
             this.btnCategoria = new System.Windows.Forms.Button();
             this.btnMarca = new System.Windows.Forms.Button();
             this.btnPromocao = new System.Windows.Forms.Button();
-            this.btnAdministrador = new System.Windows.Forms.Button();
+            this.btnCargo = new System.Windows.Forms.Button();
             this.btnFornecedor = new System.Windows.Forms.Button();
             this.btnFuncionario = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -131,18 +131,18 @@
             this.btnPromocao.UseVisualStyleBackColor = true;
             this.btnPromocao.Click += new System.EventHandler(this.BtnPromocao_Click);
             // 
-            // btnAdministrador
+            // btnCargo
             // 
-            this.btnAdministrador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdministrador.Image = ((System.Drawing.Image)(resources.GetObject("btnAdministrador.Image")));
-            this.btnAdministrador.Location = new System.Drawing.Point(583, 67);
-            this.btnAdministrador.Name = "btnAdministrador";
-            this.btnAdministrador.Size = new System.Drawing.Size(229, 126);
-            this.btnAdministrador.TabIndex = 2;
-            this.btnAdministrador.Text = "Administrador";
-            this.btnAdministrador.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnAdministrador.UseVisualStyleBackColor = true;
-            this.btnAdministrador.Click += new System.EventHandler(this.BtnAdministrador_Click);
+            this.btnCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCargo.Image = ((System.Drawing.Image)(resources.GetObject("btnCargo.Image")));
+            this.btnCargo.Location = new System.Drawing.Point(583, 67);
+            this.btnCargo.Name = "btnCargo";
+            this.btnCargo.Size = new System.Drawing.Size(229, 126);
+            this.btnCargo.TabIndex = 2;
+            this.btnCargo.Text = "Cargo";
+            this.btnCargo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCargo.UseVisualStyleBackColor = true;
+            this.btnCargo.Click += new System.EventHandler(this.BtnCargo_Click);
             // 
             // btnFornecedor
             // 
@@ -186,7 +186,7 @@
             this.Controls.Add(this.btnCategoria);
             this.Controls.Add(this.btnMarca);
             this.Controls.Add(this.btnPromocao);
-            this.Controls.Add(this.btnAdministrador);
+            this.Controls.Add(this.btnCargo);
             this.Controls.Add(this.btnFornecedor);
             this.Controls.Add(this.btnFuncionario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -202,7 +202,7 @@
 
         private System.Windows.Forms.Button btnFuncionario;
         private System.Windows.Forms.Button btnFornecedor;
-        private System.Windows.Forms.Button btnAdministrador;
+        private System.Windows.Forms.Button btnCargo;
         private System.Windows.Forms.Button btnPromocao;
         private System.Windows.Forms.Button btnMarca;
         private System.Windows.Forms.Button btnCategoria;

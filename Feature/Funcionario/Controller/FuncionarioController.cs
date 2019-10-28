@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using ProjetoDesafio.Feature.Endereco.Dao;
 using ProjetoDesafio.Feature.Funcionario.Dao;
@@ -6,6 +7,8 @@ using ProjetoDesafio.Feature.Funcionario.Model;
 using ProjetoDesafio.Feature.Pessoa.Dao;
 using System.Windows.Forms;
 using FirebirdSql.Data.FirebirdClient;
+using ProjetoDesafio.Feature.Cargo.CargoModel;
+using ProjetoDesafio.Feature.Cargo.Controller;
 
 
 namespace ProjetoDesafio.Feature.Funcionario.Controller
@@ -56,5 +59,8 @@ namespace ProjetoDesafio.Feature.Funcionario.Controller
             }
             return false;
         }
+
+        public IEnumerable<CargoModel> ListarCargos() =>
+            new CargoController().Listar();
     }
 }

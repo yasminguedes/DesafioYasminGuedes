@@ -13,7 +13,7 @@ namespace ProjetoDesafio.Feature.Fornecedor.Dao
                 try
                 {
                     conexaoFirebird.Open();
-                    const string mSql = @"Select * from Funcionario";
+                    const string mSql = @"Select * from Fornecedor";
                     var cmd = new FbCommand(mSql, conexaoFirebird);
                     var da = new FbDataAdapter(cmd);
                     var dt = new DataTable();

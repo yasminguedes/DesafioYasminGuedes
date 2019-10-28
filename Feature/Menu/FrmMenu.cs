@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using ProjetoDesafio.Feature.Administrador.View;
+using ProjetoDesafio.Feature.Cargo.View;
 using ProjetoDesafio.Feature.Categoria.View;
 using ProjetoDesafio.Feature.Cliente.View;
 using ProjetoDesafio.Feature.Fornecedor.View;
@@ -28,12 +29,7 @@ namespace ProjetoDesafio.Feature.Menu
         {
             new FrmFornecedor().Show();
         }
-
-        private void BtnAdministrador_Click(object sender, EventArgs e)
-        {
-            new FrmAdministrador().Show();
-        }
-
+        
         private void BtnMarca_Click(object sender, EventArgs e)
         {
             new FrmMarca().Show();
@@ -62,6 +58,11 @@ namespace ProjetoDesafio.Feature.Menu
         private void BtnPedido_Click(object sender, EventArgs e)
         {
             new FrmPedido().Show();
+        }
+
+        private void BtnCargo_Click(object sender, EventArgs e)
+        {
+            new  FrmCargo().Show();
         }
     }
 }

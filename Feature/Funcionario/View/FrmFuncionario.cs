@@ -2,7 +2,7 @@
 using ProjetoDesafio.Feature.Funcionario.Controller;
 using ProjetoDesafio.Feature.Funcionario.Model;
 using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
+using ProjetoDesafio.Feature.Cargo.Controller;
 
 namespace ProjetoDesafio.Feature.Funcionario.View
 {
@@ -15,6 +15,14 @@ namespace ProjetoDesafio.Feature.Funcionario.View
             HabilitarOuDesabilitarCampos(false);
             SelecionarEstado();
             LimparCampos();
+            PreencherCargos();
+        }
+
+        private void PreencherCargos()
+        {
+            cmbCargo.DataSource = new FuncionarioController().ListarCargos();
+            cmbCargo.DisplayMember = "NomeCargo";
+            cmbCargo.ValueMember = "IdCargo";
         }
 
         private void LimparCampos()
@@ -121,7 +129,7 @@ namespace ProjetoDesafio.Feature.Funcionario.View
                 DataNascimento = DateTime.Parse(dtNascimento.Text),
                 Cargo =
                 {
-                    NomeCargo = cmbCargo.Text,
+                    IdCargo = int.Parse(cmbCargo.SelectedValue.ToString()),
                 },
                 TelefonePessoa = mskTelefone.Text,
                 RgIe = mskRg.Text,
@@ -159,6 +167,12 @@ namespace ProjetoDesafio.Feature.Funcionario.View
                 cmbCidade.Items.Add("Itacaré");
                 cmbCidade.Items.Add("Porto Seguro");
             }
+        }
+
+        private void CmbCargo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            new CargoController().Listar();
+            LimparCampos();
         }
     }
 }

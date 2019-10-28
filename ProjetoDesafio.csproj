@@ -68,7 +68,14 @@
     <Compile Include="Feature\Administrador\View\FrmAdministrador.Designer.cs">
       <DependentUpon>FrmAdministrador.cs</DependentUpon>
     </Compile>
+    <Compile Include="Feature\Cargo\Controller\CargoController.cs" />
     <Compile Include="Feature\Cargo\Dao\CargoDao.cs" />
+    <Compile Include="Feature\Cargo\View\FrmCargo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Feature\Cargo\View\FrmCargo.Designer.cs">
+      <DependentUpon>FrmCargo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Feature\Categoria\View\FrmCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +177,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Feature\Administrador\View\FrmAdministrador.resx">
       <DependentUpon>FrmAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Feature\Cargo\View\FrmCargo.resx">
+      <DependentUpon>FrmCargo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Feature\Categoria\View\FrmCategoria.resx">
       <DependentUpon>FrmCategoria.cs</DependentUpon>
