@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
+using ProjetoDesafio.Feature.Categoria.Controller;
+using ProjetoDesafio.Feature.Categoria.Model;
 
 namespace ProjetoDesafio.Feature.Categoria.View
 {
@@ -29,8 +31,18 @@ namespace ProjetoDesafio.Feature.Categoria.View
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(@"Categoria cadastrada com sucesso!");
+            var categoria = new CategoriaModel()
+            {
+                NomeCategoria = txtCategoria.Text
+            };
+
+            new CategoriaController().Cadastrar(categoria);
             LimparCampos();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

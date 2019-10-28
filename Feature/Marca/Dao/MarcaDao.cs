@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using FirebirdSql.Data.FirebirdClient;
 using ProjetoDesafio.Feature.Cargo.Model;
+using ProjetoDesafio.Feature.Marca.Model;
 
-namespace ProjetoDesafio.Feature.Cargo.Dao
+namespace ProjetoDesafio.Feature.Marca.Dao
 {
-    public class CargoDao
+    public class MarcaDao
     {
         public static DataTable GetDados()
         {
@@ -16,7 +19,7 @@ namespace ProjetoDesafio.Feature.Cargo.Dao
                 try
                 {
                     conexaoFirebird.Open();
-                    const string mSql = @"Select * from Cargo";
+                    const string mSql = @"Select * from Marca";
                     var cmd = new FbCommand(mSql, conexaoFirebird);
                     var da = new FbDataAdapter(cmd);
                     var dt = new DataTable();
@@ -29,50 +32,47 @@ namespace ProjetoDesafio.Feature.Cargo.Dao
                 }
             }
         }
-
-        public bool Cadastrar(CargoModel cargo, FbCommand cmd)
+        public bool Cadastrar(MarcaModel marca, FbCommand cmd)
         {
             var commandText = new StringBuilder();
 
-            commandText.Append(@"INSERT into Cargo (nome_cargo) ");
-            commandText.Append("Values(@Cargo)");
+            commandText.Append(@"INSERT into Marca (nome_marca) ");
+            commandText.Append("Values(@Marca)");
 
             cmd.CommandText = commandText.ToString();
 
-            cmd.Parameters.Add("@Cargo", FbDbType.VarChar).Value = cargo.NomeCargo;
-           
+            cmd.Parameters.Add("@Marca", FbDbType.VarChar).Value = marca.NomeMarca;
+
             cmd.ExecuteNonQuery();
 
             return true;
         }
-        
-        internal IEnumerable<CargoModel> Listar()
+
+        internal IEnumerable<MarcaModel> Listar()
         {
             var conexaoFirebird = Connection.PegarInstancia().PegarConexao();
             conexaoFirebird.Open();
             var cmd = new FbCommand();
-
             try
             {
-                cmd.CommandText = @"Select * from Cargo";
+                cmd.CommandText = @"Select * from Marca";
                 cmd.Connection = conexaoFirebird;
 
-                var listaCargo = new List<CargoModel>();
+                var listaMarca = new List<MarcaModel>();
 
                 //cmd.Parameters.Add(@"@id", FbDbType.Integer).Value = cargo.IdCargo;
 
                 var reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    var cargoModel = new CargoModel
+                    var marcaModel = new MarcaModel
                     {
-                        IdCargo = int.Parse(reader["id_cargo"].ToString()),
-                        NomeCargo = reader["nome_cargo"].ToString()
+                        IdMarca = int.Parse(reader["id_marca"].ToString()),
+                        NomeMarca = reader["nome_marca"].ToString()
                     };
-                    listaCargo.Add(cargoModel);
+                    listaMarca.Add(marcaModel);
                 }
-
-                return listaCargo;
+                return listaMarca;
             }
             finally
             {
@@ -81,7 +81,6 @@ namespace ProjetoDesafio.Feature.Cargo.Dao
                     conexaoFirebird.Close();
             }
         }
-
 
     }
 }

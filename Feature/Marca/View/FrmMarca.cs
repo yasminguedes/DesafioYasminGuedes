@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
+using ProjetoDesafio.Feature.Marca.Controller;
+using ProjetoDesafio.Feature.Marca.Model;
 
 namespace ProjetoDesafio.Feature.Marca.View
 {
@@ -29,7 +31,11 @@ namespace ProjetoDesafio.Feature.Marca.View
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(@"Marca cadastrada com sucesso!");
+            var marca = new MarcaModel()
+            {
+                NomeMarca = txtMarca.Text
+            };
+            new MarcaController().Cadastrar(marca);
             LimparCampos();
         }
 

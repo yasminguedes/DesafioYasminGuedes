@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using FirebirdSql.Data.FirebirdClient;
-using ProjetoDesafio.Feature.Cargo.Model;
+using ProjetoDesafio.Feature.Categoria.Model;
 
-namespace ProjetoDesafio.Feature.Cargo.Dao
+namespace ProjetoDesafio.Feature.Categoria.Dao
 {
-    public class CargoDao
+    public class CategoriaDao
     {
         public static DataTable GetDados()
         {
@@ -16,7 +18,7 @@ namespace ProjetoDesafio.Feature.Cargo.Dao
                 try
                 {
                     conexaoFirebird.Open();
-                    const string mSql = @"Select * from Cargo";
+                    const string mSql = @"Select * from Categoria";
                     var cmd = new FbCommand(mSql, conexaoFirebird);
                     var da = new FbDataAdapter(cmd);
                     var dt = new DataTable();
@@ -30,23 +32,23 @@ namespace ProjetoDesafio.Feature.Cargo.Dao
             }
         }
 
-        public bool Cadastrar(CargoModel cargo, FbCommand cmd)
+        public bool Cadastrar(CategoriaModel categoria, FbCommand cmd)
         {
             var commandText = new StringBuilder();
 
-            commandText.Append(@"INSERT into Cargo (nome_cargo) ");
-            commandText.Append("Values(@Cargo)");
+            commandText.Append(@"INSERT into Categoria (nome_categoria) ");
+            commandText.Append("Values(@Categoria)");
 
             cmd.CommandText = commandText.ToString();
 
-            cmd.Parameters.Add("@Cargo", FbDbType.VarChar).Value = cargo.NomeCargo;
-           
+            cmd.Parameters.Add("@Categoria", FbDbType.VarChar).Value = categoria.NomeCategoria;
+
             cmd.ExecuteNonQuery();
 
             return true;
         }
-        
-        internal IEnumerable<CargoModel> Listar()
+
+        internal IEnumerable<CategoriaModel> Listar()
         {
             var conexaoFirebird = Connection.PegarInstancia().PegarConexao();
             conexaoFirebird.Open();
@@ -54,34 +56,31 @@ namespace ProjetoDesafio.Feature.Cargo.Dao
 
             try
             {
-                cmd.CommandText = @"Select * from Cargo";
+                cmd.CommandText = @"Select * from Categoria";
                 cmd.Connection = conexaoFirebird;
 
-                var listaCargo = new List<CargoModel>();
-
-                //cmd.Parameters.Add(@"@id", FbDbType.Integer).Value = cargo.IdCargo;
+                var listaCategoria = new List<CategoriaModel>();
 
                 var reader = cmd.ExecuteReader();
+
                 while (reader.Read())
                 {
-                    var cargoModel = new CargoModel
+                    var categoriaModel = new CategoriaModel
                     {
-                        IdCargo = int.Parse(reader["id_cargo"].ToString()),
-                        NomeCargo = reader["nome_cargo"].ToString()
+                        IdCategoria = int.Parse(reader["id_categoria"].ToString()),
+                        NomeCategoria = reader["nome_categoria"].ToString()
                     };
-                    listaCargo.Add(cargoModel);
+                    listaCategoria.Add(categoriaModel);
                 }
 
-                return listaCargo;
+                return listaCategoria;
             }
             finally
             {
                 cmd.Dispose();
-                if (conexaoFirebird.State != ConnectionState.Closed)
+                if(conexaoFirebird.State != ConnectionState.Closed)
                     conexaoFirebird.Close();
             }
-        }
-
-
+        } 
     }
 }

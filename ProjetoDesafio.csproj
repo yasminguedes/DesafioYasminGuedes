@@ -76,6 +76,8 @@
     <Compile Include="Feature\Cargo\View\FrmCargo.Designer.cs">
       <DependentUpon>FrmCargo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Feature\Categoria\Controller\CategoriaController.cs" />
+    <Compile Include="Feature\Categoria\Dao\CategoriaDao.cs" />
     <Compile Include="Feature\Categoria\View\FrmCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +101,8 @@
     <Compile Include="Feature\Funcionario\View\FrmFuncionario.Designer.cs">
       <DependentUpon>FrmFuncionario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Feature\Marca\Controller\MarcaController.cs" />
+    <Compile Include="Feature\Marca\Dao\MarcaDao.cs" />
     <Compile Include="Feature\Marca\View\FrmMarca.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +128,8 @@
     <Compile Include="Feature\Fornecedor\View\FrmFornecedor.Designer.cs">
       <DependentUpon>FrmFornecedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Feature\Produto\Controller\ProdutoController.cs" />
+    <Compile Include="Feature\Produto\Dao\ProdutoDao.cs" />
     <Compile Include="Feature\Produto\View\FrmProduto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -250,8 +256,6 @@
     <Folder Include="Feature\Endereco\View\" />
     <Folder Include="Feature\Pessoa\Controller\" />
     <Folder Include="Feature\Pessoa\View\" />
-    <Folder Include="Feature\Produto\Controller\" />
-    <Folder Include="Feature\Produto\Dao\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Feature\icones\cancel-16.png" />
