@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Text;
 using FirebirdSql.Data.FirebirdClient;
-using ProjetoDesafio.Feature.Cargo.CargoModel;
+using ProjetoDesafio.Feature.Cargo.Model;
 
 namespace ProjetoDesafio.Feature.Cargo.Dao
 {
@@ -29,7 +29,7 @@ namespace ProjetoDesafio.Feature.Cargo.Dao
                 }
             }
         }
-        public bool Cadastrar(CargoModel.CargoModel cargo, FbCommand cmd)
+        public bool Cadastrar(CargoModel cargo, FbCommand cmd)
         {
             var commandText = new StringBuilder();
 
@@ -44,19 +44,45 @@ namespace ProjetoDesafio.Feature.Cargo.Dao
 
             return true;
         }
-       
-        public IEnumerable<CargoModel.CargoModel> Listar(CargoModel.CargoModel cargo, FbCommand cmd)
+
+
+
+        internal IEnumerable<CargoModel> Listar()
         {
-            var commandText = new StringBuilder();
+            var conexaoFirebird = Connection.PegarInstancia().PegarConexao();
+            conexaoFirebird.Open();
+            var cmd = new FbCommand();
 
-            commandText.Append((@"Select * from Cargo Where id_cargo = @id"));
+            try
+            {
+                cmd.CommandText = @"Select * from Cargo";
+                cmd.Connection = conexaoFirebird;
 
-           yield return cargo;
+                var listaCargo = new List<CargoModel>();
+
+                //cmd.Parameters.Add(@"@id", FbDbType.Integer).Value = cargo.IdCargo;
+
+                var reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    var cargoModel = new CargoModel
+                    {
+                        IdCargo = int.Parse(reader["id_cargo"].ToString()),
+                        NomeCargo = reader["nome_cargo"].ToString()
+                    };
+                    listaCargo.Add(cargoModel);
+                }
+
+                return listaCargo;
+            }
+            finally
+            {
+                cmd.Dispose();
+                if (conexaoFirebird.State != ConnectionState.Closed)
+                    conexaoFirebird.Close();
+            }
         }
 
-        internal IEnumerable<CargoModel.CargoModel> Listar()
-        {
-            throw new NotImplementedException();
-        }
+
     }
 }

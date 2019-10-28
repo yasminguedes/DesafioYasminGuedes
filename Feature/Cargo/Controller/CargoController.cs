@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 using FirebirdSql.Data.FirebirdClient;
-using ProjetoDesafio.Feature.Cargo.CargoModel;
 using ProjetoDesafio.Feature.Cargo.Dao;
+using ProjetoDesafio.Feature.Cargo.Model;
 
 namespace ProjetoDesafio.Feature.Cargo.Controller
 {
     public class CargoController
     {
-        public bool Cadastrar(CargoModel.CargoModel cargo)
+        public bool Cadastrar(CargoModel cargo)
         {
             var conexaoFireBird = Connection.PegarInstancia().PegarConexao();
             var cmd = new FbCommand();
@@ -46,9 +46,21 @@ namespace ProjetoDesafio.Feature.Cargo.Controller
 
         }
 
-        public IEnumerable<CargoModel.CargoModel> Listar()
+        public IEnumerable<CargoModel> Listar()
         {
-            return new CargoDao().Listar();
+            try
+            {
+                return  new CargoDao().Listar();
+            }
+            catch (FbException fbex)
+            {
+                MessageBox.Show($@"Erro no banco ao listar cargo : {fbex.Message}");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show($@"Erro ao listar cargo : {e.Message}");
+            }
+            return new List<CargoModel>();
         }
     }
 }

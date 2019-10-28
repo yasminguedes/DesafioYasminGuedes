@@ -1,4 +1,4 @@
-﻿namespace ProjetoDesafio.Feature.Cargo.CargoModel
+﻿namespace ProjetoDesafio.Feature.Cargo.Model
 {
     public class CargoModel
     {

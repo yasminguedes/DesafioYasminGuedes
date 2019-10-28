@@ -168,12 +168,7 @@ namespace ProjetoDesafio.Feature.Funcionario.View
                 cmbCidade.Items.Add("Porto Seguro");
             }
         }
-
-        private void CmbCargo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            new CargoController().Listar();
-            LimparCampos();
-        }
+        
     }
 }
 

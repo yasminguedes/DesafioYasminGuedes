@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using ProjetoDesafio.Feature.Cargo.Controller;
+using ProjetoDesafio.Feature.Cargo.Model;
 
 namespace ProjetoDesafio.Feature.Cargo.View
 {
@@ -28,7 +29,7 @@ namespace ProjetoDesafio.Feature.Cargo.View
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
-            var cargo = new CargoModel.CargoModel()
+            var cargo = new CargoModel()
             {
                 NomeCargo = txtCargo.Text
             };

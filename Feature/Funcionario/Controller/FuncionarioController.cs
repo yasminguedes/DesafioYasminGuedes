@@ -7,8 +7,8 @@ using ProjetoDesafio.Feature.Funcionario.Model;
 using ProjetoDesafio.Feature.Pessoa.Dao;
 using System.Windows.Forms;
 using FirebirdSql.Data.FirebirdClient;
-using ProjetoDesafio.Feature.Cargo.CargoModel;
 using ProjetoDesafio.Feature.Cargo.Controller;
+using ProjetoDesafio.Feature.Cargo.Model;
 
 
 namespace ProjetoDesafio.Feature.Funcionario.Controller

@@ -27,13 +27,13 @@ namespace ProjetoDesafio.Feature.Marca.View
             txtMarca.Focus();
         }
 
-        private void btnSalvar_Click(object sender, EventArgs e)
+        private void BtnSalvar_Click(object sender, EventArgs e)
         {
             MessageBox.Show(@"Marca cadastrada com sucesso!");
             LimparCampos();
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void BtnCancelar_Click(object sender, EventArgs e)
         {
             Close();
         }

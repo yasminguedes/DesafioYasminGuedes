@@ -109,7 +109,7 @@
             this.btnListar.Location = new System.Drawing.Point(192, 12);
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(137, 122);
-            this.btnListar.TabIndex = 6;
+            this.btnListar.TabIndex = 3;
             this.btnListar.Text = "Listar";
             this.btnListar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnListar.UseVisualStyleBackColor = true;
@@ -124,7 +124,7 @@
             this.btnAlterar.Location = new System.Drawing.Point(373, 12);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(137, 122);
-            this.btnAlterar.TabIndex = 7;
+            this.btnAlterar.TabIndex = 4;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAlterar.UseVisualStyleBackColor = true;
@@ -140,7 +140,7 @@
             this.btnExcluir.Location = new System.Drawing.Point(560, 12);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(137, 122);
-            this.btnExcluir.TabIndex = 8;
+            this.btnExcluir.TabIndex = 5;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnExcluir.UseVisualStyleBackColor = true;
@@ -396,7 +396,6 @@
             this.cmbCargo.Name = "cmbCargo";
             this.cmbCargo.Size = new System.Drawing.Size(551, 33);
             this.cmbCargo.TabIndex = 0;
-            this.cmbCargo.SelectedIndexChanged += new System.EventHandler(this.CmbCargo_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -521,7 +520,7 @@
             this.btnSalvar.Location = new System.Drawing.Point(447, 774);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(221, 54);
-            this.btnSalvar.TabIndex = 38;
+            this.btnSalvar.TabIndex = 1;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
@@ -536,7 +535,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(818, 774);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(221, 54);
-            this.btnCancelar.TabIndex = 39;
+            this.btnCancelar.TabIndex = 2;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
@@ -593,7 +592,7 @@
             this.cmbCidade.Location = new System.Drawing.Point(114, 291);
             this.cmbCidade.Name = "cmbCidade";
             this.cmbCidade.Size = new System.Drawing.Size(531, 33);
-            this.cmbCidade.TabIndex = 16;
+            this.cmbCidade.TabIndex = 6;
             // 
             // txtBairro
             // 

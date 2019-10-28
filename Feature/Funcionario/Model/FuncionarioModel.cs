@@ -1,4 +1,4 @@
-﻿using ProjetoDesafio.Feature.Cargo.CargoModel;
+﻿using ProjetoDesafio.Feature.Cargo.Model;
 using ProjetoDesafio.Feature.Pessoa.Model;
 
 namespace ProjetoDesafio.Feature.Funcionario.Model
