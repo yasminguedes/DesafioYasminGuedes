@@ -38,6 +38,9 @@
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
             this.dtgCadastroItem = new System.Windows.Forms.DataGridView();
+            this.Produto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Desconto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
@@ -49,9 +52,6 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnExcluirSemana = new System.Windows.Forms.Button();
             this.btnNovoSemana = new System.Windows.Forms.Button();
-            this.Produto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Desconto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gpPromocao.SuspendLayout();
             this.gpProdutos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgCadastroItem)).BeginInit();
@@ -81,7 +81,7 @@
             this.cmbTipo.Name = "cmbTipo";
             this.cmbTipo.Size = new System.Drawing.Size(465, 33);
             this.cmbTipo.TabIndex = 4;
-            this.cmbTipo.SelectedIndexChanged += new System.EventHandler(this.cmbTipo_SelectedIndexChanged);
+            this.cmbTipo.SelectedIndexChanged += new System.EventHandler(this.CmbTipo_SelectedIndexChanged);
             // 
             // lblTipo
             // 
@@ -135,7 +135,7 @@
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnExcluir.UseVisualStyleBackColor = true;
-            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            this.btnExcluir.Click += new System.EventHandler(this.BtnExcluir_Click);
             // 
             // btnNovo
             // 
@@ -165,6 +165,27 @@
             this.dtgCadastroItem.Size = new System.Drawing.Size(703, 401);
             this.dtgCadastroItem.TabIndex = 0;
             // 
+            // Produto
+            // 
+            this.Produto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Produto.HeaderText = "Produto";
+            this.Produto.MinimumWidth = 6;
+            this.Produto.Name = "Produto";
+            // 
+            // Valor
+            // 
+            this.Valor.HeaderText = "Valor ";
+            this.Valor.MinimumWidth = 6;
+            this.Valor.Name = "Valor";
+            this.Valor.Width = 125;
+            // 
+            // Desconto
+            // 
+            this.Desconto.HeaderText = "Preço Desconto";
+            this.Desconto.MinimumWidth = 6;
+            this.Desconto.Name = "Desconto";
+            this.Desconto.Width = 125;
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dtgCadastroItem);
@@ -189,6 +210,7 @@
             this.btnSalvar.TabIndex = 5;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
             // btnVoltar
             // 
@@ -275,7 +297,7 @@
             this.btnExcluirSemana.Text = "Excluir";
             this.btnExcluirSemana.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnExcluirSemana.UseVisualStyleBackColor = true;
-            this.btnExcluirSemana.Click += new System.EventHandler(this.btnExcluirSemana_Click);
+            this.btnExcluirSemana.Click += new System.EventHandler(this.BtnExcluirSemana_Click);
             // 
             // btnNovoSemana
             // 
@@ -290,27 +312,6 @@
             this.btnNovoSemana.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnNovoSemana.UseVisualStyleBackColor = true;
             this.btnNovoSemana.Click += new System.EventHandler(this.BtnNovoSemana_Click);
-            // 
-            // Produto
-            // 
-            this.Produto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Produto.HeaderText = "Produto";
-            this.Produto.MinimumWidth = 6;
-            this.Produto.Name = "Produto";
-            // 
-            // Valor
-            // 
-            this.Valor.HeaderText = "Valor ";
-            this.Valor.MinimumWidth = 6;
-            this.Valor.Name = "Valor";
-            this.Valor.Width = 125;
-            // 
-            // Desconto
-            // 
-            this.Desconto.HeaderText = "Preço Desconto";
-            this.Desconto.MinimumWidth = 6;
-            this.Desconto.Name = "Desconto";
-            this.Desconto.Width = 125;
             // 
             // FrmCadastroPromocao
             // 

@@ -33,20 +33,26 @@ namespace ProjetoDesafio.Feature.Promocao.View
             new FrmDiaPromocao().Show();
         }
 
-        private void cmbTipo_SelectedIndexChanged(object sender, EventArgs e)
+        private void CmbTipo_SelectedIndexChanged(object sender, EventArgs e)
         {
             cmbTipo.Items.Add("Desconto");
             cmbTipo.Items.Add("Compre 3 pague 2");
         }
 
-        private void btnExcluir_Click(object sender, EventArgs e)
+        private void BtnExcluir_Click(object sender, EventArgs e)
         {
             dtgCadastroItem.Rows.Remove(dtgCadastroItem.CurrentRow ?? throw new InvalidOperationException());
         }
 
-        private void btnExcluirSemana_Click(object sender, EventArgs e)
+        private void BtnExcluirSemana_Click(object sender, EventArgs e)
         {
             dtSemana.Rows.Remove(dtSemana.CurrentRow ?? throw new InvalidOperationException());
+        }
+
+        private void BtnSalvar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Promoção salva com sucesso!");
+            Close();
         }
     }
 }

@@ -32,7 +32,7 @@ namespace ProjetoDesafio.Feature.Fornecedor.View
             mskCnpj.Text = "";
             txtRepresentante.Text = "";
             txtEmailRepresentante.Text = "";
-            mskTelefoneRepresentante.Text = "";
+            mskCelular.Text = "";
         }
         private void HabilitarOuDesabilitarCampos(bool habilitarCampos)
         {
@@ -52,7 +52,7 @@ namespace ProjetoDesafio.Feature.Fornecedor.View
             mskCnpj.Enabled = habilitarCampos;
             txtRepresentante.Enabled = habilitarCampos;
             txtEmailRepresentante.Enabled = habilitarCampos;
-            mskTelefoneRepresentante.Enabled = habilitarCampos;
+            mskCelular.Enabled = habilitarCampos;
         }
 
         
@@ -94,8 +94,30 @@ namespace ProjetoDesafio.Feature.Fornecedor.View
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
-            var fornecedor = new FornecedorModel();
-            MessageBox.Show(@"Fornecedor cadastrado com sucesso!");
+            var fornecedor = new FornecedorModel()
+            {
+                NomePessoa = txtNome.Text,
+                Endereco =
+                {
+                    Cep = txtCep.Text,
+                    Rua = txtRua.Text,
+                    Numero = txtNumero.Text,
+                    Complemento = txtComplemento.Text,
+                    Bairro = txtBairro.Text,
+                    Cidade = cmbCidade.Text,
+                    Estado = cmbEstado.Text,
+                    Pais = txtPais.Text
+                },
+                EmailPessoa = txtEmail.Text,
+                TelefonePessoa = mskTelefone.Text,
+                RgIe = mskIe.Text,
+                CpfCnpj = mskCnpj.Text,
+                RazaoSocial = txtRazaoSocial.Text,
+                Representante = txtRepresentante.Text,
+                EmailRepresentante = txtEmailRepresentante.Text,
+                CelularRepresentante = mskCelular.Text
+            };
+            //MessageBox.Show(@"Fornecedor cadastrado com sucesso!");
             new FornecedorController().Cadastrar(fornecedor);
             LimparCampos();
             
@@ -106,7 +128,7 @@ namespace ProjetoDesafio.Feature.Fornecedor.View
             Close();
         }
 
-        private void cmbEstado_SelectedIndexChanged(object sender, EventArgs e)
+        private void CmbEstado_SelectedIndexChanged(object sender, EventArgs e)
         {
             cmbCidade.Text = string.Empty;
             cmbCidade.Items.Clear();

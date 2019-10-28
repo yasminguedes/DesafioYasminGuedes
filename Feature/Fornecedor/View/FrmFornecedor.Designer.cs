@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmFornecedor));
             this.Acesso = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.mskTelefoneRepresentante = new System.Windows.Forms.MaskedTextBox();
+            this.mskCelular = new System.Windows.Forms.MaskedTextBox();
             this.txtRepresentante = new System.Windows.Forms.TextBox();
             this.lblCargo = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
@@ -82,7 +82,7 @@
             // Acesso
             // 
             this.Acesso.Controls.Add(this.label1);
-            this.Acesso.Controls.Add(this.mskTelefoneRepresentante);
+            this.Acesso.Controls.Add(this.mskCelular);
             this.Acesso.Controls.Add(this.txtRepresentante);
             this.Acesso.Controls.Add(this.lblCargo);
             this.Acesso.Controls.Add(this.lblUsuario);
@@ -101,21 +101,21 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(1032, 59);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 25);
+            this.label1.Size = new System.Drawing.Size(74, 25);
             this.label1.TabIndex = 10;
-            this.label1.Text = "Telefone";
+            this.label1.Text = "Celular";
             // 
-            // mskTelefoneRepresentante
+            // mskCelular
             // 
-            this.mskTelefoneRepresentante.AccessibleDescription = "Telefone";
-            this.mskTelefoneRepresentante.AccessibleName = "Telefone";
-            this.mskTelefoneRepresentante.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskTelefoneRepresentante.Location = new System.Drawing.Point(1160, 56);
-            this.mskTelefoneRepresentante.Mask = "(999)  00000-0000";
-            this.mskTelefoneRepresentante.Name = "mskTelefoneRepresentante";
-            this.mskTelefoneRepresentante.Size = new System.Drawing.Size(177, 30);
-            this.mskTelefoneRepresentante.TabIndex = 2;
-            this.mskTelefoneRepresentante.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.mskCelular.AccessibleDescription = "Telefone";
+            this.mskCelular.AccessibleName = "Telefone";
+            this.mskCelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskCelular.Location = new System.Drawing.Point(1160, 56);
+            this.mskCelular.Mask = "(999)  00000-0000";
+            this.mskCelular.Name = "mskCelular";
+            this.mskCelular.Size = new System.Drawing.Size(177, 30);
+            this.mskCelular.TabIndex = 2;
+            this.mskCelular.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtRepresentante
             // 
@@ -304,7 +304,7 @@
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(237, 33);
             this.cmbEstado.TabIndex = 1;
-            this.cmbEstado.SelectedIndexChanged += new System.EventHandler(this.cmbEstado_SelectedIndexChanged);
+            this.cmbEstado.SelectedIndexChanged += new System.EventHandler(this.CmbEstado_SelectedIndexChanged);
             // 
             // lblEstado
             // 
@@ -679,7 +679,7 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Label label1;
-        public System.Windows.Forms.MaskedTextBox mskTelefoneRepresentante;
+        public System.Windows.Forms.MaskedTextBox mskCelular;
         private System.Windows.Forms.TextBox txtRepresentante;
         private System.Windows.Forms.TextBox txtRazaoSocial;
         private System.Windows.Forms.Button btnExcluir;

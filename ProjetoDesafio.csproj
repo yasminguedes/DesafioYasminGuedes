@@ -83,6 +83,7 @@
     </Compile>
     <Compile Include="Feature\Endereco\Dao\EnderecoDao.cs" />
     <Compile Include="Feature\Fornecedor\Controller\FornecedorController.cs" />
+    <Compile Include="Feature\Fornecedor\Dao\FornecedorDao.cs" />
     <Compile Include="Feature\Funcionario\Controller\FuncionarioController.cs" />
     <Compile Include="Feature\Funcionario\Dao\FuncionarioDao.cs" />
     <Compile Include="Feature\Funcionario\View\FrmFuncionario.cs">

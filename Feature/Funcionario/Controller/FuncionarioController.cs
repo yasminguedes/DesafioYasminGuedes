@@ -30,12 +30,12 @@ namespace ProjetoDesafio.Feature.Funcionario.Controller
 
                 if (cadastro)
                 {
-                    MessageBox.Show("Funcionário cadastrado com sucesso.");
+                    MessageBox.Show(@"Funcionário cadastrado com sucesso.");
                     cmd.Transaction.Commit();
                     return true;
                 }
 
-                MessageBox.Show("Erro ao cadastrar");
+                MessageBox.Show(@"Erro ao cadastrar");
                 cmd.Transaction.Rollback();
             }
             catch (FbException fbex)

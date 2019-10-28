@@ -35,7 +35,8 @@ namespace ProjetoDesafio.Feature.Promocao.View
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Período da promoção salvo com sucesso!");
+            Close();
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
