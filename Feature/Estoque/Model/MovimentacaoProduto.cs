@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using ProjetoDesafio.Feature.Produto.Model;
 
-namespace ProjetoDesafio.Model
+namespace ProjetoDesafio.Feature.Estoque.Model
 {
     public class MovimentacaoProduto
     {
@@ -16,5 +12,10 @@ namespace ProjetoDesafio.Model
         public int QtdeSaida { get; set; }
         public int QtdeEstoque { get; set; }
         public ProdutoModel Produto { get; set; }
+
+        public MovimentacaoProduto()
+        {
+            Produto = new ProdutoModel();
+        }
     }
 }

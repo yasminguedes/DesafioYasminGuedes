@@ -118,9 +118,14 @@ namespace ProjetoDesafio.Feature.Produto.View
             cmbAtivo.Items.Add(@"Inativo");
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void BtnCancelar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void BtnListar_Click(object sender, EventArgs e)
+        {
+            new FrmListarProduto().Show();
         }
     }
 }
