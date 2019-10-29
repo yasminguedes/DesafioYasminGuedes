@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
+using ProjetoDesafio.Feature.Produto.Controller;
+using ProjetoDesafio.Feature.Produto.Model;
 
 namespace ProjetoDesafio.Feature.Produto.View
 {
@@ -11,7 +13,31 @@ namespace ProjetoDesafio.Feature.Produto.View
             HabilitarOuDesabilitarCampos(false);
             SelecionarTipo();
             SelecionarAtivo();
+            PreencherCategoria();
+            PreencherMarca();
+            PreencherFornecedor();
             LimparCampos();
+        }
+
+        private void PreencherCategoria()
+        {
+            cmbCategoria.DataSource = new ProdutoController().ListarCategoria();
+            cmbCategoria.DisplayMember = "NomeCategoria";
+            cmbCategoria.ValueMember = "IdCategoria";
+        }
+
+        private void PreencherMarca()
+        {
+            cmbMarca.DataSource = new ProdutoController().ListarMarca();
+            cmbMarca.DisplayMember = "NomeMarca";
+            cmbMarca.DisplayMember = "IdMarca";
+        }
+
+        private void PreencherFornecedor()
+        {
+            cmbFornecedor.DataSource = new ProdutoController().ListarFornecedor();
+            cmbFornecedor.DisplayMember = "NomePessoa";
+            cmbFornecedor.DisplayMember = "IdFornecedor";
         }
 
         private void LimparCampos()
@@ -48,15 +74,32 @@ namespace ProjetoDesafio.Feature.Produto.View
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(@"Produto cadastrado com sucesso!");
+            var produto = new ProdutoModel
+            {
+                NomeProduto = txtNomeProduto.Text,
+                PrecoVenda = double.Parse(txtVenda.Text),
+                PrecoCompra = double.Parse(txtCompra.Text),
+                Tipo = cmbTipo.Text,
+                Ativo = cmbAtivo.Text,
+                Qtde = int.Parse(txtQuantidade.Text),
+                DataCadastro = DateTime.Parse(dtCadastro.Text),
+                Marca =
+                {
+                    IdMarca = int.Parse(cmbMarca.Text),
+                },
+                Categoria =
+                {
+                    IdCategoria = int.Parse(cmbCategoria.Text),
+                },
+                Fornecedor =
+                {
+                    IdFornecedor = int.Parse(cmbFornecedor.Text),
+                }
+            };
+            new ProdutoController().Cadastrar(produto);
             LimparCampos();
         }
-
-        private void BtnCancelar_Click(object sender, EventArgs e)
-        {
-            Close();
-
-        }
+        
        private void SelecionarTipo()
         {
             cmbTipo.Items.Add(@"Caixa");
@@ -69,6 +112,11 @@ namespace ProjetoDesafio.Feature.Produto.View
         {
             cmbAtivo.Items.Add(@"Ativo");
             cmbAtivo.Items.Add(@"Inativo");
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

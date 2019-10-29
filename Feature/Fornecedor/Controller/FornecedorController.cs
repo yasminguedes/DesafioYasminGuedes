@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
 using FirebirdSql.Data.FirebirdClient;
@@ -56,6 +57,23 @@ namespace ProjetoDesafio.Feature.Fornecedor.Controller
             }
             return false;
 
+        }
+
+        public IEnumerable<FornecedorModel> Listar()
+        {
+            try
+            {
+                return new FornecedorDao().Listar();
+            }
+            catch (FbException fbex)
+            {
+                MessageBox.Show($@"Ero no banco ao listar fornecedor: {fbex.Message}");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show($@"Erro ao listar fornecedor: {e.Message}");
+            }
+            return  new List<FornecedorModel>();
         }
     }
 }

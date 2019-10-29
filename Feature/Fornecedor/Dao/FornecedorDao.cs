@@ -1,5 +1,9 @@
 ﻿using FirebirdSql.Data.FirebirdClient;
+using ProjetoDesafio.Feature.Fornecedor.Model;
+using System;
+using System.Collections.Generic;
 using System.Data;
+using System.Net.Sockets;
 using System.Text;
 
 namespace ProjetoDesafio.Feature.Fornecedor.Dao
@@ -44,6 +48,39 @@ namespace ProjetoDesafio.Feature.Fornecedor.Dao
 
             cmd.ExecuteNonQuery();
             return true;
+        }
+
+        internal IEnumerable<FornecedorModel> Listar()
+        {
+            var conexaoFirebid = Connection.PegarInstancia().PegarConexao();
+            conexaoFirebid.Open();
+            var cmd = new FbCommand();
+
+            try
+            {
+                cmd.CommandText =
+                    @"Select * from Fornecedor f INNER JOIN pessoa AS p on f.id_pessoa = p.id_pessoa Where id_fornecedor =  ";
+
+                var listaFornecedor = new List<FornecedorModel>();
+                var reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    var fornecedorModel = new FornecedorModel()
+                    {
+                        IdFornecedor = int.Parse(reader["id_fornecedor"].ToString()),
+                        NomePessoa = reader["nome_pessoa"].ToString()
+                    };
+                    listaFornecedor.Add(fornecedorModel);
+                }
+
+                return listaFornecedor;
+            }
+            finally
+            {
+                cmd.Dispose();
+                if(conexaoFirebid.State != ConnectionState.Closed)
+                    conexaoFirebid.Close();
+            }
         }
     }
 }

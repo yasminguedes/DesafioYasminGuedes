@@ -81,7 +81,5 @@ namespace ProjetoDesafio.Feature.Cargo.Dao
                     conexaoFirebird.Close();
             }
         }
-
-
     }
 }
