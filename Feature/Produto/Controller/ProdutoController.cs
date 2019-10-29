@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
 using FirebirdSql.Data.FirebirdClient;
-using ProjetoDesafio.Feature.Cargo.Controller;
-using ProjetoDesafio.Feature.Cargo.Model;
 using ProjetoDesafio.Feature.Categoria.Controller;
 using ProjetoDesafio.Feature.Categoria.Dao;
 using ProjetoDesafio.Feature.Categoria.Model;
@@ -31,10 +29,6 @@ namespace ProjetoDesafio.Feature.Produto.Controller
                 conexaoFirebird.Open();
                 cmd.Connection = conexaoFirebird;
                 cmd.Transaction = conexaoFirebird.BeginTransaction();
-
-                //cmd = FornecedorDao.Cadastrar();
-                //cmd = MarcaDao.Cadastrar();
-                //cmd = CategoriaDao.Cadastrar();
 
                 var cadastro = new ProdutoDao().Cadastrar(produto, cmd);
 

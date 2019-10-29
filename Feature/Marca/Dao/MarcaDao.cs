@@ -56,8 +56,6 @@ namespace ProjetoDesafio.Feature.Marca.Dao
 
                 var listaMarca = new List<MarcaModel>();
 
-                //cmd.Parameters.Add(@"@id", FbDbType.Integer).Value = cargo.IdCargo;
-
                 var reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {

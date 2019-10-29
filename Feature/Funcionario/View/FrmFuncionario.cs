@@ -2,7 +2,6 @@
 using ProjetoDesafio.Feature.Funcionario.Controller;
 using ProjetoDesafio.Feature.Funcionario.Model;
 using System.Windows.Forms;
-using ProjetoDesafio.Feature.Cargo.Controller;
 
 namespace ProjetoDesafio.Feature.Funcionario.View
 {
@@ -135,7 +134,7 @@ namespace ProjetoDesafio.Feature.Funcionario.View
                 RgIe = mskRg.Text,
                 CpfCnpj = mskCpf.Text,
                 UsuarioFuncionario = txtUsuario.Text,
-                SenhaFuncionario = mskSenha.Text,
+                SenhaFuncionario = mskSenha.Text
 
             };
             if (funcionario.SenhasIguais)

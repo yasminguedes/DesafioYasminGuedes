@@ -19,5 +19,12 @@ namespace ProjetoDesafio.Feature.Produto.Model
         public MarcaModel Marca { get; set; }
         public CategoriaModel Categoria { get; set; }
         public FornecedorModel Fornecedor { get; set; }
+
+        public ProdutoModel()
+        {
+            Marca = new MarcaModel();
+            Categoria = new CategoriaModel();
+            Fornecedor = new FornecedorModel();
+        }
     }
 }

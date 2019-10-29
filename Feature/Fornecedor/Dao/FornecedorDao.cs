@@ -52,35 +52,36 @@ namespace ProjetoDesafio.Feature.Fornecedor.Dao
 
         internal IEnumerable<FornecedorModel> Listar()
         {
-            var conexaoFirebid = Connection.PegarInstancia().PegarConexao();
-            conexaoFirebid.Open();
-            var cmd = new FbCommand();
-
-            try
+            using (var conexaoFireBird = Connection.PegarInstancia().PegarConexao())
             {
-                cmd.CommandText =
-                    @"Select * from Fornecedor f INNER JOIN pessoa AS p on f.id_pessoa = p.id_pessoa Where id_fornecedor =  ";
-
-                var listaFornecedor = new List<FornecedorModel>();
-                var reader = cmd.ExecuteReader();
-                while (reader.Read())
+                try
                 {
-                    var fornecedorModel = new FornecedorModel()
-                    {
-                        IdFornecedor = int.Parse(reader["id_fornecedor"].ToString()),
-                        NomePessoa = reader["nome_pessoa"].ToString()
-                    };
-                    listaFornecedor.Add(fornecedorModel);
-                }
+                    conexaoFireBird.Open();
+                    const string sql =
+                        @"Select * from Fornecedor f INNER JOIN pessoa AS p on f.id_pessoa = p.id_pessoa ";
+                    var cmd = new FbCommand(sql, conexaoFireBird);
+                    var dr = cmd.ExecuteReader();
 
-                return listaFornecedor;
+                    var listaFornecedor = new List<FornecedorModel>();
+                    while (dr.Read())
+                    {
+                        var fornecedorModel = new FornecedorModel()
+                        {
+                            IdFornecedor = int.Parse(dr["id_fornecedor"].ToString()),
+                            NomePessoa = dr["nome_pessoa"].ToString()
+                        };
+                        listaFornecedor.Add(fornecedorModel);
+                    }
+
+                    return listaFornecedor;
+                }
+                finally
+                {
+                    if (conexaoFireBird.State != ConnectionState.Closed)
+                        conexaoFireBird.Close();
+                }
             }
-            finally
-            {
-                cmd.Dispose();
-                if(conexaoFirebid.State != ConnectionState.Closed)
-                    conexaoFirebid.Close();
-            }
+            
         }
     }
 }

@@ -71,7 +71,6 @@ namespace ProjetoDesafio.Feature.Cargo.Dao
                     };
                     listaCargo.Add(cargoModel);
                 }
-
                 return listaCargo;
             }
             finally

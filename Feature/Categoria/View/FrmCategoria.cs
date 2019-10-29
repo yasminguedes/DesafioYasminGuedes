@@ -31,7 +31,7 @@ namespace ProjetoDesafio.Feature.Categoria.View
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
-            var categoria = new CategoriaModel()
+            var categoria = new CategoriaModel
             {
                 NomeCategoria = txtCategoria.Text
             };

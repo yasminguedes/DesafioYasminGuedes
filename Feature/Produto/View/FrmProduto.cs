@@ -10,6 +10,7 @@ namespace ProjetoDesafio.Feature.Produto.View
         public FrmProduto()
         {
             InitializeComponent();
+            
             HabilitarOuDesabilitarCampos(false);
             SelecionarTipo();
             SelecionarAtivo();
@@ -30,14 +31,14 @@ namespace ProjetoDesafio.Feature.Produto.View
         {
             cmbMarca.DataSource = new ProdutoController().ListarMarca();
             cmbMarca.DisplayMember = "NomeMarca";
-            cmbMarca.DisplayMember = "IdMarca";
+            cmbMarca.ValueMember = "IdMarca";
         }
 
         private void PreencherFornecedor()
         {
             cmbFornecedor.DataSource = new ProdutoController().ListarFornecedor();
             cmbFornecedor.DisplayMember = "NomePessoa";
-            cmbFornecedor.DisplayMember = "IdFornecedor";
+            cmbFornecedor.ValueMember = "IdFornecedor";
         }
 
         private void LimparCampos()
@@ -70,10 +71,11 @@ namespace ProjetoDesafio.Feature.Produto.View
         private void BtnCadastrar_Click(object sender, EventArgs e)
         {
             HabilitarOuDesabilitarCampos(true);
+            txtNomeProduto.Focus();
         }
 
         private void BtnSalvar_Click(object sender, EventArgs e)
-        {
+            {
             var produto = new ProdutoModel
             {
                 NomeProduto = txtNomeProduto.Text,
@@ -85,18 +87,20 @@ namespace ProjetoDesafio.Feature.Produto.View
                 DataCadastro = DateTime.Parse(dtCadastro.Text),
                 Marca =
                 {
-                    IdMarca = int.Parse(cmbMarca.Text),
+                    IdMarca = int.Parse(cmbMarca.SelectedValue.ToString()),
                 },
                 Categoria =
                 {
-                    IdCategoria = int.Parse(cmbCategoria.Text),
+                    IdCategoria = int.Parse(cmbCategoria.SelectedValue.ToString()),
                 },
                 Fornecedor =
                 {
-                    IdFornecedor = int.Parse(cmbFornecedor.Text),
+                    IdFornecedor = int.Parse(cmbFornecedor.SelectedValue.ToString()),
                 }
             };
+
             new ProdutoController().Cadastrar(produto);
+
             LimparCampos();
         }
         

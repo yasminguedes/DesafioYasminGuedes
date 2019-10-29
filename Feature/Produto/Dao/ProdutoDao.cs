@@ -37,8 +37,9 @@ namespace ProjetoDesafio.Feature.Produto.Dao
             var commandText = new StringBuilder();
 
             commandText.Append(@"INSERT into Produto (nome_produto, preco_compra, preco_venda, qtde_estoque, ativo, data_cadastro, 
-                                tipo_produto, id_fornecedor, id_marca, id_categoria)");
-            commandText.Append(@"NomeProduto, PrecoCompra, PrecoVenda, QtdeEstoque, Ativo, DataCadastro, TipoProduto, Fornecedor, Marca, Categoria");
+                                tipo_produto, id_fornecedor, id_marca, id_categoria) Values ");
+            commandText.Append(@"(@NomeProduto, @PrecoCompra, @PrecoVenda, @QtdeEstoque, @Ativo, @DataCadastro, 
+                                    @TipoProduto, @Fornecedor, @Marca, @Categoria)");
 
             cmd.CommandText = commandText.ToString();
 
