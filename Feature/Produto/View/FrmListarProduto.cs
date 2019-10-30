@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProjetoDesafio.Feature.Produto.Controller;
 
 namespace ProjetoDesafio.Feature.Produto.View
 {
@@ -15,6 +9,11 @@ namespace ProjetoDesafio.Feature.Produto.View
         public FrmListarProduto()
         {
             InitializeComponent();
+        }
+
+        private void FrmListarProduto_Load(object sender, EventArgs e)
+        {
+            dtListaProdutos.DataSource = new ProdutoController().Listar();
         }
     }
 }

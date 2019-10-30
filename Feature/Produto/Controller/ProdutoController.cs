@@ -4,13 +4,10 @@ using System.Data;
 using System.Windows.Forms;
 using FirebirdSql.Data.FirebirdClient;
 using ProjetoDesafio.Feature.Categoria.Controller;
-using ProjetoDesafio.Feature.Categoria.Dao;
 using ProjetoDesafio.Feature.Categoria.Model;
 using ProjetoDesafio.Feature.Fornecedor.Controller;
-using ProjetoDesafio.Feature.Fornecedor.Dao;
 using ProjetoDesafio.Feature.Fornecedor.Model;
 using ProjetoDesafio.Feature.Marca.Controller;
-using ProjetoDesafio.Feature.Marca.Dao;
 using ProjetoDesafio.Feature.Marca.Model;
 using ProjetoDesafio.Feature.Produto.Dao;
 using ProjetoDesafio.Feature.Produto.Model;
@@ -69,5 +66,22 @@ namespace ProjetoDesafio.Feature.Produto.Controller
 
         public IEnumerable<FornecedorModel> ListarFornecedor() =>
             new FornecedorController().Listar();
+
+        public IEnumerable<ProdutoModel> Listar()
+        {
+            try
+            {
+                return new ProdutoDao().Listar();
+            }
+            catch (FbException fbex)
+            {
+                MessageBox.Show($@"Erro no banco ao listar produto : {fbex.Message}");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show($@"Erro ao listar produto: {e.Message}");
+            }
+            return new List<ProdutoModel>();
+        }
     }
 }

@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using FirebirdSql.Data.FirebirdClient;
+using ProjetoDesafio.Feature.Categoria.Model;
+using ProjetoDesafio.Feature.Fornecedor.Model;
+using ProjetoDesafio.Feature.Marca.Model;
 using ProjetoDesafio.Feature.Produto.Model;
 
 namespace ProjetoDesafio.Feature.Produto.Dao
@@ -57,6 +58,63 @@ namespace ProjetoDesafio.Feature.Produto.Dao
             cmd.ExecuteNonQuery();
             return true;
         }
-    }
-}
 
+        internal IEnumerable<ProdutoModel> Listar()
+        {
+            using (var conexaoFirebird = Connection.PegarInstancia().PegarConexao())
+            {
+                try
+                {
+                    conexaoFirebird.Open();
+                    const string sql =
+                        @"Select * from Produto p inner join categoria as c on p.id_categoria = c.id_categoria 
+                            inner join marca as m on p.id_marca = m.id_marca 
+                            inner join fornecedor as f on p.id_fornecedor = f.id_fornecedor";
+                    var cmd = new FbCommand(sql, conexaoFirebird);
+                    var dr = cmd.ExecuteReader();
+
+                    var listaProduto = new List<ProdutoModel>();
+                    while (dr.Read())
+                    {
+                        var produtoModel = new ProdutoModel()
+                        {
+                            IdProduto = int.Parse(dr["id_fornecedor"].ToString()),
+                            NomeProduto = dr["nome_produto"].ToString(),
+                            PrecoCompra = double.Parse(dr["preco_compra"].ToString()),
+                            PrecoVenda = double.Parse(dr["preco_compra"].ToString()),
+                            Qtde = int.Parse(dr["qtde_estoque"].ToString()),
+                            Ativo = dr["ativo"].ToString(),
+                            DataCadastro = DateTime.Parse(dr["data_cadastro"].ToString()),
+                            Tipo = dr["tipo_produto"].ToString(),
+                            Marca = new MarcaModel()
+                            {
+                                IdMarca = int.Parse(dr["id_marca"].ToString()),
+                                NomeMarca = dr["nome_marca"].ToString()
+                            },
+                            Categoria = new CategoriaModel()
+                            {
+                                IdCategoria = int.Parse(dr["id_categoria"].ToString()),
+                                NomeCategoria = dr["nome_categoria"].ToString()
+                            },
+                            Fornecedor = new FornecedorModel()
+                            {
+                                IdFornecedor = int.Parse(dr["id_fornecedor"].ToString()),
+                                NomePessoa = dr["nome_pessoa"].ToString()
+                            }
+                        };
+                        listaProduto.Add(produtoModel);
+                    }
+
+                    return listaProduto;
+                }
+                finally
+                {
+                    if (conexaoFirebird.State != ConnectionState.Closed)
+                        conexaoFirebird.Close();
+                }
+            }
+        }
+    }
+
+}
+    

@@ -67,7 +67,7 @@ namespace ProjetoDesafio.Feature.Fornecedor.Controller
             }
             catch (FbException fbex)
             {
-                MessageBox.Show($@"Ero no banco ao listar fornecedor: {fbex.Message}");
+                MessageBox.Show($@"Erro no banco ao listar fornecedor: {fbex.Message}");
             }
             catch (Exception e)
             {

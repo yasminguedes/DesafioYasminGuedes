@@ -32,7 +32,7 @@
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.gpLista = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtListaProdutos = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NomeProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Data = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,7 +48,7 @@
             this.rdbMarca = new System.Windows.Forms.RadioButton();
             this.rdbCategoria = new System.Windows.Forms.RadioButton();
             this.gpLista.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtListaProdutos)).BeginInit();
             this.SuspendLayout();
             // 
             // btnExcluir
@@ -62,7 +62,7 @@
             this.btnExcluir.Location = new System.Drawing.Point(199, 13);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(137, 122);
-            this.btnExcluir.TabIndex = 7;
+            this.btnExcluir.TabIndex = 6;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnExcluir.UseVisualStyleBackColor = true;
@@ -77,25 +77,25 @@
             this.btnAlterar.Location = new System.Drawing.Point(12, 13);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(137, 122);
-            this.btnAlterar.TabIndex = 6;
+            this.btnAlterar.TabIndex = 5;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAlterar.UseVisualStyleBackColor = true;
             // 
             // gpLista
             // 
-            this.gpLista.Controls.Add(this.dataGridView1);
+            this.gpLista.Controls.Add(this.dtListaProdutos);
             this.gpLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpLista.Location = new System.Drawing.Point(12, 154);
             this.gpLista.Name = "gpLista";
             this.gpLista.Size = new System.Drawing.Size(1380, 599);
-            this.gpLista.TabIndex = 8;
+            this.gpLista.TabIndex = 7;
             this.gpLista.TabStop = false;
             // 
-            // dataGridView1
+            // dtListaProdutos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dtListaProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtListaProdutos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.NomeProduto,
             this.Data,
@@ -105,12 +105,12 @@
             this.Categoria,
             this.TipoProduto,
             this.Fornecedor});
-            this.dataGridView1.Location = new System.Drawing.Point(0, 13);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1380, 580);
-            this.dataGridView1.TabIndex = 0;
+            this.dtListaProdutos.Location = new System.Drawing.Point(0, 13);
+            this.dtListaProdutos.Name = "dtListaProdutos";
+            this.dtListaProdutos.RowHeadersWidth = 51;
+            this.dtListaProdutos.RowTemplate.Height = 24;
+            this.dtListaProdutos.Size = new System.Drawing.Size(1380, 580);
+            this.dtListaProdutos.TabIndex = 0;
             // 
             // ID
             // 
@@ -183,7 +183,7 @@
             this.btnPesquisar.Location = new System.Drawing.Point(377, 13);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(46, 43);
-            this.btnPesquisar.TabIndex = 9;
+            this.btnPesquisar.TabIndex = 4;
             this.btnPesquisar.UseVisualStyleBackColor = true;
             // 
             // txtPesquisar
@@ -192,7 +192,7 @@
             this.txtPesquisar.Location = new System.Drawing.Point(429, 17);
             this.txtPesquisar.Name = "txtPesquisar";
             this.txtPesquisar.Size = new System.Drawing.Size(505, 34);
-            this.txtPesquisar.TabIndex = 10;
+            this.txtPesquisar.TabIndex = 0;
             // 
             // rdbProduto
             // 
@@ -201,7 +201,7 @@
             this.rdbProduto.Location = new System.Drawing.Point(429, 74);
             this.rdbProduto.Name = "rdbProduto";
             this.rdbProduto.Size = new System.Drawing.Size(158, 29);
-            this.rdbProduto.TabIndex = 11;
+            this.rdbProduto.TabIndex = 1;
             this.rdbProduto.TabStop = true;
             this.rdbProduto.Text = "Nome Produto";
             this.rdbProduto.UseVisualStyleBackColor = true;
@@ -213,7 +213,7 @@
             this.rdbMarca.Location = new System.Drawing.Point(639, 74);
             this.rdbMarca.Name = "rdbMarca";
             this.rdbMarca.Size = new System.Drawing.Size(88, 29);
-            this.rdbMarca.TabIndex = 12;
+            this.rdbMarca.TabIndex = 2;
             this.rdbMarca.TabStop = true;
             this.rdbMarca.Text = "Marca";
             this.rdbMarca.UseVisualStyleBackColor = true;
@@ -225,7 +225,7 @@
             this.rdbCategoria.Location = new System.Drawing.Point(816, 74);
             this.rdbCategoria.Name = "rdbCategoria";
             this.rdbCategoria.Size = new System.Drawing.Size(118, 29);
-            this.rdbCategoria.TabIndex = 13;
+            this.rdbCategoria.TabIndex = 3;
             this.rdbCategoria.TabStop = true;
             this.rdbCategoria.Text = "Categoria";
             this.rdbCategoria.UseVisualStyleBackColor = true;
@@ -247,8 +247,9 @@
             this.Name = "FrmListarProduto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista de Produtos";
+            this.Load += new System.EventHandler(this.FrmListarProduto_Load);
             this.gpLista.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtListaProdutos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -259,7 +260,7 @@
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.GroupBox gpLista;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtListaProdutos;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn NomeProduto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Data;
