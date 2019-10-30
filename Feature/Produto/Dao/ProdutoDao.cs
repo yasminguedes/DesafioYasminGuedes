@@ -59,18 +59,41 @@ namespace ProjetoDesafio.Feature.Produto.Dao
             return true;
         }
 
-        internal IEnumerable<ProdutoModel> Listar()
+        internal IEnumerable<ProdutoModel> Listar(ProdutoFiltroModel filtro)
         {
             using (var conexaoFirebird = Connection.PegarInstancia().PegarConexao())
             {
                 try
                 {
                     conexaoFirebird.Open();
-                    const string sql =
-                        @"Select * from Produto p inner join categoria as c on p.id_categoria = c.id_categoria 
+
+                    var cmd = new FbCommand {Connection = conexaoFirebird};
+
+                    var sql = new StringBuilder();
+                    sql.Append(@"Select * from Produto p inner join categoria as c on p.id_categoria = c.id_categoria 
                             inner join marca as m on p.id_marca = m.id_marca 
-                            inner join fornecedor as f on p.id_fornecedor = f.id_fornecedor";
-                    var cmd = new FbCommand(sql, conexaoFirebird);
+                            inner join fornecedor as f on p.id_fornecedor = f.id_fornecedor
+                            inner join pessoa as pe on f.id_pessoa = pe.id_pessoa");
+
+                    if (filtro.PesquisarPorNomeProduto)
+                    {
+                        sql.Append(" WHERE Upper(p.Nome_Produto) LIKE Upper(@NomeProduto)");
+                        cmd.Parameters.Add("@NomeProduto", FbDbType.VarChar).Value = $"{filtro.NomeProduto}%";
+                    }
+                    else if (filtro.PesquisarPorMarca)
+                    {
+                        sql.Append(" WHERE Upper(m.Nome_Marca) LIKE Upper(@NomeMarca)");
+                        cmd.Parameters.Add("@NomeMarca", FbDbType.VarChar).Value = $"{filtro.Marca.NomeMarca}%";
+                    }
+                    else
+                    {
+                        sql.Append(" WHERE Upper(c.Nome_Categoria) LIKE Upper(@NomeCategoria)");
+                        cmd.Parameters.Add("@NomeCategoria", FbDbType.VarChar).Value = $"{filtro.Categoria.NomeCategoria}%";
+                    }
+
+
+                    cmd.CommandText = sql.ToString();
+
                     var dr = cmd.ExecuteReader();
 
                     var listaProduto = new List<ProdutoModel>();
@@ -115,6 +138,5 @@ namespace ProjetoDesafio.Feature.Produto.Dao
             }
         }
     }
-
 }
     

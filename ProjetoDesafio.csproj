@@ -130,6 +130,7 @@
     </Compile>
     <Compile Include="Feature\Produto\Controller\ProdutoController.cs" />
     <Compile Include="Feature\Produto\Dao\ProdutoDao.cs" />
+    <Compile Include="Feature\Produto\Model\ProdutoFiltroModel.cs" />
     <Compile Include="Feature\Produto\View\FrmListarProduto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -241,6 +242,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\ProjetoDesafio.Feature.Produto.Model.ProdutoModel.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
