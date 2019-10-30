@@ -3,7 +3,7 @@ using System.Windows.Forms;
 using ProjetoDesafio.Feature.Menu;
 
 namespace ProjetoDesafio.Feature.TelaLogin
-{
+{ 
     public partial class FrmLogar : Form
     {
         public FrmLogar()
