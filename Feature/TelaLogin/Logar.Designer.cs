@@ -1,4 +1,4 @@
-﻿namespace ProjetoDesafio.Feature.Tela_Login
+﻿namespace ProjetoDesafio.Feature.TelaLogin
 {
     partial class FrmLogar
     {
@@ -94,6 +94,7 @@
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(257, 34);
             this.txtSenha.TabIndex = 5;
+            this.txtSenha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtSenha_KeyDown);
             this.txtSenha.Leave += new System.EventHandler(this.TxtSenha_Leave);
             // 
             // btnEntrar
@@ -124,7 +125,6 @@
             // 
             this.pctErrado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pctErrado.ErrorImage = global::ProjetoDesafio.Properties.Resources.cancel_161;
-            this.pctErrado.Image = global::ProjetoDesafio.Properties.Resources.cancel_161;
             this.pctErrado.ImageLocation = "center";
             this.pctErrado.Location = new System.Drawing.Point(494, 392);
             this.pctErrado.Name = "pctErrado";
@@ -181,10 +181,12 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.KeyPreview = true;
             this.Name = "FrmLogar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tela de Login";
             this.Load += new System.EventHandler(this.Login_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmLogar_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pctErrado2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctErrado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctCheck2)).EndInit();

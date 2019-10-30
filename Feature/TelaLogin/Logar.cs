@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using ProjetoDesafio.Feature.Menu;
 
-namespace ProjetoDesafio.Feature.Tela_Login
+namespace ProjetoDesafio.Feature.TelaLogin
 {
     public partial class FrmLogar : Form
     {
@@ -19,7 +19,7 @@ namespace ProjetoDesafio.Feature.Tela_Login
             {
                 pctCheck.Visible = true;
                 pctErrado2.Visible = true;
-                MessageBox.Show("Senha Inválida");
+                MessageBox.Show(@"Senha Inválida");
             }
             if ("usuario".Equals(usuario) && "1234".Equals(senha))
             {
@@ -62,6 +62,18 @@ namespace ProjetoDesafio.Feature.Tela_Login
                 pctErrado2.Visible = true;
                 pctCheck2.Visible = false;
             }
+        }
+
+        private void TxtSenha_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                BtnEntrar_Click(sender,e);
+        }
+
+        private void FrmLogar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                BtnEntrar_Click(sender, e);
         }
     }
 }
