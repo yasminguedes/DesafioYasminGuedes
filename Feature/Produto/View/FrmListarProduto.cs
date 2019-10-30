@@ -16,19 +16,8 @@ namespace ProjetoDesafio.Feature.Produto.View
 
         private void ListarProdutos()
         {
-            var filtro = Filtrar();
-            dtListaProdutos.DataSource = new ProdutoController().Listar(filtro);
+            dtListaProdutos.DataSource = new ProdutoController().Listar();
         }
-
-        private ProdutoFiltroModel Filtrar() =>
-            new ProdutoFiltroModel
-            {
-                NomeProduto = txtPesquisar.Text,
-                Categoria = {NomeCategoria = txtPesquisar.Text},
-                Marca = {NomeMarca = txtPesquisar.Text},
-                PesquisarPorMarca = rdbMarca.Checked,
-                PesquisarPorNomeProduto = rdbProduto.Checked
-            };
 
         private void DtListaProdutos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {

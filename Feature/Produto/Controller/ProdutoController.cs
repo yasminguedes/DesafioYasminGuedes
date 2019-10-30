@@ -67,11 +67,11 @@ namespace ProjetoDesafio.Feature.Produto.Controller
         public IEnumerable<FornecedorModel> ListarFornecedor() =>
             new FornecedorController().Listar();
 
-        public IEnumerable<ProdutoModel> Listar(ProdutoFiltroModel filtro)
+        public IEnumerable<ProdutoModel> Listar()
         {
             try
             {
-                return new ProdutoDao().Listar(filtro);
+                return new ProdutoDao().Listar();
             }
             catch (FbException fbex)
             {
