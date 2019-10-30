@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Text;
-using FirebirdSql.Data.FirebirdClient;
+﻿using FirebirdSql.Data.FirebirdClient;
 using ProjetoDesafio.Feature.Categoria.Model;
 using ProjetoDesafio.Feature.Fornecedor.Model;
 using ProjetoDesafio.Feature.Marca.Model;
 using ProjetoDesafio.Feature.Produto.Model;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Text;
 
 namespace ProjetoDesafio.Feature.Produto.Dao
 {
@@ -37,7 +37,8 @@ namespace ProjetoDesafio.Feature.Produto.Dao
         {
             var commandText = new StringBuilder();
 
-            commandText.Append(@"INSERT into Produto (nome_produto, preco_compra, preco_venda, qtde_estoque, ativo, data_cadastro, 
+            commandText.Append(
+                @"INSERT into Produto (nome_produto, preco_compra, preco_venda, qtde_estoque, ativo, data_cadastro, 
                                 tipo_produto, id_fornecedor, id_marca, id_categoria) Values ");
             commandText.Append(@"(@NomeProduto, @PrecoCompra, @PrecoVenda, @QtdeEstoque, @Ativo, @DataCadastro, 
                                     @TipoProduto, @Fornecedor, @Marca, @Categoria)");
@@ -88,7 +89,8 @@ namespace ProjetoDesafio.Feature.Produto.Dao
                     else
                     {
                         sql.Append(" WHERE Upper(c.Nome_Categoria) LIKE Upper(@NomeCategoria)");
-                        cmd.Parameters.Add("@NomeCategoria", FbDbType.VarChar).Value = $"{filtro.Categoria.NomeCategoria}%";
+                        cmd.Parameters.Add("@NomeCategoria", FbDbType.VarChar).Value =
+                            $"{filtro.Categoria.NomeCategoria}%";
                     }
 
 
@@ -101,7 +103,7 @@ namespace ProjetoDesafio.Feature.Produto.Dao
                     {
                         var produtoModel = new ProdutoModel()
                         {
-                            IdProduto = int.Parse(dr["id_fornecedor"].ToString()),
+                            IdProduto = int.Parse(dr["id_produto"].ToString()),
                             NomeProduto = dr["nome_produto"].ToString(),
                             PrecoCompra = double.Parse(dr["preco_compra"].ToString()),
                             PrecoVenda = double.Parse(dr["preco_compra"].ToString()),

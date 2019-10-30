@@ -94,7 +94,6 @@
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(257, 34);
             this.txtSenha.TabIndex = 5;
-            this.txtSenha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtSenha_KeyDown);
             this.txtSenha.Leave += new System.EventHandler(this.TxtSenha_Leave);
             // 
             // btnEntrar

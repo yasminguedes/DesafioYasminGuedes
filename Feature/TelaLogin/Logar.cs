@@ -64,12 +64,6 @@ namespace ProjetoDesafio.Feature.TelaLogin
             }
         }
 
-        private void TxtSenha_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-                BtnEntrar_Click(sender,e);
-        }
-
         private void FrmLogar_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
