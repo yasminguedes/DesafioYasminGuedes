@@ -7,7 +7,7 @@ namespace ProjetoDesafio.Feature.Funcionario.Dao
 {
     public class FuncionarioDao
     {
-        public static DataTable GetDados()
+        public static DataTable PegarDados()
         {
             var conexaoFirebird = Connection.PegarInstancia().PegarConexao();
             {
@@ -38,8 +38,8 @@ namespace ProjetoDesafio.Feature.Funcionario.Dao
 
             cmd.Parameters.Add("@UsuarioFuncionario", FbDbType.VarChar).Value = funcionario.UsuarioFuncionario;
             cmd.Parameters.Add("@SenhaFuncionario", FbDbType.VarChar).Value = funcionario.SenhaFuncionario;
-            cmd.Parameters.Add("@IdPessoa", FbDbType.VarChar).Value = funcionario.IdPessoa;
-            cmd.Parameters.Add("@IdCargo", FbDbType.VarChar).Value = funcionario.Cargo.IdCargo;
+            cmd.Parameters.Add("@IdPessoa", FbDbType.Integer).Value = funcionario.IdPessoa;
+            cmd.Parameters.Add("@IdCargo", FbDbType.Integer).Value = funcionario.Cargo.IdCargo;
 
             cmd.ExecuteNonQuery();
             return true;

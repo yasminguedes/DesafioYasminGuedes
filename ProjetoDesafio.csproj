@@ -84,6 +84,8 @@
     <Compile Include="Feature\Categoria\View\FrmCategoria.Designer.cs">
       <DependentUpon>FrmCategoria.cs</DependentUpon>
     </Compile>
+    <Compile Include="Feature\Cliente\Controller\ClienteController.cs" />
+    <Compile Include="Feature\Cliente\Dao\ClienteDao.cs" />
     <Compile Include="Feature\Cliente\View\FrmCliente.cs">
       <SubType>Form</SubType>
     </Compile>

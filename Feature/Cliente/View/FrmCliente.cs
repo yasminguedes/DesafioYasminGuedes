@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
+using ProjetoDesafio.Feature.Cliente.Controller;
+using ProjetoDesafio.Feature.Cliente.Model;
 
 namespace ProjetoDesafio.Feature.Cliente.View
 {
@@ -91,7 +93,30 @@ namespace ProjetoDesafio.Feature.Cliente.View
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(@"Cliente cadastrado com sucesso!");
+            var cliente = new ClienteModel
+            {
+                NomePessoa = txtNome.Text,
+                Endereco =
+                {
+                    Cep = txtCep.Text,
+                    Rua = txtRua.Text,
+                    Numero = txtNumero.Text,
+                    Complemento = txtComplemento.Text,
+                    Bairro = txtBairro.Text,
+                    Cidade = cmbCidade.Text,
+                    Estado = cmbEstado.Text,
+                    Pais = txtPais.Text
+                },
+                EmailPessoa = txtEmail.Text,
+                TelefonePessoa = mskTelefone.Text,
+                ProfissaoCliente = txtProfissao.Text,
+                DataCadastro = DateTime.Parse(dtCadastro.Text),
+                Sexo = cmbSexo.Text,
+                DataNascimento = DateTime.Parse(dtNascimento.Text),
+                RgIe = mskRg.Text,
+                CpfCnpj = mskCpf.Text
+            };
+            new ClienteController().Cadastrar(cliente);
             LimparCampos();
         }
 

@@ -1,21 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
-using ProjetoDesafio.Feature.Endereco.Dao;
-using ProjetoDesafio.Feature.Funcionario.Dao;
-using ProjetoDesafio.Feature.Funcionario.Model;
-using ProjetoDesafio.Feature.Pessoa.Dao;
 using System.Windows.Forms;
 using FirebirdSql.Data.FirebirdClient;
-using ProjetoDesafio.Feature.Cargo.Controller;
-using ProjetoDesafio.Feature.Cargo.Model;
+using ProjetoDesafio.Feature.Cliente.Dao;
+using ProjetoDesafio.Feature.Cliente.Model;
+using ProjetoDesafio.Feature.Endereco.Dao;
+using ProjetoDesafio.Feature.Pessoa.Dao;
 
-
-namespace ProjetoDesafio.Feature.Funcionario.Controller
+namespace ProjetoDesafio.Feature.Cliente.Controller
 {
-    public class FuncionarioController
+    public class ClienteController
     {
-        public bool Cadastrar(FuncionarioModel funcionario)
+        public bool Cadastrar(ClienteModel cliente)
         {
             var conexaoFireBird = Connection.PegarInstancia().PegarConexao();
             var cmd = new FbCommand();
@@ -26,18 +22,18 @@ namespace ProjetoDesafio.Feature.Funcionario.Controller
                 cmd.Connection = conexaoFireBird;
                 cmd.Transaction = conexaoFireBird.BeginTransaction();
 
-                var commit = new EnderecoDao().Cadastrar(funcionario.Endereco, cmd) &&
-                            new PessoaDao().Cadastrar(funcionario, cmd) &&
-                            new FuncionarioDao().Cadastrar(funcionario, cmd);
+                var commit = new EnderecoDao().Cadastrar(cliente.Endereco, cmd) && 
+                            new PessoaDao().Cadastrar(cliente, cmd) && 
+                            new ClienteDao().Cadastrar(cliente, cmd);
 
                 if (commit)
                 {
-                    MessageBox.Show(@"Funcionário cadastrado com sucesso.");
                     cmd.Transaction.Commit();
+                    MessageBox.Show(@"Cliente cadastrado com sucesso!");
                     return true;
                 }
 
-                MessageBox.Show(@"Erro ao cadastrar");
+                MessageBox.Show(@"Erro ao cadastrar!");
                 cmd.Transaction.Rollback();
             }
             catch (FbException fbex)
@@ -47,19 +43,17 @@ namespace ProjetoDesafio.Feature.Funcionario.Controller
             }
             catch (Exception e)
             {
-                MessageBox.Show($@"Erro ao cadastrar funcionário: {e.Message}");
+                MessageBox.Show($@"Erro ao cadastrar Cliente : {e.Message}");
                 cmd.Transaction.Rollback();
             }
             finally
             {
                 cmd.Dispose();
-                if (conexaoFireBird.State != ConnectionState.Closed)
+                if(conexaoFireBird.State != ConnectionState.Closed)
                     conexaoFireBird.Close();
             }
+
             return false;
         }
-
-        public IEnumerable<CargoModel> ListarCargos() =>
-            new CargoController().Listar();
     }
 }

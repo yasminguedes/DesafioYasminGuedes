@@ -26,28 +26,23 @@ namespace ProjetoDesafio.Feature.Endereco.Dao
             }
         }
 
-        public static FbCommand Cadastrar(Model.EnderecoModel endereco, FbCommand cmd)
+        public bool Cadastrar(Model.EnderecoModel endereco, FbCommand cmd)
         {
-            var conexaoFireBird = Connection.PegarInstancia().PegarConexao();
-            {
-               conexaoFireBird.Open();
-               const string mSql = @"INSERT into Endereco (cep, rua, numero, complemento, bairro, cidade, estado, pais )
+            cmd.Parameters.Add("@Cep", FbDbType.VarChar).Value = endereco.Cep;
+            cmd.Parameters.Add("@Rua", FbDbType.VarChar).Value = endereco.Rua;
+            cmd.Parameters.Add("@Numero", FbDbType.VarChar).Value = endereco.Numero;
+            cmd.Parameters.Add("@Complemento", FbDbType.VarChar).Value = endereco.Complemento;
+            cmd.Parameters.Add("@Bairro", FbDbType.VarChar).Value = endereco.Bairro;
+            cmd.Parameters.Add("@Cidade", FbDbType.VarChar).Value = endereco.Cidade;
+            cmd.Parameters.Add("@Estado", FbDbType.VarChar).Value = endereco.Estado;
+            cmd.Parameters.Add("@Pais", FbDbType.VarChar).Value = endereco.Pais;
+
+            cmd.CommandText = @"INSERT into Endereco (cep, rua, numero, complemento, bairro, cidade, estado, pais )
                                     Values(@Cep, @Rua, @Numero, @Complemento, @Bairro, @Cidade, @Estado, @Pais ) returning id_endereco";
 
-                    cmd.CommandText = mSql;
+            endereco.IdEndereco = int.Parse(cmd.ExecuteScalar().ToString());
 
-                    cmd.Parameters.Add("@Cep", FbDbType.VarChar).Value = endereco.Cep;
-                    cmd.Parameters.Add("@Rua", FbDbType.VarChar).Value = endereco.Rua;
-                    cmd.Parameters.Add("@Numero", FbDbType.VarChar).Value = endereco.Numero;
-                    cmd.Parameters.Add("@Complemento", FbDbType.VarChar).Value = endereco.Complemento;
-                    cmd.Parameters.Add("@Bairro", FbDbType.VarChar).Value = endereco.Bairro;
-                    cmd.Parameters.Add("@Cidade", FbDbType.VarChar).Value = endereco.Cidade;
-                    cmd.Parameters.Add("@Estado", FbDbType.Integer).Value = endereco.Estado;
-                    cmd.Parameters.Add("@Pais", FbDbType.Integer).Value = endereco.Pais;
-
-                endereco.IdEndereco = int.Parse(cmd.ExecuteScalar().ToString());
-                return cmd;
-            }
+            return true;
         }
     }
 }

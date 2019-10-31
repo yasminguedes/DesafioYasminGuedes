@@ -91,7 +91,7 @@
             this.Acesso.Size = new System.Drawing.Size(1376, 128);
             this.Acesso.TabIndex = 13;
             this.Acesso.TabStop = false;
-            this.Acesso.Text = "Informações de Acesso";
+            this.Acesso.Text = "Informações de Cadastro";
             // 
             // label3
             // 

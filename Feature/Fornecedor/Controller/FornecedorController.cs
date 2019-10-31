@@ -24,12 +24,11 @@ namespace ProjetoDesafio.Feature.Fornecedor.Controller
                 cmd.Connection = conexaoFireBird;
                 cmd.Transaction = conexaoFireBird.BeginTransaction();
 
-                cmd = EnderecoDao.Cadastrar(fornecedor.Endereco, cmd);
-                cmd = PessoaDao.Cadastrar(fornecedor, cmd);
+                var commit = new EnderecoDao().Cadastrar(fornecedor.Endereco, cmd) &&
+                             new PessoaDao().Cadastrar(fornecedor, cmd) &&
+                             new FornecedorDao().Cadastrar(fornecedor, cmd);
 
-                var cadastro = new FornecedorDao().Cadastrar(fornecedor, cmd);
-
-                if (cadastro)
+                if (commit)
                 {
                     MessageBox.Show(@"Fornecedor cadastrado com sucesso.");
                     cmd.Transaction.Commit();

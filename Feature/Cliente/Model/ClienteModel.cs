@@ -8,6 +8,5 @@ namespace ProjetoDesafio.Feature.Cliente.Model
         public int IdCliente { get; set; }
         public string ProfissaoCliente { get; set; }
         public DateTime DataCadastro { get; set; }
-
     }
 }

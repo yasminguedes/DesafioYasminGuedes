@@ -27,15 +27,9 @@ namespace ProjetoDesafio.Feature.Pessoa.Dao
             }
         }
 
-        public static FbCommand Cadastrar(Model.PessoaModel pessoa, FbCommand cmd)
+        public bool Cadastrar(Model.PessoaModel pessoa, FbCommand cmd)
         {
-            var commandText = new StringBuilder();
-
-            commandText.Append(@"INSERT into Pessoa(nome_pessoa, sexo, rg_ie, cpf_cnpj, email_pessoa, telefone_pessoa, id_endereco, data_nascimento)");
-            commandText.Append("Values(@NomePessoa, @Sexo, @RgIe, @CpfCnpj, @EmailPessoa, @TelefonePessoa, @Endereco, @DataNascimento) RETURNING id_pessoa");
-
-            cmd.CommandText = commandText.ToString();
-
+            cmd.Parameters.Clear();
             cmd.Parameters.Add("@NomePessoa", FbDbType.VarChar).Value = pessoa.NomePessoa;
             cmd.Parameters.Add("@Sexo", FbDbType.VarChar).Value = pessoa.Sexo;
             cmd.Parameters.Add("@RgIe", FbDbType.VarChar).Value = pessoa.RgIe;
@@ -45,10 +39,13 @@ namespace ProjetoDesafio.Feature.Pessoa.Dao
             cmd.Parameters.Add("@Endereco", FbDbType.Integer).Value = pessoa.Endereco.IdEndereco;
             cmd.Parameters.Add("@DataNascimento", FbDbType.Date).Value = pessoa.DataNascimento;
 
+            cmd.CommandText =
+                @"INSERT into Pessoa(nome_pessoa, sexo, rg_ie, cpf_cnpj, email_pessoa, telefone_pessoa, id_endereco, data_nascimento)
+                    VALUES (@NomePessoa, @Sexo, @RgIe, @CpfCnpj, @EmailPessoa, @TelefonePessoa, @Endereco, @DataNascimento) RETURNING id_pessoa";
+
             pessoa.IdPessoa = int.Parse(cmd.ExecuteScalar().ToString());
-            return cmd;
 
-
+            return true;
         }
 
     }

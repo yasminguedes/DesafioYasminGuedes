@@ -10,7 +10,7 @@ namespace ProjetoDesafio.Feature.Fornecedor.Dao
 {
     public class FornecedorDao
     {
-        public static DataTable GetDados()
+        public static DataTable PegarDados()
         {
             var conexaoFirebird = Connection.PegarInstancia().PegarConexao();
             {
@@ -33,18 +33,15 @@ namespace ProjetoDesafio.Feature.Fornecedor.Dao
 
         public bool Cadastrar(Model.FornecedorModel fornecedor, FbCommand cmd)
         {
-            var commandText = new StringBuilder();
-
-            commandText.Append(@"INSERT into Fornecedor (razao_social, representante,celular_represetante,email_representante, id_pessoa) ");
-            commandText.Append("Values(@RazaoSocial, @Representante, @CelularRepresentante, @EmailRepresentante, @IdPessoa)");
-
-            cmd.CommandText = commandText.ToString();
-
             cmd.Parameters.Add("@RazaoSocial", FbDbType.VarChar).Value = fornecedor.RazaoSocial;
             cmd.Parameters.Add("@Representante", FbDbType.VarChar).Value = fornecedor.Representante;
             cmd.Parameters.Add("@CelularRepresentante", FbDbType.VarChar).Value = fornecedor.CelularRepresentante;
             cmd.Parameters.Add("@EmailRepresentante", FbDbType.VarChar).Value = fornecedor.EmailRepresentante;
-            cmd.Parameters.Add("@IdPessoa", FbDbType.VarChar).Value = fornecedor.IdPessoa;
+            cmd.Parameters.Add("@IdPessoa", FbDbType.Integer).Value = fornecedor.IdPessoa;
+
+            cmd.CommandText =
+                @"INSERT into Fornecedor (razao_social, representante,celular_represetante,email_representante, id_pessoa)
+                                Values(@RazaoSocial, @Representante, @CelularRepresentante, @EmailRepresentante, @IdPessoa)";
 
             cmd.ExecuteNonQuery();
             return true;
