@@ -11,7 +11,7 @@ using ProjetoDesafio.Feature.Pessoa.Model;
 
 namespace ProjetoDesafio.Feature.Fornecedor.Controller
 {
-    public class FornecedorController:PessoaModel
+    public class FornecedorController : PessoaModel
     {
         public bool Cadastrar(FornecedorModel fornecedor)
         {
@@ -54,15 +54,17 @@ namespace ProjetoDesafio.Feature.Fornecedor.Controller
                 if (conexaoFireBird.State != ConnectionState.Closed)
                     conexaoFireBird.Close();
             }
+
             return false;
 
         }
 
-        public IEnumerable<FornecedorModel> Listar()
+        public IEnumerable<FornecedorModel> Listar(FornecedorFiltroModel filtro = null)
         {
             try
             {
-                return new FornecedorDao().Listar();
+                filtro = filtro ?? new FornecedorFiltroModel();
+                return new FornecedorDao().Listar(filtro);
             }
             catch (FbException fbex)
             {
@@ -72,7 +74,8 @@ namespace ProjetoDesafio.Feature.Fornecedor.Controller
             {
                 MessageBox.Show($@"Erro ao listar fornecedor: {e.Message}");
             }
-            return  new List<FornecedorModel>();
+
+            return new List<FornecedorModel>();
         }
     }
 }

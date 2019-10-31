@@ -127,7 +127,7 @@
             this.btnPesquisar.Size = new System.Drawing.Size(46, 43);
             this.btnPesquisar.TabIndex = 4;
             this.btnPesquisar.UseVisualStyleBackColor = true;
-            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
+            this.btnPesquisar.Click += new System.EventHandler(this.BtnPesquisar_Click);
             // 
             // txtPesquisar
             // 
@@ -136,7 +136,7 @@
             this.txtPesquisar.Name = "txtPesquisar";
             this.txtPesquisar.Size = new System.Drawing.Size(505, 34);
             this.txtPesquisar.TabIndex = 0;
-            this.txtPesquisar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPesquisar_KeyDown);
+            this.txtPesquisar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtPesquisar_KeyDown);
             // 
             // rdbProduto
             // 

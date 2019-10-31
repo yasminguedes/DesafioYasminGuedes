@@ -594,6 +594,7 @@
             this.btnListar.Text = "Listar";
             this.btnListar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.BtnListar_Click);
             // 
             // btnCadastrar
             // 

@@ -145,7 +145,10 @@ namespace ProjetoDesafio.Feature.Fornecedor.View
                 cmbCidade.Items.Add("Porto Seguro");
             }
         }
-            
-        
+
+        private void BtnListar_Click(object sender, EventArgs e)
+        {
+            new FrmListarFornecedor().Show();
+        }
     }
 }

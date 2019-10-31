@@ -62,13 +62,13 @@ namespace ProjetoDesafio.Feature.Produto.Dao
 
         internal IEnumerable<ProdutoModel> Listar(ProdutoFiltroModel filtro)
         {
-            using (var conexaoFirebird = Connection.PegarInstancia().PegarConexao())
+            using (var conexaoFireBird = Connection.PegarInstancia().PegarConexao())
             {
                 try
                 {
-                    conexaoFirebird.Open();
+                    conexaoFireBird.Open();
 
-                    var cmd = new FbCommand {Connection = conexaoFirebird};
+                    var cmd = new FbCommand {Connection = conexaoFireBird};
 
                     var sql = new StringBuilder();
                     sql.Append(@"Select * from Produto p inner join categoria as c on p.id_categoria = c.id_categoria 
@@ -133,8 +133,8 @@ namespace ProjetoDesafio.Feature.Produto.Dao
                 }
                 finally
                 {
-                    if (conexaoFirebird.State != ConnectionState.Closed)
-                        conexaoFirebird.Close();
+                    if (conexaoFireBird.State != ConnectionState.Closed)
+                        conexaoFireBird.Close();
                 }
             }
         }

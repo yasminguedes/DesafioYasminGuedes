@@ -1,5 +1,4 @@
 ﻿using System.Data;
-using System.Text;
 using FirebirdSql.Data.FirebirdClient;
 using ProjetoDesafio.Feature.Cliente.Model;
 

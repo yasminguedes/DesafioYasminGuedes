@@ -29,3 +29,4 @@ C:\Users\gabri\Desktop\Desafio\DesafioYasminGuedes\obj\Debug\ProjetoDesafio.Feat
 C:\Users\gabri\Desktop\Desafio\DesafioYasminGuedes\obj\Debug\ProjetoDesafio.Feature.Cargo.View.FrmCargo.resources
 C:\Users\gabri\Desktop\Desafio\DesafioYasminGuedes\obj\Debug\ProjetoDesafio.Feature.Produto.View.FrmListarProduto.resources
 C:\Users\gabri\Desktop\Desafio\DesafioYasminGuedes\obj\Debug\ProjetoDesafio.Feature.TelaLogin.FrmLogar.resources
+C:\Users\gabri\Desktop\Desafio\DesafioYasminGuedes\obj\Debug\ProjetoDesafio.Feature.Fornecedor.View.FrmListarFornecedor.resources

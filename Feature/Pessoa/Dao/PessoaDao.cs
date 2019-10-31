@@ -1,5 +1,4 @@
 ﻿using System.Data;
-using System.Text;
 using FirebirdSql.Data.FirebirdClient;
 
 namespace ProjetoDesafio.Feature.Pessoa.Dao
