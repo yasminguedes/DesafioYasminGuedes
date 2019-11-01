@@ -45,9 +45,12 @@
             this.Data = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecoCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecoVenda = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qtdeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ativoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataCadastroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fornecedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gpLista.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtListaProdutos)).BeginInit();
@@ -106,9 +109,12 @@
             this.Data,
             this.PrecoCompra,
             this.PrecoVenda,
+            this.TipoProduto,
+            this.qtdeDataGridViewTextBoxColumn,
+            this.ativoDataGridViewTextBoxColumn,
+            this.dataCadastroDataGridViewTextBoxColumn,
             this.Marca,
             this.Categoria,
-            this.TipoProduto,
             this.Fornecedor});
             this.dtListaProdutos.DataSource = this.bdtListarProduto;
             this.dtListaProdutos.Location = new System.Drawing.Point(0, 13);
@@ -221,6 +227,38 @@
             this.PrecoVenda.Name = "PrecoVenda";
             this.PrecoVenda.Width = 125;
             // 
+            // TipoProduto
+            // 
+            this.TipoProduto.DataPropertyName = "Tipo";
+            this.TipoProduto.HeaderText = "Tipo";
+            this.TipoProduto.MinimumWidth = 6;
+            this.TipoProduto.Name = "TipoProduto";
+            this.TipoProduto.Width = 125;
+            // 
+            // qtdeDataGridViewTextBoxColumn
+            // 
+            this.qtdeDataGridViewTextBoxColumn.DataPropertyName = "Qtde";
+            this.qtdeDataGridViewTextBoxColumn.HeaderText = "Qtde";
+            this.qtdeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.qtdeDataGridViewTextBoxColumn.Name = "qtdeDataGridViewTextBoxColumn";
+            this.qtdeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // ativoDataGridViewTextBoxColumn
+            // 
+            this.ativoDataGridViewTextBoxColumn.DataPropertyName = "Ativo";
+            this.ativoDataGridViewTextBoxColumn.HeaderText = "Ativo";
+            this.ativoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.ativoDataGridViewTextBoxColumn.Name = "ativoDataGridViewTextBoxColumn";
+            this.ativoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // dataCadastroDataGridViewTextBoxColumn
+            // 
+            this.dataCadastroDataGridViewTextBoxColumn.DataPropertyName = "DataCadastro";
+            this.dataCadastroDataGridViewTextBoxColumn.HeaderText = "DataCadastro";
+            this.dataCadastroDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dataCadastroDataGridViewTextBoxColumn.Name = "dataCadastroDataGridViewTextBoxColumn";
+            this.dataCadastroDataGridViewTextBoxColumn.Width = 125;
+            // 
             // Marca
             // 
             this.Marca.DataPropertyName = "Marca.NomeMarca";
@@ -237,14 +275,6 @@
             this.Categoria.Name = "Categoria";
             this.Categoria.Width = 125;
             // 
-            // TipoProduto
-            // 
-            this.TipoProduto.DataPropertyName = "Tipo";
-            this.TipoProduto.HeaderText = "Tipo";
-            this.TipoProduto.MinimumWidth = 6;
-            this.TipoProduto.Name = "TipoProduto";
-            this.TipoProduto.Width = 125;
-            // 
             // Fornecedor
             // 
             this.Fornecedor.DataPropertyName = "Fornecedor.NomePessoa";
@@ -253,7 +283,7 @@
             this.Fornecedor.Name = "Fornecedor";
             this.Fornecedor.Width = 125;
             // 
-            // FrmListarProduto
+            // FrmListagemDeProdutos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -268,7 +298,7 @@
             this.Controls.Add(this.btnAlterar);
             this.KeyPreview = true;
             this.MaximizeBox = false;
-            this.Name = "FrmListarProduto";
+            this.Name = "FrmListagemDeProdutos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista de Produtos";
             this.gpLista.ResumeLayout(false);
@@ -291,14 +321,20 @@
         private System.Windows.Forms.RadioButton rdbMarca;
         private System.Windows.Forms.RadioButton rdbCategoria;
         private System.Windows.Forms.BindingSource bdtListarProduto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn marcaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoriaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fornecedorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn NomeProduto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Data;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecoCompra;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecoVenda;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TipoProduto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn qtdeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ativoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataCadastroDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Marca;
         private System.Windows.Forms.DataGridViewTextBoxColumn Categoria;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TipoProduto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fornecedor;
     }
 }

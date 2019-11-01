@@ -8,7 +8,7 @@ namespace ProjetoDesafio.Feature.Produto.View
     public partial class FrmListagemDeProdutos : Form
     {
         private readonly ProdutoController _produtoController;
-
+        
         public FrmListagemDeProdutos()
         {
             InitializeComponent();
@@ -31,14 +31,11 @@ namespace ProjetoDesafio.Feature.Produto.View
                 PesquisarPorNomeProduto = rdbProduto.Checked,
                 PesquisarPorMarca = rdbMarca.Checked
             };
-            
 
         private void DtListaProdutos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e) =>
                 e.Value = Propriedades.BuscaPropriedadesComPonto(dtListaProdutos, e);
         
-        
         private void BtnPesquisar_Click(object sender, EventArgs e) => ListarProdutos();
-        
 
         private void TxtPesquisar_KeyDown(object sender, KeyEventArgs e)
         {

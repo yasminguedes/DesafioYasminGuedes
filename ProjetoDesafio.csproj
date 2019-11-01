@@ -111,6 +111,12 @@
     <Compile Include="Feature\Funcionario\View\FrmFuncionario.Designer.cs">
       <DependentUpon>FrmFuncionario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Feature\Funcionario\View\FrmListagemDeFuncionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Feature\Funcionario\View\FrmListagemDeFuncionarios.Designer.cs">
+      <DependentUpon>FrmListagemDeFuncionarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Feature\Marca\Controller\MarcaController.cs" />
     <Compile Include="Feature\Marca\Dao\MarcaDao.cs" />
     <Compile Include="Feature\Marca\View\FrmMarca.cs">
@@ -216,6 +222,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Feature\Funcionario\View\FrmFuncionario.resx">
       <DependentUpon>FrmFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Feature\Funcionario\View\FrmListagemDeFuncionarios.resx">
+      <DependentUpon>FrmListagemDeFuncionarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Feature\Marca\View\FrmMarca.resx">
       <DependentUpon>FrmMarca.cs</DependentUpon>

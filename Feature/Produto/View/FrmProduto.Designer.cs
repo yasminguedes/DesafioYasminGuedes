@@ -70,7 +70,7 @@
             this.btnCancelar.BackColor = System.Drawing.SystemColors.Menu;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnCancelar.Location = new System.Drawing.Point(1191, 594);
+            this.btnCancelar.Location = new System.Drawing.Point(1162, 594);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(221, 54);
             this.btnCancelar.TabIndex = 2;

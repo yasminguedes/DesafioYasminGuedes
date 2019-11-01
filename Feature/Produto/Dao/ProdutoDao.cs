@@ -44,7 +44,6 @@ namespace ProjetoDesafio.Feature.Produto.Dao
 
                 cmd.ExecuteNonQuery();
                 return true;
-
             }
             finally
             {
@@ -52,7 +51,6 @@ namespace ProjetoDesafio.Feature.Produto.Dao
                 if (conexaoFireBird.State != ConnectionState.Closed)
                     conexaoFireBird.Close();
             }
-
         }
 
         internal IEnumerable<ProdutoModel> Listar(ProdutoFiltroModel filtro)
@@ -62,6 +60,8 @@ namespace ProjetoDesafio.Feature.Produto.Dao
             var cmd = new FbCommand();
             try
             {
+                cmd.Connection = conexaoFirebird;
+
                 var sql = new StringBuilder();
                 sql.Append(@"Select * from Produto p inner join categoria as c on p.id_categoria = c.id_categoria 
                             inner join marca as m on p.id_marca = m.id_marca 
