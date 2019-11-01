@@ -1,25 +1,28 @@
-﻿using System;
-using System.Windows.Forms;
-using ProjetoDesafio.Feature.Marca.Controller;
+﻿using ProjetoDesafio.Feature.Marca.Controller;
 using ProjetoDesafio.Feature.Marca.Model;
+using System;
+using System.Windows.Forms;
 
 namespace ProjetoDesafio.Feature.Marca.View
 {
     public partial class FrmMarca : Form
     {
+        private readonly MarcaModel _marcaModel;
+        private readonly MarcaController _marcaController;
+
         public FrmMarca()
         {
             InitializeComponent();
             HabilitarOuDesabilitarCampos(false);
             LimparCampos();
-        }
-        private void LimparCampos()
-        {
-            txtMarca.Text = "";
+            _marcaModel = new MarcaModel();
+            _marcaController = new MarcaController();
         }
 
-        private void HabilitarOuDesabilitarCampos(bool habilitarCampos)
-        {
+        private void LimparCampos() =>
+            txtMarca.Text = string.Empty;
+
+        private void HabilitarOuDesabilitarCampos(bool habilitarCampos)        {
             txtMarca.Enabled = habilitarCampos;
         }
 
@@ -31,12 +34,9 @@ namespace ProjetoDesafio.Feature.Marca.View
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
-            var marca = new MarcaModel()
-            {
-                NomeMarca = txtMarca.Text
-            };
-            new MarcaController().Cadastrar(marca);
-            LimparCampos();
+            _marcaModel.NomeMarca = txtMarca.Text;
+            if (_marcaController.Cadastrar(_marcaModel))
+                LimparCampos();
         }
 
         private void BtnCancelar_Click(object sender, EventArgs e)

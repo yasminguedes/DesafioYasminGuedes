@@ -17,6 +17,12 @@ namespace ProjetoDesafio.Feature.Funcionario.Controller
     {
         public bool Cadastrar(FuncionarioModel funcionario)
         {
+            if (!funcionario.SenhasIguais)
+            {
+                MessageBox.Show(@"Senhas não conferem");
+                return false;
+            }
+
             var conexaoFireBird = Connection.PegarInstancia().PegarConexao();
             var cmd = new FbCommand();
 
@@ -61,5 +67,23 @@ namespace ProjetoDesafio.Feature.Funcionario.Controller
 
         public IEnumerable<CargoModel> ListarCargos() =>
             new CargoController().Listar();
+        public IEnumerable<FuncionarioModel> Listar(FuncionarioFiltroModel filtro)
+        {
+            try
+            {
+                return new FuncionarioDao().Listar(filtro);
+            }
+            catch (FbException fbex)
+            {
+                MessageBox.Show($@"Erro no banco ao listar funcionario : {fbex.Message}");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show($@"Erro ao listar funcionario: {e.Message}");
+            }
+            return new List<FuncionarioModel>();
+        }
     }
+   
 }
+

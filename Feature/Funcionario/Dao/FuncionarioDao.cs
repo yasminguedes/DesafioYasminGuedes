@@ -1,33 +1,21 @@
 ﻿using FirebirdSql.Data.FirebirdClient;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Text;
+using ProjetoDesafio.Feature.Cargo.Model;
+using ProjetoDesafio.Feature.Categoria.Model;
+using ProjetoDesafio.Feature.Endereco.Model;
+using ProjetoDesafio.Feature.Fornecedor.Model;
+using ProjetoDesafio.Feature.Funcionario.Model;
+using ProjetoDesafio.Feature.Marca.Model;
+using ProjetoDesafio.Feature.Produto.Model;
 
 namespace ProjetoDesafio.Feature.Funcionario.Dao
 {
     public class FuncionarioDao
     {
-        public static DataTable PegarDados()
-        {
-            var conexaoFirebird = Connection.PegarInstancia().PegarConexao();
-            {
-                try
-                {
-                    conexaoFirebird.Open();
-                    const string mSql = @"Select * from Funcionario";
-                    var cmd = new FbCommand(mSql, conexaoFirebird);
-                    var da = new FbDataAdapter(cmd);
-                    var dt = new DataTable();
-                    da.Fill(dt);
-                    return dt;
-                }
-                finally
-                {
-                    conexaoFirebird.Close();
-                }
-            }
-        }
-        public bool Cadastrar(Model.FuncionarioModel funcionario, FbCommand cmd)
+        public bool Cadastrar(FuncionarioModel funcionario, FbCommand cmd)
         {
             var commandText = new StringBuilder();
 
@@ -45,37 +33,81 @@ namespace ProjetoDesafio.Feature.Funcionario.Dao
             return true;
         }
 
-        public static Model.FuncionarioModel Listar(int idFn)
+
+        internal IEnumerable<FuncionarioModel> Listar(FuncionarioFiltroModel filtro)
         {
-            var conexaoFireBird = Connection.PegarInstancia().PegarConexao();
+            var conexaoFirebird = Connection.PegarInstancia().PegarConexao();
+            conexaoFirebird.Open();
+            var cmd = new FbCommand();
+            try
             {
-                try
+                var sql = new StringBuilder();
+                sql.Append(@"Select * from Funcionario f inner join cargo as c on f.id_cargo = c.id_cargo
+                            inner join pessoa as p on f.id_pessoa = p.id_pessoa
+                            inner join endereco as e on p.id_endereco = e.id_endereco");
+
+                if (filtro.PesquisarPorNome)
                 {
-                    conexaoFireBird.Open();
-                    var mSql = @"Select * from Funcionario fn INNER JOIN pessoa AS p on fn.id_pessoa = p.id_pessoa Where id_funcionario = " + idFn;
-                    var cmd = new FbCommand(mSql, conexaoFireBird);
-                    var dr = cmd.ExecuteReader();
-                    var funcionario = new Model.FuncionarioModel();
-                    while (dr.Read())
+                    sql.Append(" WHERE Upper(p.Nome_Pessoa) LIKE Upper(@NomePessoa)");
+                    cmd.Parameters.Add("@NomePessoa", FbDbType.VarChar).Value = $"{filtro.NomePessoa}%";
+                }
+                else if (filtro.PesquisarPorCargo)
+                {
+                    sql.Append(" WHERE Upper(c.Nome_Cargo) LIKE Upper(@NomeCargo)");
+                    cmd.Parameters.Add("@NomeCargo", FbDbType.VarChar).Value = $"{filtro.Cargo.NomeCargo}%";
+                }
+                else
+                {
+                    sql.Append(" WHERE Upper(f.Usuario_Funcionario) LIKE Upper(@UsuarioFuncionario)");
+                    cmd.Parameters.Add("@UsuarioFuncionario", FbDbType.VarChar).Value = $"{filtro.UsuarioFuncionario}%";
+                }
+
+                cmd.CommandText = sql.ToString();
+
+                var dr = cmd.ExecuteReader();
+
+                var listaFuncionario = new List<FuncionarioModel>();
+                while (dr.Read())
+                    listaFuncionario.Add(new FuncionarioModel
                     {
-                        funcionario.IdFuncionario = Convert.ToInt32(dr["id_funcionario"]);
-                        funcionario.UsuarioFuncionario = dr["usuario_funcionario"].ToString();
-                        funcionario.SenhaFuncionario = dr["senha_funcionario"].ToString();
-                        funcionario.IdPessoa = Convert.ToInt32(dr["id_pessoa"]);
-                        funcionario.Cargo.IdCargo = Convert.ToInt32(dr["id_cargo"]);
+                        IdFuncionario = int.Parse(dr["id_funcionario"].ToString()),
+                        NomePessoa = dr["nome_pessoa"].ToString(),
+                        Sexo = dr["sexo"].ToString(),
+                        DataNascimento = DateTime.Parse(dr["data_nascimento"].ToString()),
+                        RgIe = dr["rg_ie"].ToString(),
+                        CpfCnpj = dr["cpf_cnpj"].ToString(),
+                        EmailPessoa = dr["email_pessoa"].ToString(),
+                        TelefonePessoa = dr["telefone_pessoa"].ToString(),
+                        Cargo = new CargoModel
+                        {
+                            IdCargo = int.Parse(dr["id_cargo"].ToString()),
+                            NomeCargo = dr["nome_cargo"].ToString()
+                        },
+                        Endereco = new EnderecoModel
+                        {
+                            IdEndereco = int.Parse(dr["id_endereco"].ToString()),
+                            Cep = dr["cep"].ToString(),
+                            Rua = dr["rua"].ToString(),
+                            Numero = dr["numero"].ToString(),
+                            Complemento = dr["complemento"].ToString(),
+                            Cidade = dr["cidade"].ToString(),
+                            Estado = dr["estado"].ToString(),
+                            Pais = dr["pais"].ToString()
+                        },
+                        UsuarioFuncionario = dr["usuario_funcionario"].ToString(),
+                        SenhaFuncionario = dr["senha_funcinario"].ToString()
+                    });
 
-                    }
-
-                    return funcionario;
-                }
-                finally
-                {
-                    conexaoFireBird.Close();
-                }
+                return listaFuncionario;
+            }
+            finally
+            {
+                if (conexaoFirebird.State != ConnectionState.Closed)
+                    conexaoFirebird.Close();
             }
         }
 
-        public static void Alterar(Model.FuncionarioModel funcionario)
+        public static void Alterar(FuncionarioModel funcionario)
         {
             var conexaoFireBird = Connection.PegarInstancia().PegarConexao();
             conexaoFireBird.Open();
@@ -93,6 +125,8 @@ namespace ProjetoDesafio.Feature.Funcionario.Dao
                 cmd.Parameters.Add("@SenhaFuncionario", FbDbType.VarChar).Value = funcionario.SenhaFuncionario;
                 cmd.Parameters.Add("@IdPessoa", FbDbType.VarChar).Value = funcionario.IdPessoa;
                 cmd.Parameters.Add("@Cargo", FbDbType.VarChar).Value = funcionario.Cargo;
+
+                cmd.CommandText = mSql;
 
                 cmd.ExecuteNonQuery();
                 transaction.Commit();

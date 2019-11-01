@@ -5,9 +5,9 @@ using ProjetoDesafio.Feature.Fornecedor.Model;
 
 namespace ProjetoDesafio.Feature.Fornecedor.View
 {
-    public partial class FrmListarFornecedor : Form
+    public partial class FrmListagemDeFornecedor : Form
     {
-        public FrmListarFornecedor()
+        public FrmListagemDeFornecedor()
         {
             InitializeComponent();
             ListarFornecedor();
@@ -28,12 +28,9 @@ namespace ProjetoDesafio.Feature.Fornecedor.View
                 PesquisarPorNomeFantasia = rdbNomeFantasia.Checked,
                 PesquisarPorRazaoSocial = rdbNomeFantasia.Checked
             };
-        private void DtListFornecedor_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
+        private void DtListFornecedor_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e) =>
             e.Value = Propriedades.BuscaPropriedadesComPonto(dtListaFornecedor, e);
-        }
-
-
+        
         private void BtnPesquisar_Click(object sender, EventArgs e)
         {
             ListarFornecedor();

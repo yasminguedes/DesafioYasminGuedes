@@ -13,6 +13,7 @@ namespace ProjetoDesafio.Feature.Cargo.View
             HabilitarOuDesabilitarCampos(false);
             LimparCampos();
         }
+
         private void LimparCampos()
         {
             txtCargo.Text = "";

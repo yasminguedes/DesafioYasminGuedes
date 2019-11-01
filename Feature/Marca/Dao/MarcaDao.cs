@@ -8,40 +8,34 @@ namespace ProjetoDesafio.Feature.Marca.Dao
 {
     public class MarcaDao
     {
-        public static DataTable GetDados()
+        public bool Cadastrar(MarcaModel marca)
         {
-            var conexaoFirebird = Connection.PegarInstancia().PegarConexao();
+            var conexaoFireBird = Connection.PegarInstancia().PegarConexao();
+            var cmd = new FbCommand();
+
+            try
             {
-                try
-                {
-                    conexaoFirebird.Open();
-                    const string mSql = @"Select * from Marca";
-                    var cmd = new FbCommand(mSql, conexaoFirebird);
-                    var da = new FbDataAdapter(cmd);
-                    var dt = new DataTable();
-                    da.Fill(dt);
-                    return dt;
-                }
-                finally
-                {
-                    conexaoFirebird.Close();
-                }
+                conexaoFireBird.Open();
+                cmd.Connection = conexaoFireBird;
+                var commandText = new StringBuilder();
+
+                commandText.Append(@"INSERT into Marca (nome_marca) ");
+                commandText.Append("Values(@Marca)");
+
+                cmd.CommandText = commandText.ToString();
+
+                cmd.Parameters.Add("@Marca", FbDbType.VarChar).Value = marca.NomeMarca;
+
+                cmd.ExecuteNonQuery();
+
+                return true;
             }
-        }
-        public bool Cadastrar(MarcaModel marca, FbCommand cmd)
-        {
-            var commandText = new StringBuilder();
-
-            commandText.Append(@"INSERT into Marca (nome_marca) ");
-            commandText.Append("Values(@Marca)");
-
-            cmd.CommandText = commandText.ToString();
-
-            cmd.Parameters.Add("@Marca", FbDbType.VarChar).Value = marca.NomeMarca;
-
-            cmd.ExecuteNonQuery();
-
-            return true;
+            finally
+            {
+                cmd.Dispose();
+                if (conexaoFireBird.State != ConnectionState.Closed)
+                    conexaoFireBird.Close();
+            }
         }
 
         internal IEnumerable<MarcaModel> Listar()
@@ -58,14 +52,12 @@ namespace ProjetoDesafio.Feature.Marca.Dao
 
                 var reader = cmd.ExecuteReader();
                 while (reader.Read())
-                {
-                    var marcaModel = new MarcaModel
+                    listaMarca.Add(new MarcaModel
                     {
                         IdMarca = int.Parse(reader["id_marca"].ToString()),
                         NomeMarca = reader["nome_marca"].ToString()
-                    };
-                    listaMarca.Add(marcaModel);
-                }
+                    });
+
                 return listaMarca;
             }
             finally
@@ -75,6 +67,5 @@ namespace ProjetoDesafio.Feature.Marca.Dao
                     conexaoFirebird.Close();
             }
         }
-
     }
 }

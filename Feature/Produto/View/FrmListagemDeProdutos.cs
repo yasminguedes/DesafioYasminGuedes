@@ -5,18 +5,21 @@ using ProjetoDesafio.Feature.Produto.Model;
 
 namespace ProjetoDesafio.Feature.Produto.View
 {
-    public partial class FrmListarProduto : Form
+    public partial class FrmListagemDeProdutos : Form
     {
-        public FrmListarProduto()
+        private readonly ProdutoController _produtoController;
+
+        public FrmListagemDeProdutos()
         {
             InitializeComponent();
+            _produtoController = new ProdutoController();
             ListarProdutos();
         }
 
         private void ListarProdutos()
         {
             var filtro = Filtrar();
-            dtListaProdutos.DataSource = new ProdutoController().Listar(filtro);
+            dtListaProdutos.DataSource = _produtoController.Listar(filtro);
         }
 
         private ProdutoFiltroModel Filtrar() =>
@@ -30,17 +33,12 @@ namespace ProjetoDesafio.Feature.Produto.View
             };
             
 
-        private void DtListaProdutos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            e.Value = Propriedades.BuscaPropriedadesComPonto(dtListaProdutos, e);
-        }
-
+        private void DtListaProdutos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e) =>
+                e.Value = Propriedades.BuscaPropriedadesComPonto(dtListaProdutos, e);
         
-
-        private void BtnPesquisar_Click(object sender, EventArgs e)
-        {
-            ListarProdutos();
-        }
+        
+        private void BtnPesquisar_Click(object sender, EventArgs e) => ListarProdutos();
+        
 
         private void TxtPesquisar_KeyDown(object sender, KeyEventArgs e)
         {

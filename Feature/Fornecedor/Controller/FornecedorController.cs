@@ -11,7 +11,7 @@ using ProjetoDesafio.Feature.Pessoa.Model;
 
 namespace ProjetoDesafio.Feature.Fornecedor.Controller
 {
-    public class FornecedorController : PessoaModel
+    public class FornecedorController
     {
         public bool Cadastrar(FornecedorModel fornecedor)
         {

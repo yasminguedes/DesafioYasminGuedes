@@ -1,6 +1,6 @@
 ﻿namespace ProjetoDesafio.Feature.Fornecedor.View
 {
-    partial class FrmListarFornecedor
+    partial class FrmListagemDeFornecedor
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmListarFornecedor));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmListagemDeFornecedor));
             this.rdbRazaoSocial = new System.Windows.Forms.RadioButton();
             this.rdbRepresentante = new System.Windows.Forms.RadioButton();
             this.rdbNomeFantasia = new System.Windows.Forms.RadioButton();

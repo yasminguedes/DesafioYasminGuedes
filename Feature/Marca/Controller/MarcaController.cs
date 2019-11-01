@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using FirebirdSql.Data.FirebirdClient;
-using ProjetoDesafio.Feature.Cargo.Dao;
+﻿using FirebirdSql.Data.FirebirdClient;
 using ProjetoDesafio.Feature.Marca.Dao;
 using ProjetoDesafio.Feature.Marca.Model;
+using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace ProjetoDesafio.Feature.Marca.Controller
 {
@@ -15,17 +11,9 @@ namespace ProjetoDesafio.Feature.Marca.Controller
     {
         public bool Cadastrar(MarcaModel marca)
         {
-            var conexaoFireBird = Connection.PegarInstancia().PegarConexao();
-            var cmd = new FbCommand();
-
             try
             {
-                conexaoFireBird.Open();
-                cmd.Connection = conexaoFireBird;
-
-                var cadastro = new MarcaDao().Cadastrar(marca, cmd);
-
-                if (cadastro)
+                if (new MarcaDao().Cadastrar(marca))
                 {
                     MessageBox.Show(@"Marca cadastrado com sucesso.");
                     return true;
@@ -40,11 +28,6 @@ namespace ProjetoDesafio.Feature.Marca.Controller
             catch (Exception e)
             {
                 MessageBox.Show($@"Erro ao cadastrar marca: {e.Message}");
-            }
-            finally
-            {
-                cmd.Dispose();
-                conexaoFireBird.Close();
             }
 
             return false;

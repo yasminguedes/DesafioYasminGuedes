@@ -96,14 +96,15 @@
     <Compile Include="Feature\Fornecedor\Controller\FornecedorController.cs" />
     <Compile Include="Feature\Fornecedor\Dao\FornecedorDao.cs" />
     <Compile Include="Feature\Fornecedor\Model\FornecedorFiltroModel.cs" />
-    <Compile Include="Feature\Fornecedor\View\FrmListarFornecedor.cs">
+    <Compile Include="Feature\Fornecedor\View\FrmListagemDeFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Feature\Fornecedor\View\FrmListarFornecedor.Designer.cs">
-      <DependentUpon>FrmListarFornecedor.cs</DependentUpon>
+    <Compile Include="Feature\Fornecedor\View\FrmListagemDeFornecedor.Designer.cs">
+      <DependentUpon>FrmListagemDeFornecedor.cs</DependentUpon>
     </Compile>
     <Compile Include="Feature\Funcionario\Controller\FuncionarioController.cs" />
     <Compile Include="Feature\Funcionario\Dao\FuncionarioDao.cs" />
+    <Compile Include="Feature\Funcionario\Model\FuncionarioFiltroModel.cs" />
     <Compile Include="Feature\Funcionario\View\FrmFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,11 +141,11 @@
     <Compile Include="Feature\Produto\Controller\ProdutoController.cs" />
     <Compile Include="Feature\Produto\Dao\ProdutoDao.cs" />
     <Compile Include="Feature\Produto\Model\ProdutoFiltroModel.cs" />
-    <Compile Include="Feature\Produto\View\FrmListarProduto.cs">
+    <Compile Include="Feature\Produto\View\FrmListagemDeProdutos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Feature\Produto\View\FrmListarProduto.Designer.cs">
-      <DependentUpon>FrmListarProduto.cs</DependentUpon>
+    <Compile Include="Feature\Produto\View\FrmListagemDeProdutos.Designer.cs">
+      <DependentUpon>FrmListagemDeProdutos.cs</DependentUpon>
     </Compile>
     <Compile Include="Feature\Produto\View\FrmProduto.cs">
       <SubType>Form</SubType>
@@ -210,8 +211,8 @@
     <EmbeddedResource Include="Feature\Cliente\View\FrmCliente.resx">
       <DependentUpon>FrmCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Feature\Fornecedor\View\FrmListarFornecedor.resx">
-      <DependentUpon>FrmListarFornecedor.cs</DependentUpon>
+    <EmbeddedResource Include="Feature\Fornecedor\View\FrmListagemDeFornecedor.resx">
+      <DependentUpon>FrmListagemDeFornecedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Feature\Funcionario\View\FrmFuncionario.resx">
       <DependentUpon>FrmFuncionario.cs</DependentUpon>
@@ -228,8 +229,8 @@
     <EmbeddedResource Include="Feature\Pedido\View\FrmPedido.resx">
       <DependentUpon>FrmPedido.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Feature\Produto\View\FrmListarProduto.resx">
-      <DependentUpon>FrmListarProduto.cs</DependentUpon>
+    <EmbeddedResource Include="Feature\Produto\View\FrmListagemDeProdutos.resx">
+      <DependentUpon>FrmListagemDeProdutos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Feature\Produto\View\FrmProduto.resx">
       <DependentUpon>FrmProduto.cs</DependentUpon>

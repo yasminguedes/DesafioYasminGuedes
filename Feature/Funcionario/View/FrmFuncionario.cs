@@ -7,10 +7,13 @@ namespace ProjetoDesafio.Feature.Funcionario.View
 {
     public partial class FrmFuncionario : Form
     {
+        private readonly FuncionarioController _funcionarioController;
+        private readonly FuncionarioModel _funcionarioModel;
         public FrmFuncionario()
         {
             InitializeComponent();
-
+            _funcionarioModel = new FuncionarioModel();
+            _funcionarioController = new FuncionarioController();
             HabilitarOuDesabilitarCampos(false);
             SelecionarEstado();
             LimparCampos();
@@ -19,34 +22,33 @@ namespace ProjetoDesafio.Feature.Funcionario.View
 
         private void PreencherCargos()
         {
-            cmbCargo.DataSource = new FuncionarioController().ListarCargos();
+            cmbCargo.DataSource = _funcionarioController.ListarCargos();
             cmbCargo.DisplayMember = "NomeCargo";
             cmbCargo.ValueMember = "IdCargo";
         }
 
         private void LimparCampos()
         {
-            txtNome.Text = "";
-            txtRua.Text = "";
-            txtNumero.Text = "";
-            txtCep.Text = "";
-            txtComplemento.Text = "";
-            txtBairro.Text = "";
-            cmbCidade.Text = "";
-            cmbEstado.Text = "";
-            txtPais.Text = "";
-            dtNascimento.Text = "";
-            cmbSexo.Text = "";
-            txtEmail.Text = "";
-            cmbCargo.Text = "";
-            mskTelefone.Text = "";
-            mskRg.Text = "";
-            mskCpf.Text = "";
-            txtUsuario.Text = "";
-            mskSenha.Text = "";
-            mskSenhaConfirmar.Text = "";
+            txtNome.Text = string.Empty;
+            txtRua.Text = string.Empty;
+            txtNumero.Text = string.Empty;
+            txtCep.Text = string.Empty;
+            txtComplemento.Text = string.Empty;
+            txtBairro.Text = string.Empty;
+            cmbCidade.Text = string.Empty;
+            cmbEstado.Text = string.Empty;
+            txtPais.Text = string.Empty;
+            dtNascimento.Text = string.Empty;
+            cmbSexo.Text = string.Empty;
+            txtEmail.Text = string.Empty;
+            cmbCargo.Text = string.Empty;
+            mskTelefone.Text = string.Empty;
+            mskRg.Text = string.Empty;
+            mskCpf.Text = string.Empty;
+            txtUsuario.Text = string.Empty;
+            mskSenha.Text = string.Empty;
+            mskSenhaConfirmar.Text = string.Empty;
         }
-
 
         private void HabilitarOuDesabilitarCampos(bool habilitarCampos)
         {
@@ -108,47 +110,33 @@ namespace ProjetoDesafio.Feature.Funcionario.View
 
         }
         private void BtnSalvar_Click(object sender, EventArgs e)
-        { 
-            var funcionario = new FuncionarioModel
-            {
-                NomePessoa = txtNome.Text,
-                Sexo = cmbSexo.Text,
-                Endereco =
-                {
-                    Cep = txtCep.Text,
-                    Rua = txtRua.Text,
-                    Numero = txtNumero.Text,
-                    Complemento = txtComplemento.Text,
-                    Bairro = txtBairro.Text,
-                    Cidade = cmbCidade.Text,
-                    Estado = cmbEstado.Text,
-                    Pais = txtPais.Text
-                },
-                EmailPessoa = txtEmail.Text,
-                DataNascimento = DateTime.Parse(dtNascimento.Text),
-                Cargo =
-                {
-                    IdCargo = int.Parse(cmbCargo.SelectedValue.ToString()),
-                },
-                TelefonePessoa = mskTelefone.Text,
-                RgIe = mskRg.Text,
-                CpfCnpj = mskCpf.Text,
-                UsuarioFuncionario = txtUsuario.Text,
-                SenhaFuncionario = mskSenha.Text
-
-            };
-            if (funcionario.SenhasIguais)
-                MessageBox.Show(@"Senhas não conferem");
-
-            new FuncionarioController().Cadastrar(funcionario);
-            LimparCampos();
-
-        }
-        
-        private void BtnCancelar_Click(object sender, EventArgs e)
         {
-            Close();
+            _funcionarioModel.NomePessoa = txtNome.Text;
+            _funcionarioModel.Endereco.Cep = txtCep.Text;
+            _funcionarioModel.Endereco.Rua = txtRua.Text;
+            _funcionarioModel.Endereco.Numero = txtNumero.Text;
+            _funcionarioModel.Endereco.Bairro = txtBairro.Text;
+            _funcionarioModel.Endereco.Cidade = cmbCidade.Text;
+            _funcionarioModel.Endereco.Estado = cmbEstado.Text;
+            _funcionarioModel.Endereco.Pais = txtPais.Text;
+            _funcionarioModel.Endereco.Complemento = txtComplemento.Text;
+            _funcionarioModel.Sexo = cmbSexo.Text;
+            _funcionarioModel.EmailPessoa = txtEmail.Text;
+            _funcionarioModel.DataNascimento = DateTime.Parse(dtNascimento.Text);
+            _funcionarioModel.Cargo.IdCargo = int.Parse(cmbCargo.SelectedValue.ToString());
+            _funcionarioModel.TelefonePessoa = mskTelefone.Text;
+            _funcionarioModel.RgIe = mskRg.Text;
+            _funcionarioModel.CpfCnpj = mskCpf.Text;
+            _funcionarioModel.UsuarioFuncionario = txtUsuario.Text;
+            _funcionarioModel.SenhaFuncionario = mskSenha.Text;
+            _funcionarioModel.ConfirmarSenha = mskSenhaConfirmar.Text;
+
+            
+            if (_funcionarioController.Cadastrar(_funcionarioModel))
+                LimparCampos();
         }
+
+        private void BtnCancelar_Click(object sender, EventArgs e) => Close();
 
         private void CmbEstado_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -167,7 +155,6 @@ namespace ProjetoDesafio.Feature.Funcionario.View
                 cmbCidade.Items.Add("Porto Seguro");
             }
         }
-        
     }
 }
 

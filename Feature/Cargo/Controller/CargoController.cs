@@ -42,6 +42,7 @@ namespace ProjetoDesafio.Feature.Cargo.Controller
                 cmd.Dispose();
                 conexaoFireBird.Close();
             }
+
             return false;
 
         }
@@ -50,7 +51,7 @@ namespace ProjetoDesafio.Feature.Cargo.Controller
         {
             try
             {
-                return  new CargoDao().Listar();
+                return new CargoDao().Listar();
             }
             catch (FbException fbex)
             {
@@ -60,6 +61,7 @@ namespace ProjetoDesafio.Feature.Cargo.Controller
             {
                 MessageBox.Show($@"Erro ao listar cargo : {e.Message}");
             }
+
             return new List<CargoModel>();
         }
     }

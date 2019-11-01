@@ -59,8 +59,6 @@ namespace ProjetoDesafio.Feature.Cargo.Dao
 
                 var listaCargo = new List<CargoModel>();
 
-                //cmd.Parameters.Add(@"@id", FbDbType.Integer).Value = cargo.IdCargo;
-
                 var reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {

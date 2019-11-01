@@ -1,6 +1,6 @@
 ﻿namespace ProjetoDesafio.Feature.Produto.View
 {
-    partial class FrmListarProduto
+    partial class FrmListagemDeProdutos
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmListarProduto));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmListagemDeProdutos));
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.gpLista = new System.Windows.Forms.GroupBox();

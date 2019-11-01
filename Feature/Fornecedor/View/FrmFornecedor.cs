@@ -7,32 +7,36 @@ namespace ProjetoDesafio.Feature.Fornecedor.View
 {
     public partial class FrmFornecedor : Form
     {
+        private readonly FornecedorModel _fornecedorModel;
+        private readonly FornecedorController _fornecedorController;
         public FrmFornecedor()
         {
             InitializeComponent();
+            _fornecedorController = new FornecedorController();
+            _fornecedorModel = new FornecedorModel();
             HabilitarOuDesabilitarCampos(false);
             SelecionarEstado();
             LimparCampos();
         }
         private void LimparCampos()
         {
-            txtNome.Text= "";
-            txtRua.Text = "";
-            txtNumero.Text = "";
-            txtCep.Text = "";
-            txtComplemento.Text = "";
-            txtBairro.Text = "";
-            cmbCidade.Text = "";
-            cmbEstado.Text = "";
-            txtPais.Text = "";
-            txtRazaoSocial.Text = "";
-            txtEmail.Text = "";
-            mskTelefone.Text = "";
-            mskIe.Text = "";
-            mskCnpj.Text = "";
-            txtRepresentante.Text = "";
-            txtEmailRepresentante.Text = "";
-            mskCelular.Text = "";
+            txtNome.Text= string.Empty;
+            txtRua.Text = string.Empty;
+            txtNumero.Text = string.Empty;
+            txtCep.Text = string.Empty;
+            txtComplemento.Text = string.Empty;
+            txtBairro.Text = string.Empty;
+            cmbCidade.Text = string.Empty;
+            cmbEstado.Text = string.Empty;
+            txtPais.Text = string.Empty;
+            txtRazaoSocial.Text = string.Empty;
+            txtEmail.Text = string.Empty;
+            mskTelefone.Text = string.Empty;
+            mskIe.Text = string.Empty;
+            mskCnpj.Text = string.Empty;
+            txtRepresentante.Text = string.Empty;
+            txtEmailRepresentante.Text = string.Empty;
+            mskCelular.Text = string.Empty;
         }
         private void HabilitarOuDesabilitarCampos(bool habilitarCampos)
         {
@@ -94,40 +98,31 @@ namespace ProjetoDesafio.Feature.Fornecedor.View
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
-            var fornecedor = new FornecedorModel()
-            {
-                NomePessoa = txtNome.Text,
-                Endereco =
-                {
-                    Cep = txtCep.Text,
-                    Rua = txtRua.Text,
-                    Numero = txtNumero.Text,
-                    Complemento = txtComplemento.Text,
-                    Bairro = txtBairro.Text,
-                    Cidade = cmbCidade.Text,
-                    Estado = cmbEstado.Text,
-                    Pais = txtPais.Text
-                },
-                EmailPessoa = txtEmail.Text,
-                TelefonePessoa = mskTelefone.Text,
-                RgIe = mskIe.Text,
-                CpfCnpj = mskCnpj.Text,
-                RazaoSocial = txtRazaoSocial.Text,
-                Representante = txtRepresentante.Text,
-                EmailRepresentante = txtEmailRepresentante.Text,
-                CelularRepresentante = mskCelular.Text
-            };
-            //MessageBox.Show(@"Fornecedor cadastrado com sucesso!");
-            new FornecedorController().Cadastrar(fornecedor);
+            _fornecedorModel.NomePessoa = txtNome.Text;
+            _fornecedorModel.Endereco.Cep = txtCep.Text;
+            _fornecedorModel.Endereco.Rua = txtRua.Text;
+            _fornecedorModel.Endereco.Numero = txtNumero.Text;
+            _fornecedorModel.Endereco.Complemento = txtComplemento.Text;
+            _fornecedorModel.Endereco.Bairro = txtBairro.Text;
+            _fornecedorModel.Endereco.Cidade = cmbCidade.Text;
+            _fornecedorModel.Endereco.Estado = cmbEstado.Text;
+            _fornecedorModel.Endereco.Pais = txtPais.Text;
+            _fornecedorModel.EmailPessoa = txtEmail.Text;
+            _fornecedorModel.TelefonePessoa = mskTelefone.Text;
+            _fornecedorModel.RgIe = mskIe.Text;
+            _fornecedorModel.CpfCnpj = mskCnpj.Text;
+            _fornecedorModel.RazaoSocial = txtRazaoSocial.Text;
+            _fornecedorModel.Representante = txtRepresentante.Text;
+            _fornecedorModel.EmailRepresentante = txtEmailRepresentante.Text;
+            _fornecedorModel.CelularRepresentante = mskCelular.Text;
+
+            _fornecedorController.Cadastrar(_fornecedorModel);
             LimparCampos();
             
         }
 
-        private void BtnCancelar_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
+        private void BtnCancelar_Click(object sender, EventArgs e) =>Close();
+        
         private void CmbEstado_SelectedIndexChanged(object sender, EventArgs e)
         {
             cmbCidade.Text = string.Empty;
@@ -148,7 +143,7 @@ namespace ProjetoDesafio.Feature.Fornecedor.View
 
         private void BtnListar_Click(object sender, EventArgs e)
         {
-            new FrmListarFornecedor().Show();
+            new FrmListagemDeFornecedor().Show();
         }
     }
 }
