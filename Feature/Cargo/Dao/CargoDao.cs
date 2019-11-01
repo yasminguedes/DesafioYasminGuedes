@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data;
 using System.Text;
 using FirebirdSql.Data.FirebirdClient;
@@ -9,44 +8,38 @@ namespace ProjetoDesafio.Feature.Cargo.Dao
 {
     public class CargoDao
     {
-        public static DataTable GetDados()
+        public bool Cadastrar(CargoModel cargo)
         {
-            var conexaoFirebird = Connection.PegarInstancia().PegarConexao();
+            var conexaoFireBird = Connection.PegarInstancia().PegarConexao();
+            var cmd = new FbCommand();
+
+            try
             {
-                try
-                {
-                    conexaoFirebird.Open();
-                    const string mSql = @"Select * from Cargo";
-                    var cmd = new FbCommand(mSql, conexaoFirebird);
-                    var da = new FbDataAdapter(cmd);
-                    var dt = new DataTable();
-                    da.Fill(dt);
-                    return dt;
-                }
-                finally
-                {
-                    conexaoFirebird.Close();
-                }
+                conexaoFireBird.Open();
+                cmd.Connection = conexaoFireBird;
+                var commandText = new StringBuilder();
+                
+                commandText.Append(@"INSERT into Cargo (nome_cargo) ");
+                commandText.Append("Values(@Cargo)");
+
+                cmd.CommandText = commandText.ToString();
+
+                cmd.Parameters.Add("@Cargo", FbDbType.VarChar).Value = cargo.NomeCargo;
+
+                cmd.ExecuteNonQuery();
+
+                return true;
             }
+            finally
+            {
+                cmd.Dispose();
+                if (conexaoFireBird.State != ConnectionState.Closed)
+                    conexaoFireBird.Close();
+            }
+
         }
 
-        public bool Cadastrar(CargoModel cargo, FbCommand cmd)
-        {
-            var commandText = new StringBuilder();
-
-            commandText.Append(@"INSERT into Cargo (nome_cargo) ");
-            commandText.Append("Values(@Cargo)");
-
-            cmd.CommandText = commandText.ToString();
-
-            cmd.Parameters.Add("@Cargo", FbDbType.VarChar).Value = cargo.NomeCargo;
-           
-            cmd.ExecuteNonQuery();
-
-            return true;
-        }
-        
-        internal IEnumerable<CargoModel> Listar()
+            internal IEnumerable<CargoModel> Listar()
         {
             var conexaoFirebird = Connection.PegarInstancia().PegarConexao();
             conexaoFirebird.Open();

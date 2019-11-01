@@ -101,6 +101,7 @@ namespace ProjetoDesafio.Feature.Produto.View
             cmbTipo.Items.Add(@"Litro");
             cmbTipo.Items.Add(@"Kg");
             cmbTipo.Items.Add(@"Unidade");
+            cmbTipo.Items.Add(@"Engradado");
         }
 
         private void SelecionarAtivo()

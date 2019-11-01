@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using FirebirdSql.Data.FirebirdClient;
 using ProjetoDesafio.Feature.Categoria.Dao;
 using ProjetoDesafio.Feature.Categoria.Model;
+using ProjetoDesafio.Feature.Marca.Dao;
 
 namespace ProjetoDesafio.Feature.Categoria.Controller
 {
@@ -14,17 +15,9 @@ namespace ProjetoDesafio.Feature.Categoria.Controller
     {
         public bool Cadastrar(CategoriaModel categoria)
         {
-            var conexaoFireBird = Connection.PegarInstancia().PegarConexao();
-            var cmd = new FbCommand();
-
             try
             {
-                conexaoFireBird.Open();
-                cmd.Connection = conexaoFireBird;
-
-                var cadastro = new CategoriaDao().Cadastrar(categoria, cmd);
-
-                if (cadastro)
+                if (new CategoriaDao().Cadastrar(categoria))
                 {
                     MessageBox.Show(@"Categoria cadastrado com sucesso.");
                     return true;
@@ -40,12 +33,6 @@ namespace ProjetoDesafio.Feature.Categoria.Controller
             {
                 MessageBox.Show($@"Erro ao cadastrar categoria: {e.Message}");
             }
-            finally
-            {
-                cmd.Dispose();
-                conexaoFireBird.Close();
-            }
-
             return false;
         }
 

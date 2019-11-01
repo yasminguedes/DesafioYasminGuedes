@@ -9,27 +9,6 @@ namespace ProjetoDesafio.Feature.Fornecedor.Dao
 {
     public class FornecedorDao
     {
-        public static DataTable PegarDados()
-        {
-            var conexaoFirebird = Connection.PegarInstancia().PegarConexao();
-            {
-                try
-                {
-                    conexaoFirebird.Open();
-                    const string mSql = @"Select * from Fornecedor";
-                    var cmd = new FbCommand(mSql, conexaoFirebird);
-                    var da = new FbDataAdapter(cmd);
-                    var dt = new DataTable();
-                    da.Fill(dt);
-                    return dt;
-                }
-                finally
-                {
-                    conexaoFirebird.Close();
-                }
-            }
-        }
-
         public bool Cadastrar(FornecedorModel fornecedor, FbCommand cmd)
         {
             cmd.Parameters.Add("@RazaoSocial", FbDbType.VarChar).Value = fornecedor.RazaoSocial;

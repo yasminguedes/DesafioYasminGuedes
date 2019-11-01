@@ -11,41 +11,33 @@ namespace ProjetoDesafio.Feature.Categoria.Dao
 {
     public class CategoriaDao
     {
-        public static DataTable GetDados()
+        public bool Cadastrar(CategoriaModel categoria)
         {
-            var conexaoFirebird = Connection.PegarInstancia().PegarConexao();
+            var conexaoFireBird = Connection.PegarInstancia().PegarConexao();
+            var cmd = new FbCommand();
+
+            try
             {
-                try
-                {
-                    conexaoFirebird.Open();
-                    const string mSql = @"Select * from Categoria";
-                    var cmd = new FbCommand(mSql, conexaoFirebird);
-                    var da = new FbDataAdapter(cmd);
-                    var dt = new DataTable();
-                    da.Fill(dt);
-                    return dt;
-                }
-                finally
-                {
-                    conexaoFirebird.Close();
-                }
+                conexaoFireBird.Open();
+                cmd.Connection = conexaoFireBird;
+                var commandText = new StringBuilder();
+                commandText.Append(@"INSERT into Categoria (nome_categoria) ");
+                commandText.Append("Values(@Categoria)");
+
+                cmd.CommandText = commandText.ToString();
+
+                cmd.Parameters.Add("@Categoria", FbDbType.VarChar).Value = categoria.NomeCategoria;
+
+                cmd.ExecuteNonQuery();
+
+                return true;
             }
-        }
-
-        public bool Cadastrar(CategoriaModel categoria, FbCommand cmd)
-        {
-            var commandText = new StringBuilder();
-
-            commandText.Append(@"INSERT into Categoria (nome_categoria) ");
-            commandText.Append("Values(@Categoria)");
-
-            cmd.CommandText = commandText.ToString();
-
-            cmd.Parameters.Add("@Categoria", FbDbType.VarChar).Value = categoria.NomeCategoria;
-
-            cmd.ExecuteNonQuery();
-
-            return true;
+            finally
+            {
+                cmd.Dispose();
+                if (conexaoFireBird.State != ConnectionState.Closed)
+                    conexaoFireBird.Close();
+            }
         }
 
         internal IEnumerable<CategoriaModel> Listar()
@@ -53,7 +45,6 @@ namespace ProjetoDesafio.Feature.Categoria.Dao
             var conexaoFirebird = Connection.PegarInstancia().PegarConexao();
             conexaoFirebird.Open();
             var cmd = new FbCommand();
-
             try
             {
                 cmd.CommandText = @"Select * from Categoria";
@@ -62,17 +53,12 @@ namespace ProjetoDesafio.Feature.Categoria.Dao
                 var listaCategoria = new List<CategoriaModel>();
 
                 var reader = cmd.ExecuteReader();
-
                 while (reader.Read())
-                {
-                    var categoriaModel = new CategoriaModel
+                    listaCategoria.Add(new CategoriaModel
                     {
                         IdCategoria = int.Parse(reader["id_categoria"].ToString()),
                         NomeCategoria = reader["nome_categoria"].ToString()
-                    };
-                    listaCategoria.Add(categoriaModel);
-                }
-
+                    });
                 return listaCategoria;
             }
             finally

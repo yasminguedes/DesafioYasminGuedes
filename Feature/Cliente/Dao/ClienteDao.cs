@@ -6,28 +6,6 @@ namespace ProjetoDesafio.Feature.Cliente.Dao
 {
     public class ClienteDao
     {
-
-        public static DataTable PegarDados()
-        {
-            var conexaoFirebird = Connection.PegarInstancia().PegarConexao();
-            {
-                try
-                {
-                    conexaoFirebird.Open();
-                    const string mSql = @"Select * from Cliente";
-                    var cmd = new FbCommand(mSql, conexaoFirebird);
-                    var da = new FbDataAdapter(cmd);
-                    var dt = new DataTable();
-                    da.Fill(dt);
-                    return dt;
-                }
-                finally
-                {
-                    conexaoFirebird.Close();
-                }
-            }
-        }
-
         public bool Cadastrar(ClienteModel cliente, FbCommand cmd)
         {
             cmd.Parameters.Clear();

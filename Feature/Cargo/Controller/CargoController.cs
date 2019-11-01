@@ -11,17 +11,9 @@ namespace ProjetoDesafio.Feature.Cargo.Controller
     {
         public bool Cadastrar(CargoModel cargo)
         {
-            var conexaoFireBird = Connection.PegarInstancia().PegarConexao();
-            var cmd = new FbCommand();
-
             try
             {
-                conexaoFireBird.Open();
-                cmd.Connection = conexaoFireBird;
-
-                var cadastro = new CargoDao().Cadastrar(cargo, cmd);
-
-                if (cadastro)
+                if (new CargoDao().Cadastrar(cargo))
                 {
                     MessageBox.Show(@"Cargo cadastrado com sucesso.");
                     return true;
@@ -37,14 +29,7 @@ namespace ProjetoDesafio.Feature.Cargo.Controller
             {
                 MessageBox.Show($@"Erro ao cadastrar cargo: {e.Message}");
             }
-            finally
-            {
-                cmd.Dispose();
-                conexaoFireBird.Close();
-            }
-
             return false;
-
         }
 
         public IEnumerable<CargoModel> Listar()

@@ -7,9 +7,13 @@ namespace ProjetoDesafio.Feature.Cliente.View
 {
     public partial class FrmCliente : Form
     {
+        private readonly ClienteController _clienteController;
+        private readonly ClienteModel _clienteModel;
         public FrmCliente()
         {
             InitializeComponent();
+            _clienteModel = new ClienteModel();
+            _clienteController = new ClienteController();
             SelecionarEstado();
             HabilitarOuDesabilitarCampos(false);
             LimparCampos();
@@ -65,23 +69,23 @@ namespace ProjetoDesafio.Feature.Cliente.View
         }
         private void LimparCampos()
         {
-            txtNome.Text = "";
-            txtRua.Text = "";
-            txtNumero.Text = "";
-            txtCep.Text = "";
-            txtComplemento.Text = "";
-            txtBairro.Text = "";
-            cmbCidade.Text = "";
-            cmbEstado.Text = "";
-            txtPais.Text = "";
-            dtNascimento.Text = "";
-            cmbSexo.Text = "";
-            txtEmail.Text = "";
-            txtProfissao.Text = "";
-            mskTelefone.Text = "";
-            mskRg.Text = "";
-            mskCpf.Text = "";
-            dtCadastro.Text = "";
+            txtNome.Text = string.Empty;
+            txtRua.Text = string.Empty;
+            txtNumero.Text = string.Empty;
+            txtCep.Text = string.Empty;
+            txtComplemento.Text = string.Empty;
+            txtBairro.Text = string.Empty;
+            cmbCidade.Text = string.Empty;
+            cmbEstado.Text =string.Empty;
+            txtPais.Text = string.Empty;
+            dtNascimento.Text = string.Empty;
+            cmbSexo.Text = string.Empty;
+            txtEmail.Text = string.Empty;
+            txtProfissao.Text = string.Empty;
+            mskTelefone.Text = string.Empty;
+            mskRg.Text = string.Empty;
+            mskCpf.Text = string.Empty;
+            dtCadastro.Text = string.Empty;
             
         }
 
@@ -93,30 +97,25 @@ namespace ProjetoDesafio.Feature.Cliente.View
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
-            var cliente = new ClienteModel
-            {
-                NomePessoa = txtNome.Text,
-                Endereco =
-                {
-                    Cep = txtCep.Text,
-                    Rua = txtRua.Text,
-                    Numero = txtNumero.Text,
-                    Complemento = txtComplemento.Text,
-                    Bairro = txtBairro.Text,
-                    Cidade = cmbCidade.Text,
-                    Estado = cmbEstado.Text,
-                    Pais = txtPais.Text
-                },
-                EmailPessoa = txtEmail.Text,
-                TelefonePessoa = mskTelefone.Text,
-                ProfissaoCliente = txtProfissao.Text,
-                DataCadastro = DateTime.Parse(dtCadastro.Text),
-                Sexo = cmbSexo.Text,
-                DataNascimento = DateTime.Parse(dtNascimento.Text),
-                RgIe = mskRg.Text,
-                CpfCnpj = mskCpf.Text
-            };
-            new ClienteController().Cadastrar(cliente);
+            _clienteModel.NomePessoa = txtNome.Text;
+            _clienteModel.Endereco.Cep = txtCep.Text;
+            _clienteModel.Endereco.Rua = txtRua.Text;
+            _clienteModel.Endereco.Numero = txtNumero.Text;
+            _clienteModel.Endereco.Complemento = txtComplemento.Text;
+            _clienteModel.Endereco.Bairro = txtBairro.Text;
+            _clienteModel.Endereco.Cidade = cmbCidade.Text;
+            _clienteModel.Endereco.Estado = cmbEstado.Text;
+            _clienteModel.Endereco.Pais = txtPais.Text;
+            _clienteModel.EmailPessoa = txtEmail.Text;
+            _clienteModel.TelefonePessoa = mskTelefone.Text;
+            _clienteModel.ProfissaoCliente = txtProfissao.Text;
+            _clienteModel.DataCadastro = DateTime.Parse(dtCadastro.Text);
+            _clienteModel.Sexo = cmbSexo.Text;
+            _clienteModel.DataNascimento = DateTime.Parse(dtNascimento.Text);
+            _clienteModel.RgIe = mskRg.Text;
+            _clienteModel.CpfCnpj = mskCpf.Text;
+        
+           if(_clienteController.Cadastrar(_clienteModel));
             LimparCampos();
         }
 
