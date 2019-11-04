@@ -95,7 +95,7 @@ namespace ProjetoDesafio.Feature.Produto.Dao
                         IdProduto = int.Parse(dr["id_produto"].ToString()),
                         NomeProduto = dr["nome_produto"].ToString(),
                         PrecoCompra = double.Parse(dr["preco_compra"].ToString()),
-                        PrecoVenda = double.Parse(dr["preco_compra"].ToString()),
+                        PrecoVenda = double.Parse(dr["preco_venda"].ToString()),
                         Qtde = int.Parse(dr["qtde_estoque"].ToString()),
                         Ativo = dr["ativo"].ToString(),
                         DataCadastro = DateTime.Parse(dr["data_cadastro"].ToString()),

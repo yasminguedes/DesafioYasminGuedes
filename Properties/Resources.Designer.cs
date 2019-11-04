@@ -283,6 +283,26 @@ namespace ProjetoDesafio.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_pesquisar_16 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-pesquisar-16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_pesquisar_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-pesquisar-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_solicitar_dinheiro_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-solicitar-dinheiro-64", resourceCulture);

@@ -379,5 +379,11 @@
   <ItemGroup>
     <None Include="Resources\icons8-voltar-32.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pesquisar-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pesquisar-32.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

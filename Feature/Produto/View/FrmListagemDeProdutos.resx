@@ -147,15 +147,4 @@
   <metadata name="bdtListarProduto.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnPesquisar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAPRJREFUSEvt
-        k00OwVAURsuQmBmwCbEVYoRF+BvagsRCbEH87MA2xAgJM77T3EoUTftaSQc9yUn63ku++3p76xXkhrIc
-        miU2sobghzlgwwj2XHzj7wVoC8F9ey74IJdTdJRz2ZZVGUnSAitZk7FxnaKe3MuruZNdmQlL+e3tcCFT
-        wc0JusmRbMimHNseZx35IukU0RZCCA8zkZxt/ZUR9yNXJFwka24ehjfh7OyvDNcChIUJCpz8lZF0ipgW
-        QmhHmJnkbO2vHGEUCeGDUoRb41TeJWd0JRWMIkG/PMi6TAWjuJH8ZPSctnBzwimSqk1RcHOFe60nlmKB
-        NAzOJI0AAAAASUVORK5CYII=
-</value>
-  </data>
 </root>
