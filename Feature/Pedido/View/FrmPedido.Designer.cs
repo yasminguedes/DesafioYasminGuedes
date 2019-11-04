@@ -279,7 +279,7 @@
             this.btnCadastrar.AccessibleDescription = "Cadastrar";
             this.btnCadastrar.AccessibleName = "Cadastrar";
             this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrar.Image")));
+            this.btnCadastrar.Image = global::ProjetoDesafio.Properties.Resources.add;
             this.btnCadastrar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnCadastrar.Location = new System.Drawing.Point(22, 17);
             this.btnCadastrar.Name = "btnCadastrar";
@@ -295,7 +295,7 @@
             this.btnListar.AccessibleDescription = "Listar";
             this.btnListar.AccessibleName = "Listar";
             this.btnListar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListar.Image = ((System.Drawing.Image)(resources.GetObject("btnListar.Image")));
+            this.btnListar.Image = global::ProjetoDesafio.Properties.Resources.icons8_lista_numerada_64;
             this.btnListar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnListar.Location = new System.Drawing.Point(194, 17);
             this.btnListar.Name = "btnListar";

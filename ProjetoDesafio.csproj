@@ -183,6 +183,12 @@
     <Compile Include="Feature\Promocao\View\FrmSelecionarProdutos.Designer.cs">
       <DependentUpon>FrmSelecionarProdutos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Feature\Promocao\View\TelaPromocao\FrmPromocao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Feature\Promocao\View\TelaPromocao\FrmPromocao.Designer.cs">
+      <DependentUpon>FrmPromocao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Feature\Propriedades.cs" />
     <Compile Include="Feature\TelaLogin\Logar.cs">
       <SubType>Form</SubType>
@@ -256,6 +262,9 @@
     <EmbeddedResource Include="Feature\Promocao\View\FrmSelecionarProdutos.resx">
       <DependentUpon>FrmSelecionarProdutos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Feature\Promocao\View\TelaPromocao\FrmPromocao.resx">
+      <DependentUpon>FrmPromocao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Feature\TelaLogin\Logar.resx">
       <DependentUpon>Logar.cs</DependentUpon>
     </EmbeddedResource>
@@ -300,6 +309,75 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Feature\icones\icons8-mais-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checked %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-lista-numerada-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-editar-vários-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-adicionar-arquivo-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-crie-um-novo-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-excluir-propriedade-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-gestão-de-desenvolvimento-comercial-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-fornecedor-64 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-funcionário-homem-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-grupo-de-usuário-homem-mulher-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-marca-registrada-64 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-categoria-64 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pacote-64 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\price-tag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-solicitar-dinheiro-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warehouse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\team %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-voltar-32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

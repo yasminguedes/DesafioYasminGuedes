@@ -34,12 +34,6 @@
             this.btnAlterar = new System.Windows.Forms.Button();
             this.gpLista = new System.Windows.Forms.GroupBox();
             this.dtListaProdutos = new System.Windows.Forms.DataGridView();
-            this.btnPesquisar = new System.Windows.Forms.Button();
-            this.txtPesquisar = new System.Windows.Forms.TextBox();
-            this.rdbProduto = new System.Windows.Forms.RadioButton();
-            this.rdbMarca = new System.Windows.Forms.RadioButton();
-            this.rdbCategoria = new System.Windows.Forms.RadioButton();
-            this.bdtListarProduto = new System.Windows.Forms.BindingSource(this.components);
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NomeProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Data = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,6 +46,12 @@
             this.Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fornecedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bdtListarProduto = new System.Windows.Forms.BindingSource(this.components);
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.txtPesquisar = new System.Windows.Forms.TextBox();
+            this.rdbProduto = new System.Windows.Forms.RadioButton();
+            this.rdbMarca = new System.Windows.Forms.RadioButton();
+            this.rdbCategoria = new System.Windows.Forms.RadioButton();
             this.gpLista.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtListaProdutos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdtListarProduto)).BeginInit();
@@ -63,7 +63,7 @@
             this.btnExcluir.AccessibleName = "";
             this.btnExcluir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluir.Image")));
+            this.btnExcluir.Image = global::ProjetoDesafio.Properties.Resources.delete__1_;
             this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnExcluir.Location = new System.Drawing.Point(199, 13);
             this.btnExcluir.Name = "btnExcluir";
@@ -78,7 +78,7 @@
             this.btnAlterar.AccessibleDescription = "Alterar";
             this.btnAlterar.AccessibleName = "Alterar";
             this.btnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlterar.Image = ((System.Drawing.Image)(resources.GetObject("btnAlterar.Image")));
+            this.btnAlterar.Image = global::ProjetoDesafio.Properties.Resources.icons8_editar_vários_64;
             this.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnAlterar.Location = new System.Drawing.Point(12, 13);
             this.btnAlterar.Name = "btnAlterar";
@@ -124,65 +124,6 @@
             this.dtListaProdutos.Size = new System.Drawing.Size(1380, 580);
             this.dtListaProdutos.TabIndex = 0;
             this.dtListaProdutos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DtListaProdutos_CellFormatting);
-            // 
-            // btnPesquisar
-            // 
-            this.btnPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisar.Image")));
-            this.btnPesquisar.Location = new System.Drawing.Point(377, 13);
-            this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(46, 43);
-            this.btnPesquisar.TabIndex = 4;
-            this.btnPesquisar.UseVisualStyleBackColor = true;
-            this.btnPesquisar.Click += new System.EventHandler(this.BtnPesquisar_Click);
-            // 
-            // txtPesquisar
-            // 
-            this.txtPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPesquisar.Location = new System.Drawing.Point(429, 17);
-            this.txtPesquisar.Name = "txtPesquisar";
-            this.txtPesquisar.Size = new System.Drawing.Size(505, 34);
-            this.txtPesquisar.TabIndex = 0;
-            this.txtPesquisar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtPesquisar_KeyDown);
-            // 
-            // rdbProduto
-            // 
-            this.rdbProduto.AutoSize = true;
-            this.rdbProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbProduto.Location = new System.Drawing.Point(429, 74);
-            this.rdbProduto.Name = "rdbProduto";
-            this.rdbProduto.Size = new System.Drawing.Size(158, 29);
-            this.rdbProduto.TabIndex = 1;
-            this.rdbProduto.TabStop = true;
-            this.rdbProduto.Text = "Nome Produto";
-            this.rdbProduto.UseVisualStyleBackColor = true;
-            // 
-            // rdbMarca
-            // 
-            this.rdbMarca.AutoSize = true;
-            this.rdbMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbMarca.Location = new System.Drawing.Point(639, 74);
-            this.rdbMarca.Name = "rdbMarca";
-            this.rdbMarca.Size = new System.Drawing.Size(88, 29);
-            this.rdbMarca.TabIndex = 2;
-            this.rdbMarca.TabStop = true;
-            this.rdbMarca.Text = "Marca";
-            this.rdbMarca.UseVisualStyleBackColor = true;
-            // 
-            // rdbCategoria
-            // 
-            this.rdbCategoria.AutoSize = true;
-            this.rdbCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbCategoria.Location = new System.Drawing.Point(816, 74);
-            this.rdbCategoria.Name = "rdbCategoria";
-            this.rdbCategoria.Size = new System.Drawing.Size(118, 29);
-            this.rdbCategoria.TabIndex = 3;
-            this.rdbCategoria.TabStop = true;
-            this.rdbCategoria.Text = "Categoria";
-            this.rdbCategoria.UseVisualStyleBackColor = true;
-            // 
-            // bdtListarProduto
-            // 
-            this.bdtListarProduto.DataSource = typeof(ProjetoDesafio.Feature.Produto.Model.ProdutoModel);
             // 
             // ID
             // 
@@ -282,6 +223,65 @@
             this.Fornecedor.MinimumWidth = 6;
             this.Fornecedor.Name = "Fornecedor";
             this.Fornecedor.Width = 125;
+            // 
+            // bdtListarProduto
+            // 
+            this.bdtListarProduto.DataSource = typeof(ProjetoDesafio.Feature.Produto.Model.ProdutoModel);
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisar.Image")));
+            this.btnPesquisar.Location = new System.Drawing.Point(377, 13);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(46, 43);
+            this.btnPesquisar.TabIndex = 4;
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.BtnPesquisar_Click);
+            // 
+            // txtPesquisar
+            // 
+            this.txtPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPesquisar.Location = new System.Drawing.Point(429, 17);
+            this.txtPesquisar.Name = "txtPesquisar";
+            this.txtPesquisar.Size = new System.Drawing.Size(505, 34);
+            this.txtPesquisar.TabIndex = 0;
+            this.txtPesquisar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtPesquisar_KeyDown);
+            // 
+            // rdbProduto
+            // 
+            this.rdbProduto.AutoSize = true;
+            this.rdbProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbProduto.Location = new System.Drawing.Point(429, 74);
+            this.rdbProduto.Name = "rdbProduto";
+            this.rdbProduto.Size = new System.Drawing.Size(158, 29);
+            this.rdbProduto.TabIndex = 1;
+            this.rdbProduto.TabStop = true;
+            this.rdbProduto.Text = "Nome Produto";
+            this.rdbProduto.UseVisualStyleBackColor = true;
+            // 
+            // rdbMarca
+            // 
+            this.rdbMarca.AutoSize = true;
+            this.rdbMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbMarca.Location = new System.Drawing.Point(639, 74);
+            this.rdbMarca.Name = "rdbMarca";
+            this.rdbMarca.Size = new System.Drawing.Size(88, 29);
+            this.rdbMarca.TabIndex = 2;
+            this.rdbMarca.TabStop = true;
+            this.rdbMarca.Text = "Marca";
+            this.rdbMarca.UseVisualStyleBackColor = true;
+            // 
+            // rdbCategoria
+            // 
+            this.rdbCategoria.AutoSize = true;
+            this.rdbCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbCategoria.Location = new System.Drawing.Point(816, 74);
+            this.rdbCategoria.Name = "rdbCategoria";
+            this.rdbCategoria.Size = new System.Drawing.Size(118, 29);
+            this.rdbCategoria.TabIndex = 3;
+            this.rdbCategoria.TabStop = true;
+            this.rdbCategoria.Text = "Categoria";
+            this.rdbCategoria.UseVisualStyleBackColor = true;
             // 
             // FrmListagemDeProdutos
             // 

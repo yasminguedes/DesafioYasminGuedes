@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogar));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
@@ -111,11 +110,12 @@
             // 
             // pctErrado2
             // 
-            this.pctErrado2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pctErrado2.BackgroundImage")));
             this.pctErrado2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pctErrado2.Location = new System.Drawing.Point(490, 507);
+            this.pctErrado2.Image = global::ProjetoDesafio.Properties.Resources.cancel1;
+            this.pctErrado2.Location = new System.Drawing.Point(490, 501);
             this.pctErrado2.Name = "pctErrado2";
-            this.pctErrado2.Size = new System.Drawing.Size(29, 28);
+            this.pctErrado2.Size = new System.Drawing.Size(35, 34);
+            this.pctErrado2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pctErrado2.TabIndex = 10;
             this.pctErrado2.TabStop = false;
             this.pctErrado2.Visible = false;
@@ -123,21 +123,21 @@
             // pctErrado
             // 
             this.pctErrado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pctErrado.ErrorImage = global::ProjetoDesafio.Properties.Resources.cancel_161;
+            this.pctErrado.ErrorImage = global::ProjetoDesafio.Properties.Resources.cancel1;
             this.pctErrado.ImageLocation = "center";
-            this.pctErrado.Location = new System.Drawing.Point(494, 392);
+            this.pctErrado.Location = new System.Drawing.Point(490, 386);
             this.pctErrado.Name = "pctErrado";
-            this.pctErrado.Size = new System.Drawing.Size(18, 19);
+            this.pctErrado.Size = new System.Drawing.Size(35, 34);
             this.pctErrado.TabIndex = 9;
             this.pctErrado.TabStop = false;
             this.pctErrado.Visible = false;
             // 
             // pctCheck2
             // 
-            this.pctCheck2.Image = ((System.Drawing.Image)(resources.GetObject("pctCheck2.Image")));
-            this.pctCheck2.Location = new System.Drawing.Point(490, 506);
+            this.pctCheck2.Image = global::ProjetoDesafio.Properties.Resources.checked__1_;
+            this.pctCheck2.Location = new System.Drawing.Point(490, 501);
             this.pctCheck2.Name = "pctCheck2";
-            this.pctCheck2.Size = new System.Drawing.Size(25, 29);
+            this.pctCheck2.Size = new System.Drawing.Size(35, 34);
             this.pctCheck2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pctCheck2.TabIndex = 8;
             this.pctCheck2.TabStop = false;
@@ -145,10 +145,10 @@
             // 
             // pctCheck
             // 
-            this.pctCheck.Image = ((System.Drawing.Image)(resources.GetObject("pctCheck.Image")));
+            this.pctCheck.Image = global::ProjetoDesafio.Properties.Resources.checked__1_;
             this.pctCheck.Location = new System.Drawing.Point(490, 386);
             this.pctCheck.Name = "pctCheck";
-            this.pctCheck.Size = new System.Drawing.Size(25, 29);
+            this.pctCheck.Size = new System.Drawing.Size(35, 34);
             this.pctCheck.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pctCheck.TabIndex = 7;
             this.pctCheck.TabStop = false;
@@ -156,7 +156,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImage = global::ProjetoDesafio.Properties.Resources.team__1_;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.Location = new System.Drawing.Point(256, 89);
             this.pictureBox1.Name = "pictureBox1";

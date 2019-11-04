@@ -37,9 +37,6 @@
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.gpLista = new System.Windows.Forms.GroupBox();
             this.dtListaFornecedor = new System.Windows.Forms.DataGridView();
-            this.btnExcluir = new System.Windows.Forms.Button();
-            this.btnAlterar = new System.Windows.Forms.Button();
-            this.fornecedorModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idFornecedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomePessoaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.razaoSocialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,7 +47,9 @@
             this.telefonePessoaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.celularRepresentanteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailRepresentanteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.enderecoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fornecedorModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnAlterar = new System.Windows.Forms.Button();
             this.gpLista.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtListaFornecedor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fornecedorModelBindingSource)).BeginInit();
@@ -136,8 +135,7 @@
             this.representanteDataGridViewTextBoxColumn,
             this.telefonePessoaDataGridViewTextBoxColumn,
             this.celularRepresentanteDataGridViewTextBoxColumn,
-            this.emailRepresentanteDataGridViewTextBoxColumn,
-            this.enderecoDataGridViewTextBoxColumn});
+            this.emailRepresentanteDataGridViewTextBoxColumn});
             this.dtListaFornecedor.DataSource = this.fornecedorModelBindingSource;
             this.dtListaFornecedor.Location = new System.Drawing.Point(2, 10);
             this.dtListaFornecedor.Name = "dtListaFornecedor";
@@ -146,41 +144,6 @@
             this.dtListaFornecedor.Size = new System.Drawing.Size(1380, 648);
             this.dtListaFornecedor.TabIndex = 0;
             this.dtListaFornecedor.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DtListFornecedor_CellFormatting);
-            // 
-            // btnExcluir
-            // 
-            this.btnExcluir.AccessibleDescription = "Excluir";
-            this.btnExcluir.AccessibleName = "";
-            this.btnExcluir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluir.Image")));
-            this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnExcluir.Location = new System.Drawing.Point(197, 14);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(137, 122);
-            this.btnExcluir.TabIndex = 14;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnExcluir.UseVisualStyleBackColor = true;
-            // 
-            // btnAlterar
-            // 
-            this.btnAlterar.AccessibleDescription = "Alterar";
-            this.btnAlterar.AccessibleName = "Alterar";
-            this.btnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlterar.Image = ((System.Drawing.Image)(resources.GetObject("btnAlterar.Image")));
-            this.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAlterar.Location = new System.Drawing.Point(10, 14);
-            this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(137, 122);
-            this.btnAlterar.TabIndex = 13;
-            this.btnAlterar.Text = "Alterar";
-            this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnAlterar.UseVisualStyleBackColor = true;
-            // 
-            // fornecedorModelBindingSource
-            // 
-            this.fornecedorModelBindingSource.DataSource = typeof(ProjetoDesafio.Feature.Fornecedor.Model.FornecedorModel);
             // 
             // idFornecedorDataGridViewTextBoxColumn
             // 
@@ -262,15 +225,42 @@
             this.emailRepresentanteDataGridViewTextBoxColumn.Name = "emailRepresentanteDataGridViewTextBoxColumn";
             this.emailRepresentanteDataGridViewTextBoxColumn.Width = 125;
             // 
-            // enderecoDataGridViewTextBoxColumn
+            // fornecedorModelBindingSource
             // 
-            this.enderecoDataGridViewTextBoxColumn.DataPropertyName = "Endereco.Rua";
-            this.enderecoDataGridViewTextBoxColumn.HeaderText = "Endereco";
-            this.enderecoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.enderecoDataGridViewTextBoxColumn.Name = "enderecoDataGridViewTextBoxColumn";
-            this.enderecoDataGridViewTextBoxColumn.Width = 125;
+            this.fornecedorModelBindingSource.DataSource = typeof(ProjetoDesafio.Feature.Fornecedor.Model.FornecedorModel);
             // 
-            // FrmListarFornecedor
+            // btnExcluir
+            // 
+            this.btnExcluir.AccessibleDescription = "Excluir";
+            this.btnExcluir.AccessibleName = "";
+            this.btnExcluir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.Image = global::ProjetoDesafio.Properties.Resources.delete__1_;
+            this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnExcluir.Location = new System.Drawing.Point(197, 14);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(137, 122);
+            this.btnExcluir.TabIndex = 14;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            // 
+            // btnAlterar
+            // 
+            this.btnAlterar.AccessibleDescription = "Alterar";
+            this.btnAlterar.AccessibleName = "Alterar";
+            this.btnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlterar.Image = global::ProjetoDesafio.Properties.Resources.icons8_editar_vários_64;
+            this.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAlterar.Location = new System.Drawing.Point(10, 14);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(137, 122);
+            this.btnAlterar.TabIndex = 13;
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAlterar.UseVisualStyleBackColor = true;
+            // 
+            // FrmListagemDeFornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -283,7 +273,8 @@
             this.Controls.Add(this.gpLista);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnAlterar);
-            this.Name = "FrmListarFornecedor";
+            this.Name = "FrmListagemDeFornecedor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listar Fornecedor";
             this.gpLista.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtListaFornecedor)).EndInit();
