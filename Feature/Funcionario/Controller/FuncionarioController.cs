@@ -67,6 +67,7 @@ namespace ProjetoDesafio.Feature.Funcionario.Controller
 
         public IEnumerable<CargoModel> ListarCargos() =>
             new CargoController().Listar();
+
         public IEnumerable<FuncionarioModel> Listar(FuncionarioFiltroModel filtro)
         {
             try

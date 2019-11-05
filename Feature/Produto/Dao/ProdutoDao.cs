@@ -32,8 +32,8 @@ namespace ProjetoDesafio.Feature.Produto.Dao
                 cmd.CommandText = commandText.ToString();
 
                 cmd.Parameters.Add("@NomeProduto", FbDbType.VarChar).Value = produto.NomeProduto;
-                cmd.Parameters.Add("@PrecoCompra", FbDbType.Double).Value = produto.PrecoCompra;
-                cmd.Parameters.Add("@PrecoVenda", FbDbType.Double).Value = produto.PrecoVenda;
+                cmd.Parameters.Add("@PrecoCompra", FbDbType.Numeric).Value = produto.PrecoCompra;
+                cmd.Parameters.Add("@PrecoVenda", FbDbType.Numeric).Value = produto.PrecoVenda;
                 cmd.Parameters.Add("@QtdeEstoque", FbDbType.Integer).Value = produto.Qtde;
                 cmd.Parameters.Add("@Ativo", FbDbType.VarChar).Value = produto.Ativo;
                 cmd.Parameters.Add("@DataCadastro", FbDbType.Date).Value = produto.DataCadastro;

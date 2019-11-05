@@ -4,12 +4,8 @@ using System.Collections.Generic;
 using System.Data;
 using System.Text;
 using ProjetoDesafio.Feature.Cargo.Model;
-using ProjetoDesafio.Feature.Categoria.Model;
 using ProjetoDesafio.Feature.Endereco.Model;
-using ProjetoDesafio.Feature.Fornecedor.Model;
 using ProjetoDesafio.Feature.Funcionario.Model;
-using ProjetoDesafio.Feature.Marca.Model;
-using ProjetoDesafio.Feature.Produto.Model;
 
 namespace ProjetoDesafio.Feature.Funcionario.Dao
 {
@@ -41,6 +37,7 @@ namespace ProjetoDesafio.Feature.Funcionario.Dao
             var cmd = new FbCommand();
             try
             {
+                cmd.Connection = conexaoFirebird;
                 var sql = new StringBuilder();
                 sql.Append(@"Select * from Funcionario f inner join cargo as c on f.id_cargo = c.id_cargo
                             inner join pessoa as p on f.id_pessoa = p.id_pessoa
@@ -95,7 +92,7 @@ namespace ProjetoDesafio.Feature.Funcionario.Dao
                             Pais = dr["pais"].ToString()
                         },
                         UsuarioFuncionario = dr["usuario_funcionario"].ToString(),
-                        SenhaFuncionario = dr["senha_funcinario"].ToString()
+                        SenhaFuncionario = dr["senha_funcionario"].ToString()
                     });
 
                 return listaFuncionario;

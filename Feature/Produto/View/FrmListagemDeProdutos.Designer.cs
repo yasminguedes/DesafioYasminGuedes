@@ -29,8 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gpLista = new System.Windows.Forms.GroupBox();
             this.dtListaProdutos = new System.Windows.Forms.DataGridView();
+            this.txtPesquisar = new System.Windows.Forms.TextBox();
+            this.rdbProduto = new System.Windows.Forms.RadioButton();
+            this.rdbMarca = new System.Windows.Forms.RadioButton();
+            this.rdbCategoria = new System.Windows.Forms.RadioButton();
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnAlterar = new System.Windows.Forms.Button();
+            this.bdtListarProduto = new System.Windows.Forms.BindingSource(this.components);
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NomeProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Data = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,14 +53,6 @@
             this.Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fornecedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bdtListarProduto = new System.Windows.Forms.BindingSource(this.components);
-            this.txtPesquisar = new System.Windows.Forms.TextBox();
-            this.rdbProduto = new System.Windows.Forms.RadioButton();
-            this.rdbMarca = new System.Windows.Forms.RadioButton();
-            this.rdbCategoria = new System.Windows.Forms.RadioButton();
-            this.btnPesquisar = new System.Windows.Forms.Button();
-            this.btnExcluir = new System.Windows.Forms.Button();
-            this.btnAlterar = new System.Windows.Forms.Button();
             this.gpLista.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtListaProdutos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdtListarProduto)).BeginInit();
@@ -92,109 +94,6 @@
             this.dtListaProdutos.Size = new System.Drawing.Size(1380, 580);
             this.dtListaProdutos.TabIndex = 0;
             this.dtListaProdutos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DtListaProdutos_CellFormatting);
-            // 
-            // ID
-            // 
-            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ID.DataPropertyName = "IdProduto";
-            this.ID.FillWeight = 30F;
-            this.ID.HeaderText = "ID";
-            this.ID.MinimumWidth = 6;
-            this.ID.Name = "ID";
-            this.ID.Width = 50;
-            // 
-            // NomeProduto
-            // 
-            this.NomeProduto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.NomeProduto.DataPropertyName = "NomeProduto";
-            this.NomeProduto.HeaderText = "Nome do Produto";
-            this.NomeProduto.MinimumWidth = 6;
-            this.NomeProduto.Name = "NomeProduto";
-            this.NomeProduto.Width = 200;
-            // 
-            // Data
-            // 
-            this.Data.DataPropertyName = "DataCadastro";
-            this.Data.HeaderText = "Data de Cadastro";
-            this.Data.MinimumWidth = 6;
-            this.Data.Name = "Data";
-            this.Data.Width = 125;
-            // 
-            // PrecoCompra
-            // 
-            this.PrecoCompra.DataPropertyName = "PrecoCompra";
-            this.PrecoCompra.HeaderText = "Preço de Compra";
-            this.PrecoCompra.MinimumWidth = 6;
-            this.PrecoCompra.Name = "PrecoCompra";
-            this.PrecoCompra.Width = 125;
-            // 
-            // PrecoVenda
-            // 
-            this.PrecoVenda.DataPropertyName = "PrecoVenda";
-            this.PrecoVenda.HeaderText = "Preço de Venda";
-            this.PrecoVenda.MinimumWidth = 6;
-            this.PrecoVenda.Name = "PrecoVenda";
-            this.PrecoVenda.Width = 125;
-            // 
-            // TipoProduto
-            // 
-            this.TipoProduto.DataPropertyName = "Tipo";
-            this.TipoProduto.HeaderText = "Tipo";
-            this.TipoProduto.MinimumWidth = 6;
-            this.TipoProduto.Name = "TipoProduto";
-            this.TipoProduto.Width = 125;
-            // 
-            // qtdeDataGridViewTextBoxColumn
-            // 
-            this.qtdeDataGridViewTextBoxColumn.DataPropertyName = "Qtde";
-            this.qtdeDataGridViewTextBoxColumn.HeaderText = "Qtde";
-            this.qtdeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.qtdeDataGridViewTextBoxColumn.Name = "qtdeDataGridViewTextBoxColumn";
-            this.qtdeDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // ativoDataGridViewTextBoxColumn
-            // 
-            this.ativoDataGridViewTextBoxColumn.DataPropertyName = "Ativo";
-            this.ativoDataGridViewTextBoxColumn.HeaderText = "Ativo";
-            this.ativoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.ativoDataGridViewTextBoxColumn.Name = "ativoDataGridViewTextBoxColumn";
-            this.ativoDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // dataCadastroDataGridViewTextBoxColumn
-            // 
-            this.dataCadastroDataGridViewTextBoxColumn.DataPropertyName = "DataCadastro";
-            this.dataCadastroDataGridViewTextBoxColumn.HeaderText = "DataCadastro";
-            this.dataCadastroDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dataCadastroDataGridViewTextBoxColumn.Name = "dataCadastroDataGridViewTextBoxColumn";
-            this.dataCadastroDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // Marca
-            // 
-            this.Marca.DataPropertyName = "Marca.NomeMarca";
-            this.Marca.HeaderText = "Marca";
-            this.Marca.MinimumWidth = 6;
-            this.Marca.Name = "Marca";
-            this.Marca.Width = 125;
-            // 
-            // Categoria
-            // 
-            this.Categoria.DataPropertyName = "Categoria.NomeCategoria";
-            this.Categoria.HeaderText = "Categoria";
-            this.Categoria.MinimumWidth = 6;
-            this.Categoria.Name = "Categoria";
-            this.Categoria.Width = 125;
-            // 
-            // Fornecedor
-            // 
-            this.Fornecedor.DataPropertyName = "Fornecedor.NomePessoa";
-            this.Fornecedor.HeaderText = "Fornecedor";
-            this.Fornecedor.MinimumWidth = 6;
-            this.Fornecedor.Name = "Fornecedor";
-            this.Fornecedor.Width = 125;
-            // 
-            // bdtListarProduto
-            // 
-            this.bdtListarProduto.DataSource = typeof(ProjetoDesafio.Feature.Produto.Model.ProdutoModel);
             // 
             // txtPesquisar
             // 
@@ -282,6 +181,115 @@
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAlterar.UseVisualStyleBackColor = true;
+            // 
+            // bdtListarProduto
+            // 
+            this.bdtListarProduto.DataSource = typeof(ProjetoDesafio.Feature.Produto.Model.ProdutoModel);
+            // 
+            // ID
+            // 
+            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ID.DataPropertyName = "IdProduto";
+            this.ID.FillWeight = 30F;
+            this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            this.ID.Width = 50;
+            // 
+            // NomeProduto
+            // 
+            this.NomeProduto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.NomeProduto.DataPropertyName = "NomeProduto";
+            this.NomeProduto.HeaderText = "Nome do Produto";
+            this.NomeProduto.MinimumWidth = 6;
+            this.NomeProduto.Name = "NomeProduto";
+            this.NomeProduto.Width = 200;
+            // 
+            // Data
+            // 
+            this.Data.DataPropertyName = "DataCadastro";
+            this.Data.HeaderText = "Data de Cadastro";
+            this.Data.MinimumWidth = 6;
+            this.Data.Name = "Data";
+            this.Data.Width = 125;
+            // 
+            // PrecoCompra
+            // 
+            this.PrecoCompra.DataPropertyName = "PrecoCompra";
+            dataGridViewCellStyle1.Format = "C2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.PrecoCompra.DefaultCellStyle = dataGridViewCellStyle1;
+            this.PrecoCompra.HeaderText = "Preço de Compra";
+            this.PrecoCompra.MinimumWidth = 6;
+            this.PrecoCompra.Name = "PrecoCompra";
+            this.PrecoCompra.Width = 125;
+            // 
+            // PrecoVenda
+            // 
+            this.PrecoVenda.DataPropertyName = "PrecoVenda";
+            dataGridViewCellStyle2.Format = "C2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.PrecoVenda.DefaultCellStyle = dataGridViewCellStyle2;
+            this.PrecoVenda.HeaderText = "Preço de Venda";
+            this.PrecoVenda.MinimumWidth = 6;
+            this.PrecoVenda.Name = "PrecoVenda";
+            this.PrecoVenda.Width = 125;
+            // 
+            // TipoProduto
+            // 
+            this.TipoProduto.DataPropertyName = "Tipo";
+            this.TipoProduto.HeaderText = "Tipo";
+            this.TipoProduto.MinimumWidth = 6;
+            this.TipoProduto.Name = "TipoProduto";
+            this.TipoProduto.Width = 125;
+            // 
+            // qtdeDataGridViewTextBoxColumn
+            // 
+            this.qtdeDataGridViewTextBoxColumn.DataPropertyName = "Qtde";
+            this.qtdeDataGridViewTextBoxColumn.HeaderText = "Qtde";
+            this.qtdeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.qtdeDataGridViewTextBoxColumn.Name = "qtdeDataGridViewTextBoxColumn";
+            this.qtdeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // ativoDataGridViewTextBoxColumn
+            // 
+            this.ativoDataGridViewTextBoxColumn.DataPropertyName = "Ativo";
+            this.ativoDataGridViewTextBoxColumn.HeaderText = "Ativo";
+            this.ativoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.ativoDataGridViewTextBoxColumn.Name = "ativoDataGridViewTextBoxColumn";
+            this.ativoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // dataCadastroDataGridViewTextBoxColumn
+            // 
+            this.dataCadastroDataGridViewTextBoxColumn.DataPropertyName = "DataCadastro";
+            this.dataCadastroDataGridViewTextBoxColumn.HeaderText = "DataCadastro";
+            this.dataCadastroDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dataCadastroDataGridViewTextBoxColumn.Name = "dataCadastroDataGridViewTextBoxColumn";
+            this.dataCadastroDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // Marca
+            // 
+            this.Marca.DataPropertyName = "Marca.NomeMarca";
+            this.Marca.HeaderText = "Marca";
+            this.Marca.MinimumWidth = 6;
+            this.Marca.Name = "Marca";
+            this.Marca.Width = 125;
+            // 
+            // Categoria
+            // 
+            this.Categoria.DataPropertyName = "Categoria.NomeCategoria";
+            this.Categoria.HeaderText = "Categoria";
+            this.Categoria.MinimumWidth = 6;
+            this.Categoria.Name = "Categoria";
+            this.Categoria.Width = 125;
+            // 
+            // Fornecedor
+            // 
+            this.Fornecedor.DataPropertyName = "Fornecedor.NomePessoa";
+            this.Fornecedor.HeaderText = "Fornecedor";
+            this.Fornecedor.MinimumWidth = 6;
+            this.Fornecedor.Name = "Fornecedor";
+            this.Fornecedor.Width = 125;
             // 
             // FrmListagemDeProdutos
             // 

@@ -275,6 +275,7 @@
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\ProjetoDesafio.Feature.Fornecedor.Model.FornecedorModel.datasource" />
+    <None Include="Properties\DataSources\ProjetoDesafio.Feature.Funcionario.Model.FuncionarioModel.datasource" />
     <None Include="Properties\DataSources\ProjetoDesafio.Feature.Produto.Model.ProdutoModel.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

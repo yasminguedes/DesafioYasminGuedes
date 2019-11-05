@@ -155,6 +155,10 @@ namespace ProjetoDesafio.Feature.Funcionario.View
                 cmbCidade.Items.Add("Porto Seguro");
             }
         }
+
+        private void btnListar_Click(object sender, EventArgs e) =>
+            new FrmListagemDeFuncionarios().Show();
+
     }
 }
 

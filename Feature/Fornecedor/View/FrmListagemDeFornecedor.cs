@@ -26,7 +26,7 @@ namespace ProjetoDesafio.Feature.Fornecedor.View
                 RazaoSocial = txtPesquisar.Text,
                 Representante = txtPesquisar.Text,
                 PesquisarPorNomeFantasia = rdbNomeFantasia.Checked,
-                PesquisarPorRazaoSocial = rdbNomeFantasia.Checked
+                PesquisarPorRazaoSocial = rdbRazaoSocial.Checked
             };
         private void DtListFornecedor_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e) =>
             e.Value = Propriedades.BuscaPropriedadesComPonto(dtListaFornecedor, e);

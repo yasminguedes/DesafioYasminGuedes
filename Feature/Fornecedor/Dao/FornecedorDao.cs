@@ -43,7 +43,7 @@ namespace ProjetoDesafio.Feature.Fornecedor.Dao
                     if (filtro.PesquisarPorNomeFantasia)
                     {
                         sql.Append(" WHERE Upper(p.nome_pessoa) LIKE Upper(@NomePessoa)");
-                        cmd.Parameters.Add("@NomeProduto", FbDbType.VarChar).Value = $"{filtro.NomePessoa}%";
+                        cmd.Parameters.Add("@NomePessoa", FbDbType.VarChar).Value = $"{filtro.NomePessoa}%";
                     }
                     else if (filtro.PesquisarPorRazaoSocial)
                     {

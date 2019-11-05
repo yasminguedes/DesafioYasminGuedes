@@ -23,7 +23,7 @@ namespace ProjetoDesafio.Feature.Produto.View
         }
 
         private ProdutoFiltroModel Filtrar() =>
-            new ProdutoFiltroModel()
+            new ProdutoFiltroModel
             {
                 NomeProduto = txtPesquisar.Text,
                 Marca = {NomeMarca = txtPesquisar.Text},
