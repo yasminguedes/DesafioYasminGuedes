@@ -93,7 +93,7 @@
             this.txtPesquisaProdutos.Name = "txtPesquisaProdutos";
             this.txtPesquisaProdutos.Size = new System.Drawing.Size(420, 30);
             this.txtPesquisaProdutos.TabIndex = 15;
-            this.txtPesquisaProdutos.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPesquisaProdutos_KeyDown);
+            this.txtPesquisaProdutos.TextChanged += new System.EventHandler(this.txtPesquisaProdutos_TextChanged);
             // 
             // lstProdutos
             // 

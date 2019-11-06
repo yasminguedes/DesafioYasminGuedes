@@ -16,6 +16,7 @@ namespace ProjetoDesafio.Feature.Produto.Model
         public  string Tipo { get; set; }
         public string Ativo { get; set; }
         public DateTime DataCadastro { get; set; }
+        public DateTime DataValidade { get; set; }
         public MarcaModel Marca { get; set; }
         public CategoriaModel Categoria { get; set; }
         public FornecedorModel Fornecedor { get; set; }

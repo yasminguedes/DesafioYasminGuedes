@@ -28,34 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.gpPromocoes = new System.Windows.Forms.GroupBox();
+            this.btnNovo = new System.Windows.Forms.Button();
             this.gpPromocoesCadastradas = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NomePromocao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnNovo = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
+            this.Validade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gpPromocoes.SuspendLayout();
             this.gpPromocoesCadastradas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.AccessibleDescription = "Cancelar";
-            this.btnCancelar.AccessibleName = "Cancelar";
-            this.btnCancelar.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btnCancelar.Location = new System.Drawing.Point(36, 601);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(221, 54);
-            this.btnCancelar.TabIndex = 15;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // gpPromocoes
             // 
@@ -65,17 +52,32 @@
             this.gpPromocoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpPromocoes.Location = new System.Drawing.Point(36, 39);
             this.gpPromocoes.Name = "gpPromocoes";
-            this.gpPromocoes.Size = new System.Drawing.Size(761, 541);
+            this.gpPromocoes.Size = new System.Drawing.Size(1340, 546);
             this.gpPromocoes.TabIndex = 16;
             this.gpPromocoes.TabStop = false;
             this.gpPromocoes.Text = "Promoções Cadastradas";
             // 
+            // btnNovo
+            // 
+            this.btnNovo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNovo.Image = global::ProjetoDesafio.Properties.Resources.icons8_adicionar_arquivo_32;
+            this.btnNovo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnNovo.Location = new System.Drawing.Point(1193, 55);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(90, 73);
+            this.btnNovo.TabIndex = 1;
+            this.btnNovo.Text = "Novo";
+            this.btnNovo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.BtnNovo_Click);
+            // 
             // gpPromocoesCadastradas
             // 
             this.gpPromocoesCadastradas.Controls.Add(this.dataGridView1);
+            this.gpPromocoesCadastradas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpPromocoesCadastradas.Location = new System.Drawing.Point(22, 134);
             this.gpPromocoesCadastradas.Name = "gpPromocoesCadastradas";
-            this.gpPromocoesCadastradas.Size = new System.Drawing.Size(714, 380);
+            this.gpPromocoesCadastradas.Size = new System.Drawing.Size(1296, 389);
             this.gpPromocoesCadastradas.TabIndex = 17;
             this.gpPromocoesCadastradas.TabStop = false;
             // 
@@ -83,22 +85,52 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Codigo,
             this.NomePromocao,
+            this.Descricao,
             this.Tipo,
-            this.Status});
-            this.dataGridView1.Location = new System.Drawing.Point(0, 20);
+            this.Status,
+            this.Validade});
+            this.dataGridView1.Location = new System.Drawing.Point(6, 20);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(714, 360);
+            this.dataGridView1.Size = new System.Drawing.Size(1284, 360);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.Image = global::ProjetoDesafio.Properties.Resources.icons8_crie_um_novo_32;
+            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnEditar.Location = new System.Drawing.Point(1083, 55);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(90, 73);
+            this.btnEditar.TabIndex = 0;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEditar.UseVisualStyleBackColor = true;
+            // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Cod";
+            this.Codigo.MinimumWidth = 6;
+            this.Codigo.Name = "Codigo";
+            this.Codigo.Width = 125;
             // 
             // NomePromocao
             // 
-            this.NomePromocao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.NomePromocao.HeaderText = "Nome da Promoção";
             this.NomePromocao.MinimumWidth = 6;
             this.NomePromocao.Name = "NomePromocao";
+            this.NomePromocao.Width = 432;
+            // 
+            // Descricao
+            // 
+            this.Descricao.HeaderText = "Descrição";
+            this.Descricao.MinimumWidth = 6;
+            this.Descricao.Name = "Descricao";
+            this.Descricao.Width = 300;
             // 
             // Tipo
             // 
@@ -114,40 +146,19 @@
             this.Status.Name = "Status";
             this.Status.Width = 125;
             // 
-            // btnNovo
+            // Validade
             // 
-            this.btnNovo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNovo.Image = global::ProjetoDesafio.Properties.Resources.icons8_adicionar_arquivo_32;
-            this.btnNovo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnNovo.Location = new System.Drawing.Point(646, 37);
-            this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(90, 73);
-            this.btnNovo.TabIndex = 1;
-            this.btnNovo.Text = "Novo";
-            this.btnNovo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnNovo.UseVisualStyleBackColor = true;
-            this.btnNovo.Click += new System.EventHandler(this.BtnNovo_Click);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Image = global::ProjetoDesafio.Properties.Resources.icons8_crie_um_novo_32;
-            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEditar.Location = new System.Drawing.Point(536, 37);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(90, 73);
-            this.btnEditar.TabIndex = 0;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnEditar.UseVisualStyleBackColor = true;
+            this.Validade.HeaderText = "Validade";
+            this.Validade.MinimumWidth = 6;
+            this.Validade.Name = "Validade";
+            this.Validade.Width = 125;
             // 
             // FrmPromocao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(852, 723);
+            this.ClientSize = new System.Drawing.Size(1401, 614);
             this.Controls.Add(this.gpPromocoes);
-            this.Controls.Add(this.btnCancelar);
             this.MaximizeBox = false;
             this.Name = "FrmPromocao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -160,14 +171,16 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.GroupBox gpPromocoes;
         private System.Windows.Forms.Button btnNovo;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.GroupBox gpPromocoesCadastradas;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn NomePromocao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descricao;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tipo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Validade;
     }
 }

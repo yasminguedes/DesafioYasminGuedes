@@ -35,6 +35,8 @@ namespace ProjetoDesafio.Feature.Pedido.View
             txtValor.Enabled = habilitarCampos;
             dtgItens.Enabled = habilitarCampos;
             nrQtde.Enabled = habilitarCampos;
+            txtPesquisaCliente.Enabled = habilitarCampos;
+            txtPesquisaProdutos.Enabled = habilitarCampos;
         }
 
         private void BtnCadastrar_Click(object sender, EventArgs e)
@@ -131,11 +133,10 @@ namespace ProjetoDesafio.Feature.Pedido.View
             lstProdutos.DataSource = PreencherLista()
                 .Where(p => p.NomeProduto.ToLower().Contains(txtPesquisaProdutos.Text.ToLower())).ToList();
         }
-
-        private void txtPesquisaProdutos_KeyDown(object sender, KeyEventArgs e)
+        
+        private void txtPesquisaProdutos_TextChanged(object sender, EventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
-                BtnPesquisaProduto_Click(null,null);
+            BtnPesquisaProduto_Click(null, null);
         }
     }
 }

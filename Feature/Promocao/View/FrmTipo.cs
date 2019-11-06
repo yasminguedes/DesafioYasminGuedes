@@ -3,15 +3,16 @@ using System.Windows.Forms;
 
 namespace ProjetoDesafio.Feature.Promocao.View
 {
-    public partial class FrmPromocao : Form
+    public partial class FrmTipo : Form
     {
-        public FrmPromocao()
+        public FrmTipo()
         {
             InitializeComponent();
         }
-        private void BtnNovo_Click(object sender, EventArgs e)
+
+        private void BtnProximo_Click(object sender, EventArgs e)
         {
-            new FrmTipo().Show();
+            new FrmInsereProdutosPromocao().Show();
         }
     }
 }

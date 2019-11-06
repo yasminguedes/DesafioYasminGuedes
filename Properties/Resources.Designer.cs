@@ -163,6 +163,16 @@ namespace ProjetoDesafio.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_avançar_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-avançar-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_categoria_64__1_ {
             get {
                 object obj = ResourceManager.GetObject("icons8-categoria-64 (1)", resourceCulture);
@@ -186,6 +196,16 @@ namespace ProjetoDesafio.Properties {
         internal static System.Drawing.Bitmap icons8_editar_vários_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-editar-vários-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_excluir_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-excluir-32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -303,9 +323,29 @@ namespace ProjetoDesafio.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_selecionado_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-selecionado-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_solicitar_dinheiro_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-solicitar-dinheiro-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_subtração_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-subtração-32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

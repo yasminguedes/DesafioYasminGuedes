@@ -10,7 +10,6 @@ using ProjetoDesafio.Feature.Marca.View;
 using ProjetoDesafio.Feature.Pedido.View;
 using ProjetoDesafio.Feature.Produto.View;
 using ProjetoDesafio.Feature.Promocao.View;
-
 namespace ProjetoDesafio.Feature.Menu
 {
     public partial class FrmMenu : Form
@@ -52,7 +51,7 @@ namespace ProjetoDesafio.Feature.Menu
 
         private void BtnPromocao_Click(object sender, EventArgs e)
         {
-            new  FrmPromocao().Show();
+            new FrmPromocao().Show(); 
         }
 
         private void BtnPedido_Click(object sender, EventArgs e)
