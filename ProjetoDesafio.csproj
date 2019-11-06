@@ -313,6 +313,7 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\ProjetoDesafio.Feature.Cargo.Model.CargoModel.datasource" />
     <None Include="Properties\DataSources\ProjetoDesafio.Feature.Categoria.Model.CategoriaModel.datasource" />
+    <None Include="Properties\DataSources\ProjetoDesafio.Feature.Cliente.Model.ClienteFiltroModel.datasource" />
     <None Include="Properties\DataSources\ProjetoDesafio.Feature.Cliente.Model.ClienteModel.datasource" />
     <None Include="Properties\DataSources\ProjetoDesafio.Feature.Fornecedor.Model.FornecedorModel.datasource" />
     <None Include="Properties\DataSources\ProjetoDesafio.Feature.Funcionario.Model.FuncionarioModel.datasource" />

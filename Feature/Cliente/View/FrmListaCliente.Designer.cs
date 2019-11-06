@@ -29,34 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dtListaCliente = new System.Windows.Forms.DataGridView();
-            this.clienteModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnConfirmar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.clienteModelBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.clienteModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nomePessoaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefonePessoaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dtListaCliente)).BeginInit();
+            this.idClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtListaCliente = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteModelBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteModelBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtListaCliente)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dtListaCliente
-            // 
-            this.dtListaCliente.AutoGenerateColumns = false;
-            this.dtListaCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtListaCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nomePessoaDataGridViewTextBoxColumn,
-            this.telefonePessoaDataGridViewTextBoxColumn});
-            this.dtListaCliente.DataSource = this.clienteModelBindingSource;
-            this.dtListaCliente.Location = new System.Drawing.Point(35, 51);
-            this.dtListaCliente.Name = "dtListaCliente";
-            this.dtListaCliente.RowHeadersWidth = 51;
-            this.dtListaCliente.RowTemplate.Height = 24;
-            this.dtListaCliente.Size = new System.Drawing.Size(532, 541);
-            this.dtListaCliente.TabIndex = 0;
-            // 
-            // clienteModelBindingSource
-            // 
-            this.clienteModelBindingSource.DataSource = typeof(ProjetoDesafio.Feature.Cliente.Model.ClienteModel);
             // 
             // btnConfirmar
             // 
@@ -85,6 +68,14 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             // 
+            // clienteModelBindingSource1
+            // 
+            this.clienteModelBindingSource1.DataSource = typeof(ProjetoDesafio.Feature.Cliente.Model.ClienteModel);
+            // 
+            // clienteModelBindingSource
+            // 
+            this.clienteModelBindingSource.DataSource = typeof(ProjetoDesafio.Feature.Cliente.Model.ClienteModel);
+            // 
             // nomePessoaDataGridViewTextBoxColumn
             // 
             this.nomePessoaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -93,39 +84,56 @@
             this.nomePessoaDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nomePessoaDataGridViewTextBoxColumn.Name = "nomePessoaDataGridViewTextBoxColumn";
             // 
-            // telefonePessoaDataGridViewTextBoxColumn
+            // idClienteDataGridViewTextBoxColumn
             // 
-            this.telefonePessoaDataGridViewTextBoxColumn.DataPropertyName = "TelefonePessoa";
-            this.telefonePessoaDataGridViewTextBoxColumn.HeaderText = "Telefone";
-            this.telefonePessoaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.telefonePessoaDataGridViewTextBoxColumn.Name = "telefonePessoaDataGridViewTextBoxColumn";
-            this.telefonePessoaDataGridViewTextBoxColumn.Width = 125;
+            this.idClienteDataGridViewTextBoxColumn.DataPropertyName = "IdCliente";
+            this.idClienteDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.idClienteDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idClienteDataGridViewTextBoxColumn.Name = "idClienteDataGridViewTextBoxColumn";
+            this.idClienteDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // dtListaCliente
+            // 
+            this.dtListaCliente.AutoGenerateColumns = false;
+            this.dtListaCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtListaCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idClienteDataGridViewTextBoxColumn,
+            this.nomePessoaDataGridViewTextBoxColumn});
+            this.dtListaCliente.DataSource = this.clienteModelBindingSource1;
+            this.dtListaCliente.Location = new System.Drawing.Point(66, 77);
+            this.dtListaCliente.Name = "dtListaCliente";
+            this.dtListaCliente.RowHeadersWidth = 51;
+            this.dtListaCliente.RowTemplate.Height = 24;
+            this.dtListaCliente.Size = new System.Drawing.Size(463, 484);
+            this.dtListaCliente.TabIndex = 3;
             // 
             // FrmSelecionaCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(607, 690);
+            this.Controls.Add(this.dtListaCliente);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnConfirmar);
-            this.Controls.Add(this.dtListaCliente);
             this.MinimizeBox = false;
             this.Name = "FrmSelecionaCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmSelecionarClientes";
-            ((System.ComponentModel.ISupportInitialize)(this.dtListaCliente)).EndInit();
+            this.Load += new System.EventHandler(this.FrmSelecionaCliente_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.clienteModelBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteModelBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtListaCliente)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dtListaCliente;
         private System.Windows.Forms.BindingSource clienteModelBindingSource;
         private System.Windows.Forms.Button btnConfirmar;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.BindingSource clienteModelBindingSource1;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomePessoaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn telefonePessoaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idClienteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridView dtListaCliente;
     }
 }

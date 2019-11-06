@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 using System.Windows.Forms;
-using ProjetoDesafio.Feature.Cliente.Model;
 using ProjetoDesafio.Feature.Cliente.View;
 using ProjetoDesafio.Feature.Produto.Model;
 
@@ -44,7 +44,14 @@ namespace ProjetoDesafio.Feature.Pedido.View
 
         private void FrmPedido_Load(object sender, EventArgs e)
         {
-            var lista = new List<object>
+            var lista = PreencherLista();
+            lstProdutos.DisplayMember = "NomeProduto";
+            lstProdutos.DataSource = lista;
+        }
+
+        private static List<ProdutoModel> PreencherLista()
+        {
+            return new List<ProdutoModel>
             {
                 new ProdutoModel
                 {
@@ -62,10 +69,6 @@ namespace ProjetoDesafio.Feature.Pedido.View
                     PrecoVenda = 30.00
                 }
             };
-            lstProdutos.DisplayMember = "NomeProduto";
-            lstProdutos.Items.Add(lista[0]);
-            lstProdutos.Items.Add(lista[1]);
-            lstProdutos.Items.Add(lista[2]);
         }
 
         private void BtnCancelar_Click(object sender, EventArgs e)
@@ -114,13 +117,25 @@ namespace ProjetoDesafio.Feature.Pedido.View
         private void TxtPesquisaCliente_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
-                BtnCliente_Click(null,null);
+                BtnCliente_Click(null, null);
         }
 
         private void BtnCliente_Click(object sender, EventArgs e)
         {
             var cliente = new FrmSelecionaCliente().RetornarClienteSelecionado();
             txtPesquisaCliente.Text = cliente.NomePessoa;
+        }
+
+        private void BtnPesquisaProduto_Click(object sender, EventArgs e)
+        {
+            lstProdutos.DataSource = PreencherLista()
+                .Where(p => p.NomeProduto.ToLower().Contains(txtPesquisaProdutos.Text.ToLower())).ToList();
+        }
+
+        private void txtPesquisaProdutos_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+                BtnPesquisaProduto_Click(null,null);
         }
     }
 }

@@ -84,6 +84,7 @@
             this.btnPesquisaProduto.Size = new System.Drawing.Size(34, 29);
             this.btnPesquisaProduto.TabIndex = 16;
             this.btnPesquisaProduto.UseVisualStyleBackColor = true;
+            this.btnPesquisaProduto.Click += new System.EventHandler(this.BtnPesquisaProduto_Click);
             // 
             // txtPesquisaProdutos
             // 
@@ -92,6 +93,7 @@
             this.txtPesquisaProdutos.Name = "txtPesquisaProdutos";
             this.txtPesquisaProdutos.Size = new System.Drawing.Size(420, 30);
             this.txtPesquisaProdutos.TabIndex = 15;
+            this.txtPesquisaProdutos.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPesquisaProdutos_KeyDown);
             // 
             // lstProdutos
             // 
