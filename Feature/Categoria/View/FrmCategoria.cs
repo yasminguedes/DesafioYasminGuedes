@@ -30,12 +30,24 @@ namespace ProjetoDesafio.Feature.Categoria.View
         
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtCategoria.Text.Trim())) return;
+
             _categoriaModel.NomeCategoria = txtCategoria.Text;
 
-            _categoriaController.Cadastrar(_categoriaModel);
-            LimparCampos();
+            if(_categoriaController.Cadastrar(_categoriaModel))
+                LimparCampos();
         }
 
+        //private bool ValidarCampo()
+        //{
+        //    if (!string.IsNullOrWhiteSpace(txtCategoria.Text.Trim())) return true;
+        //    MessageBox.Show("Campo 'Categoria' é obrigatório");
+        //    return false;
+        //}
+
         private void BtnCancelar_Click(object sender, EventArgs e) => Close();
+
+        private void BtnListar_Click(object sender, EventArgs e) => new FrmListagemDeCategoria().Show();
+
     }
 }

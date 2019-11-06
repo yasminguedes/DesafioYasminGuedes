@@ -30,6 +30,7 @@ namespace ProjetoDesafio.Feature.Cargo.View
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtCargo.Text.Trim())) return;
             _cargoModel.NomeCargo = txtCargo.Text;
 
             if (_cargoController.Cadastrar(_cargoModel))
@@ -37,5 +38,9 @@ namespace ProjetoDesafio.Feature.Cargo.View
         }
 
         private void BtnCancelar_Click(object sender, EventArgs e) => Close();
+
+        private void BtnListar_Click(object sender, EventArgs e) =>
+            new FrmListagemDeCargo().Show();
+
     }
 }

@@ -76,6 +76,12 @@
     <Compile Include="Feature\Cargo\View\FrmCargo.Designer.cs">
       <DependentUpon>FrmCargo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Feature\Cargo\View\FrmListagemDeCargo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Feature\Cargo\View\FrmListagemDeCargo.Designer.cs">
+      <DependentUpon>FrmListagemDeCargo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Feature\Categoria\Controller\CategoriaController.cs" />
     <Compile Include="Feature\Categoria\Dao\CategoriaDao.cs" />
     <Compile Include="Feature\Categoria\View\FrmCategoria.cs">
@@ -84,6 +90,12 @@
     <Compile Include="Feature\Categoria\View\FrmCategoria.Designer.cs">
       <DependentUpon>FrmCategoria.cs</DependentUpon>
     </Compile>
+    <Compile Include="Feature\Categoria\View\FrmListagemDeCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Feature\Categoria\View\FrmListagemDeCategoria.Designer.cs">
+      <DependentUpon>FrmListagemDeCategoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="Feature\Cliente\Controller\ClienteController.cs" />
     <Compile Include="Feature\Cliente\Dao\ClienteDao.cs" />
     <Compile Include="Feature\Cliente\View\FrmCliente.cs">
@@ -91,6 +103,12 @@
     </Compile>
     <Compile Include="Feature\Cliente\View\FrmCliente.Designer.cs">
       <DependentUpon>FrmCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Feature\Cliente\View\FrmListagemDeMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Feature\Cliente\View\FrmListagemDeMarca.Designer.cs">
+      <DependentUpon>FrmListagemDeMarca.cs</DependentUpon>
     </Compile>
     <Compile Include="Feature\Endereco\Dao\EnderecoDao.cs" />
     <Compile Include="Feature\Fornecedor\Controller\FornecedorController.cs" />
@@ -217,11 +235,20 @@
     <EmbeddedResource Include="Feature\Cargo\View\FrmCargo.resx">
       <DependentUpon>FrmCargo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Feature\Cargo\View\FrmListagemDeCargo.resx">
+      <DependentUpon>FrmListagemDeCargo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Feature\Categoria\View\FrmCategoria.resx">
       <DependentUpon>FrmCategoria.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Feature\Categoria\View\FrmListagemDeCategoria.resx">
+      <DependentUpon>FrmListagemDeCategoria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Feature\Cliente\View\FrmCliente.resx">
       <DependentUpon>FrmCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Feature\Cliente\View\FrmListagemDeMarca.resx">
+      <DependentUpon>FrmListagemDeMarca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Feature\Fornecedor\View\FrmListagemDeFornecedor.resx">
       <DependentUpon>FrmListagemDeFornecedor.cs</DependentUpon>
@@ -274,8 +301,11 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\ProjetoDesafio.Feature.Cargo.Model.CargoModel.datasource" />
+    <None Include="Properties\DataSources\ProjetoDesafio.Feature.Categoria.Model.CategoriaModel.datasource" />
     <None Include="Properties\DataSources\ProjetoDesafio.Feature.Fornecedor.Model.FornecedorModel.datasource" />
     <None Include="Properties\DataSources\ProjetoDesafio.Feature.Funcionario.Model.FuncionarioModel.datasource" />
+    <None Include="Properties\DataSources\ProjetoDesafio.Feature.Marca.Model.MarcaModel.datasource" />
     <None Include="Properties\DataSources\ProjetoDesafio.Feature.Produto.Model.ProdutoModel.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

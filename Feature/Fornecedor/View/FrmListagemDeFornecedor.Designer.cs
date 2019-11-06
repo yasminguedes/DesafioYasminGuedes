@@ -29,12 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmListagemDeFornecedor));
             this.rdbRazaoSocial = new System.Windows.Forms.RadioButton();
             this.rdbRepresentante = new System.Windows.Forms.RadioButton();
             this.rdbNomeFantasia = new System.Windows.Forms.RadioButton();
             this.txtPesquisar = new System.Windows.Forms.TextBox();
-            this.btnPesquisar = new System.Windows.Forms.Button();
             this.gpLista = new System.Windows.Forms.GroupBox();
             this.dtListaFornecedor = new System.Windows.Forms.DataGridView();
             this.idFornecedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,16 +48,18 @@
             this.fornecedorModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gpLista.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtListaFornecedor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fornecedorModelBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // rdbRazaoSocial
             // 
             this.rdbRazaoSocial.AutoSize = true;
             this.rdbRazaoSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbRazaoSocial.Location = new System.Drawing.Point(784, 75);
+            this.rdbRazaoSocial.Location = new System.Drawing.Point(776, 40);
             this.rdbRazaoSocial.Name = "rdbRazaoSocial";
             this.rdbRazaoSocial.Size = new System.Drawing.Size(148, 29);
             this.rdbRazaoSocial.TabIndex = 11;
@@ -71,7 +71,7 @@
             // 
             this.rdbRepresentante.AutoSize = true;
             this.rdbRepresentante.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbRepresentante.Location = new System.Drawing.Point(610, 75);
+            this.rdbRepresentante.Location = new System.Drawing.Point(602, 40);
             this.rdbRepresentante.Name = "rdbRepresentante";
             this.rdbRepresentante.Size = new System.Drawing.Size(160, 29);
             this.rdbRepresentante.TabIndex = 10;
@@ -83,7 +83,7 @@
             // 
             this.rdbNomeFantasia.AutoSize = true;
             this.rdbNomeFantasia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbNomeFantasia.Location = new System.Drawing.Point(427, 75);
+            this.rdbNomeFantasia.Location = new System.Drawing.Point(419, 40);
             this.rdbNomeFantasia.Name = "rdbNomeFantasia";
             this.rdbNomeFantasia.Size = new System.Drawing.Size(165, 29);
             this.rdbNomeFantasia.TabIndex = 9;
@@ -94,21 +94,11 @@
             // txtPesquisar
             // 
             this.txtPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPesquisar.Location = new System.Drawing.Point(427, 18);
+            this.txtPesquisar.Location = new System.Drawing.Point(428, 90);
             this.txtPesquisar.Name = "txtPesquisar";
             this.txtPesquisar.Size = new System.Drawing.Size(505, 34);
             this.txtPesquisar.TabIndex = 8;
-            this.txtPesquisar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtPesquisar_KeyDown);
-            // 
-            // btnPesquisar
-            // 
-            this.btnPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisar.Image")));
-            this.btnPesquisar.Location = new System.Drawing.Point(375, 14);
-            this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(46, 43);
-            this.btnPesquisar.TabIndex = 12;
-            this.btnPesquisar.UseVisualStyleBackColor = true;
-            this.btnPesquisar.Click += new System.EventHandler(this.BtnPesquisar_Click);
+            this.txtPesquisar.TextChanged += new System.EventHandler(this.TxtPesquisar_TextChanged);
             // 
             // gpLista
             // 
@@ -260,16 +250,26 @@
             this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAlterar.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProjetoDesafio.Properties.Resources.icons8_pesquisar_32;
+            this.pictureBox1.Location = new System.Drawing.Point(373, 88);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 40);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
+            // 
             // FrmListagemDeFornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1409, 825);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.rdbRazaoSocial);
             this.Controls.Add(this.rdbRepresentante);
             this.Controls.Add(this.rdbNomeFantasia);
             this.Controls.Add(this.txtPesquisar);
-            this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.gpLista);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnAlterar);
@@ -279,6 +279,7 @@
             this.gpLista.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtListaFornecedor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fornecedorModelBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -290,7 +291,6 @@
         private System.Windows.Forms.RadioButton rdbRepresentante;
         private System.Windows.Forms.RadioButton rdbNomeFantasia;
         private System.Windows.Forms.TextBox txtPesquisar;
-        private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.GroupBox gpLista;
         private System.Windows.Forms.DataGridView dtListaFornecedor;
         private System.Windows.Forms.Button btnExcluir;
@@ -307,5 +307,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn celularRepresentanteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailRepresentanteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn enderecoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

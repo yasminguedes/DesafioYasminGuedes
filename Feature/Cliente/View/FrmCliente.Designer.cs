@@ -117,6 +117,7 @@
             // 
             this.txtProfissao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProfissao.Location = new System.Drawing.Point(104, 56);
+            this.txtProfissao.MaxLength = 100;
             this.txtProfissao.Name = "txtProfissao";
             this.txtProfissao.Size = new System.Drawing.Size(551, 30);
             this.txtProfissao.TabIndex = 8;
@@ -153,6 +154,7 @@
             this.txtEmail.AccessibleName = "Email";
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(103, 61);
+            this.txtEmail.MaxLength = 100;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(553, 30);
             this.txtEmail.TabIndex = 0;
@@ -228,6 +230,7 @@
             // 
             this.txtBairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBairro.Location = new System.Drawing.Point(114, 235);
+            this.txtBairro.MaxLength = 100;
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(532, 30);
             this.txtBairro.TabIndex = 5;
@@ -250,6 +253,7 @@
             this.txtCep.AccessibleName = "CEP";
             this.txtCep.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCep.Location = new System.Drawing.Point(114, 59);
+            this.txtCep.MaxLength = 20;
             this.txtCep.Name = "txtCep";
             this.txtCep.Size = new System.Drawing.Size(197, 30);
             this.txtCep.TabIndex = 0;
@@ -296,6 +300,7 @@
             this.txtRua.AccessibleName = "Rua";
             this.txtRua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRua.Location = new System.Drawing.Point(114, 120);
+            this.txtRua.MaxLength = 100;
             this.txtRua.Name = "txtRua";
             this.txtRua.Size = new System.Drawing.Size(532, 30);
             this.txtRua.TabIndex = 2;
@@ -316,6 +321,7 @@
             // 
             this.txtNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumero.Location = new System.Drawing.Point(114, 178);
+            this.txtNumero.MaxLength = 20;
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(142, 30);
             this.txtNumero.TabIndex = 3;
@@ -350,6 +356,7 @@
             this.txtComplemento.AccessibleName = "Complemento";
             this.txtComplemento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComplemento.Location = new System.Drawing.Point(451, 176);
+            this.txtComplemento.MaxLength = 50;
             this.txtComplemento.Name = "txtComplemento";
             this.txtComplemento.Size = new System.Drawing.Size(195, 30);
             this.txtComplemento.TabIndex = 4;
@@ -370,6 +377,7 @@
             // 
             this.txtPais.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPais.Location = new System.Drawing.Point(114, 349);
+            this.txtPais.MaxLength = 30;
             this.txtPais.Name = "txtPais";
             this.txtPais.Size = new System.Drawing.Size(532, 30);
             this.txtPais.TabIndex = 7;
@@ -410,6 +418,7 @@
             this.txtNome.AccessibleName = "Nome";
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.Location = new System.Drawing.Point(102, 59);
+            this.txtNome.MaxLength = 100;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(545, 30);
             this.txtNome.TabIndex = 0;

@@ -98,6 +98,7 @@ namespace ProjetoDesafio.Feature.Fornecedor.View
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
+            if(!ValidarCampos()) return;
             _fornecedorModel.NomePessoa = txtNome.Text;
             _fornecedorModel.Endereco.Cep = txtCep.Text;
             _fornecedorModel.Endereco.Rua = txtRua.Text;
@@ -144,6 +145,101 @@ namespace ProjetoDesafio.Feature.Fornecedor.View
         private void BtnListar_Click(object sender, EventArgs e)
         {
             new FrmListagemDeFornecedor().Show();
+        }
+
+        private bool ValidarCampos()
+        {
+            if (!string.IsNullOrWhiteSpace(txtNome.Text.Trim()))
+            {
+                MessageBox.Show(@"Campo 'Nome Fantasia' é obrigatório.");
+                return false;
+            }
+            if (!string.IsNullOrWhiteSpace(txtBairro.Text.Trim()))
+            {
+                MessageBox.Show(@"Campo 'Bairro' é obrigatório.");
+                return false;
+            }
+
+            if (!string.IsNullOrWhiteSpace(txtCep.Text.Trim()))
+            {
+                MessageBox.Show(@"Campo 'Cep' é obrigatório.");
+                return false;
+            }
+
+            if (!string.IsNullOrWhiteSpace(txtEmail.Text.Trim()))
+            {
+                MessageBox.Show(@"Campo 'Email' é obrigatório.");
+                return false;
+            }
+
+            if (!string.IsNullOrWhiteSpace(txtNumero.Text.Trim()))
+            {
+                MessageBox.Show(@"Campo 'Número' é obrigatório.");
+                return false;
+            }
+
+            if (!string.IsNullOrWhiteSpace(txtPais.Text.Trim()))
+            {
+                MessageBox.Show(@"Campo 'País' é obrigatório.");
+                return false;
+            }
+
+            if (!string.IsNullOrWhiteSpace(txtRazaoSocial.Text.Trim()))
+            {
+                MessageBox.Show(@"Campo 'Profissão' é obrigatório.");
+                return false;
+            }
+
+            if (!string.IsNullOrWhiteSpace(txtRua.Text.Trim()))
+            {
+                MessageBox.Show(@"Campo 'Rua' é obrigatório.");
+                return false;
+            }
+
+            if (!string.IsNullOrWhiteSpace(cmbEstado.Text.Trim()))
+            {
+                MessageBox.Show(@"Campo 'Estado' é obrigatório.");
+                return false;
+            }
+
+            if (!string.IsNullOrWhiteSpace(cmbCidade.Text.Trim()))
+            {
+                MessageBox.Show(@"Campo 'Cidade' é obrigatório.");
+                return false;
+            }
+
+            if (!string.IsNullOrWhiteSpace(mskCnpj.Text.Trim()))
+            {
+                MessageBox.Show(@"Campo 'Cnpj' é obrigatório.");
+                return false;
+            }
+
+            if (!string.IsNullOrWhiteSpace(mskIe.Text.Trim()))
+            {
+                MessageBox.Show(@"Campo 'IE' é obrigatório.");
+                return false;
+            }
+
+            if (!string.IsNullOrWhiteSpace(mskTelefone.Text.Trim()))
+            {
+                MessageBox.Show(@"Campo 'Telefone' é obrigatório.");
+                return false;
+            }
+
+            if (!string.IsNullOrWhiteSpace(txtEmailRepresentante.Text.Trim()))
+            {
+                MessageBox.Show(@"Campo 'Email Representante' é obrigatório.");
+                return false;
+            }
+            if (!string.IsNullOrWhiteSpace(txtRepresentante.Text.Trim()))
+            {
+                MessageBox.Show(@"Campo 'Representante' é obrigatório.");
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(mskCelular.Text.Trim())) return true;
+            MessageBox.Show(@"Campo 'Celular' é obrigatório.");
+            return false;
         }
     }
 }

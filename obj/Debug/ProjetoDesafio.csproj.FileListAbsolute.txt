@@ -32,3 +32,6 @@ C:\Users\gabri\Desktop\Desafio\DesafioYasminGuedes\obj\Debug\ProjetoDesafio.Feat
 C:\Users\gabri\Desktop\Desafio\DesafioYasminGuedes\obj\Debug\ProjetoDesafio.Feature.Fornecedor.View.FrmListagemDeFornecedor.resources
 C:\Users\gabri\Desktop\Desafio\DesafioYasminGuedes\obj\Debug\ProjetoDesafio.Feature.Funcionario.View.FrmListagemDeFuncionarios.resources
 C:\Users\gabri\Desktop\Desafio\DesafioYasminGuedes\obj\Debug\ProjetoDesafio.Feature.Promocao.View.TelaPromocao.FrmPromocao.resources
+C:\Users\gabri\Desktop\Desafio\DesafioYasminGuedes\obj\Debug\ProjetoDesafio.Feature.Cargo.View.FrmListagemDeCargo.resources
+C:\Users\gabri\Desktop\Desafio\DesafioYasminGuedes\obj\Debug\ProjetoDesafio.Feature.Categoria.View.FrmListagemDeCategoria.resources
+C:\Users\gabri\Desktop\Desafio\DesafioYasminGuedes\obj\Debug\ProjetoDesafio.Feature.Cliente.View.FrmListagemDeMarca.resources

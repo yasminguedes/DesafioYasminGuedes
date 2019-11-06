@@ -2,6 +2,7 @@
 using ProjetoDesafio.Feature.Marca.Model;
 using System;
 using System.Windows.Forms;
+using ProjetoDesafio.Feature.Cliente.View;
 
 namespace ProjetoDesafio.Feature.Marca.View
 {
@@ -34,14 +35,16 @@ namespace ProjetoDesafio.Feature.Marca.View
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtMarca.Text.Trim())) return;
             _marcaModel.NomeMarca = txtMarca.Text;
             if (_marcaController.Cadastrar(_marcaModel))
                 LimparCampos();
         }
 
-        private void BtnCancelar_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
+        private void BtnCancelar_Click(object sender, EventArgs e) => Close();
+
+        private void BtnListar_Click(object sender, EventArgs e) =>
+            new FrmListagemDeMarca().Show();
+
     }
 }

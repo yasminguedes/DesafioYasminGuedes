@@ -111,6 +111,7 @@ namespace ProjetoDesafio.Feature.Funcionario.View
         }
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
+            if (!ValidarCampos()) return;
             _funcionarioModel.NomePessoa = txtNome.Text;
             _funcionarioModel.Endereco.Cep = txtCep.Text;
             _funcionarioModel.Endereco.Rua = txtRua.Text;
@@ -131,7 +132,7 @@ namespace ProjetoDesafio.Feature.Funcionario.View
             _funcionarioModel.SenhaFuncionario = mskSenha.Text;
             _funcionarioModel.ConfirmarSenha = mskSenhaConfirmar.Text;
 
-            
+
             if (_funcionarioController.Cadastrar(_funcionarioModel))
                 LimparCampos();
         }
@@ -159,6 +160,93 @@ namespace ProjetoDesafio.Feature.Funcionario.View
         private void btnListar_Click(object sender, EventArgs e) =>
             new FrmListagemDeFuncionarios().Show();
 
+        private bool ValidarCampos()
+        {
+            if (!string.IsNullOrWhiteSpace(txtNome.Text.Trim()))
+            {
+                MessageBox.Show(@"Campo 'Nome' é obrigatório.");
+                return false;
+            }
+            if (!string.IsNullOrWhiteSpace(txtBairro.Text.Trim()))
+            {
+                MessageBox.Show(@"Campo 'Bairro' é obrigatório.");
+                return false;
+            }
+            if (!string.IsNullOrWhiteSpace(txtCep.Text.Trim()))
+            {
+                MessageBox.Show(@"Campo 'Cep' é obrigatório.");
+                return false;
+            }
+            if (!string.IsNullOrWhiteSpace(txtEmail.Text.Trim()))
+            {
+                MessageBox.Show(@"Campo 'Email' é obrigatório.");
+                return false;
+            }
+            if (!string.IsNullOrWhiteSpace(txtNumero.Text.Trim()))
+            {
+                MessageBox.Show(@"Campo 'Número' é obrigatório.");
+                return false;
+            }
+            if (!string.IsNullOrWhiteSpace(txtPais.Text.Trim()))
+            {
+                MessageBox.Show(@"Campo 'País' é obrigatório.");
+                return false;
+            }
+            if (!string.IsNullOrWhiteSpace(txtRua.Text.Trim()))
+            {
+                MessageBox.Show(@"Campo 'Rua' é obrigatório.");
+                return false;
+            }
+            if (!string.IsNullOrWhiteSpace(cmbSexo.Text.Trim()))
+            {
+                MessageBox.Show(@"Campo 'Sexo' é obrigatório.");
+                return false;
+            }
+            if (!string.IsNullOrWhiteSpace(cmbEstado.Text.Trim()))
+            {
+                MessageBox.Show(@"Campo 'Estado' é obrigatório.");
+                return false;
+            }
+            if (!string.IsNullOrWhiteSpace(cmbCidade.Text.Trim()))
+            {
+                MessageBox.Show(@"Campo 'Cidade' é obrigatório.");
+                return false;
+            }
+            if (!string.IsNullOrWhiteSpace(mskCpf.Text.Trim()))
+            {
+                MessageBox.Show(@"Campo 'CPF' é obrigatório.");
+                return false;
+            }
+            if (!string.IsNullOrWhiteSpace(mskRg.Text.Trim()))
+            {
+                MessageBox.Show(@"Campo 'RG' é obrigatório.");
+                return false;
+            }
+            if (!string.IsNullOrWhiteSpace(mskTelefone.Text.Trim()))
+            {
+                MessageBox.Show(@"Campo 'Telefone' é obrigatório.");
+                return false;
+            }
+            if (!string.IsNullOrWhiteSpace(dtNascimento.Text.Trim()))
+            {
+                MessageBox.Show(@"Campo 'Nascimento' é obrigatório.");
+                return false;
+            }
+            if (!string.IsNullOrWhiteSpace(txtUsuario.Text.Trim()))
+            {
+                MessageBox.Show(@"Campo 'Usuário' é obrigatório.");
+                return false;
+            }
+            if (!string.IsNullOrWhiteSpace(mskSenha.Text.Trim()))
+            {
+                MessageBox.Show(@"Campo 'Senha' é obrigatório.");
+                return false;
+            }
+            if (string.IsNullOrWhiteSpace(cmbCargo.Text.Trim())) return true;
+            MessageBox.Show(@"Campo 'Cargo' é obrigatório.");
+            return false;
+
+        }
     }
 }
 

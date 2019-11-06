@@ -44,6 +44,7 @@
             // 
             this.btnEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEstoque.Image = global::ProjetoDesafio.Properties.Resources.warehouse;
+            this.btnEstoque.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnEstoque.Location = new System.Drawing.Point(1095, 225);
             this.btnEstoque.Name = "btnEstoque";
             this.btnEstoque.Size = new System.Drawing.Size(229, 126);
@@ -56,6 +57,7 @@
             // 
             this.btnPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPedido.Image = global::ProjetoDesafio.Properties.Resources.icons8_solicitar_dinheiro_64;
+            this.btnPedido.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnPedido.Location = new System.Drawing.Point(836, 225);
             this.btnPedido.Name = "btnPedido";
             this.btnPedido.Size = new System.Drawing.Size(229, 126);
@@ -82,6 +84,7 @@
             // 
             this.btnProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProduto.Image = global::ProjetoDesafio.Properties.Resources.icons8_pacote_64__1_;
+            this.btnProduto.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnProduto.Location = new System.Drawing.Point(327, 225);
             this.btnProduto.Name = "btnProduto";
             this.btnProduto.Size = new System.Drawing.Size(229, 126);
@@ -95,6 +98,7 @@
             // 
             this.btnCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCategoria.Image = global::ProjetoDesafio.Properties.Resources.icons8_categoria_64__1_;
+            this.btnCategoria.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnCategoria.Location = new System.Drawing.Point(71, 225);
             this.btnCategoria.Name = "btnCategoria";
             this.btnCategoria.Size = new System.Drawing.Size(229, 126);
@@ -108,6 +112,7 @@
             // 
             this.btnMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMarca.Image = global::ProjetoDesafio.Properties.Resources.icons8_marca_registrada_64__1_;
+            this.btnMarca.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnMarca.Location = new System.Drawing.Point(1095, 67);
             this.btnMarca.Name = "btnMarca";
             this.btnMarca.Size = new System.Drawing.Size(229, 126);
@@ -121,6 +126,7 @@
             // 
             this.btnPromocao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPromocao.Image = global::ProjetoDesafio.Properties.Resources.price_tag;
+            this.btnPromocao.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnPromocao.Location = new System.Drawing.Point(583, 225);
             this.btnPromocao.Name = "btnPromocao";
             this.btnPromocao.Size = new System.Drawing.Size(229, 126);

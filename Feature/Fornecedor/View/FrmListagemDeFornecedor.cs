@@ -30,16 +30,10 @@ namespace ProjetoDesafio.Feature.Fornecedor.View
             };
         private void DtListFornecedor_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e) =>
             e.Value = Propriedades.BuscaPropriedadesComPonto(dtListaFornecedor, e);
-        
-        private void BtnPesquisar_Click(object sender, EventArgs e)
+
+        private void TxtPesquisar_TextChanged(object sender, EventArgs e)
         {
             ListarFornecedor();
-        }
-
-        private void TxtPesquisar_KeyDown(object sender, KeyEventArgs e)
-        {
-            if(e.KeyCode == Keys.Enter)
-                ListarFornecedor();
         }
     }
 }

@@ -32,8 +32,6 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.txtCargo = new System.Windows.Forms.TextBox();
             this.lblCargo = new System.Windows.Forms.Label();
-            this.btnExcluir = new System.Windows.Forms.Button();
-            this.btnAlterar = new System.Windows.Forms.Button();
             this.btnListar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -72,6 +70,7 @@
             // 
             this.txtCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCargo.Location = new System.Drawing.Point(156, 248);
+            this.txtCargo.MaxLength = 100;
             this.txtCargo.Name = "txtCargo";
             this.txtCargo.Size = new System.Drawing.Size(486, 30);
             this.txtCargo.TabIndex = 47;
@@ -85,37 +84,6 @@
             this.lblCargo.Size = new System.Drawing.Size(66, 25);
             this.lblCargo.TabIndex = 46;
             this.lblCargo.Text = "Cargo";
-            // 
-            // btnExcluir
-            // 
-            this.btnExcluir.AccessibleDescription = "Excluir";
-            this.btnExcluir.AccessibleName = "";
-            this.btnExcluir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluir.Image = global::ProjetoDesafio.Properties.Resources.delete__1_;
-            this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnExcluir.Location = new System.Drawing.Point(608, 23);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(137, 122);
-            this.btnExcluir.TabIndex = 45;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnExcluir.UseVisualStyleBackColor = true;
-            // 
-            // btnAlterar
-            // 
-            this.btnAlterar.AccessibleDescription = "Alterar";
-            this.btnAlterar.AccessibleName = "Alterar";
-            this.btnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlterar.Image = global::ProjetoDesafio.Properties.Resources.icons8_editar_vários_64;
-            this.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAlterar.Location = new System.Drawing.Point(421, 23);
-            this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(137, 122);
-            this.btnAlterar.TabIndex = 44;
-            this.btnAlterar.Text = "Alterar";
-            this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnAlterar.UseVisualStyleBackColor = true;
             // 
             // btnListar
             // 
@@ -131,6 +99,7 @@
             this.btnListar.Text = "Listar";
             this.btnListar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.BtnListar_Click);
             // 
             // btnCadastrar
             // 
@@ -157,8 +126,6 @@
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.txtCargo);
             this.Controls.Add(this.lblCargo);
-            this.Controls.Add(this.btnExcluir);
-            this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.btnCadastrar);
             this.MaximizeBox = false;
@@ -176,8 +143,6 @@
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.TextBox txtCargo;
         private System.Windows.Forms.Label lblCargo;
-        private System.Windows.Forms.Button btnExcluir;
-        private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnListar;
         private System.Windows.Forms.Button btnCadastrar;
     }
