@@ -1,4 +1,4 @@
-﻿namespace ProjetoDesafio.Feature.Cliente.View
+﻿namespace ProjetoDesafio.Feature.Marca.View
 {
     partial class FrmListagemDeMarca
     {

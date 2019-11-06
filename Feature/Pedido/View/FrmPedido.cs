@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Windows.Forms;
+using ProjetoDesafio.Feature.Cliente.Model;
+using ProjetoDesafio.Feature.Cliente.View;
 using ProjetoDesafio.Feature.Produto.Model;
 
 namespace ProjetoDesafio.Feature.Pedido.View
@@ -17,12 +19,12 @@ namespace ProjetoDesafio.Feature.Pedido.View
 
         private void LimparCampos()
         {
-            lstProdutos.Text = "";
-            txtTotal.Text = "";
-            txtProduto.Text = "";
-            txtValor.Text = "";
+            lstProdutos.Text = string.Empty;
+            txtTotal.Text = string.Empty;
+            txtProduto.Text = string.Empty;
+            txtValor.Text = string.Empty;
             dtgItens.Rows.Clear();
-            nrQtde.Text = "";
+            nrQtde.Text = string.Empty;
         }
 
         private void HabilitarOuDesabilitarCampos(bool habilitarCampos)
@@ -107,6 +109,18 @@ namespace ProjetoDesafio.Feature.Pedido.View
             }
 
             txtTotal.Text = Convert.ToDouble(total).ToString(CultureInfo.InvariantCulture);
+        }
+
+        private void TxtPesquisaCliente_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                BtnCliente_Click(null,null);
+        }
+
+        private void BtnCliente_Click(object sender, EventArgs e)
+        {
+            var cliente = new FrmSelecionaCliente().RetornarClienteSelecionado();
+            txtPesquisaCliente.Text = cliente.NomePessoa;
         }
     }
 }

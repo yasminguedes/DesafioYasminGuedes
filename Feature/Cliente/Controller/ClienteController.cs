@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
 using FirebirdSql.Data.FirebirdClient;
@@ -54,6 +55,23 @@ namespace ProjetoDesafio.Feature.Cliente.Controller
             }
 
             return false;
+        }
+
+        public IEnumerable<ClienteModel> Listar(ClienteFiltroModel filtro)
+        {
+            try
+            {
+                return new ClienteDao().Listar(filtro);
+            }
+            catch (FbException fbex)
+            {
+                MessageBox.Show($@"Erro no banco ao listar cliente : {fbex.Message}");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show($@"Erro ao listar cliente: {e.Message}");
+            }
+            return new List<ClienteModel>();
         }
     }
 }

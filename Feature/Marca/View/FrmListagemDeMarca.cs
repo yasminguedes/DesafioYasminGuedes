@@ -1,7 +1,7 @@
 ﻿using System.Windows.Forms;
 using ProjetoDesafio.Feature.Marca.Controller;
 
-namespace ProjetoDesafio.Feature.Cliente.View
+namespace ProjetoDesafio.Feature.Marca.View
 {
     public partial class FrmListagemDeMarca : Form
     {

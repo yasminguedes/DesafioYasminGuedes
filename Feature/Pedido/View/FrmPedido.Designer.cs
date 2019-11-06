@@ -30,18 +30,23 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPedido));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnPesquisaProduto = new System.Windows.Forms.Button();
+            this.txtPesquisaProdutos = new System.Windows.Forms.TextBox();
             this.lstProdutos = new System.Windows.Forms.ListBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.nrQtde = new System.Windows.Forms.NumericUpDown();
             this.gpPedido = new System.Windows.Forms.GroupBox();
+            this.btnCliente = new System.Windows.Forms.Button();
+            this.txtPesquisaCliente = new System.Windows.Forms.TextBox();
+            this.Cliente = new System.Windows.Forms.Label();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.txtValor = new System.Windows.Forms.TextBox();
-            this.Qtde = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtProduto = new System.Windows.Forms.TextBox();
             this.lblProduto = new System.Windows.Forms.Label();
+            this.Qtde = new System.Windows.Forms.Label();
             this.gpProdutosPedido = new System.Windows.Forms.GroupBox();
             this.dtgItens = new System.Windows.Forms.DataGridView();
             this.Produto = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,19 +67,38 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnPesquisaProduto);
+            this.groupBox1.Controls.Add(this.txtPesquisaProdutos);
             this.groupBox1.Controls.Add(this.lstProdutos);
             this.groupBox1.Location = new System.Drawing.Point(22, 167);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(512, 465);
+            this.groupBox1.Size = new System.Drawing.Size(512, 529);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // btnPesquisaProduto
+            // 
+            this.btnPesquisaProduto.Image = global::ProjetoDesafio.Properties.Resources.icons8_pesquisar_16;
+            this.btnPesquisaProduto.Location = new System.Drawing.Point(453, 22);
+            this.btnPesquisaProduto.Name = "btnPesquisaProduto";
+            this.btnPesquisaProduto.Size = new System.Drawing.Size(34, 29);
+            this.btnPesquisaProduto.TabIndex = 16;
+            this.btnPesquisaProduto.UseVisualStyleBackColor = true;
+            // 
+            // txtPesquisaProdutos
+            // 
+            this.txtPesquisaProdutos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPesquisaProdutos.Location = new System.Drawing.Point(23, 21);
+            this.txtPesquisaProdutos.Name = "txtPesquisaProdutos";
+            this.txtPesquisaProdutos.Size = new System.Drawing.Size(420, 30);
+            this.txtPesquisaProdutos.TabIndex = 15;
             // 
             // lstProdutos
             // 
             this.lstProdutos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstProdutos.FormattingEnabled = true;
             this.lstProdutos.ItemHeight = 25;
-            this.lstProdutos.Location = new System.Drawing.Point(23, 17);
+            this.lstProdutos.Location = new System.Drawing.Point(23, 92);
             this.lstProdutos.Name = "lstProdutos";
             this.lstProdutos.Size = new System.Drawing.Size(464, 429);
             this.lstProdutos.TabIndex = 0;
@@ -87,7 +111,7 @@
             this.btnCancelar.BackColor = System.Drawing.SystemColors.Menu;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnCancelar.Location = new System.Drawing.Point(277, 650);
+            this.btnCancelar.Location = new System.Drawing.Point(277, 716);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(221, 54);
             this.btnCancelar.TabIndex = 5;
@@ -102,7 +126,7 @@
             this.btnSalvar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSalvar.Location = new System.Drawing.Point(22, 650);
+            this.btnSalvar.Location = new System.Drawing.Point(22, 716);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(221, 54);
             this.btnSalvar.TabIndex = 4;
@@ -113,7 +137,7 @@
             // nrQtde
             // 
             this.nrQtde.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nrQtde.Location = new System.Drawing.Point(457, 77);
+            this.nrQtde.Location = new System.Drawing.Point(457, 123);
             this.nrQtde.Name = "nrQtde";
             this.nrQtde.Size = new System.Drawing.Size(120, 30);
             this.nrQtde.TabIndex = 6;
@@ -121,24 +145,55 @@
             // 
             // gpPedido
             // 
+            this.gpPedido.Controls.Add(this.btnCliente);
+            this.gpPedido.Controls.Add(this.txtPesquisaCliente);
+            this.gpPedido.Controls.Add(this.Cliente);
             this.gpPedido.Controls.Add(this.btnExcluir);
             this.gpPedido.Controls.Add(this.btnAdd);
             this.gpPedido.Controls.Add(this.txtValor);
             this.gpPedido.Controls.Add(this.nrQtde);
-            this.gpPedido.Controls.Add(this.Qtde);
             this.gpPedido.Controls.Add(this.label1);
             this.gpPedido.Controls.Add(this.txtProduto);
             this.gpPedido.Controls.Add(this.lblProduto);
             this.gpPedido.Location = new System.Drawing.Point(564, 167);
             this.gpPedido.Name = "gpPedido";
-            this.gpPedido.Size = new System.Drawing.Size(675, 155);
+            this.gpPedido.Size = new System.Drawing.Size(675, 178);
             this.gpPedido.TabIndex = 7;
             this.gpPedido.TabStop = false;
+            // 
+            // btnCliente
+            // 
+            this.btnCliente.Image = global::ProjetoDesafio.Properties.Resources.icons8_pesquisar_16;
+            this.btnCliente.Location = new System.Drawing.Point(625, 9);
+            this.btnCliente.Name = "btnCliente";
+            this.btnCliente.Size = new System.Drawing.Size(34, 29);
+            this.btnCliente.TabIndex = 14;
+            this.btnCliente.UseVisualStyleBackColor = true;
+            this.btnCliente.Click += new System.EventHandler(this.BtnCliente_Click);
+            // 
+            // txtPesquisaCliente
+            // 
+            this.txtPesquisaCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPesquisaCliente.Location = new System.Drawing.Point(140, 9);
+            this.txtPesquisaCliente.Name = "txtPesquisaCliente";
+            this.txtPesquisaCliente.Size = new System.Drawing.Size(478, 30);
+            this.txtPesquisaCliente.TabIndex = 13;
+            this.txtPesquisaCliente.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtPesquisaCliente_KeyDown);
+            // 
+            // Cliente
+            // 
+            this.Cliente.AutoSize = true;
+            this.Cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cliente.Location = new System.Drawing.Point(12, 14);
+            this.Cliente.Name = "Cliente";
+            this.Cliente.Size = new System.Drawing.Size(73, 25);
+            this.Cliente.TabIndex = 12;
+            this.Cliente.Text = "Cliente";
             // 
             // btnExcluir
             // 
             this.btnExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluir.Image")));
-            this.btnExcluir.Location = new System.Drawing.Point(624, 76);
+            this.btnExcluir.Location = new System.Drawing.Point(624, 122);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(34, 30);
             this.btnExcluir.TabIndex = 8;
@@ -148,7 +203,7 @@
             // btnAdd
             // 
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(583, 76);
+            this.btnAdd.Location = new System.Drawing.Point(583, 122);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(35, 30);
             this.btnAdd.TabIndex = 7;
@@ -158,27 +213,17 @@
             // txtValor
             // 
             this.txtValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtValor.Location = new System.Drawing.Point(140, 76);
+            this.txtValor.Location = new System.Drawing.Point(140, 122);
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(172, 30);
             this.txtValor.TabIndex = 4;
             this.txtValor.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // Qtde
-            // 
-            this.Qtde.AutoSize = true;
-            this.Qtde.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Qtde.Location = new System.Drawing.Point(337, 79);
-            this.Qtde.Name = "Qtde";
-            this.Qtde.Size = new System.Drawing.Size(114, 25);
-            this.Qtde.TabIndex = 3;
-            this.Qtde.Text = "Quantidade";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(17, 79);
+            this.label1.Location = new System.Drawing.Point(12, 125);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 25);
             this.label1.TabIndex = 2;
@@ -187,7 +232,7 @@
             // txtProduto
             // 
             this.txtProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProduto.Location = new System.Drawing.Point(140, 18);
+            this.txtProduto.Location = new System.Drawing.Point(140, 64);
             this.txtProduto.Name = "txtProduto";
             this.txtProduto.Size = new System.Drawing.Size(518, 30);
             this.txtProduto.TabIndex = 1;
@@ -197,18 +242,29 @@
             // 
             this.lblProduto.AutoSize = true;
             this.lblProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProduto.Location = new System.Drawing.Point(12, 18);
+            this.lblProduto.Location = new System.Drawing.Point(12, 64);
             this.lblProduto.Name = "lblProduto";
             this.lblProduto.Size = new System.Drawing.Size(80, 25);
             this.lblProduto.TabIndex = 0;
             this.lblProduto.Text = "Produto";
             // 
+            // Qtde
+            // 
+            this.Qtde.AutoSize = true;
+            this.Qtde.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Qtde.Location = new System.Drawing.Point(435, 0);
+            this.Qtde.Name = "Qtde";
+            this.Qtde.Size = new System.Drawing.Size(114, 25);
+            this.Qtde.TabIndex = 3;
+            this.Qtde.Text = "Quantidade";
+            // 
             // gpProdutosPedido
             // 
             this.gpProdutosPedido.Controls.Add(this.dtgItens);
+            this.gpProdutosPedido.Controls.Add(this.Qtde);
             this.gpProdutosPedido.Location = new System.Drawing.Point(564, 329);
             this.gpProdutosPedido.Name = "gpProdutosPedido";
-            this.gpProdutosPedido.Size = new System.Drawing.Size(675, 303);
+            this.gpProdutosPedido.Size = new System.Drawing.Size(675, 367);
             this.gpProdutosPedido.TabIndex = 8;
             this.gpProdutosPedido.TabStop = false;
             // 
@@ -219,11 +275,11 @@
             this.Produto,
             this.Valor,
             this.Quantidade});
-            this.dtgItens.Location = new System.Drawing.Point(6, 21);
+            this.dtgItens.Location = new System.Drawing.Point(6, 44);
             this.dtgItens.Name = "dtgItens";
             this.dtgItens.RowHeadersWidth = 51;
             this.dtgItens.RowTemplate.Height = 24;
-            this.dtgItens.Size = new System.Drawing.Size(653, 272);
+            this.dtgItens.Size = new System.Drawing.Size(653, 298);
             this.dtgItens.TabIndex = 0;
             // 
             // Produto
@@ -252,7 +308,7 @@
             this.gpTotal.Controls.Add(this.txtTotal);
             this.gpTotal.Controls.Add(this.lblTotal);
             this.gpTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gpTotal.Location = new System.Drawing.Point(852, 628);
+            this.gpTotal.Location = new System.Drawing.Point(852, 694);
             this.gpTotal.Name = "gpTotal";
             this.gpTotal.Size = new System.Drawing.Size(387, 76);
             this.gpTotal.TabIndex = 9;
@@ -309,7 +365,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1285, 744);
+            this.ClientSize = new System.Drawing.Size(1372, 834);
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.gpTotal);
             this.Controls.Add(this.gpProdutosPedido);
@@ -324,10 +380,12 @@
             this.Text = "Pedido";
             this.Load += new System.EventHandler(this.FrmPedido_Load);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nrQtde)).EndInit();
             this.gpPedido.ResumeLayout(false);
             this.gpPedido.PerformLayout();
             this.gpProdutosPedido.ResumeLayout(false);
+            this.gpProdutosPedido.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgItens)).EndInit();
             this.gpTotal.ResumeLayout(false);
             this.gpTotal.PerformLayout();
@@ -360,5 +418,10 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnListar;
+        private System.Windows.Forms.Button btnCliente;
+        private System.Windows.Forms.TextBox txtPesquisaCliente;
+        private System.Windows.Forms.Label Cliente;
+        private System.Windows.Forms.Button btnPesquisaProduto;
+        private System.Windows.Forms.TextBox txtPesquisaProdutos;
     }
 }

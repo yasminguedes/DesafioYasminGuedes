@@ -214,12 +214,6 @@ namespace ProjetoDesafio.Feature.Fornecedor.View
                 return false;
             }
 
-            if (!string.IsNullOrWhiteSpace(mskIe.Text.Trim()))
-            {
-                MessageBox.Show(@"Campo 'IE' é obrigatório.");
-                return false;
-            }
-
             if (!string.IsNullOrWhiteSpace(mskTelefone.Text.Trim()))
             {
                 MessageBox.Show(@"Campo 'Telefone' é obrigatório.");

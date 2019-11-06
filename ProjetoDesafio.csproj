@@ -98,16 +98,23 @@
     </Compile>
     <Compile Include="Feature\Cliente\Controller\ClienteController.cs" />
     <Compile Include="Feature\Cliente\Dao\ClienteDao.cs" />
+    <Compile Include="Feature\Cliente\Model\ClienteFiltroModel.cs" />
     <Compile Include="Feature\Cliente\View\FrmCliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Feature\Cliente\View\FrmCliente.Designer.cs">
       <DependentUpon>FrmCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Feature\Cliente\View\FrmListagemDeMarca.cs">
+    <Compile Include="Feature\Cliente\View\FrmListaCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Feature\Cliente\View\FrmListagemDeMarca.Designer.cs">
+    <Compile Include="Feature\Cliente\View\FrmListaCliente.Designer.cs">
+      <DependentUpon>FrmListaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Feature\Marca\View\FrmListagemDeMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Feature\Marca\View\FrmListagemDeMarca.Designer.cs">
       <DependentUpon>FrmListagemDeMarca.cs</DependentUpon>
     </Compile>
     <Compile Include="Feature\Endereco\Dao\EnderecoDao.cs" />
@@ -247,7 +254,10 @@
     <EmbeddedResource Include="Feature\Cliente\View\FrmCliente.resx">
       <DependentUpon>FrmCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Feature\Cliente\View\FrmListagemDeMarca.resx">
+    <EmbeddedResource Include="Feature\Cliente\View\FrmListaCliente.resx">
+      <DependentUpon>FrmListaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Feature\Marca\View\FrmListagemDeMarca.resx">
       <DependentUpon>FrmListagemDeMarca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Feature\Fornecedor\View\FrmListagemDeFornecedor.resx">
@@ -303,6 +313,7 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\ProjetoDesafio.Feature.Cargo.Model.CargoModel.datasource" />
     <None Include="Properties\DataSources\ProjetoDesafio.Feature.Categoria.Model.CategoriaModel.datasource" />
+    <None Include="Properties\DataSources\ProjetoDesafio.Feature.Cliente.Model.ClienteModel.datasource" />
     <None Include="Properties\DataSources\ProjetoDesafio.Feature.Fornecedor.Model.FornecedorModel.datasource" />
     <None Include="Properties\DataSources\ProjetoDesafio.Feature.Funcionario.Model.FuncionarioModel.datasource" />
     <None Include="Properties\DataSources\ProjetoDesafio.Feature.Marca.Model.MarcaModel.datasource" />

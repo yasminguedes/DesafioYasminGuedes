@@ -43,7 +43,7 @@
             this.lblMarca.Location = new System.Drawing.Point(7, 237);
             this.lblMarca.Name = "lblMarca";
             this.lblMarca.Size = new System.Drawing.Size(67, 25);
-            this.lblMarca.TabIndex = 13;
+            this.lblMarca.TabIndex = 5;
             this.lblMarca.Text = "Marca";
             // 
             // txtMarca
@@ -52,7 +52,7 @@
             this.txtMarca.Location = new System.Drawing.Point(108, 237);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(486, 30);
-            this.txtMarca.TabIndex = 14;
+            this.txtMarca.TabIndex = 1;
             // 
             // btnCancelar
             // 
@@ -64,7 +64,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(373, 309);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(221, 54);
-            this.btnCancelar.TabIndex = 41;
+            this.btnCancelar.TabIndex = 3;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
@@ -79,7 +79,7 @@
             this.btnSalvar.Location = new System.Drawing.Point(108, 309);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(221, 54);
-            this.btnSalvar.TabIndex = 40;
+            this.btnSalvar.TabIndex = 2;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
@@ -94,7 +94,7 @@
             this.btnListar.Location = new System.Drawing.Point(192, 12);
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(137, 122);
-            this.btnListar.TabIndex = 10;
+            this.btnListar.TabIndex = 4;
             this.btnListar.Text = "Listar";
             this.btnListar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnListar.UseVisualStyleBackColor = true;
@@ -110,7 +110,7 @@
             this.btnCadastrar.Location = new System.Drawing.Point(12, 12);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(137, 122);
-            this.btnCadastrar.TabIndex = 9;
+            this.btnCadastrar.TabIndex = 0;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCadastrar.UseVisualStyleBackColor = true;
