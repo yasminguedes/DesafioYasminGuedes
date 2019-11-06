@@ -61,10 +61,6 @@
             // cmbTipo
             // 
             this.cmbTipo.FormattingEnabled = true;
-            this.cmbTipo.Items.AddRange(new object[] {
-            "Desconto Percentual/ Valor atribuído",
-            "Cada X em compras, ganhe Y em desconto",
-            "Leve X, pague Y"});
             this.cmbTipo.Location = new System.Drawing.Point(138, 66);
             this.cmbTipo.Name = "cmbTipo";
             this.cmbTipo.Size = new System.Drawing.Size(452, 37);

@@ -74,7 +74,7 @@
             // gpPromocoesCadastradas
             // 
             this.gpPromocoesCadastradas.Controls.Add(this.dataGridView1);
-            this.gpPromocoesCadastradas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpPromocoesCadastradas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpPromocoesCadastradas.Location = new System.Drawing.Point(22, 134);
             this.gpPromocoesCadastradas.Name = "gpPromocoesCadastradas";
             this.gpPromocoesCadastradas.Size = new System.Drawing.Size(1296, 389);
@@ -120,7 +120,7 @@
             // 
             // NomePromocao
             // 
-            this.NomePromocao.HeaderText = "Nome da Promoção";
+            this.NomePromocao.HeaderText = "Nome ";
             this.NomePromocao.MinimumWidth = 6;
             this.NomePromocao.Name = "NomePromocao";
             this.NomePromocao.Width = 432;

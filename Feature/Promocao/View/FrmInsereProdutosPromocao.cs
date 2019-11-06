@@ -57,5 +57,12 @@ namespace ProjetoDesafio.Feature.Promocao.View
         }
         private void DtSelecionarProdutos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e) =>
             e.Value = Propriedades.BuscaPropriedadesComPonto(dtgSelecionarProdutos, e);
+
+        private void BtnCancelar_Click(object sender, EventArgs e) => Close();
+
+        private void BtnProximo_Click(object sender, EventArgs e)
+        {
+            new FrmCadastrodaPromocao().Show();
+        }
     }
 }
