@@ -115,6 +115,7 @@
             this.Controls.Add(this.dtListaCliente);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnConfirmar);
+            this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmSelecionaCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

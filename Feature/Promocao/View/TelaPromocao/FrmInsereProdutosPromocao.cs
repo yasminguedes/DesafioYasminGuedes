@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace ProjetoDesafio.Feature.Promocao.View.TelaPromocao
 {
-    public partial class FrmPromocao : Form
+    public partial class FrmInsereProdutosPromocao : Form
     {
-        public FrmPromocao()
+        public FrmInsereProdutosPromocao()
         {
             InitializeComponent();
-        }
-
-        private void BtnNovo_Click(object sender, EventArgs e)
-        {
-            new FrmTipo().Show();
         }
     }
 }

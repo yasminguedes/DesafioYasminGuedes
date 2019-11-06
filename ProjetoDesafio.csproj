@@ -208,11 +208,23 @@
     <Compile Include="Feature\Promocao\View\FrmSelecionarProdutos.Designer.cs">
       <DependentUpon>FrmSelecionarProdutos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Feature\Promocao\View\TelaPromocao\FrmInsereProdutosPromocao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Feature\Promocao\View\TelaPromocao\FrmInsereProdutosPromocao.Designer.cs">
+      <DependentUpon>FrmInsereProdutosPromocao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Feature\Promocao\View\TelaPromocao\FrmPromocao.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Feature\Promocao\View\TelaPromocao\FrmPromocao.Designer.cs">
       <DependentUpon>FrmPromocao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Feature\Promocao\View\TelaPromocao\FrmTipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Feature\Promocao\View\TelaPromocao\FrmTipo.Designer.cs">
+      <DependentUpon>FrmTipo.cs</DependentUpon>
     </Compile>
     <Compile Include="Feature\Propriedades.cs" />
     <Compile Include="Feature\TelaLogin\Logar.cs">
@@ -299,8 +311,14 @@
     <EmbeddedResource Include="Feature\Promocao\View\FrmSelecionarProdutos.resx">
       <DependentUpon>FrmSelecionarProdutos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Feature\Promocao\View\TelaPromocao\FrmInsereProdutosPromocao.resx">
+      <DependentUpon>FrmInsereProdutosPromocao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Feature\Promocao\View\TelaPromocao\FrmPromocao.resx">
       <DependentUpon>FrmPromocao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Feature\Promocao\View\TelaPromocao\FrmTipo.resx">
+      <DependentUpon>FrmTipo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Feature\TelaLogin\Logar.resx">
       <DependentUpon>Logar.cs</DependentUpon>
