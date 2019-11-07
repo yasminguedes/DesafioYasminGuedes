@@ -33,14 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gpLista = new System.Windows.Forms.GroupBox();
             this.dtListaProdutos = new System.Windows.Forms.DataGridView();
-            this.txtPesquisar = new System.Windows.Forms.TextBox();
-            this.rdbProduto = new System.Windows.Forms.RadioButton();
-            this.rdbMarca = new System.Windows.Forms.RadioButton();
-            this.rdbCategoria = new System.Windows.Forms.RadioButton();
-            this.btnPesquisar = new System.Windows.Forms.Button();
-            this.btnExcluir = new System.Windows.Forms.Button();
-            this.btnAlterar = new System.Windows.Forms.Button();
-            this.bdtListarProduto = new System.Windows.Forms.BindingSource(this.components);
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NomeProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Data = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,6 +45,14 @@
             this.Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fornecedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bdtListarProduto = new System.Windows.Forms.BindingSource(this.components);
+            this.txtPesquisar = new System.Windows.Forms.TextBox();
+            this.rdbProduto = new System.Windows.Forms.RadioButton();
+            this.rdbMarca = new System.Windows.Forms.RadioButton();
+            this.rdbCategoria = new System.Windows.Forms.RadioButton();
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnAlterar = new System.Windows.Forms.Button();
             this.gpLista.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtListaProdutos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdtListarProduto)).BeginInit();
@@ -94,97 +94,6 @@
             this.dtListaProdutos.Size = new System.Drawing.Size(1380, 580);
             this.dtListaProdutos.TabIndex = 0;
             this.dtListaProdutos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DtListaProdutos_CellFormatting);
-            // 
-            // txtPesquisar
-            // 
-            this.txtPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPesquisar.Location = new System.Drawing.Point(433, 96);
-            this.txtPesquisar.MaxLength = 100;
-            this.txtPesquisar.Name = "txtPesquisar";
-            this.txtPesquisar.Size = new System.Drawing.Size(505, 34);
-            this.txtPesquisar.TabIndex = 0;
-            this.txtPesquisar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtPesquisar_KeyDown);
-            // 
-            // rdbProduto
-            // 
-            this.rdbProduto.AutoSize = true;
-            this.rdbProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbProduto.Location = new System.Drawing.Point(381, 33);
-            this.rdbProduto.Name = "rdbProduto";
-            this.rdbProduto.Size = new System.Drawing.Size(158, 29);
-            this.rdbProduto.TabIndex = 1;
-            this.rdbProduto.TabStop = true;
-            this.rdbProduto.Text = "Nome Produto";
-            this.rdbProduto.UseVisualStyleBackColor = true;
-            // 
-            // rdbMarca
-            // 
-            this.rdbMarca.AutoSize = true;
-            this.rdbMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbMarca.Location = new System.Drawing.Point(591, 33);
-            this.rdbMarca.Name = "rdbMarca";
-            this.rdbMarca.Size = new System.Drawing.Size(88, 29);
-            this.rdbMarca.TabIndex = 2;
-            this.rdbMarca.TabStop = true;
-            this.rdbMarca.Text = "Marca";
-            this.rdbMarca.UseVisualStyleBackColor = true;
-            // 
-            // rdbCategoria
-            // 
-            this.rdbCategoria.AutoSize = true;
-            this.rdbCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbCategoria.Location = new System.Drawing.Point(768, 33);
-            this.rdbCategoria.Name = "rdbCategoria";
-            this.rdbCategoria.Size = new System.Drawing.Size(118, 29);
-            this.rdbCategoria.TabIndex = 3;
-            this.rdbCategoria.TabStop = true;
-            this.rdbCategoria.Text = "Categoria";
-            this.rdbCategoria.UseVisualStyleBackColor = true;
-            // 
-            // btnPesquisar
-            // 
-            this.btnPesquisar.Image = global::ProjetoDesafio.Properties.Resources.icons8_pesquisar_32;
-            this.btnPesquisar.Location = new System.Drawing.Point(381, 92);
-            this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(46, 43);
-            this.btnPesquisar.TabIndex = 4;
-            this.btnPesquisar.UseVisualStyleBackColor = true;
-            this.btnPesquisar.Click += new System.EventHandler(this.BtnPesquisar_Click);
-            // 
-            // btnExcluir
-            // 
-            this.btnExcluir.AccessibleDescription = "Excluir";
-            this.btnExcluir.AccessibleName = "";
-            this.btnExcluir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluir.Image = global::ProjetoDesafio.Properties.Resources.delete__1_;
-            this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnExcluir.Location = new System.Drawing.Point(199, 13);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(137, 122);
-            this.btnExcluir.TabIndex = 6;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnExcluir.UseVisualStyleBackColor = true;
-            // 
-            // btnAlterar
-            // 
-            this.btnAlterar.AccessibleDescription = "Alterar";
-            this.btnAlterar.AccessibleName = "Alterar";
-            this.btnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlterar.Image = global::ProjetoDesafio.Properties.Resources.icons8_editar_vários_64;
-            this.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAlterar.Location = new System.Drawing.Point(12, 13);
-            this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(137, 122);
-            this.btnAlterar.TabIndex = 5;
-            this.btnAlterar.Text = "Alterar";
-            this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnAlterar.UseVisualStyleBackColor = true;
-            // 
-            // bdtListarProduto
-            // 
-            this.bdtListarProduto.DataSource = typeof(ProjetoDesafio.Feature.Produto.Model.ProdutoModel);
             // 
             // ID
             // 
@@ -290,6 +199,97 @@
             this.Fornecedor.MinimumWidth = 6;
             this.Fornecedor.Name = "Fornecedor";
             this.Fornecedor.Width = 125;
+            // 
+            // bdtListarProduto
+            // 
+            this.bdtListarProduto.DataSource = typeof(ProjetoDesafio.Feature.Produto.Model.ProdutoModel);
+            // 
+            // txtPesquisar
+            // 
+            this.txtPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPesquisar.Location = new System.Drawing.Point(433, 96);
+            this.txtPesquisar.MaxLength = 100;
+            this.txtPesquisar.Name = "txtPesquisar";
+            this.txtPesquisar.Size = new System.Drawing.Size(505, 34);
+            this.txtPesquisar.TabIndex = 0;
+            this.txtPesquisar.TextChanged += new System.EventHandler(this.txtPesquisar_TextChanged);
+            // 
+            // rdbProduto
+            // 
+            this.rdbProduto.AutoSize = true;
+            this.rdbProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbProduto.Location = new System.Drawing.Point(381, 33);
+            this.rdbProduto.Name = "rdbProduto";
+            this.rdbProduto.Size = new System.Drawing.Size(158, 29);
+            this.rdbProduto.TabIndex = 1;
+            this.rdbProduto.TabStop = true;
+            this.rdbProduto.Text = "Nome Produto";
+            this.rdbProduto.UseVisualStyleBackColor = true;
+            // 
+            // rdbMarca
+            // 
+            this.rdbMarca.AutoSize = true;
+            this.rdbMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbMarca.Location = new System.Drawing.Point(591, 33);
+            this.rdbMarca.Name = "rdbMarca";
+            this.rdbMarca.Size = new System.Drawing.Size(88, 29);
+            this.rdbMarca.TabIndex = 2;
+            this.rdbMarca.TabStop = true;
+            this.rdbMarca.Text = "Marca";
+            this.rdbMarca.UseVisualStyleBackColor = true;
+            // 
+            // rdbCategoria
+            // 
+            this.rdbCategoria.AutoSize = true;
+            this.rdbCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbCategoria.Location = new System.Drawing.Point(768, 33);
+            this.rdbCategoria.Name = "rdbCategoria";
+            this.rdbCategoria.Size = new System.Drawing.Size(118, 29);
+            this.rdbCategoria.TabIndex = 3;
+            this.rdbCategoria.TabStop = true;
+            this.rdbCategoria.Text = "Categoria";
+            this.rdbCategoria.UseVisualStyleBackColor = true;
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Image = global::ProjetoDesafio.Properties.Resources.icons8_pesquisar_32;
+            this.btnPesquisar.Location = new System.Drawing.Point(381, 92);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(46, 43);
+            this.btnPesquisar.TabIndex = 4;
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.BtnPesquisar_Click);
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.AccessibleDescription = "Excluir";
+            this.btnExcluir.AccessibleName = "";
+            this.btnExcluir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.Image = global::ProjetoDesafio.Properties.Resources.delete__1_;
+            this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnExcluir.Location = new System.Drawing.Point(199, 13);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(137, 122);
+            this.btnExcluir.TabIndex = 6;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            // 
+            // btnAlterar
+            // 
+            this.btnAlterar.AccessibleDescription = "Alterar";
+            this.btnAlterar.AccessibleName = "Alterar";
+            this.btnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlterar.Image = global::ProjetoDesafio.Properties.Resources.icons8_editar_vários_64;
+            this.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAlterar.Location = new System.Drawing.Point(12, 13);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(137, 122);
+            this.btnAlterar.TabIndex = 5;
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAlterar.UseVisualStyleBackColor = true;
             // 
             // FrmListagemDeProdutos
             // 

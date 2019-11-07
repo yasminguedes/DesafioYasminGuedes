@@ -82,13 +82,13 @@ namespace ProjetoDesafio.Feature.Produto.Dao
                 }
                 else if (filtro.PesquisarPorCodigo)
                 {
-                    sql.Append(" WHERE Upper(p.Codigo) LIKE Upper(@Codigo)");
-                    cmd.Parameters.Add("@Codigo", FbDbType.VarChar).Value = $"{filtro.Codigo}%";
+                    sql.Append(" WHERE p.Codigo LIKE (@Codigo)");
+                    cmd.Parameters.Add("@Codigo", FbDbType.Integer).Value = $"{filtro.Codigo}%";
                 }
                 else if (filtro.PesquisarPorValidade)
                 {
-                    sql.Append(" WHERE Upper(p.Data_Validade) LIKE Upper(@DataValidade)");
-                    cmd.Parameters.Add("@DataValidade", FbDbType.VarChar).Value = $"{filtro.DataValidade}%";
+                    sql.Append(" WHERE p.Data_Validade LIKE (@DataValidade)");
+                    cmd.Parameters.Add("@DataValidade", FbDbType.Date).Value = $"{filtro.DataValidade}%";
                 }
                 else
                 {
@@ -111,6 +111,8 @@ namespace ProjetoDesafio.Feature.Produto.Dao
                         Qtde = int.Parse(dr["qtde_estoque"].ToString()),
                         Ativo = dr["ativo"].ToString(),
                         DataCadastro = DateTime.Parse(dr["data_cadastro"].ToString()),
+                        DataValidade = DateTime.Parse(dr["data_validade"].ToString()),
+                        Codigo = int.Parse(dr["codigo"].ToString()),
                         Tipo = dr["tipo_produto"].ToString(),
                         Marca = new MarcaModel()
                         {
