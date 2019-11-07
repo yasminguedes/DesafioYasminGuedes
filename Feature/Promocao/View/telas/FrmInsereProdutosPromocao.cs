@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using ProjetoDesafio.Feature.Produto.Model;
 
-namespace ProjetoDesafio.Feature.Promocao.View
+namespace ProjetoDesafio.Feature.Promocao.View.telas
 {
     public partial class FrmInsereProdutosPromocao : Form
     {

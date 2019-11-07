@@ -25,9 +25,9 @@ namespace ProjetoDesafio.Feature.Produto.Dao
 
                 commandText.Append(
                     @"INSERT into Produto (nome_produto, preco_compra, preco_venda, qtde_estoque, ativo, data_cadastro, 
-                                tipo_produto, id_fornecedor, id_marca, id_categoria) Values ");
+                                tipo_produto, codigo, data_validade, id_fornecedor, id_marca, id_categoria) Values ");
                 commandText.Append(@"(@NomeProduto, @PrecoCompra, @PrecoVenda, @QtdeEstoque, @Ativo, @DataCadastro, 
-                                    @TipoProduto, @Fornecedor, @Marca, @Categoria)");
+                                    @TipoProduto, @Codigo,@DataValidade, @Fornecedor, @Marca, @Categoria)");
 
                 cmd.CommandText = commandText.ToString();
 
@@ -38,6 +38,8 @@ namespace ProjetoDesafio.Feature.Produto.Dao
                 cmd.Parameters.Add("@Ativo", FbDbType.VarChar).Value = produto.Ativo;
                 cmd.Parameters.Add("@DataCadastro", FbDbType.Date).Value = produto.DataCadastro;
                 cmd.Parameters.Add("@TipoProduto", FbDbType.VarChar).Value = produto.Tipo;
+                cmd.Parameters.Add("@Codigo", FbDbType.Integer).Value = produto.Codigo;
+                cmd.Parameters.Add("@DataValidade", FbDbType.Date).Value = produto.DataValidade;
                 cmd.Parameters.Add("@Fornecedor", FbDbType.Integer).Value = produto.Fornecedor.IdFornecedor;
                 cmd.Parameters.Add("@Marca", FbDbType.Integer).Value = produto.Marca.IdMarca;
                 cmd.Parameters.Add("@Categoria", FbDbType.Integer).Value = produto.Categoria.IdCategoria;
@@ -77,6 +79,16 @@ namespace ProjetoDesafio.Feature.Produto.Dao
                 {
                     sql.Append(" WHERE Upper(m.Nome_Marca) LIKE Upper(@NomeMarca)");
                     cmd.Parameters.Add("@NomeMarca", FbDbType.VarChar).Value = $"{filtro.Marca.NomeMarca}%";
+                }
+                else if (filtro.PesquisarPorCodigo)
+                {
+                    sql.Append(" WHERE Upper(p.Codigo) LIKE Upper(@Codigo)");
+                    cmd.Parameters.Add("@Codigo", FbDbType.VarChar).Value = $"{filtro.Codigo}%";
+                }
+                else if (filtro.PesquisarPorValidade)
+                {
+                    sql.Append(" WHERE Upper(p.Data_Validade) LIKE Upper(@DataValidade)");
+                    cmd.Parameters.Add("@DataValidade", FbDbType.VarChar).Value = $"{filtro.DataValidade}%";
                 }
                 else
                 {

@@ -184,16 +184,28 @@
     <Compile Include="Feature\Produto\View\FrmProduto.Designer.cs">
       <DependentUpon>FrmProduto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Feature\Promocao\View\FrmCadastroDaPromocao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Feature\Promocao\View\FrmCadastroDaPromocao.Designer.cs">
+      <DependentUpon>FrmCadastroDaPromocao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Feature\Promocao\View\FrmInsereProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Feature\Promocao\View\FrmInsereProdutos.Designer.cs">
+      <DependentUpon>FrmInsereProdutos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Feature\Promocao\View\telas\FrmCadastrarPromocao.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Feature\Promocao\View\telas\FrmCadastrarPromocao.Designer.cs">
       <DependentUpon>FrmCadastrarPromocao.cs</DependentUpon>
     </Compile>
-    <Compile Include="Feature\Promocao\View\FrmCadastrodaPromocao.cs">
+    <Compile Include="Feature\Promocao\View\telas\FrmCadastrodaPromocao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Feature\Promocao\View\FrmCadastrodaPromocao.Designer.cs">
+    <Compile Include="Feature\Promocao\View\telas\FrmCadastrodaPromocao.Designer.cs">
       <DependentUpon>FrmCadastrodaPromocao.cs</DependentUpon>
     </Compile>
     <Compile Include="Feature\Promocao\View\telas\FrmDiaPromocao.cs">
@@ -202,10 +214,10 @@
     <Compile Include="Feature\Promocao\View\telas\FrmDiaPromocao.Designer.cs">
       <DependentUpon>FrmDiaPromocao.cs</DependentUpon>
     </Compile>
-    <Compile Include="Feature\Promocao\View\FrmInsereProdutosPromocao.cs">
+    <Compile Include="Feature\Promocao\View\telas\FrmInsereProdutosPromocao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Feature\Promocao\View\FrmInsereProdutosPromocao.Designer.cs">
+    <Compile Include="Feature\Promocao\View\telas\FrmInsereProdutosPromocao.Designer.cs">
       <DependentUpon>FrmInsereProdutosPromocao.cs</DependentUpon>
     </Compile>
     <Compile Include="Feature\Promocao\View\FrmPromocao.cs">
@@ -299,16 +311,22 @@
     <EmbeddedResource Include="Feature\Produto\View\FrmProduto.resx">
       <DependentUpon>FrmProduto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Feature\Promocao\View\FrmCadastroDaPromocao.resx">
+      <DependentUpon>FrmCadastroDaPromocao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Feature\Promocao\View\FrmInsereProdutos.resx">
+      <DependentUpon>FrmInsereProdutos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Feature\Promocao\View\telas\FrmCadastrarPromocao.resx">
       <DependentUpon>FrmCadastrarPromocao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Feature\Promocao\View\FrmCadastrodaPromocao.resx">
+    <EmbeddedResource Include="Feature\Promocao\View\telas\FrmCadastrodaPromocao.resx">
       <DependentUpon>FrmCadastrodaPromocao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Feature\Promocao\View\telas\FrmDiaPromocao.resx">
       <DependentUpon>FrmDiaPromocao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Feature\Promocao\View\FrmInsereProdutosPromocao.resx">
+    <EmbeddedResource Include="Feature\Promocao\View\telas\FrmInsereProdutosPromocao.resx">
       <DependentUpon>FrmInsereProdutosPromocao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Feature\Promocao\View\FrmPromocao.resx">
@@ -338,6 +356,7 @@
     <None Include="Properties\DataSources\ProjetoDesafio.Feature.Marca.Model.MarcaModel.datasource" />
     <None Include="Properties\DataSources\ProjetoDesafio.Feature.Produto.Model.ProdutoFiltroModel.datasource" />
     <None Include="Properties\DataSources\ProjetoDesafio.Feature.Produto.Model.ProdutoModel.datasource" />
+    <None Include="Properties\DataSources\ProjetoDesafio.Feature.Produto.View.FrmProduto.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -458,6 +477,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-excluir-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-soma-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-soma-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
