@@ -1,4 +1,4 @@
-﻿namespace ProjetoDesafio.Feature.Promocao.View
+﻿namespace ProjetoDesafio.Feature.Promocao.View.telas
 {
     partial class FrmSelecionarProdutos
     {

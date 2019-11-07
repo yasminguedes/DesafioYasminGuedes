@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace ProjetoDesafio.Feature.Promocao.View
+namespace ProjetoDesafio.Feature.Promocao.View.telas
 {
     public partial class FrmDiaPromocao : Form
     {

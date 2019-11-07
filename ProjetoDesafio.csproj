@@ -184,10 +184,10 @@
     <Compile Include="Feature\Produto\View\FrmProduto.Designer.cs">
       <DependentUpon>FrmProduto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Feature\Promocao\View\FrmCadastrarPromocao.cs">
+    <Compile Include="Feature\Promocao\View\telas\FrmCadastrarPromocao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Feature\Promocao\View\FrmCadastrarPromocao.Designer.cs">
+    <Compile Include="Feature\Promocao\View\telas\FrmCadastrarPromocao.Designer.cs">
       <DependentUpon>FrmCadastrarPromocao.cs</DependentUpon>
     </Compile>
     <Compile Include="Feature\Promocao\View\FrmCadastrodaPromocao.cs">
@@ -196,10 +196,10 @@
     <Compile Include="Feature\Promocao\View\FrmCadastrodaPromocao.Designer.cs">
       <DependentUpon>FrmCadastrodaPromocao.cs</DependentUpon>
     </Compile>
-    <Compile Include="Feature\Promocao\View\FrmDiaPromocao.cs">
+    <Compile Include="Feature\Promocao\View\telas\FrmDiaPromocao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Feature\Promocao\View\FrmDiaPromocao.Designer.cs">
+    <Compile Include="Feature\Promocao\View\telas\FrmDiaPromocao.Designer.cs">
       <DependentUpon>FrmDiaPromocao.cs</DependentUpon>
     </Compile>
     <Compile Include="Feature\Promocao\View\FrmInsereProdutosPromocao.cs">
@@ -214,16 +214,16 @@
     <Compile Include="Feature\Promocao\View\FrmPromocao.Designer.cs">
       <DependentUpon>FrmPromocao.cs</DependentUpon>
     </Compile>
-    <Compile Include="Feature\Promocao\View\FrmSelecionarProdutos.cs">
+    <Compile Include="Feature\Promocao\View\telas\FrmSelecionarProdutos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Feature\Promocao\View\FrmSelecionarProdutos.Designer.cs">
+    <Compile Include="Feature\Promocao\View\telas\FrmSelecionarProdutos.Designer.cs">
       <DependentUpon>FrmSelecionarProdutos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Feature\Promocao\View\FrmTipo.cs">
+    <Compile Include="Feature\Promocao\View\telas\FrmTipo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Feature\Promocao\View\FrmTipo.Designer.cs">
+    <Compile Include="Feature\Promocao\View\telas\FrmTipo.Designer.cs">
       <DependentUpon>FrmTipo.cs</DependentUpon>
     </Compile>
     <Compile Include="Feature\Propriedades.cs" />
@@ -299,13 +299,13 @@
     <EmbeddedResource Include="Feature\Produto\View\FrmProduto.resx">
       <DependentUpon>FrmProduto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Feature\Promocao\View\FrmCadastrarPromocao.resx">
+    <EmbeddedResource Include="Feature\Promocao\View\telas\FrmCadastrarPromocao.resx">
       <DependentUpon>FrmCadastrarPromocao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Feature\Promocao\View\FrmCadastrodaPromocao.resx">
       <DependentUpon>FrmCadastrodaPromocao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Feature\Promocao\View\FrmDiaPromocao.resx">
+    <EmbeddedResource Include="Feature\Promocao\View\telas\FrmDiaPromocao.resx">
       <DependentUpon>FrmDiaPromocao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Feature\Promocao\View\FrmInsereProdutosPromocao.resx">
@@ -314,10 +314,10 @@
     <EmbeddedResource Include="Feature\Promocao\View\FrmPromocao.resx">
       <DependentUpon>FrmPromocao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Feature\Promocao\View\FrmSelecionarProdutos.resx">
+    <EmbeddedResource Include="Feature\Promocao\View\telas\FrmSelecionarProdutos.resx">
       <DependentUpon>FrmSelecionarProdutos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Feature\Promocao\View\FrmTipo.resx">
+    <EmbeddedResource Include="Feature\Promocao\View\telas\FrmTipo.resx">
       <DependentUpon>FrmTipo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Feature\TelaLogin\Logar.resx">

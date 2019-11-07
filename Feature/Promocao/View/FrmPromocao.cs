@@ -11,7 +11,7 @@ namespace ProjetoDesafio.Feature.Promocao.View
         }
         private void BtnNovo_Click(object sender, EventArgs e)
         {
-            new FrmTipo().Show();
+            
         }
     }
 }
