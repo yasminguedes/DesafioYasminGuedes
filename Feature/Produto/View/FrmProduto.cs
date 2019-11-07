@@ -57,6 +57,8 @@ namespace ProjetoDesafio.Feature.Produto.View
             cmbTipo.Text = string.Empty;
             dtCadastro.Text = string.Empty;
             cmbFornecedor.Text = string.Empty;
+            txtCodigo.Text = string.Empty;
+            dtValidade.Text = string.Empty;
         }
         private void HabilitarOuDesabilitarCampos(bool habilitarCampos)
         {
@@ -70,12 +72,14 @@ namespace ProjetoDesafio.Feature.Produto.View
             cmbAtivo.Enabled = habilitarCampos;
             dtCadastro.Enabled = habilitarCampos;
             cmbFornecedor.Enabled = habilitarCampos;
+            txtCodigo.Enabled = habilitarCampos;
+            dtValidade.Enabled = habilitarCampos;
         }
 
         private void BtnCadastrar_Click(object sender, EventArgs e)
         {
             HabilitarOuDesabilitarCampos(true);
-            txtNomeProduto.Focus();
+            txtCodigo.Focus();
         }
 
         private void BtnSalvar_Click(object sender, EventArgs e)
@@ -88,6 +92,8 @@ namespace ProjetoDesafio.Feature.Produto.View
             _produtoModel.Ativo = cmbAtivo.Text;
             _produtoModel.Qtde = int.Parse(txtQuantidade.Text);
             _produtoModel.DataCadastro = DateTime.Parse(dtCadastro.Text);
+            _produtoModel.DataValidade = DateTime.Parse(dtValidade.Text);
+            _produtoModel.Codigo = int.Parse(txtCodigo.Text);
             _produtoModel.Marca.IdMarca = int.Parse(cmbMarca.SelectedValue.ToString());
             _produtoModel.Categoria.IdCategoria = int.Parse(cmbCategoria.SelectedValue.ToString());
             _produtoModel.Fornecedor.IdFornecedor = int.Parse(cmbFornecedor.SelectedValue.ToString());
@@ -113,64 +119,64 @@ namespace ProjetoDesafio.Feature.Produto.View
 
         private void BtnCancelar_Click(object sender, EventArgs e) => Close();
 
-
         private void BtnListar_Click(object sender, EventArgs e) =>
             new FrmListagemDeProdutos().Show();
 
         private bool ValidarCampos()
         {
-            if (!string.IsNullOrWhiteSpace(txtNomeProduto.Text.Trim()))
+            if (string.IsNullOrWhiteSpace(txtNomeProduto.Text.Trim()))
             {
                 MessageBox.Show(@"Campo 'Nome' é obrigatório.");
                 return false;
             }
-            if (!string.IsNullOrWhiteSpace(txtVenda.Text.Trim()))
+            if (string.IsNullOrWhiteSpace(txtVenda.Text.Trim()))
             {
                 MessageBox.Show(@"Campo 'Venda' é obrigatório.");
                 return false;
             }
-            if (!string.IsNullOrWhiteSpace(txtCompra.Text.Trim()))
+            if (string.IsNullOrWhiteSpace(txtCompra.Text.Trim()))
             {
                 MessageBox.Show(@"Campo 'Compra' é obrigatório.");
                 return false;
             }
-            if (!string.IsNullOrWhiteSpace(cmbTipo.Text.Trim()))
+            if (string.IsNullOrWhiteSpace(cmbTipo.Text.Trim()))
             {
                 MessageBox.Show(@"Campo 'Tipo' é obrigatório.");
                 return false;
             }
-            if (!string.IsNullOrWhiteSpace(cmbAtivo.Text.Trim()))
+            if (string.IsNullOrWhiteSpace(cmbAtivo.Text.Trim()))
             {
                 MessageBox.Show(@"Campo 'Ativo' é obrigatório.");
                 return false;
             }
-            if (!string.IsNullOrWhiteSpace(txtQuantidade.Text.Trim()))
+            if (string.IsNullOrWhiteSpace(txtQuantidade.Text.Trim()))
             {
                 MessageBox.Show(@"Campo 'Quantidade' é obrigatório.");
                 return false;
             }
-            if (!string.IsNullOrWhiteSpace(dtCadastro.Text.Trim()))
+            if (string.IsNullOrWhiteSpace(dtCadastro.Text.Trim()))
             {
                 MessageBox.Show(@"Campo 'Cadastro' é obrigatório.");
                 return false;
             }
-            if (!string.IsNullOrWhiteSpace(cmbMarca.Text.Trim()))
+            if (string.IsNullOrWhiteSpace(cmbMarca.Text.Trim()))
             {
                 MessageBox.Show(@"Campo 'Marca' é obrigatório.");
                 return false;
             }
-            if (!string.IsNullOrWhiteSpace(cmbCategoria.Text.Trim()))
+            if (string.IsNullOrWhiteSpace(cmbCategoria.Text.Trim()))
             {
                 MessageBox.Show(@"Campo 'Categoria' é obrigatório.");
                 return false;
             }
-            if (!string.IsNullOrWhiteSpace(cmbFornecedor.Text.Trim()))
+            if (string.IsNullOrWhiteSpace(txtCodigo.Text.Trim()))
             {
-                MessageBox.Show(@"Campo 'Fornecedor' é obrigatório.");
+                MessageBox.Show(@"Campo 'Código' é obrigatório.");
                 return false;
             }
-            return true;
+            if (!string.IsNullOrWhiteSpace(cmbFornecedor.Text.Trim())) return true;
+            MessageBox.Show(@"Campo 'Fornecedor' é obrigatório.");
+            return false;
         }
-
     }
 }
