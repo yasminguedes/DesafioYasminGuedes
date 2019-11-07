@@ -47,7 +47,7 @@ namespace ProjetoDesafio.Feature.Promocao.View
         }
 
         private void BtnSalvar_Click(object sender, EventArgs e) =>
-            MessageBox.Show("Promoção cadastrada com sucesso!");
+            MessageBox.Show(@"Promoção cadastrada com sucesso!");
 
         private void btnCancelar_Click(object sender, EventArgs e) => Close();
     }

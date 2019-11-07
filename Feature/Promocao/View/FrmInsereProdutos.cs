@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using ProjetoDesafio.Feature.Produto.Controller;
 using ProjetoDesafio.Feature.Produto.Model;
@@ -7,10 +8,11 @@ namespace ProjetoDesafio.Feature.Promocao.View
 {
     public partial class FrmInsereProdutos : Form
     {
+        private readonly IList<ProdutoModel> _produtos;
         public FrmInsereProdutos()
         {
             InitializeComponent();
-            ListarProduto();
+            _produtos = new List<ProdutoModel>();
         }
 
         private void ListarProduto()
@@ -77,7 +79,20 @@ namespace ProjetoDesafio.Feature.Promocao.View
             };
 
         }
+        //private void AdicionarProdutosNaGrid()
+        //{
+        //    dtgListaProdutos.Rows.Clear();
 
+        //    foreach (var p in _produtos)
+        //        dtgListaProdutos.Rows.Add(p.NomeProduto, p.PrecoVenda, p.PrecoDeVendaComDesconto);
+        //}
+
+        public IList<ProdutoModel> RetornarProdutosSelecionados()
+        {
+            ShowDialog();
+
+            return _produtos;
+        }
 
         private void TxtProdutos_TextChanged(object sender, EventArgs e)
         {
