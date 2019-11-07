@@ -82,13 +82,13 @@ namespace ProjetoDesafio.Feature.Produto.Dao
                 }
                 else if (filtro.PesquisarPorCodigo)
                 {
-                    sql.Append(" WHERE p.Codigo LIKE (@Codigo)");
-                    cmd.Parameters.Add("@Codigo", FbDbType.Integer).Value = $"{filtro.Codigo}%";
+                    sql.Append(" WHERE p.Codigo = @Codigo");
+                    cmd.Parameters.Add("@Codigo", FbDbType.Integer).Value = filtro.Codigo;
                 }
                 else if (filtro.PesquisarPorValidade)
                 {
-                    sql.Append(" WHERE p.Data_Validade LIKE (@DataValidade)");
-                    cmd.Parameters.Add("@DataValidade", FbDbType.Date).Value = $"{filtro.DataValidade}%";
+                    sql.Append(" WHERE p.Data_Validade = @DataValidade");
+                    cmd.Parameters.Add("@DataValidade", FbDbType.Date).Value = filtro.DataValidade;
                 }
                 else
                 {

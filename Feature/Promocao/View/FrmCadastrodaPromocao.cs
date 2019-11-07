@@ -26,13 +26,13 @@ namespace ProjetoDesafio.Feature.Promocao.View
 
         private void CalcularDesconto()
         {
-            var desconto = Convert.ToDouble(txtDesconto.Text);
+            if (!double.TryParse(txtDesconto.Text, out var desconto)) return;
 
             if (rdPorcentagem.Checked)
             {
                 foreach (var p in _produtos)
                 {
-                    p.PrecoDeVendaComDesconto = p.PrecoVenda - (p.PrecoVenda * desconto) / 100;
+                    p.PrecoDeVendaComDesconto = p.PrecoVenda - p.PrecoVenda * desconto / 100;
                 }
             }
             else
@@ -42,6 +42,13 @@ namespace ProjetoDesafio.Feature.Promocao.View
                     p.PrecoDeVendaComDesconto = p.PrecoVenda - desconto;
                 }
             }
+
+            dtgProdutosPromocao.Refresh();
         }
+
+        private void BtnSalvar_Click(object sender, EventArgs e) =>
+            MessageBox.Show("Promoção cadastrada com sucesso!");
+
+        private void btnCancelar_Click(object sender, EventArgs e) => Close();
     }
 }

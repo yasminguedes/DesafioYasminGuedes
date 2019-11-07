@@ -10,6 +10,7 @@ namespace ProjetoDesafio.Feature.Promocao.View
         public FrmInsereProdutos()
         {
             InitializeComponent();
+            ListarProduto();
         }
 
         private void ListarProduto()
@@ -17,26 +18,73 @@ namespace ProjetoDesafio.Feature.Promocao.View
             var filtro = Filtrar();
             dtgListaProdutos.DataSource = new ProdutoController().Listar(filtro);
         }
-        
-        private ProdutoFiltroModel Filtrar() =>
-            new ProdutoFiltroModel
+
+        private ProdutoFiltroModel Filtrar()
+        {
+            if (rdProduto.Checked)
             {
-                NomeProduto = txtProdutos.Text,
-                Marca = {NomeMarca = txtProdutos.Text},
-                Categoria = {NomeCategoria = txtProdutos.Text},
-                Codigo = int.Parse(txtProdutos.Text),
-                DataValidade = DateTime.Parse(txtProdutos.Text),
-                PesquisarPorMarca = rdMarca.AutoCheck,
-                PesquisarPorNomeProduto = rdProduto.Checked,
-                PesquisarPorCodigo = rdCodigo.AutoCheck,
-                PesquisarPorValidade = rdValidade.Checked
+                return new ProdutoFiltroModel
+                {
+                    NomeProduto = txtProdutos.Text,
+                    PesquisarPorNomeProduto = true
+                };
+            }
+
+            if (rdMarca.Checked)
+            {
+                return new ProdutoFiltroModel
+                {
+                   Marca = {NomeMarca = txtProdutos.Text},
+                   PesquisarPorMarca = true
+                };
+            }
+
+            if (rdCodigo.Checked)
+            {
+                try
+                {
+                    return new ProdutoFiltroModel
+                    {
+                        Codigo = int.Parse(txtProdutos.Text),
+                        PesquisarPorCodigo = true
+                    };
+                }
+                catch
+                {
+                    return new ProdutoFiltroModel();
+                }
+            }
+
+            if (rdValidade.Checked)
+            {
+                try
+                {
+                    return new ProdutoFiltroModel
+                    {
+                        DataValidade = Convert.ToDateTime(txtProdutos.Text),
+                        PesquisarPorValidade = true
+                    };
+                }
+                catch 
+                {
+                    return new ProdutoFiltroModel();
+                }
+            }
+
+            return new ProdutoFiltroModel
+            {
+                Categoria = {NomeCategoria = txtProdutos.Text}
             };
 
-        private void BtnCancelar_Click(object sender, EventArgs e) => Close();
+        }
+
 
         private void TxtProdutos_TextChanged(object sender, EventArgs e)
         {
             ListarProduto();
         }
+
+        private void BtnCancelar_Click(object sender, EventArgs e) => Close();
+
     }
 }
