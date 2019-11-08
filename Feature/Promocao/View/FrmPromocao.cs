@@ -47,7 +47,7 @@ namespace ProjetoDesafio.Feature.Promocao.View
                     TerminoPromocao = DateTime.Parse("18/11/2019")
                 }
             };
-            //dtgPromocao.DataSource = _promocao;
+            dtgPromocao.DataSource = _promocao;
         }
     }
 }
