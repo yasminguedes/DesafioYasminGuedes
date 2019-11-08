@@ -7,7 +7,7 @@ namespace ProjetoDesafio.Feature.Promocao.View
 {
     public partial class FrmCadastroDaPromocao : Form
     {
-        private readonly IList<ProdutoModel> _produtos;
+        private IList<ProdutoModel> _produtos;
         public FrmCadastroDaPromocao()
         {
             InitializeComponent();
@@ -16,7 +16,12 @@ namespace ProjetoDesafio.Feature.Promocao.View
 
         private void BtnInserirProdutos_Click(object sender, EventArgs e)
         {
-            new FrmInsereProdutos().Show();
+            _produtos = new FrmInsereProdutos().RetornarProdutos();
+            
+            if(_produtos.Count <= 0) return;
+
+            produtoModelBindingSource.DataSource = _produtos;
+            dtgProdutosPromocao.Refresh();
         }
 
         private void TxtDesconto_TextChanged(object sender, EventArgs e)
@@ -49,6 +54,6 @@ namespace ProjetoDesafio.Feature.Promocao.View
         private void BtnSalvar_Click(object sender, EventArgs e) =>
             MessageBox.Show(@"Promoção cadastrada com sucesso!");
 
-        private void btnCancelar_Click(object sender, EventArgs e) => Close();
+        private void BtnCancelar_Click(object sender, EventArgs e) => Close();
     }
 }

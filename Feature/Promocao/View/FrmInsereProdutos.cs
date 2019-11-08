@@ -8,7 +8,8 @@ namespace ProjetoDesafio.Feature.Promocao.View
 {
     public partial class FrmInsereProdutos : Form
     {
-        private readonly IList<ProdutoModel> _produtos;
+        private IList<ProdutoModel> _produtos;
+
         public FrmInsereProdutos()
         {
             InitializeComponent();
@@ -36,8 +37,8 @@ namespace ProjetoDesafio.Feature.Promocao.View
             {
                 return new ProdutoFiltroModel
                 {
-                   Marca = {NomeMarca = txtProdutos.Text},
-                   PesquisarPorMarca = true
+                    Marca = { NomeMarca = txtProdutos.Text },
+                    PesquisarPorMarca = true
                 };
             }
 
@@ -67,39 +68,29 @@ namespace ProjetoDesafio.Feature.Promocao.View
                         PesquisarPorValidade = true
                     };
                 }
-                catch 
+                catch
                 {
                     return new ProdutoFiltroModel();
                 }
             }
-
             return new ProdutoFiltroModel
             {
-                Categoria = {NomeCategoria = txtProdutos.Text}
+                Categoria = { NomeCategoria = txtProdutos.Text }
             };
-
         }
-        //private void AdicionarProdutosNaGrid()
-        //{
-        //    dtgListaProdutos.Rows.Clear();
 
-        //    foreach (var p in _produtos)
-        //        dtgListaProdutos.Rows.Add(p.NomeProduto, p.PrecoVenda, p.PrecoDeVendaComDesconto);
-        //}
+        public IList<ProdutoModel> RetornarProdutos() =>
+            ShowDialog() == DialogResult.OK ? _produtos : new List<ProdutoModel>();
 
-        public IList<ProdutoModel> RetornarProdutosSelecionados()
+        private void TxtProdutos_TextChanged(object sender, EventArgs e) => ListarProduto();
+
+        private void BtnCancelar_Click(object sender, EventArgs e) => DialogResult = DialogResult.Cancel;
+
+        private void BtnSalvar_Click(object sender, EventArgs e)
         {
-            ShowDialog();
-
-            return _produtos;
+            _produtos = dtgListaProdutos.DataSource as List<ProdutoModel>;
+            MessageBox.Show(@"Produtos Adicionados com sucesso!");
+            DialogResult = DialogResult.OK;
         }
-
-        private void TxtProdutos_TextChanged(object sender, EventArgs e)
-        {
-            ListarProduto();
-        }
-
-        private void BtnCancelar_Click(object sender, EventArgs e) => Close();
-
     }
 }
