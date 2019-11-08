@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 using ProjetoDesafio.Feature.Produto.Model;
 using ProjetoDesafio.Feature.Promocao.Model;
@@ -75,6 +76,30 @@ namespace ProjetoDesafio.Feature.Promocao.View
             ShowDialog();
 
             return DialogResult == DialogResult.OK ? _promocaoModel : new PromocaoModel();
+        }
+
+        private void CmbTipo_SelectedValueChanged(object sender, EventArgs e)
+        {
+           if (cmbTipo.SelectedIndex == 1)
+            {
+                lblDesconto.Location = new Point(18, 220);
+                rdPorcentagem.Location = new Point(143, 220);
+                rdValor.Location = new Point(250, 220);
+                txtDesconto.Location = new Point(345, 215);
+				lblStatus.Location = new Point(19, 260);
+                cmbStatus.Location = new Point(143, 255);
+                btnInserirProdutos.Location = new Point(310, 253);
+				dtgProdutosPromocao.Location = new Point(25, 300);
+                btnSalvar.Location = new Point(138, 630);
+                btnCancelar.Location = new Point(343, 630);
+
+                txtValor.Visible = true;
+                lblAcima.Visible = true;
+            }
+           else if (cmbTipo.SelectedIndex == 2)
+           {
+
+           }
         }
     }
 }

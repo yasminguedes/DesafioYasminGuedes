@@ -40,22 +40,24 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.cmbTipo = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblDesconto = new System.Windows.Forms.Label();
             this.rdValor = new System.Windows.Forms.RadioButton();
             this.rdPorcentagem = new System.Windows.Forms.RadioButton();
             this.txtDesconto = new System.Windows.Forms.TextBox();
             this.dtgProdutosPromocao = new System.Windows.Forms.DataGridView();
-            this.idProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecoCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precoVendaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precoDeVendaComDescontoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.produtoModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnInserirProdutos = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblStatus = new System.Windows.Forms.Label();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
+            this.txtValor = new System.Windows.Forms.TextBox();
+            this.lblAcima = new System.Windows.Forms.Label();
+            this.idProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precoVendaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precoDeVendaComDescontoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.produtoModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dtgProdutosPromocao)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.produtoModelBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -161,22 +163,23 @@
             this.cmbTipo.FormattingEnabled = true;
             this.cmbTipo.Items.AddRange(new object[] {
             "Desconto Percentual/ Valor atribuído",
-            "Cada X em compras, ganhe Y em desconto",
+            "Acima de  X em compras, ganhe Y em desconto",
             "Leve X, pague Y"});
             this.cmbTipo.Location = new System.Drawing.Point(188, 26);
             this.cmbTipo.Name = "cmbTipo";
             this.cmbTipo.Size = new System.Drawing.Size(424, 33);
             this.cmbTipo.TabIndex = 0;
+            this.cmbTipo.SelectedValueChanged += new System.EventHandler(this.CmbTipo_SelectedValueChanged);
             // 
-            // label4
+            // lblDesconto
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label4.Location = new System.Drawing.Point(23, 221);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(95, 25);
-            this.label4.TabIndex = 34;
-            this.label4.Text = "Desconto";
+            this.lblDesconto.AutoSize = true;
+            this.lblDesconto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblDesconto.Location = new System.Drawing.Point(23, 221);
+            this.lblDesconto.Name = "lblDesconto";
+            this.lblDesconto.Size = new System.Drawing.Size(95, 25);
+            this.lblDesconto.TabIndex = 34;
+            this.lblDesconto.Text = "Desconto";
             // 
             // rdValor
             // 
@@ -223,28 +226,12 @@
             this.precoVendaDataGridViewTextBoxColumn,
             this.precoDeVendaComDescontoDataGridViewTextBoxColumn});
             this.dtgProdutosPromocao.DataSource = this.produtoModelBindingSource;
-            this.dtgProdutosPromocao.Location = new System.Drawing.Point(28, 328);
+            this.dtgProdutosPromocao.Location = new System.Drawing.Point(28, 332);
             this.dtgProdutosPromocao.Name = "dtgProdutosPromocao";
             this.dtgProdutosPromocao.RowHeadersWidth = 51;
             this.dtgProdutosPromocao.RowTemplate.Height = 24;
             this.dtgProdutosPromocao.Size = new System.Drawing.Size(584, 372);
             this.dtgProdutosPromocao.TabIndex = 37;
-            // 
-            // idProdutoDataGridViewTextBoxColumn
-            // 
-            this.idProdutoDataGridViewTextBoxColumn.DataPropertyName = "IdProduto";
-            this.idProdutoDataGridViewTextBoxColumn.HeaderText = "Cod";
-            this.idProdutoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idProdutoDataGridViewTextBoxColumn.Name = "idProdutoDataGridViewTextBoxColumn";
-            this.idProdutoDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // nomeProdutoDataGridViewTextBoxColumn
-            // 
-            this.nomeProdutoDataGridViewTextBoxColumn.DataPropertyName = "NomeProduto";
-            this.nomeProdutoDataGridViewTextBoxColumn.HeaderText = "Produto";
-            this.nomeProdutoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nomeProdutoDataGridViewTextBoxColumn.Name = "nomeProdutoDataGridViewTextBoxColumn";
-            this.nomeProdutoDataGridViewTextBoxColumn.Width = 125;
             // 
             // PrecoCompra
             // 
@@ -253,26 +240,6 @@
             this.PrecoCompra.MinimumWidth = 6;
             this.PrecoCompra.Name = "PrecoCompra";
             this.PrecoCompra.Width = 125;
-            // 
-            // precoVendaDataGridViewTextBoxColumn
-            // 
-            this.precoVendaDataGridViewTextBoxColumn.DataPropertyName = "PrecoVenda";
-            this.precoVendaDataGridViewTextBoxColumn.HeaderText = "Preço Venda";
-            this.precoVendaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.precoVendaDataGridViewTextBoxColumn.Name = "precoVendaDataGridViewTextBoxColumn";
-            this.precoVendaDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // precoDeVendaComDescontoDataGridViewTextBoxColumn
-            // 
-            this.precoDeVendaComDescontoDataGridViewTextBoxColumn.DataPropertyName = "PrecoDeVendaComDesconto";
-            this.precoDeVendaComDescontoDataGridViewTextBoxColumn.HeaderText = "Preço Desconto";
-            this.precoDeVendaComDescontoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.precoDeVendaComDescontoDataGridViewTextBoxColumn.Name = "precoDeVendaComDescontoDataGridViewTextBoxColumn";
-            this.precoDeVendaComDescontoDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // produtoModelBindingSource
-            // 
-            this.produtoModelBindingSource.DataSource = typeof(ProjetoDesafio.Feature.Produto.Model.ProdutoModel);
             // 
             // btnInserirProdutos
             // 
@@ -294,7 +261,7 @@
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.btnSalvar.Image = global::ProjetoDesafio.Properties.Resources.check1;
             this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalvar.Location = new System.Drawing.Point(238, 725);
+            this.btnSalvar.Location = new System.Drawing.Point(238, 738);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(165, 54);
             this.btnSalvar.TabIndex = 9;
@@ -309,7 +276,7 @@
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.btnCancelar.Image = global::ProjetoDesafio.Properties.Resources.clear;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelar.Location = new System.Drawing.Point(447, 725);
+            this.btnCancelar.Location = new System.Drawing.Point(447, 738);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(165, 54);
             this.btnCancelar.TabIndex = 10;
@@ -318,15 +285,15 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
-            // label5
+            // lblStatus
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(23, 273);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 25);
-            this.label5.TabIndex = 39;
-            this.label5.Text = "Status";
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatus.Location = new System.Drawing.Point(25, 273);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(68, 25);
+            this.lblStatus.TabIndex = 39;
+            this.lblStatus.Text = "Status";
             // 
             // cmbStatus
             // 
@@ -340,18 +307,76 @@
             this.cmbStatus.Size = new System.Drawing.Size(201, 33);
             this.cmbStatus.TabIndex = 40;
             // 
+            // txtValor
+            // 
+            this.txtValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtValor.Location = new System.Drawing.Point(186, 218);
+            this.txtValor.Name = "txtValor";
+            this.txtValor.Size = new System.Drawing.Size(426, 30);
+            this.txtValor.TabIndex = 41;
+            this.txtValor.Visible = false;
+            // 
+            // lblAcima
+            // 
+            this.lblAcima.AutoSize = true;
+            this.lblAcima.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAcima.Location = new System.Drawing.Point(25, 220);
+            this.lblAcima.Name = "lblAcima";
+            this.lblAcima.Size = new System.Drawing.Size(94, 25);
+            this.lblAcima.TabIndex = 42;
+            this.lblAcima.Text = "Acima de";
+            this.lblAcima.Visible = false;
+            // 
+            // idProdutoDataGridViewTextBoxColumn
+            // 
+            this.idProdutoDataGridViewTextBoxColumn.DataPropertyName = "IdProduto";
+            this.idProdutoDataGridViewTextBoxColumn.HeaderText = "Cod";
+            this.idProdutoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idProdutoDataGridViewTextBoxColumn.Name = "idProdutoDataGridViewTextBoxColumn";
+            this.idProdutoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // nomeProdutoDataGridViewTextBoxColumn
+            // 
+            this.nomeProdutoDataGridViewTextBoxColumn.DataPropertyName = "NomeProduto";
+            this.nomeProdutoDataGridViewTextBoxColumn.HeaderText = "Produto";
+            this.nomeProdutoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nomeProdutoDataGridViewTextBoxColumn.Name = "nomeProdutoDataGridViewTextBoxColumn";
+            this.nomeProdutoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // precoVendaDataGridViewTextBoxColumn
+            // 
+            this.precoVendaDataGridViewTextBoxColumn.DataPropertyName = "PrecoVenda";
+            this.precoVendaDataGridViewTextBoxColumn.HeaderText = "Preço Venda";
+            this.precoVendaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.precoVendaDataGridViewTextBoxColumn.Name = "precoVendaDataGridViewTextBoxColumn";
+            this.precoVendaDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // precoDeVendaComDescontoDataGridViewTextBoxColumn
+            // 
+            this.precoDeVendaComDescontoDataGridViewTextBoxColumn.DataPropertyName = "PrecoDeVendaComDesconto";
+            this.precoDeVendaComDescontoDataGridViewTextBoxColumn.HeaderText = "Preço Desconto";
+            this.precoDeVendaComDescontoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.precoDeVendaComDescontoDataGridViewTextBoxColumn.Name = "precoDeVendaComDescontoDataGridViewTextBoxColumn";
+            this.precoDeVendaComDescontoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // produtoModelBindingSource
+            // 
+            this.produtoModelBindingSource.DataSource = typeof(ProjetoDesafio.Feature.Produto.Model.ProdutoModel);
+            // 
             // FrmCadastroDaPromocao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(641, 806);
+            this.ClientSize = new System.Drawing.Size(641, 922);
+            this.Controls.Add(this.lblAcima);
+            this.Controls.Add(this.txtValor);
             this.Controls.Add(this.cmbStatus);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.btnInserirProdutos);
             this.Controls.Add(this.dtgProdutosPromocao);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblDesconto);
             this.Controls.Add(this.rdValor);
             this.Controls.Add(this.rdPorcentagem);
             this.Controls.Add(this.txtDesconto);
@@ -390,7 +415,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cmbTipo;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblDesconto;
         private System.Windows.Forms.RadioButton rdValor;
         private System.Windows.Forms.RadioButton rdPorcentagem;
         private System.Windows.Forms.TextBox txtDesconto;
@@ -404,7 +429,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecoCompra;
         private System.Windows.Forms.DataGridViewTextBoxColumn precoVendaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn precoDeVendaComDescontoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.ComboBox cmbStatus;
+        private System.Windows.Forms.TextBox txtValor;
+        private System.Windows.Forms.Label lblAcima;
     }
 }
