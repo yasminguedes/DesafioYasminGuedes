@@ -54,6 +54,8 @@
             this.btnInserirProdutos = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cmbStatus = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgProdutosPromocao)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.produtoModelBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -157,6 +159,10 @@
             // 
             this.cmbTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTipo.FormattingEnabled = true;
+            this.cmbTipo.Items.AddRange(new object[] {
+            "Desconto Percentual/ Valor atribuído",
+            "Cada X em compras, ganhe Y em desconto",
+            "Leve X, pague Y"});
             this.cmbTipo.Location = new System.Drawing.Point(188, 26);
             this.cmbTipo.Name = "cmbTipo";
             this.cmbTipo.Size = new System.Drawing.Size(424, 33);
@@ -284,6 +290,7 @@
             // 
             // btnSalvar
             // 
+            this.btnSalvar.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.btnSalvar.Image = global::ProjetoDesafio.Properties.Resources.check1;
             this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -311,11 +318,35 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(23, 273);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(68, 25);
+            this.label5.TabIndex = 39;
+            this.label5.Text = "Status";
+            // 
+            // cmbStatus
+            // 
+            this.cmbStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbStatus.FormattingEnabled = true;
+            this.cmbStatus.Items.AddRange(new object[] {
+            "Ativo",
+            "Inativo"});
+            this.cmbStatus.Location = new System.Drawing.Point(186, 270);
+            this.cmbStatus.Name = "cmbStatus";
+            this.cmbStatus.Size = new System.Drawing.Size(201, 33);
+            this.cmbStatus.TabIndex = 40;
+            // 
             // FrmCadastroDaPromocao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(641, 806);
+            this.Controls.Add(this.cmbStatus);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnInserirProdutos);
             this.Controls.Add(this.dtgProdutosPromocao);
             this.Controls.Add(this.btnSalvar);
@@ -373,5 +404,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecoCompra;
         private System.Windows.Forms.DataGridViewTextBoxColumn precoVendaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn precoDeVendaComDescontoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cmbStatus;
     }
 }
