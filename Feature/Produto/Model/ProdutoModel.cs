@@ -15,7 +15,7 @@ namespace ProjetoDesafio.Feature.Produto.Model
         public int Qtde { get; set; }
         public  string Tipo { get; set; }
         public string Ativo { get; set; }
-        public int Codigo { get; set; }
+        public string CodigoBarras { get; set; }
         public DateTime DataCadastro { get; set; }
         public DateTime DataValidade { get; set; }
         public MarcaModel Marca { get; set; }

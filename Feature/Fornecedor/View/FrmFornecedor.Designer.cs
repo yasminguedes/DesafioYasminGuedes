@@ -691,6 +691,7 @@
             // 
             this.cmbEstado.AccessibleDescription = "Estado";
             this.cmbEstado.AccessibleName = "Estado";
+            this.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbEstado.FormattingEnabled = true;
             this.cmbEstado.Location = new System.Drawing.Point(416, 239);
@@ -700,6 +701,7 @@
             // 
             // cmbCidade
             // 
+            this.cmbCidade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCidade.FormattingEnabled = true;
             this.cmbCidade.Location = new System.Drawing.Point(121, 292);
             this.cmbCidade.Name = "cmbCidade";

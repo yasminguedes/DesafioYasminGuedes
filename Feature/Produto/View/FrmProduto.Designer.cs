@@ -37,7 +37,6 @@
             this.lblPrecoVenda = new System.Windows.Forms.Label();
             this.lblQuantidade = new System.Windows.Forms.Label();
             this.lbltipo = new System.Windows.Forms.Label();
-            this.lblAtivo = new System.Windows.Forms.Label();
             this.lblDataCadastro = new System.Windows.Forms.Label();
             this.lblMarca = new System.Windows.Forms.Label();
             this.lblCategoria = new System.Windows.Forms.Label();
@@ -55,12 +54,10 @@
             this.cmbMarca = new System.Windows.Forms.ComboBox();
             this.txtNomeProduto = new System.Windows.Forms.TextBox();
             this.gpCompra = new System.Windows.Forms.GroupBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dtCadastro = new System.Windows.Forms.DateTimePicker();
-            this.cmbAtivo = new System.Windows.Forms.ComboBox();
             this.cmbTipo = new System.Windows.Forms.ComboBox();
             this.txtQuantidade = new System.Windows.Forms.TextBox();
             this.gpValores = new System.Windows.Forms.GroupBox();
@@ -190,16 +187,6 @@
             this.lbltipo.Size = new System.Drawing.Size(51, 25);
             this.lbltipo.TabIndex = 16;
             this.lbltipo.Text = "Tipo";
-            // 
-            // lblAtivo
-            // 
-            this.lblAtivo.AutoSize = true;
-            this.lblAtivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAtivo.Location = new System.Drawing.Point(337, 168);
-            this.lblAtivo.Name = "lblAtivo";
-            this.lblAtivo.Size = new System.Drawing.Size(56, 25);
-            this.lblAtivo.TabIndex = 17;
-            this.lblAtivo.Text = "Ativo";
             // 
             // lblDataCadastro
             // 
@@ -354,6 +341,7 @@
             // 
             // cmbCategoria
             // 
+            this.cmbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCategoria.FormattingEnabled = true;
             this.cmbCategoria.Location = new System.Drawing.Point(136, 231);
             this.cmbCategoria.Name = "cmbCategoria";
@@ -362,6 +350,7 @@
             // 
             // cmbMarca
             // 
+            this.cmbMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMarca.FormattingEnabled = true;
             this.cmbMarca.Location = new System.Drawing.Point(136, 165);
             this.cmbMarca.Name = "cmbMarca";
@@ -378,17 +367,14 @@
             // 
             // gpCompra
             // 
-            this.gpCompra.Controls.Add(this.label10);
             this.gpCompra.Controls.Add(this.label11);
             this.gpCompra.Controls.Add(this.label9);
             this.gpCompra.Controls.Add(this.label8);
             this.gpCompra.Controls.Add(this.dtCadastro);
-            this.gpCompra.Controls.Add(this.cmbAtivo);
             this.gpCompra.Controls.Add(this.lbltipo);
             this.gpCompra.Controls.Add(this.lblQuantidade);
             this.gpCompra.Controls.Add(this.lblDataCadastro);
             this.gpCompra.Controls.Add(this.cmbTipo);
-            this.gpCompra.Controls.Add(this.lblAtivo);
             this.gpCompra.Controls.Add(this.txtQuantidade);
             this.gpCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpCompra.Location = new System.Drawing.Point(734, 208);
@@ -397,18 +383,6 @@
             this.gpCompra.TabIndex = 24;
             this.gpCompra.TabStop = false;
             this.gpCompra.Text = "Informações de Compra";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(389, 166);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(16, 20);
-            this.label10.TabIndex = 30;
-            this.label10.Text = "*";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label11
             // 
@@ -454,16 +428,9 @@
             this.dtCadastro.Size = new System.Drawing.Size(133, 30);
             this.dtCadastro.TabIndex = 2;
             // 
-            // cmbAtivo
-            // 
-            this.cmbAtivo.FormattingEnabled = true;
-            this.cmbAtivo.Location = new System.Drawing.Point(441, 165);
-            this.cmbAtivo.Name = "cmbAtivo";
-            this.cmbAtivo.Size = new System.Drawing.Size(217, 33);
-            this.cmbAtivo.TabIndex = 3;
-            // 
             // cmbTipo
             // 
+            this.cmbTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipo.FormattingEnabled = true;
             this.cmbTipo.Location = new System.Drawing.Point(144, 45);
             this.cmbTipo.Name = "cmbTipo";
@@ -561,6 +528,7 @@
             // 
             // cmbFornecedor
             // 
+            this.cmbFornecedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbFornecedor.FormattingEnabled = true;
             this.cmbFornecedor.Location = new System.Drawing.Point(136, 56);
             this.cmbFornecedor.Name = "cmbFornecedor";
@@ -628,7 +596,6 @@
         private System.Windows.Forms.Label lblPrecoVenda;
         private System.Windows.Forms.Label lblQuantidade;
         private System.Windows.Forms.Label lbltipo;
-        private System.Windows.Forms.Label lblAtivo;
         private System.Windows.Forms.Label lblDataCadastro;
         private System.Windows.Forms.Label lblMarca;
         private System.Windows.Forms.Label lblCategoria;
@@ -637,7 +604,6 @@
         private System.Windows.Forms.ComboBox cmbMarca;
         private System.Windows.Forms.TextBox txtNomeProduto;
         private System.Windows.Forms.GroupBox gpCompra;
-        private System.Windows.Forms.ComboBox cmbAtivo;
         private System.Windows.Forms.ComboBox cmbTipo;
         private System.Windows.Forms.TextBox txtQuantidade;
         private System.Windows.Forms.DateTimePicker dtCadastro;
@@ -650,7 +616,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;

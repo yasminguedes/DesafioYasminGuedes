@@ -73,6 +73,16 @@ namespace ProjetoDesafio.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_24 {
+            get {
+                object obj = ResourceManager.GetObject("add 24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cancel {
             get {
                 object obj = ResourceManager.GetObject("cancel", resourceCulture);
@@ -396,6 +406,16 @@ namespace ProjetoDesafio.Properties {
         internal static System.Drawing.Bitmap icons8_voltar_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-voltar-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minus {
+            get {
+                object obj = ResourceManager.GetObject("minus", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

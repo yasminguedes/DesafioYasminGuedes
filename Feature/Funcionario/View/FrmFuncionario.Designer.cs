@@ -238,6 +238,7 @@
             // 
             this.cmbCargo.AccessibleDescription = "Cargo";
             this.cmbCargo.AccessibleName = "Cargo";
+            this.cmbCargo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCargo.FormattingEnabled = true;
             this.cmbCargo.Location = new System.Drawing.Point(104, 56);
@@ -648,6 +649,7 @@
             // 
             this.cmbEstado.AccessibleDescription = "Estado";
             this.cmbEstado.AccessibleName = "Estado";
+            this.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbEstado.FormattingEnabled = true;
             this.cmbEstado.Location = new System.Drawing.Point(410, 239);
@@ -657,6 +659,7 @@
             // 
             // cmbCidade
             // 
+            this.cmbCidade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCidade.FormattingEnabled = true;
             this.cmbCidade.Location = new System.Drawing.Point(115, 292);
             this.cmbCidade.Name = "cmbCidade";

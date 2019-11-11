@@ -36,23 +36,25 @@
             this.rdProduto = new System.Windows.Forms.RadioButton();
             this.rdCodigo = new System.Windows.Forms.RadioButton();
             this.dtgListaProdutos = new System.Windows.Forms.DataGridView();
-            this.idProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.produtoModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.ckbProdutos = new System.Windows.Forms.CheckedListBox();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.produtoModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.frmProdutoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.CodigoBarras = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgListaProdutos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.produtoModelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.produtoModelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frmProdutoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // txtProdutos
             // 
             this.txtProdutos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProdutos.Location = new System.Drawing.Point(91, 137);
+            this.txtProdutos.Location = new System.Drawing.Point(50, 110);
             this.txtProdutos.MaxLength = 100;
             this.txtProdutos.Name = "txtProdutos";
             this.txtProdutos.Size = new System.Drawing.Size(569, 30);
@@ -124,23 +126,89 @@
             this.dtgListaProdutos.AutoGenerateColumns = false;
             this.dtgListaProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgListaProdutos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idProdutoDataGridViewTextBoxColumn,
+            this.CodigoBarras,
             this.nomeProdutoDataGridViewTextBoxColumn});
             this.dtgListaProdutos.DataSource = this.produtoModelBindingSource;
-            this.dtgListaProdutos.Location = new System.Drawing.Point(91, 218);
+            this.dtgListaProdutos.Location = new System.Drawing.Point(653, 221);
             this.dtgListaProdutos.Name = "dtgListaProdutos";
             this.dtgListaProdutos.RowHeadersWidth = 51;
             this.dtgListaProdutos.RowTemplate.Height = 24;
-            this.dtgListaProdutos.Size = new System.Drawing.Size(569, 408);
+            this.dtgListaProdutos.Size = new System.Drawing.Size(584, 412);
             this.dtgListaProdutos.TabIndex = 13;
             // 
-            // idProdutoDataGridViewTextBoxColumn
+            // btnSalvar
             // 
-            this.idProdutoDataGridViewTextBoxColumn.DataPropertyName = "IdProduto";
-            this.idProdutoDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.idProdutoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idProdutoDataGridViewTextBoxColumn.Name = "idProdutoDataGridViewTextBoxColumn";
-            this.idProdutoDataGridViewTextBoxColumn.Width = 200;
+            this.btnSalvar.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnSalvar.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.btnSalvar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSalvar.Location = new System.Drawing.Point(820, 657);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(165, 54);
+            this.btnSalvar.TabIndex = 14;
+            this.btnSalvar.Text = "Confirmar";
+            this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.Red;
+            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancelar.Location = new System.Drawing.Point(1072, 657);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(165, 54);
+            this.btnCancelar.TabIndex = 15;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
+            // 
+            // ckbProdutos
+            // 
+            this.ckbProdutos.FormattingEnabled = true;
+            this.ckbProdutos.Location = new System.Drawing.Point(50, 221);
+            this.ckbProdutos.Name = "ckbProdutos";
+            this.ckbProdutos.Size = new System.Drawing.Size(477, 412);
+            this.ckbProdutos.TabIndex = 16;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Image = global::ProjetoDesafio.Properties.Resources.add_24;
+            this.btnAdd.Location = new System.Drawing.Point(479, 170);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(48, 45);
+            this.btnAdd.TabIndex = 17;
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProjetoDesafio.Properties.Resources.icons8_pesquisar_32;
+            this.pictureBox1.Location = new System.Drawing.Point(653, 102);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(51, 43);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
+            // produtoModelBindingSource
+            // 
+            this.produtoModelBindingSource.DataSource = typeof(ProjetoDesafio.Feature.Produto.Model.ProdutoModel);
+            // 
+            // frmProdutoBindingSource
+            // 
+            this.frmProdutoBindingSource.DataSource = typeof(ProjetoDesafio.Feature.Produto.View.FrmProduto);
+            // 
+            // CodigoBarras
+            // 
+            this.CodigoBarras.DataPropertyName = "CodigoBarras";
+            this.CodigoBarras.HeaderText = "Código de barras";
+            this.CodigoBarras.MinimumWidth = 6;
+            this.CodigoBarras.Name = "CodigoBarras";
+            this.CodigoBarras.Width = 150;
             // 
             // nomeProdutoDataGridViewTextBoxColumn
             // 
@@ -148,61 +216,15 @@
             this.nomeProdutoDataGridViewTextBoxColumn.HeaderText = "Produto";
             this.nomeProdutoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nomeProdutoDataGridViewTextBoxColumn.Name = "nomeProdutoDataGridViewTextBoxColumn";
-            this.nomeProdutoDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // produtoModelBindingSource
-            // 
-            this.produtoModelBindingSource.DataSource = typeof(ProjetoDesafio.Feature.Produto.Model.ProdutoModel);
-            // 
-            // btnSalvar
-            // 
-            this.btnSalvar.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.btnSalvar.Image = global::ProjetoDesafio.Properties.Resources.icons8_selecionado_32;
-            this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalvar.Location = new System.Drawing.Point(287, 657);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(165, 54);
-            this.btnSalvar.TabIndex = 14;
-            this.btnSalvar.Text = "Confirmar";
-            this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalvar.UseVisualStyleBackColor = true;
-            this.btnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.btnCancelar.Image = global::ProjetoDesafio.Properties.Resources.icons8_excluir_32;
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelar.Location = new System.Drawing.Point(496, 657);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(165, 54);
-            this.btnCancelar.TabIndex = 15;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ProjetoDesafio.Properties.Resources.icons8_pesquisar_32;
-            this.pictureBox1.Location = new System.Drawing.Point(666, 131);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(51, 43);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            // 
-            // frmProdutoBindingSource
-            // 
-            this.frmProdutoBindingSource.DataSource = typeof(ProjetoDesafio.Feature.Produto.View.FrmProduto);
+            this.nomeProdutoDataGridViewTextBoxColumn.Width = 330;
             // 
             // FrmInsereProdutos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(789, 732);
+            this.ClientSize = new System.Drawing.Size(1338, 723);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.ckbProdutos);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.dtgListaProdutos);
@@ -216,10 +238,10 @@
             this.MinimizeBox = false;
             this.Name = "FrmInsereProdutos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Inserir Produtos";
+            this.Text = "Inserção de produtos";
             ((System.ComponentModel.ISupportInitialize)(this.dtgListaProdutos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.produtoModelBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.produtoModelBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.frmProdutoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -240,7 +262,10 @@
         private System.Windows.Forms.BindingSource produtoModelBindingSource;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idProdutoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.CheckedListBox ckbProdutos;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CodigoBarras;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeProdutoDataGridViewTextBoxColumn;
     }
 }

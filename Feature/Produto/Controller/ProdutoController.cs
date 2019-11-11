@@ -33,7 +33,7 @@ namespace ProjetoDesafio.Feature.Produto.Controller
             }
             catch (Exception e)
             {
-                MessageBox.Show($@"Erro ao cadastrar funcionário: {e.Message}");
+                MessageBox.Show($@"Erro ao cadastrar produto: {e.Message}");
             }
             return false;
         }

@@ -27,7 +27,7 @@ namespace ProjetoDesafio.Feature.Produto.Dao
                     @"INSERT into Produto (nome_produto, preco_compra, preco_venda, qtde_estoque, ativo, data_cadastro, 
                                 tipo_produto, codigo, data_validade, id_fornecedor, id_marca, id_categoria) Values ");
                 commandText.Append(@"(@NomeProduto, @PrecoCompra, @PrecoVenda, @QtdeEstoque, @Ativo, @DataCadastro, 
-                                    @TipoProduto, @Codigo,@DataValidade, @Fornecedor, @Marca, @Categoria)");
+                                    @TipoProduto, @CodigoBarras,@DataValidade, @Fornecedor, @Marca, @Categoria)");
 
                 cmd.CommandText = commandText.ToString();
 
@@ -38,7 +38,7 @@ namespace ProjetoDesafio.Feature.Produto.Dao
                 cmd.Parameters.Add("@Ativo", FbDbType.VarChar).Value = produto.Ativo;
                 cmd.Parameters.Add("@DataCadastro", FbDbType.Date).Value = produto.DataCadastro;
                 cmd.Parameters.Add("@TipoProduto", FbDbType.VarChar).Value = produto.Tipo;
-                cmd.Parameters.Add("@Codigo", FbDbType.Integer).Value = produto.Codigo;
+                cmd.Parameters.Add("@CodigoBarras", FbDbType.Integer).Value = produto.CodigoBarras;
                 cmd.Parameters.Add("@DataValidade", FbDbType.Date).Value = produto.DataValidade;
                 cmd.Parameters.Add("@Fornecedor", FbDbType.Integer).Value = produto.Fornecedor.IdFornecedor;
                 cmd.Parameters.Add("@Marca", FbDbType.Integer).Value = produto.Marca.IdMarca;
@@ -83,7 +83,7 @@ namespace ProjetoDesafio.Feature.Produto.Dao
                 else if (filtro.PesquisarPorCodigo)
                 {
                     sql.Append(" WHERE p.Codigo = @Codigo");
-                    cmd.Parameters.Add("@Codigo", FbDbType.Integer).Value = filtro.Codigo;
+                    cmd.Parameters.Add("@Codigo", FbDbType.Integer).Value = filtro.CodigoBarras;
                 }
                 else if (filtro.PesquisarPorValidade)
                 {
@@ -112,7 +112,7 @@ namespace ProjetoDesafio.Feature.Produto.Dao
                         Ativo = dr["ativo"].ToString(),
                         DataCadastro = DateTime.Parse(dr["data_cadastro"].ToString()),
                         DataValidade = DateTime.Parse(dr["data_validade"].ToString()),
-                        Codigo = int.Parse(dr["codigo"].ToString()),
+                        CodigoBarras = dr["codigo"].ToString(),
                         Tipo = dr["tipo_produto"].ToString(),
                         Marca = new MarcaModel()
                         {

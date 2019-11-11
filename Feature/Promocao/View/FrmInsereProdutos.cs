@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 using ProjetoDesafio.Feature.Produto.Controller;
 using ProjetoDesafio.Feature.Produto.Model;
@@ -19,7 +20,8 @@ namespace ProjetoDesafio.Feature.Promocao.View
         private void ListarProduto()
         {
             var filtro = Filtrar();
-            dtgListaProdutos.DataSource = new ProdutoController().Listar(filtro);
+            ckbProdutos.DataSource = new ProdutoController().Listar(filtro);
+            ckbProdutos.DisplayMember = "NomeProduto";
         }
 
         private ProdutoFiltroModel Filtrar()
@@ -48,7 +50,7 @@ namespace ProjetoDesafio.Feature.Promocao.View
                 {
                     return new ProdutoFiltroModel
                     {
-                        Codigo = int.Parse(txtProdutos.Text),
+                        CodigoBarras = txtProdutos.Text,
                         PesquisarPorCodigo = true
                     };
                 }
@@ -84,6 +86,11 @@ namespace ProjetoDesafio.Feature.Promocao.View
 
         private void TxtProdutos_TextChanged(object sender, EventArgs e) => ListarProduto();
 
+        private void AdicionarProdutosNaGrid()
+        {
+            dtgListaProdutos.DataSource = _produtos;
+        }
+
         private void BtnCancelar_Click(object sender, EventArgs e) => DialogResult = DialogResult.Cancel;
 
         private void BtnSalvar_Click(object sender, EventArgs e)
@@ -91,6 +98,13 @@ namespace ProjetoDesafio.Feature.Promocao.View
             _produtos = dtgListaProdutos.DataSource as List<ProdutoModel>;
             MessageBox.Show(@"Produtos Adicionados com sucesso!");
             DialogResult = DialogResult.OK;
+        }
+
+        private void BtnAdd_Click(object sender, EventArgs e)
+        {
+           _produtos = ckbProdutos.CheckedItems.Cast<ProdutoModel>().ToList() ;
+            
+            AdicionarProdutosNaGrid();
         }
     }
 }

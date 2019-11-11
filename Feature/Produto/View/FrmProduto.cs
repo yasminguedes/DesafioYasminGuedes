@@ -16,7 +16,6 @@ namespace ProjetoDesafio.Feature.Produto.View
             _produtoModel = new ProdutoModel();
             _produtoController = new ProdutoController();
             PreencherTipo();
-            SelecionarAtivo();
             PreencherCategoria();
             PreencherMarca();
             PreencherFornecedor();
@@ -51,7 +50,6 @@ namespace ProjetoDesafio.Feature.Produto.View
             txtNomeProduto.Text = string.Empty;
             txtQuantidade.Text = string.Empty;
             txtVenda.Text = string.Empty;
-            cmbAtivo.Text = string.Empty;
             cmbCategoria.Text = string.Empty;
             cmbMarca.Text = string.Empty;
             cmbTipo.Text = string.Empty;
@@ -69,7 +67,6 @@ namespace ProjetoDesafio.Feature.Produto.View
             cmbMarca.Enabled = habilitarCampos;
             cmbCategoria.Enabled = habilitarCampos;
             cmbTipo.Enabled = habilitarCampos;
-            cmbAtivo.Enabled = habilitarCampos;
             dtCadastro.Enabled = habilitarCampos;
             cmbFornecedor.Enabled = habilitarCampos;
             txtCodigo.Enabled = habilitarCampos;
@@ -89,11 +86,10 @@ namespace ProjetoDesafio.Feature.Produto.View
             _produtoModel.PrecoVenda = double.Parse(txtVenda.Text);
             _produtoModel.PrecoCompra = double.Parse(txtCompra.Text);
             _produtoModel.Tipo = cmbTipo.Text;
-            _produtoModel.Ativo = cmbAtivo.Text;
             _produtoModel.Qtde = int.Parse(txtQuantidade.Text);
             _produtoModel.DataCadastro = DateTime.Parse(dtCadastro.Text);
             _produtoModel.DataValidade = DateTime.Parse(dtValidade.Text);
-            _produtoModel.Codigo = int.Parse(txtCodigo.Text);
+            _produtoModel.CodigoBarras = txtCodigo.Text;
             _produtoModel.Marca.IdMarca = int.Parse(cmbMarca.SelectedValue.ToString());
             _produtoModel.Categoria.IdCategoria = int.Parse(cmbCategoria.SelectedValue.ToString());
             _produtoModel.Fornecedor.IdFornecedor = int.Parse(cmbFornecedor.SelectedValue.ToString());
@@ -110,13 +106,6 @@ namespace ProjetoDesafio.Feature.Produto.View
             cmbTipo.Items.Add(@"Unidade");
             cmbTipo.Items.Add(@"Engradado");
         }
-
-        private void SelecionarAtivo()
-        {
-            cmbAtivo.Items.Add(@"Ativo");
-            cmbAtivo.Items.Add(@"Inativo");
-        }
-
         private void BtnCancelar_Click(object sender, EventArgs e) => Close();
 
         private void BtnListar_Click(object sender, EventArgs e) =>
@@ -142,11 +131,6 @@ namespace ProjetoDesafio.Feature.Produto.View
             if (string.IsNullOrWhiteSpace(cmbTipo.Text.Trim()))
             {
                 MessageBox.Show(@"Campo 'Tipo' é obrigatório.");
-                return false;
-            }
-            if (string.IsNullOrWhiteSpace(cmbAtivo.Text.Trim()))
-            {
-                MessageBox.Show(@"Campo 'Ativo' é obrigatório.");
                 return false;
             }
             if (string.IsNullOrWhiteSpace(txtQuantidade.Text.Trim()))

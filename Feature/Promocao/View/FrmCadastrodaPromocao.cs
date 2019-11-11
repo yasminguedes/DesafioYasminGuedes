@@ -2,7 +2,6 @@
 using ProjetoDesafio.Feature.Promocao.Model;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace ProjetoDesafio.Feature.Promocao.View
@@ -17,7 +16,22 @@ namespace ProjetoDesafio.Feature.Promocao.View
             _produtos = new List<ProdutoModel>();
             _promocaoModel = new PromocaoModel();
         }
-       
+
+        private void cmbTipo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbTipo.SelectedIndex == 0)
+            {
+                txtNomePromoção.Enabled = true;
+            }
+        }
+
+        private void TxtNomePromoção_TextChanged(object sender, EventArgs e)
+        {
+            btnInserirProdutos.Enabled = !string.IsNullOrWhiteSpace(txtNomePromoção.Text);
+        }
+
+
+
         private void BtnInserirProdutos_Click(object sender, EventArgs e)
         {
             _produtos = new FrmInsereProdutos().RetornarProdutos();
@@ -58,9 +72,7 @@ namespace ProjetoDesafio.Feature.Promocao.View
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
             _promocaoModel.NomePromocao = txtNomePromoção.Text;
-            _promocaoModel.Descricao = txtDescricao.Text;
             _promocaoModel.TipoPromocao = cmbTipo.Text;
-            _promocaoModel.StatusPromocao = cmbStatus.Text;
             _promocaoModel.InicioPromocao = DateTime.Parse(dtFim.Text);
             _promocaoModel.TerminoPromocao = DateTime.Parse(dtFim.Text);
 
@@ -76,30 +88,6 @@ namespace ProjetoDesafio.Feature.Promocao.View
             ShowDialog();
 
             return DialogResult == DialogResult.OK ? _promocaoModel : new PromocaoModel();
-        }
-
-        private void CmbTipo_SelectedValueChanged(object sender, EventArgs e)
-        {
-           if (cmbTipo.SelectedIndex == 1)
-           {
-               lblDesconto.Location = new Point(18, 220);
-               rdPorcentagem.Location = new Point(143, 220);
-               rdValor.Location = new Point(250, 220);
-               txtDesconto.Location = new Point(345, 215);
-               lblStatus.Location = new Point(19, 260);
-               cmbStatus.Location = new Point(143, 255);
-               btnInserirProdutos.Location = new Point(310, 253);
-               dtgProdutosPromocao.Location = new Point(25, 300);
-               btnSalvar.Location = new Point(138, 630);
-               btnCancelar.Location = new Point(343, 630);
-
-               txtValor.Visible = true;
-               lblAcima.Visible = true;
-           }
-           else if (cmbTipo.SelectedIndex == 2)
-           {
-
-           }
         }
     }
 }
