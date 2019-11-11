@@ -31,7 +31,6 @@ namespace ProjetoDesafio.Feature.Promocao.View
                 {
                     IdPromocao = 1,
                     NomePromocao = "Desconto Percentual Saboraki",
-                    Descricao = "Promoção com X% de desconto da marca Saboraki",
                     TipoPromocao = "Desconto Percentual/Valor atribuído",
                     StatusPromocao = "Ativa",
                     InicioPromocao = DateTime.Parse("08/11/2019"),
@@ -41,7 +40,6 @@ namespace ProjetoDesafio.Feature.Promocao.View
                 {
                     IdPromocao = 2,
                     NomePromocao = "Desconto por categoria",
-                    Descricao = "Promoção com R$ X,xx de desconto da categoria Destilados",
                     TipoPromocao = "Desconto Percentual/Valor atribuído",
                     StatusPromocao = "Ativa",
                     InicioPromocao = DateTime.Parse("14/11/2019"),

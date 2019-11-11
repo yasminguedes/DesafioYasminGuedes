@@ -9,7 +9,7 @@ namespace ProjetoDesafio.Feature.Promocao.View
 {
     public partial class FrmInsereProdutos : Form
     {
-        private IList<ProdutoModel> _produtos;
+        private List<ProdutoModel> _produtos;
 
         public FrmInsereProdutos()
         {
@@ -88,6 +88,7 @@ namespace ProjetoDesafio.Feature.Promocao.View
 
         private void AdicionarProdutosNaGrid()
         {
+            dtgListaProdutos.DataSource = null;
             dtgListaProdutos.DataSource = _produtos;
         }
 
@@ -102,7 +103,7 @@ namespace ProjetoDesafio.Feature.Promocao.View
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-           _produtos = ckbProdutos.CheckedItems.Cast<ProdutoModel>().ToList() ;
+            _produtos.AddRange(ckbProdutos.CheckedItems.Cast<ProdutoModel>().ToList());
             
             AdicionarProdutosNaGrid();
         }

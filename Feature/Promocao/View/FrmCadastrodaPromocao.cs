@@ -8,7 +8,7 @@ namespace ProjetoDesafio.Feature.Promocao.View
 {
     public partial class FrmCadastroDaPromocao : Form
     {
-        private IList<ProdutoModel> _produtos;
+        private readonly List<ProdutoModel> _produtos;
         private readonly PromocaoModel _promocaoModel;
         public FrmCadastroDaPromocao()
         {
@@ -17,7 +17,7 @@ namespace ProjetoDesafio.Feature.Promocao.View
             _promocaoModel = new PromocaoModel();
         }
 
-        private void cmbTipo_SelectedIndexChanged(object sender, EventArgs e)
+        private void CmbTipo_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbTipo.SelectedIndex == 0)
             {
@@ -29,17 +29,21 @@ namespace ProjetoDesafio.Feature.Promocao.View
         {
             btnInserirProdutos.Enabled = !string.IsNullOrWhiteSpace(txtNomePromoção.Text);
         }
-
-
-
+        
         private void BtnInserirProdutos_Click(object sender, EventArgs e)
         {
-            _produtos = new FrmInsereProdutos().RetornarProdutos();
+            _produtos.AddRange( new FrmInsereProdutos().RetornarProdutos());
 
             if (_produtos.Count <= 0) return;
 
-            produtoModelBindingSource.DataSource = _produtos;
+            produtoModelBindingSource1.DataSource = null;
+            produtoModelBindingSource1.DataSource = _produtos;
             dtgProdutosPromocao.Refresh();
+
+            if (_produtos.Count <= 0) return;
+            rdPorcentagem.Enabled = true;
+            rdValor.Enabled = true;
+            txtDesconto.Enabled = true;
         }
 
         private void TxtDesconto_TextChanged(object sender, EventArgs e)

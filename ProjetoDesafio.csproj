@@ -184,6 +184,8 @@
     <Compile Include="Feature\Produto\View\FrmProduto.Designer.cs">
       <DependentUpon>FrmProduto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Feature\Promocao\Controller\PromocaoController.cs" />
+    <Compile Include="Feature\Promocao\Dao\PromocaoDao.cs" />
     <Compile Include="Feature\Promocao\View\FrmCadastroDaPromocao.cs">
       <SubType>Form</SubType>
     </Compile>

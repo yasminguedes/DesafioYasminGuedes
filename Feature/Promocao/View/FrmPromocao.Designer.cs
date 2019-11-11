@@ -30,16 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             this.gpPromocoes = new System.Windows.Forms.GroupBox();
-            this.btnNovo = new System.Windows.Forms.Button();
             this.gpPromocoesCadastradas = new System.Windows.Forms.GroupBox();
             this.dtgPromocao = new System.Windows.Forms.DataGridView();
-            this.promocaoModelBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.btnNovo = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.promocaoModelBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.promocaoModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.promocaoModelBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.promocaoModelBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.idPromocaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomePromocaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inicioPromocaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,9 +46,9 @@
             this.gpPromocoes.SuspendLayout();
             this.gpPromocoesCadastradas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPromocao)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.promocaoModelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.promocaoModelBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.promocaoModelBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.promocaoModelBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // gpPromocoes
@@ -64,20 +63,6 @@
             this.gpPromocoes.TabIndex = 16;
             this.gpPromocoes.TabStop = false;
             this.gpPromocoes.Text = "Promoções Cadastradas";
-            // 
-            // btnNovo
-            // 
-            this.btnNovo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNovo.Image = global::ProjetoDesafio.Properties.Resources.icons8_adicionar_arquivo_32;
-            this.btnNovo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnNovo.Location = new System.Drawing.Point(1193, 55);
-            this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(90, 73);
-            this.btnNovo.TabIndex = 1;
-            this.btnNovo.Text = "Novo";
-            this.btnNovo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnNovo.UseVisualStyleBackColor = true;
-            this.btnNovo.Click += new System.EventHandler(this.BtnNovo_Click);
             // 
             // gpPromocoesCadastradas
             // 
@@ -96,7 +81,6 @@
             this.dtgPromocao.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idPromocaoDataGridViewTextBoxColumn,
             this.nomePromocaoDataGridViewTextBoxColumn,
-            this.descricaoDataGridViewTextBoxColumn,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn1,
             this.inicioPromocaoDataGridViewTextBoxColumn,
@@ -109,9 +93,19 @@
             this.dtgPromocao.Size = new System.Drawing.Size(1296, 389);
             this.dtgPromocao.TabIndex = 0;
             // 
-            // promocaoModelBindingSource2
+            // btnNovo
             // 
-            this.promocaoModelBindingSource2.DataSource = typeof(ProjetoDesafio.Feature.Promocao.Model.PromocaoModel);
+            this.btnNovo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNovo.Image = global::ProjetoDesafio.Properties.Resources.icons8_adicionar_arquivo_32;
+            this.btnNovo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnNovo.Location = new System.Drawing.Point(1193, 55);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(90, 73);
+            this.btnNovo.TabIndex = 1;
+            this.btnNovo.Text = "Novo";
+            this.btnNovo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.BtnNovo_Click);
             // 
             // btnEditar
             // 
@@ -126,18 +120,22 @@
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEditar.UseVisualStyleBackColor = true;
             // 
-            // promocaoModelBindingSource1
-            // 
-            this.promocaoModelBindingSource1.DataSource = typeof(ProjetoDesafio.Feature.Promocao.Model.PromocaoModel);
-            // 
             // promocaoModelBindingSource
             // 
             this.promocaoModelBindingSource.DataSource = typeof(ProjetoDesafio.Feature.Promocao.Model.PromocaoModel);
             // 
+            // promocaoModelBindingSource2
+            // 
+            this.promocaoModelBindingSource2.DataSource = typeof(ProjetoDesafio.Feature.Promocao.Model.PromocaoModel);
+            // 
+            // promocaoModelBindingSource1
+            // 
+            this.promocaoModelBindingSource1.DataSource = typeof(ProjetoDesafio.Feature.Promocao.Model.PromocaoModel);
+            // 
             // idPromocaoDataGridViewTextBoxColumn
             // 
             this.idPromocaoDataGridViewTextBoxColumn.DataPropertyName = "IdPromocao";
-            this.idPromocaoDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.idPromocaoDataGridViewTextBoxColumn.HeaderText = "Cód.";
             this.idPromocaoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.idPromocaoDataGridViewTextBoxColumn.Name = "idPromocaoDataGridViewTextBoxColumn";
             this.idPromocaoDataGridViewTextBoxColumn.Width = 50;
@@ -148,15 +146,7 @@
             this.nomePromocaoDataGridViewTextBoxColumn.HeaderText = "Nome";
             this.nomePromocaoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nomePromocaoDataGridViewTextBoxColumn.Name = "nomePromocaoDataGridViewTextBoxColumn";
-            this.nomePromocaoDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // descricaoDataGridViewTextBoxColumn
-            // 
-            this.descricaoDataGridViewTextBoxColumn.DataPropertyName = "Descricao";
-            this.descricaoDataGridViewTextBoxColumn.HeaderText = "Descriçao";
-            this.descricaoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.descricaoDataGridViewTextBoxColumn.Name = "descricaoDataGridViewTextBoxColumn";
-            this.descricaoDataGridViewTextBoxColumn.Width = 200;
+            this.nomePromocaoDataGridViewTextBoxColumn.Width = 400;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -164,6 +154,7 @@
             this.dataGridViewTextBoxColumn2.HeaderText = "Tipo";
             this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 125;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -171,6 +162,7 @@
             this.dataGridViewTextBoxColumn1.HeaderText = "Status";
             this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 125;
             // 
             // inicioPromocaoDataGridViewTextBoxColumn
             // 
@@ -178,6 +170,7 @@
             this.inicioPromocaoDataGridViewTextBoxColumn.HeaderText = "Vigência - Início";
             this.inicioPromocaoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.inicioPromocaoDataGridViewTextBoxColumn.Name = "inicioPromocaoDataGridViewTextBoxColumn";
+            this.inicioPromocaoDataGridViewTextBoxColumn.Width = 125;
             // 
             // terminoPromocaoDataGridViewTextBoxColumn
             // 
@@ -185,6 +178,7 @@
             this.terminoPromocaoDataGridViewTextBoxColumn.HeaderText = "Vigência - Término";
             this.terminoPromocaoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.terminoPromocaoDataGridViewTextBoxColumn.Name = "terminoPromocaoDataGridViewTextBoxColumn";
+            this.terminoPromocaoDataGridViewTextBoxColumn.Width = 125;
             // 
             // FrmPromocao
             // 
@@ -200,9 +194,9 @@
             this.gpPromocoes.ResumeLayout(false);
             this.gpPromocoesCadastradas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgPromocao)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.promocaoModelBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.promocaoModelBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.promocaoModelBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.promocaoModelBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -220,7 +214,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn statusPromocaoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idPromocaoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomePromocaoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descricaoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn inicioPromocaoDataGridViewTextBoxColumn;

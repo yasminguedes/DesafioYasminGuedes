@@ -92,8 +92,8 @@ namespace ProjetoDesafio.Feature.Produto.Dao
                 }
                 else
                 {
-                    sql.Append(" WHERE Upper(c.Nome_Categoria) LIKE Upper(@NomeCategoria)");
-                    cmd.Parameters.Add("@NomeCategoria", FbDbType.VarChar).Value = $"{filtro.Categoria.NomeCategoria}%";
+                    sql.Append(" WHERE Upper(c.Nome_Categoria) LIKE @NomeCategoria");
+                    cmd.Parameters.Add("@NomeCategoria", FbDbType.VarChar).Value = $"{filtro.Categoria.NomeCategoria.ToUpper()}%";
                 }
 
                 cmd.CommandText = sql.ToString();
