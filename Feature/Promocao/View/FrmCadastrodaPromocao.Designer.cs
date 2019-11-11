@@ -314,6 +314,7 @@
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(426, 30);
             this.txtValor.TabIndex = 41;
+            this.txtValor.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtValor.Visible = false;
             // 
             // lblAcima

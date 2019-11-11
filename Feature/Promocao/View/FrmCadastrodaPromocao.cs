@@ -81,21 +81,21 @@ namespace ProjetoDesafio.Feature.Promocao.View
         private void CmbTipo_SelectedValueChanged(object sender, EventArgs e)
         {
            if (cmbTipo.SelectedIndex == 1)
-            {
-                lblDesconto.Location = new Point(18, 220);
-                rdPorcentagem.Location = new Point(143, 220);
-                rdValor.Location = new Point(250, 220);
-                txtDesconto.Location = new Point(345, 215);
-				lblStatus.Location = new Point(19, 260);
-                cmbStatus.Location = new Point(143, 255);
-                btnInserirProdutos.Location = new Point(310, 253);
-				dtgProdutosPromocao.Location = new Point(25, 300);
-                btnSalvar.Location = new Point(138, 630);
-                btnCancelar.Location = new Point(343, 630);
+           {
+               lblDesconto.Location = new Point(18, 220);
+               rdPorcentagem.Location = new Point(143, 220);
+               rdValor.Location = new Point(250, 220);
+               txtDesconto.Location = new Point(345, 215);
+               lblStatus.Location = new Point(19, 260);
+               cmbStatus.Location = new Point(143, 255);
+               btnInserirProdutos.Location = new Point(310, 253);
+               dtgProdutosPromocao.Location = new Point(25, 300);
+               btnSalvar.Location = new Point(138, 630);
+               btnCancelar.Location = new Point(343, 630);
 
-                txtValor.Visible = true;
-                lblAcima.Visible = true;
-            }
+               txtValor.Visible = true;
+               lblAcima.Visible = true;
+           }
            else if (cmbTipo.SelectedIndex == 2)
            {
 
