@@ -1,9 +1,9 @@
-﻿using System;
+﻿using ProjetoDesafio.Feature.Produto.Model;
+using ProjetoDesafio.Feature.Promocao.Model;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
-using ProjetoDesafio.Feature.Produto.Model;
-using ProjetoDesafio.Feature.Promocao.Model;
 
 namespace ProjetoDesafio.Feature.Promocao.View
 {

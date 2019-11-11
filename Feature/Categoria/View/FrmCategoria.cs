@@ -38,13 +38,6 @@ namespace ProjetoDesafio.Feature.Categoria.View
                 LimparCampos();
         }
 
-        //private bool ValidarCampo()
-        //{
-        //    if (!string.IsNullOrWhiteSpace(txtCategoria.Text.Trim())) return true;
-        //    MessageBox.Show("Campo 'Categoria' é obrigatório");
-        //    return false;
-        //}
-
         private void BtnCancelar_Click(object sender, EventArgs e) => Close();
 
         private void BtnListar_Click(object sender, EventArgs e) => new FrmListagemDeCategoria().Show();

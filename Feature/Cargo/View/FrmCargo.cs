@@ -1,7 +1,7 @@
-﻿using System;
-using System.Windows.Forms;
-using ProjetoDesafio.Feature.Cargo.Controller;
+﻿using ProjetoDesafio.Feature.Cargo.Controller;
 using ProjetoDesafio.Feature.Cargo.Model;
+using System;
+using System.Windows.Forms;
 
 namespace ProjetoDesafio.Feature.Cargo.View
 {

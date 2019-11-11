@@ -1,7 +1,7 @@
-﻿using System;
+﻿using ProjetoDesafio.Feature.Promocao.Model;
+using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using ProjetoDesafio.Feature.Promocao.Model;
 
 namespace ProjetoDesafio.Feature.Promocao.View
 {
@@ -10,6 +10,7 @@ namespace ProjetoDesafio.Feature.Promocao.View
         private IList<PromocaoModel> _promocao;
         public FrmPromocao()
         {
+        
             InitializeComponent();
             _promocao = new List<PromocaoModel>();
         }

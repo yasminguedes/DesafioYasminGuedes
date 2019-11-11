@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using FirebirdSql.Data.FirebirdClient;
+using ProjetoDesafio.Feature.Cargo.Model;
+using System.Collections.Generic;
 using System.Data;
 using System.Text;
-using FirebirdSql.Data.FirebirdClient;
-using ProjetoDesafio.Feature.Cargo.Model;
 
 namespace ProjetoDesafio.Feature.Cargo.Dao
 {

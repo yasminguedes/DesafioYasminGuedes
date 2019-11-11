@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Windows.Forms;
-using FirebirdSql.Data.FirebirdClient;
+﻿using FirebirdSql.Data.FirebirdClient;
 using ProjetoDesafio.Feature.Cargo.Dao;
 using ProjetoDesafio.Feature.Cargo.Model;
+using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace ProjetoDesafio.Feature.Cargo.Controller
 {

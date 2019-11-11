@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using ProjetoDesafio.Feature.Administrador.View;
 using ProjetoDesafio.Feature.Cargo.View;
 using ProjetoDesafio.Feature.Categoria.View;
 using ProjetoDesafio.Feature.Cliente.View;
