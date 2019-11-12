@@ -37,7 +37,7 @@ namespace ProjetoDesafio.Feature.Produto.View
         
         private void BtnPesquisar_Click(object sender, EventArgs e) => ListarProdutos();
 
-        private void txtPesquisar_TextChanged(object sender, EventArgs e)
+        private void TxtPesquisar_TextChanged(object sender, EventArgs e)
         {
             ListarProdutos();
         }

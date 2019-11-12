@@ -1,11 +1,11 @@
 ﻿using FirebirdSql.Data.FirebirdClient;
+using ProjetoDesafio.Feature.Cargo.Model;
+using ProjetoDesafio.Feature.Endereco.Model;
+using ProjetoDesafio.Feature.Funcionario.Model;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Text;
-using ProjetoDesafio.Feature.Cargo.Model;
-using ProjetoDesafio.Feature.Endereco.Model;
-using ProjetoDesafio.Feature.Funcionario.Model;
 
 namespace ProjetoDesafio.Feature.Funcionario.Dao
 {

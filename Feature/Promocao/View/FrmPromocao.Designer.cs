@@ -190,7 +190,6 @@
             this.Name = "FrmPromocao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Promoção";
-            this.Load += new System.EventHandler(this.FrmPromocao_Load);
             this.gpPromocoes.ResumeLayout(false);
             this.gpPromocoesCadastradas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgPromocao)).EndInit();

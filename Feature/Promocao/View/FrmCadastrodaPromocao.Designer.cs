@@ -34,7 +34,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtInicio = new System.Windows.Forms.DateTimePicker();
             this.dtFim = new System.Windows.Forms.DateTimePicker();
-            this.txtNomePromoção = new System.Windows.Forms.TextBox();
+            this.txtNomePromocao = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -46,20 +46,20 @@
             this.rdPorcentagem = new System.Windows.Forms.RadioButton();
             this.txtDesconto = new System.Windows.Forms.TextBox();
             this.dtgProdutosPromocao = new System.Windows.Forms.DataGridView();
-            this.btnInserirProdutos = new System.Windows.Forms.Button();
-            this.btnSalvar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.gpProdutos = new System.Windows.Forms.GroupBox();
             this.codigoBarras = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precoCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precoVenda = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precoDeVendaComDesconto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.produtoModelBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.btnInserirProdutos = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.gpProdutos = new System.Windows.Forms.GroupBox();
             this.produtoModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dtgProdutosPromocao)).BeginInit();
-            this.gpProdutos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.produtoModelBindingSource1)).BeginInit();
+            this.gpProdutos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.produtoModelBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,16 +83,16 @@
             this.dtFim.Size = new System.Drawing.Size(151, 30);
             this.dtFim.TabIndex = 7;
             // 
-            // txtNomePromoção
+            // txtNomePromocao
             // 
-            this.txtNomePromoção.Enabled = false;
-            this.txtNomePromoção.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomePromoção.Location = new System.Drawing.Point(875, 24);
-            this.txtNomePromoção.MaxLength = 100;
-            this.txtNomePromoção.Name = "txtNomePromoção";
-            this.txtNomePromoção.Size = new System.Drawing.Size(424, 30);
-            this.txtNomePromoção.TabIndex = 1;
-            this.txtNomePromoção.TextChanged += new System.EventHandler(this.TxtNomePromoção_TextChanged);
+            this.txtNomePromocao.Enabled = false;
+            this.txtNomePromocao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomePromocao.Location = new System.Drawing.Point(875, 24);
+            this.txtNomePromocao.MaxLength = 100;
+            this.txtNomePromocao.Name = "txtNomePromocao";
+            this.txtNomePromocao.Size = new System.Drawing.Size(424, 30);
+            this.txtNomePromocao.TabIndex = 1;
+            this.txtNomePromocao.TextChanged += new System.EventHandler(this.TxtNomePromoção_TextChanged);
             // 
             // label8
             // 
@@ -225,6 +225,59 @@
             this.dtgProdutosPromocao.TabIndex = 37;
             this.dtgProdutosPromocao.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.DtgProdutosPromocao_CellPainting);
             // 
+            // codigoBarras
+            // 
+            this.codigoBarras.DataPropertyName = "CodigoBarras";
+            this.codigoBarras.HeaderText = "Código de barras";
+            this.codigoBarras.MinimumWidth = 6;
+            this.codigoBarras.Name = "codigoBarras";
+            this.codigoBarras.Width = 150;
+            // 
+            // nomeProduto
+            // 
+            this.nomeProduto.DataPropertyName = "NomeProduto";
+            this.nomeProduto.HeaderText = "Produto";
+            this.nomeProduto.MinimumWidth = 6;
+            this.nomeProduto.Name = "nomeProduto";
+            this.nomeProduto.Width = 300;
+            // 
+            // precoCompra
+            // 
+            this.precoCompra.DataPropertyName = "PrecoCompra";
+            dataGridViewCellStyle1.Format = "C2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.precoCompra.DefaultCellStyle = dataGridViewCellStyle1;
+            this.precoCompra.HeaderText = "Preço de compra";
+            this.precoCompra.MinimumWidth = 6;
+            this.precoCompra.Name = "precoCompra";
+            this.precoCompra.Width = 150;
+            // 
+            // precoVenda
+            // 
+            this.precoVenda.DataPropertyName = "PrecoVenda";
+            dataGridViewCellStyle2.Format = "C2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.precoVenda.DefaultCellStyle = dataGridViewCellStyle2;
+            this.precoVenda.HeaderText = "Preço de venda";
+            this.precoVenda.MinimumWidth = 6;
+            this.precoVenda.Name = "precoVenda";
+            this.precoVenda.Width = 150;
+            // 
+            // precoDeVendaComDesconto
+            // 
+            this.precoDeVendaComDesconto.DataPropertyName = "PrecoDeVendaComDesconto";
+            dataGridViewCellStyle3.Format = "C2";
+            dataGridViewCellStyle3.NullValue = null;
+            this.precoDeVendaComDesconto.DefaultCellStyle = dataGridViewCellStyle3;
+            this.precoDeVendaComDesconto.HeaderText = "Preço com desconto";
+            this.precoDeVendaComDesconto.MinimumWidth = 6;
+            this.precoDeVendaComDesconto.Name = "precoDeVendaComDesconto";
+            this.precoDeVendaComDesconto.Width = 150;
+            // 
+            // produtoModelBindingSource1
+            // 
+            this.produtoModelBindingSource1.DataSource = typeof(ProjetoDesafio.Feature.Produto.Model.ProdutoModel);
+            // 
             // btnInserirProdutos
             // 
             this.btnInserirProdutos.Enabled = false;
@@ -280,59 +333,6 @@
             this.gpProdutos.TabIndex = 43;
             this.gpProdutos.TabStop = false;
             // 
-            // codigoBarras
-            // 
-            this.codigoBarras.DataPropertyName = "CodigoBarras";
-            this.codigoBarras.HeaderText = "Código de barras";
-            this.codigoBarras.MinimumWidth = 6;
-            this.codigoBarras.Name = "codigoBarras";
-            this.codigoBarras.Width = 150;
-            // 
-            // nomeProduto
-            // 
-            this.nomeProduto.DataPropertyName = "NomeProduto";
-            this.nomeProduto.HeaderText = "Produto";
-            this.nomeProduto.MinimumWidth = 6;
-            this.nomeProduto.Name = "nomeProduto";
-            this.nomeProduto.Width = 300;
-            // 
-            // precoCompra
-            // 
-            this.precoCompra.DataPropertyName = "PrecoCompra";
-            dataGridViewCellStyle1.Format = "C2";
-            dataGridViewCellStyle1.NullValue = null;
-            this.precoCompra.DefaultCellStyle = dataGridViewCellStyle1;
-            this.precoCompra.HeaderText = "Preço de compra";
-            this.precoCompra.MinimumWidth = 6;
-            this.precoCompra.Name = "precoCompra";
-            this.precoCompra.Width = 150;
-            // 
-            // precoVenda
-            // 
-            this.precoVenda.DataPropertyName = "PrecoVenda";
-            dataGridViewCellStyle2.Format = "C2";
-            dataGridViewCellStyle2.NullValue = null;
-            this.precoVenda.DefaultCellStyle = dataGridViewCellStyle2;
-            this.precoVenda.HeaderText = "Preço de venda";
-            this.precoVenda.MinimumWidth = 6;
-            this.precoVenda.Name = "precoVenda";
-            this.precoVenda.Width = 150;
-            // 
-            // precoDeVendaComDesconto
-            // 
-            this.precoDeVendaComDesconto.DataPropertyName = "PrecoDeVendaComDesconto";
-            dataGridViewCellStyle3.Format = "C2";
-            dataGridViewCellStyle3.NullValue = null;
-            this.precoDeVendaComDesconto.DefaultCellStyle = dataGridViewCellStyle3;
-            this.precoDeVendaComDesconto.HeaderText = "Preço com desconto";
-            this.precoDeVendaComDesconto.MinimumWidth = 6;
-            this.precoDeVendaComDesconto.Name = "precoDeVendaComDesconto";
-            this.precoDeVendaComDesconto.Width = 150;
-            // 
-            // produtoModelBindingSource1
-            // 
-            this.produtoModelBindingSource1.DataSource = typeof(ProjetoDesafio.Feature.Produto.Model.ProdutoModel);
-            // 
             // produtoModelBindingSource
             // 
             this.produtoModelBindingSource.DataSource = typeof(ProjetoDesafio.Feature.Produto.Model.ProdutoModel);
@@ -354,7 +354,7 @@
             this.Controls.Add(this.cmbTipo);
             this.Controls.Add(this.dtInicio);
             this.Controls.Add(this.dtFim);
-            this.Controls.Add(this.txtNomePromoção);
+            this.Controls.Add(this.txtNomePromocao);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -364,8 +364,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " Cadastro ";
             ((System.ComponentModel.ISupportInitialize)(this.dtgProdutosPromocao)).EndInit();
-            this.gpProdutos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.produtoModelBindingSource1)).EndInit();
+            this.gpProdutos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.produtoModelBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -376,7 +376,7 @@
 
         private System.Windows.Forms.DateTimePicker dtInicio;
         private System.Windows.Forms.DateTimePicker dtFim;
-        private System.Windows.Forms.TextBox txtNomePromoção;
+        private System.Windows.Forms.TextBox txtNomePromocao;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;

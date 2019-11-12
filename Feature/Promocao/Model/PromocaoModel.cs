@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using ProjetoDesafio.Feature.Produto.Model;
 
 namespace ProjetoDesafio.Feature.Promocao.Model
 {
@@ -12,6 +14,11 @@ namespace ProjetoDesafio.Feature.Promocao.Model
         public string TipoPromocao { get; set; }
         public DateTime InicioPromocao { get; set; }
         public DateTime TerminoPromocao { get; set; }
-        public DayOfWeek DiaSemana { get; set; }
+        public List<ProdutoModel> Produto { get; set; }
+
+        public PromocaoModel()
+        {
+            Produto = new List<ProdutoModel>();
+        }
     }
 }
