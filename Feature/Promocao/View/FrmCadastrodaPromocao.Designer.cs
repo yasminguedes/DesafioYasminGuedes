@@ -46,20 +46,20 @@
             this.rdPorcentagem = new System.Windows.Forms.RadioButton();
             this.txtDesconto = new System.Windows.Forms.TextBox();
             this.dtgProdutosPromocao = new System.Windows.Forms.DataGridView();
-            this.produtoModelBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.btnInserirProdutos = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.gpProdutos = new System.Windows.Forms.GroupBox();
+            this.codigoBarras = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precoCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precoVenda = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precoDeVendaComDesconto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.produtoModelBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.produtoModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.codigoBarrasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precoCompraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precoVendaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precoDeVendaComDescontoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgProdutosPromocao)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.produtoModelBindingSource1)).BeginInit();
             this.gpProdutos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.produtoModelBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.produtoModelBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,7 +68,7 @@
             this.dtInicio.Enabled = false;
             this.dtInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtInicio.Location = new System.Drawing.Point(252, 595);
+            this.dtInicio.Location = new System.Drawing.Point(185, 595);
             this.dtInicio.Name = "dtInicio";
             this.dtInicio.Size = new System.Drawing.Size(151, 30);
             this.dtInicio.TabIndex = 6;
@@ -78,7 +78,7 @@
             this.dtFim.Enabled = false;
             this.dtFim.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtFim.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtFim.Location = new System.Drawing.Point(475, 595);
+            this.dtFim.Location = new System.Drawing.Point(408, 595);
             this.dtFim.Name = "dtFim";
             this.dtFim.Size = new System.Drawing.Size(151, 30);
             this.dtFim.TabIndex = 7;
@@ -98,7 +98,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(420, 600);
+            this.label8.Location = new System.Drawing.Point(353, 600);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(39, 25);
             this.label8.TabIndex = 24;
@@ -108,7 +108,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(183, 600);
+            this.label7.Location = new System.Drawing.Point(129, 600);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(34, 25);
             this.label7.TabIndex = 23;
@@ -187,7 +187,7 @@
             this.rdPorcentagem.AutoSize = true;
             this.rdPorcentagem.Enabled = false;
             this.rdPorcentagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.rdPorcentagem.Location = new System.Drawing.Point(875, 104);
+            this.rdPorcentagem.Location = new System.Drawing.Point(875, 99);
             this.rdPorcentagem.Name = "rdPorcentagem";
             this.rdPorcentagem.Size = new System.Drawing.Size(52, 29);
             this.rdPorcentagem.TabIndex = 3;
@@ -211,11 +211,11 @@
             this.dtgProdutosPromocao.AutoGenerateColumns = false;
             this.dtgProdutosPromocao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgProdutosPromocao.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.codigoBarrasDataGridViewTextBoxColumn,
-            this.nomeProdutoDataGridViewTextBoxColumn,
-            this.precoCompraDataGridViewTextBoxColumn,
-            this.precoVendaDataGridViewTextBoxColumn,
-            this.precoDeVendaComDescontoDataGridViewTextBoxColumn});
+            this.codigoBarras,
+            this.nomeProduto,
+            this.precoCompra,
+            this.precoVenda,
+            this.precoDeVendaComDesconto});
             this.dtgProdutosPromocao.DataSource = this.produtoModelBindingSource1;
             this.dtgProdutosPromocao.Location = new System.Drawing.Point(1, 12);
             this.dtgProdutosPromocao.Name = "dtgProdutosPromocao";
@@ -223,10 +223,7 @@
             this.dtgProdutosPromocao.RowTemplate.Height = 24;
             this.dtgProdutosPromocao.Size = new System.Drawing.Size(1270, 398);
             this.dtgProdutosPromocao.TabIndex = 37;
-            // 
-            // produtoModelBindingSource1
-            // 
-            this.produtoModelBindingSource1.DataSource = typeof(ProjetoDesafio.Feature.Produto.Model.ProdutoModel);
+            this.dtgProdutosPromocao.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.DtgProdutosPromocao_CellPainting);
             // 
             // btnInserirProdutos
             // 
@@ -283,58 +280,62 @@
             this.gpProdutos.TabIndex = 43;
             this.gpProdutos.TabStop = false;
             // 
+            // codigoBarras
+            // 
+            this.codigoBarras.DataPropertyName = "CodigoBarras";
+            this.codigoBarras.HeaderText = "Código de barras";
+            this.codigoBarras.MinimumWidth = 6;
+            this.codigoBarras.Name = "codigoBarras";
+            this.codigoBarras.Width = 150;
+            // 
+            // nomeProduto
+            // 
+            this.nomeProduto.DataPropertyName = "NomeProduto";
+            this.nomeProduto.HeaderText = "Produto";
+            this.nomeProduto.MinimumWidth = 6;
+            this.nomeProduto.Name = "nomeProduto";
+            this.nomeProduto.Width = 300;
+            // 
+            // precoCompra
+            // 
+            this.precoCompra.DataPropertyName = "PrecoCompra";
+            dataGridViewCellStyle1.Format = "C2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.precoCompra.DefaultCellStyle = dataGridViewCellStyle1;
+            this.precoCompra.HeaderText = "Preço de compra";
+            this.precoCompra.MinimumWidth = 6;
+            this.precoCompra.Name = "precoCompra";
+            this.precoCompra.Width = 150;
+            // 
+            // precoVenda
+            // 
+            this.precoVenda.DataPropertyName = "PrecoVenda";
+            dataGridViewCellStyle2.Format = "C2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.precoVenda.DefaultCellStyle = dataGridViewCellStyle2;
+            this.precoVenda.HeaderText = "Preço de venda";
+            this.precoVenda.MinimumWidth = 6;
+            this.precoVenda.Name = "precoVenda";
+            this.precoVenda.Width = 150;
+            // 
+            // precoDeVendaComDesconto
+            // 
+            this.precoDeVendaComDesconto.DataPropertyName = "PrecoDeVendaComDesconto";
+            dataGridViewCellStyle3.Format = "C2";
+            dataGridViewCellStyle3.NullValue = null;
+            this.precoDeVendaComDesconto.DefaultCellStyle = dataGridViewCellStyle3;
+            this.precoDeVendaComDesconto.HeaderText = "Preço com desconto";
+            this.precoDeVendaComDesconto.MinimumWidth = 6;
+            this.precoDeVendaComDesconto.Name = "precoDeVendaComDesconto";
+            this.precoDeVendaComDesconto.Width = 150;
+            // 
+            // produtoModelBindingSource1
+            // 
+            this.produtoModelBindingSource1.DataSource = typeof(ProjetoDesafio.Feature.Produto.Model.ProdutoModel);
+            // 
             // produtoModelBindingSource
             // 
             this.produtoModelBindingSource.DataSource = typeof(ProjetoDesafio.Feature.Produto.Model.ProdutoModel);
-            // 
-            // codigoBarrasDataGridViewTextBoxColumn
-            // 
-            this.codigoBarrasDataGridViewTextBoxColumn.DataPropertyName = "CodigoBarras";
-            this.codigoBarrasDataGridViewTextBoxColumn.HeaderText = "Código de barras";
-            this.codigoBarrasDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.codigoBarrasDataGridViewTextBoxColumn.Name = "codigoBarrasDataGridViewTextBoxColumn";
-            this.codigoBarrasDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // nomeProdutoDataGridViewTextBoxColumn
-            // 
-            this.nomeProdutoDataGridViewTextBoxColumn.DataPropertyName = "NomeProduto";
-            this.nomeProdutoDataGridViewTextBoxColumn.HeaderText = "Produto";
-            this.nomeProdutoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nomeProdutoDataGridViewTextBoxColumn.Name = "nomeProdutoDataGridViewTextBoxColumn";
-            this.nomeProdutoDataGridViewTextBoxColumn.Width = 300;
-            // 
-            // precoCompraDataGridViewTextBoxColumn
-            // 
-            this.precoCompraDataGridViewTextBoxColumn.DataPropertyName = "PrecoCompra";
-            dataGridViewCellStyle1.Format = "C2";
-            dataGridViewCellStyle1.NullValue = null;
-            this.precoCompraDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
-            this.precoCompraDataGridViewTextBoxColumn.HeaderText = "Preço de compra";
-            this.precoCompraDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.precoCompraDataGridViewTextBoxColumn.Name = "precoCompraDataGridViewTextBoxColumn";
-            this.precoCompraDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // precoVendaDataGridViewTextBoxColumn
-            // 
-            this.precoVendaDataGridViewTextBoxColumn.DataPropertyName = "PrecoVenda";
-            dataGridViewCellStyle2.Format = "C2";
-            dataGridViewCellStyle2.NullValue = null;
-            this.precoVendaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
-            this.precoVendaDataGridViewTextBoxColumn.HeaderText = "Preço de venda";
-            this.precoVendaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.precoVendaDataGridViewTextBoxColumn.Name = "precoVendaDataGridViewTextBoxColumn";
-            this.precoVendaDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // precoDeVendaComDescontoDataGridViewTextBoxColumn
-            // 
-            this.precoDeVendaComDescontoDataGridViewTextBoxColumn.DataPropertyName = "PrecoDeVendaComDesconto";
-            dataGridViewCellStyle3.Format = "C2";
-            dataGridViewCellStyle3.NullValue = null;
-            this.precoDeVendaComDescontoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
-            this.precoDeVendaComDescontoDataGridViewTextBoxColumn.HeaderText = "Preço com desconto";
-            this.precoDeVendaComDescontoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.precoDeVendaComDescontoDataGridViewTextBoxColumn.Name = "precoDeVendaComDescontoDataGridViewTextBoxColumn";
-            this.precoDeVendaComDescontoDataGridViewTextBoxColumn.Width = 150;
             // 
             // FrmCadastroDaPromocao
             // 
@@ -363,8 +364,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " Cadastro ";
             ((System.ComponentModel.ISupportInitialize)(this.dtgProdutosPromocao)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.produtoModelBindingSource1)).EndInit();
             this.gpProdutos.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.produtoModelBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.produtoModelBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -393,10 +394,10 @@
         private System.Windows.Forms.Button btnInserirProdutos;
         private System.Windows.Forms.BindingSource produtoModelBindingSource1;
         private System.Windows.Forms.GroupBox gpProdutos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigoBarrasDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomeProdutoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precoCompraDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precoVendaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precoDeVendaComDescontoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigoBarras;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomeProduto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precoCompra;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precoVenda;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precoDeVendaComDesconto;
     }
 }
